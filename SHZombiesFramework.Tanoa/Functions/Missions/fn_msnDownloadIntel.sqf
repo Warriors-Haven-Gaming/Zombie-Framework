@@ -58,7 +58,7 @@ private _spawnerScript = [
 	[_intelCenter, 100, 100, 0, false, 20],
 	40 + count allPlayers * 2,
 	300,
-	[10 + floor (count allPlayers / 2), "mixed", independent, [0,0,0], 10, 0.5],
+	[10 + floor (count allPlayers / 2), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5],
 	[20, 100],
 	5,
 	15

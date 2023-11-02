@@ -1,0 +1,1 @@
+SHZ_zombieSide = independent;

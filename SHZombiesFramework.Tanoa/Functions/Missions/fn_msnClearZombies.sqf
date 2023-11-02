@@ -38,19 +38,19 @@ private _spawnerScript = [
 	_activationArea,
 	20 + count allPlayers,
 	20 + floor (count allPlayers * 1.6),
-	[20 + floor (count allPlayers * 0.5), "mixed", independent, [0,0,0], 10, 0.25 + random 0.75],
+	[20 + floor (count allPlayers * 0.5), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.25 + random 0.75],
 	100,
 	5,
 	15
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
-if (count units independent < 100) then {
-	[20, "mixed", independent, _center, 75, 1] spawn SHZ_fnc_hordeSpawn;
+if (count units SHZ_zombieSide < 100) then {
+	[20, "mixed", SHZ_zombieSide, _center, 75, 1] spawn SHZ_fnc_hordeSpawn;
 };
 
 while {true} do {
 	sleep 10;
-	if (scriptDone _spawnerScript && {count (units independent inAreaArray _activationArea) < 20}) exitWith {
+	if (scriptDone _spawnerScript && {count (units SHZ_zombieSide inAreaArray _activationArea) < 20}) exitWith {
 		[_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
 	};
 };
