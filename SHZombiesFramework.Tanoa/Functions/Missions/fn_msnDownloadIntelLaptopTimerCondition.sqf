@@ -13,4 +13,4 @@ Author:
 
 */
 params ["_laptopPos"];
-units blufor findIf {_x inArea [_laptopPos, 5, 5, 0, false]} >= 0
+units blufor findIf {_x inArea [_laptopPos, 5, 5, 0, false, 5]} >= 0

@@ -40,7 +40,7 @@ Examples:
 	(begin example)
 		[
 			blufor,
-			[_yourPos, 50, 50, 0, false],
+			[_yourPos, 50, 50, 0, false, 20],
 			20,
 			60,
 			[5, "walkerCivilians", independent, [0,0,0], 7, 0.5],

@@ -55,7 +55,7 @@ private _taskID = call SHZ_fnc_randomTaskID;
 
 private _spawnerScript = [
 	blufor,
-	[_intelCenter, 100, 100, 0, false],
+	[_intelCenter, 100, 100, 0, false, 20],
 	40 + count allPlayers * 2,
 	300,
 	[10 + floor (count allPlayers / 2), "mixedZombies", independent, [0,0,0], 10, 0.5],
