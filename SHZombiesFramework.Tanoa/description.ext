@@ -1,0 +1,35 @@
+class CfgFunctions {
+	class SHZ {
+		class Helpers {
+			class displayTimer {};
+			class objectsGrabber {};
+			class objectsMapper {};
+			class randomPos {};
+			class randomString {};
+		};
+		class Missions {
+			class msnDownloadIntel {};
+			class msnDownloadIntelLaptop {};
+			class msnDownloadIntelLaptopTimer {};
+			class msnDownloadIntelLaptopTimerCondition {};
+		};
+		class Tasks {
+			class randomTaskID {};
+			class taskEnd {};
+		};
+		class Zombies {
+			class hordeSpawn {};
+			class hordeSpawnLoop {};
+			class hordeType {};
+			class hordeTypeList {};
+			class zombieInit {};
+		};
+	};
+};
+
+class CfgTaskDescriptions {
+	class downloadIntel {
+		title       = "Secure Intel";
+		description = "A military research building has been found containing intel. Secure it!";
+	};
+};
