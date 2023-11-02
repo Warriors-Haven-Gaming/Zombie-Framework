@@ -44,13 +44,13 @@ private _spawnerScript = [
 	15
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
-if (count units opfor < 100) then {
+if (count units independent < 100) then {
 	[20, "mixed", independent, _center, 75, 1] spawn SHZ_fnc_hordeSpawn;
 };
 
 while {true} do {
 	sleep 10;
-	if (scriptDone _spawnerScript && {count (units opfor inAreaArray _activationArea) < 20}) exitWith {
+	if (scriptDone _spawnerScript && {count (units independent inAreaArray _activationArea) < 20}) exitWith {
 		[_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
 	};
 };
