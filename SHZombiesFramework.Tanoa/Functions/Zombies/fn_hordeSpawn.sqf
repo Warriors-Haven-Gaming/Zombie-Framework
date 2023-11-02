@@ -81,4 +81,5 @@ for "_i" from 1 to _quantity do {
 
 	if (canSuspend) then {sleep _rate};
 };
+[_group, true] remoteExec ["enableDynamicSimulation"];
 _units
