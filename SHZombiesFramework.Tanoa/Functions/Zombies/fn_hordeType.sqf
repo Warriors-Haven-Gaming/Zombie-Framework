@@ -20,6 +20,7 @@ Parameters:
 			"crawlers"
 			"mixed" (represents all above types)
 			"mixedZombies" (represents all above types except demons)
+			"mixedStanding" (represents all fast, medium, slow, and walker zombies)
 		Note that classnames are not de-duplicated.
 		If none of the types are valid, an empty array is returned.
 
@@ -48,6 +49,7 @@ private _resolvedTypes = _this apply {
 		case "crawlers": {["RyanZombieCrawler1", "RyanZombieCrawler2", "RyanZombieCrawler3", "RyanZombieCrawler4", "RyanZombieCrawler5", "RyanZombieCrawler6", "RyanZombieCrawler7", "RyanZombieCrawler8", "RyanZombieCrawler9", "RyanZombieCrawler10", "RyanZombieCrawler11", "RyanZombieCrawler12", "RyanZombieCrawler13", "RyanZombieCrawler14", "RyanZombieCrawler15", "RyanZombieCrawler16", "RyanZombieCrawler17", "RyanZombieCrawler18", "RyanZombieCrawler19", "RyanZombieCrawler20", "RyanZombieCrawler21", "RyanZombieCrawler22", "RyanZombieCrawler23", "RyanZombieCrawler24", "RyanZombieCrawler25", "RyanZombieCrawler26", "RyanZombieCrawler27", "RyanZombieCrawler28", "RyanZombieCrawler29", "RyanZombieCrawler30", "RyanZombieCrawler31", "RyanZombieCrawler32"]};
 		case "mixed": {flatten (call SHZ_fnc_hordeTypeList apply {_x call SHZ_fnc_hordeType})};
 		case "mixedZombies": {flatten (call SHZ_fnc_hordeTypeList - ["demons"] apply {_x call SHZ_fnc_hordeType})};
+		case "mixedStanding": {flatten (call SHZ_fnc_hordeTypeList - ["demons", "spiders", "crawlers"] apply {_x call SHZ_fnc_hordeType})};
 		default {[]};
 	};
 };

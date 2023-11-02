@@ -3,7 +3,7 @@ Function: SHZ_fnc_hordeTypeList
 
 Description:
 	Returns an array of all horde types supported by SHZ_fnc_hordeType,
-	not including the "mixed" and "mixedZombies" types.
+	not including the "mixed", "mixedZombies", and "mixedStanding" types.
 
 Returns:
 	Array

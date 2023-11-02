@@ -22,6 +22,7 @@ Parameters:
 			"crawlers"
 			"mixed"
 			"mixedZombies"
+			"mixedStanding"
 		Unlike SHZ_fnc_hordeType, this function will throw an exception
 		if none of the types are valid.
 	Side side:
