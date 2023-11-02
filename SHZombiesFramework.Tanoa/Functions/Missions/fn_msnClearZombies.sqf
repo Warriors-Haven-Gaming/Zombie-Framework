@@ -54,4 +54,3 @@ while {true} do {
 		[_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
 	};
 };
-_spawnerScript spawn {sleep 120; terminate _this};
