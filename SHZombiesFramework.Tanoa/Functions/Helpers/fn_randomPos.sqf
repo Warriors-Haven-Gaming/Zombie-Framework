@@ -28,8 +28,8 @@ Author:
 
 */
 params ["_center", "_radius"];
-private _pos = [0,0];
 
+private _pos = [0,0];
 private _randomPosArgs = [];
 private _minRadius = 0;
 private _maxRadius = 0;
