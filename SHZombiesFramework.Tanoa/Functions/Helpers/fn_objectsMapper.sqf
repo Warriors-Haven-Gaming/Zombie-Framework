@@ -146,12 +146,18 @@ _multiplyMatrixFunc =
 		private ["_z"];
 		if ((count _relPos) > 2) then {_z = _relPos select 2} else {_z = 0};
 
-		_newPos = [_posX + (_newRelPos select 0), _posY + (_newRelPos select 1), _posZ + _z];
+		_newPos = [_posX + (_newRelPos select 0), _posY + (_newRelPos select 1), _z];
+		if (_ASL) then {_newPos set [2, _newPos # 2 + _posZ]};
 
 		//Create the object and make sure it's in the correct location
 		_newObj = _type createVehicle _newPos;
 		_newObj setDir (_azi + _azimuth);
-		_newObj setPosASL _newPos;
+		if (_ASL) then {
+			_newObj setPosASL _newPos
+		} else {
+			_newObj setPosATL _newPos;
+			_newObj setVectorUp surfaceNormal _newPos;
+		};
 
 		//If fuel and damage were grabbed, map them
 		if (!isNil "_fuel") then {_newObj setFuel _fuel};
