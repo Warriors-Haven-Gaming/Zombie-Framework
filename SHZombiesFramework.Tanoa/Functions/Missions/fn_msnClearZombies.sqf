@@ -50,7 +50,7 @@ if (count units SHZ_zombieSide < 100) then {
 
 while {true} do {
 	sleep 10;
-	if (scriptDone _spawnerScript && {count (units SHZ_zombieSide inAreaArray _activationArea) < 20}) exitWith {
+	if (scriptDone _spawnerScript && {count (units SHZ_zombieSide inAreaArray _activationArea) < 10}) exitWith {
 		[_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
 	};
 };
