@@ -71,11 +71,7 @@ private _getAliveCount = {
 	/* Returns the number of units that are alive.
 
 	To avoid a memory leak and degraded* performance, this function
-	will replace the units array once it reaches 1000 units.
-	This isn't bulletproof since hordes could be in the process of spawning
-	while this is already running which would result in uncounted zombies,
-	but we don't really need to worry about this unless the user requests
-	for large hordes over a long duration.
+	will clean up the units array once it reaches 1000 units.
 
 	* Very mild performance degredation:
 		 100 units: 0.03ms
@@ -83,8 +79,11 @@ private _getAliveCount = {
 
 	*/
 	if (count _units < 1000) then {{alive _x} count _units} else {
-		_units = _units select {alive _x};
-		count _units
+		private _totalUnits = count _units;
+		private _temp = _units select [0, _totalUnits] select {alive _x};
+		private _tempAlive = count _temp;
+		_units deleteRange [0, _totalUnits];
+		_tempAlive + ({alive _x} count (_units select [_totalUnits]))
 	}
 };
 private _hordeCallbackCode = {
