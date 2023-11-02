@@ -31,12 +31,18 @@ params ["_center", "_radius"];
 private _pos = [0,0];
 
 private _randomPosArgs = [];
+private _minRadius = 0;
+private _maxRadius = 0;
 if (_radius isEqualType []) then {
-	_radius params ["_minRadius", "_maxRadius"];
-	_randomPosArgs pushBack [[_center, _maxRadius]];
-	_randomPosArgs pushBack [[_center, _minRadius]];
+	_minRadius = _radius # 0;
+	_maxRadius = _radius # 1;
 } else {
-	_randomPosArgs pushBack [[_center, _radius]];
+	_maxRadius = _radius;
+};
+
+_randomPosArgs pushBack [[_center, _maxRadius]];
+if (_minRadius > 0) then {
+	_randomPosArgs pushBack [[_center, _minRadius]];
 };
 
 for "_i" from 1 to 30 do {
@@ -44,7 +50,7 @@ for "_i" from 1 to 30 do {
 	if (_pos isNotEqualTo [0,0]) exitWith {};
 };
 if (_pos isEqualTo [0,0]) then {
-	private _empty = _center findEmptyPosition [0, _radius];
+	private _empty = _center findEmptyPosition [_minRadius, _maxRadius];
 	if (_empty isNotEqualTo []) then {_pos = _empty};
 };
 _pos
