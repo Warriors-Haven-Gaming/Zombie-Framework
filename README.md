@@ -1,5 +1,7 @@
 # Zombie-Framework (Pre-alpha)
 
+![](docs/images/banner.jpg)
+
 A whole map multiplayer mission using RyanD's [Zombies and Demons] mod,
 inspired by Quiksilver's Invade & Annex [Apex-Framework].
 
