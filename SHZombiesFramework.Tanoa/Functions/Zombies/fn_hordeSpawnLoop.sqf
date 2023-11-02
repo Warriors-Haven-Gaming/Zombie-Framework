@@ -86,10 +86,13 @@ private _getAliveCount = {
 		_tempAlive + ({alive _x} count (_units select [_totalUnits]))
 	}
 };
-private _hordeCallbackCode = {
-	params ["_unit", "_units"];
-	_units pushBack _unit;
-};
+private _hordeCallback = [
+	_units,
+	{
+		params ["_unit", "_units"];
+		_units pushBack _unit;
+	}
+];
 private _makeHordeArgs = {
 	/* Generates the arguments for a new horde. */
 	params ["_aliveCount"];
@@ -101,7 +104,7 @@ private _makeHordeArgs = {
 	_center = [_areaArgs # 0, _hordeRadius] call SHZ_fnc_randomPos;
 	if (_center isEqualTo [0,0]) exitWith {[]};
 	_hordeArgs set [3, _center];
-	_callbacks = _callbacks + [[_units, _hordeCallbackCode]];
+	_callbacks = _callbacks + [_hordeCallback];
 	_hordeArgs set [6, _callbacks];
 
 	_hordeArgs
