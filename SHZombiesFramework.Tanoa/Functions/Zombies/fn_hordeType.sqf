@@ -18,9 +18,9 @@ Parameters:
 			"demons"
 			"spiders"
 			"crawlers"
-			"mixed" (represents all above types)
-			"mixedZombies" (represents all above types except demons)
-			"mixedStanding" (represents all fast, medium, slow, and walker zombies)
+			"mixed" (all above types)
+			"mixedZombies" (all above types except demons)
+			"mixedStanding" (all fast, medium, slow, and walker zombies)
 		Note that classnames are not de-duplicated.
 		If none of the types are valid, an empty array is returned.
 
