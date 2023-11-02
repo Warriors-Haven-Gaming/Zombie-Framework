@@ -8,6 +8,7 @@ class CfgFunctions {
 			class randomString {};
 		};
 		class Missions {
+			class msnClearZombies {};
 			class msnDownloadIntel {};
 			class msnDownloadIntelLaptop {};
 			class msnDownloadIntelLaptopTimer {};
@@ -28,6 +29,10 @@ class CfgFunctions {
 };
 
 class CfgTaskDescriptions {
+	class clearZombies {
+		title       = "Clear Area";
+		description = "This area has been infested with zombies. Clear them out!";
+	};
 	class downloadIntel {
 		title       = "Secure Intel";
 		description = "A military research building has been found containing intel. Secure it!";

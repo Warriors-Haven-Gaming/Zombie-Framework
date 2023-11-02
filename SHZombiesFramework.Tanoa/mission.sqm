@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=122;
+		nextID=125;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={6943.5059,15.407605,7404.374};
-		dir[]={-0.81437737,-0.42322689,-0.39707798};
-		up[]={-0.38041613,0.90602362,-0.18548515};
-		aside[]={-0.43826407,-7.21775e-009,0.89884686};
+		pos[]={6944.3433,15.407605,7400.084};
+		dir[]={-0.93816465,-0.32537174,0.11823929};
+		up[]={-0.32281801,0.94558614,0.040685583};
+		aside[]={0.12504338,-3.7252903e-009,0.99215132};
 	};
 };
 binarizationWanted=0;
-sourceName="SHZombiesEndlessTGC";
+sourceName="SHZombiesFramework";
 addons[]=
 {
 	"rhsusf_c_troops",
@@ -586,7 +586,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6913.8843,3.5524228,7419.7153};
-				angles[]={-0,1.3651699,0};
+				angles[]={0,1.3651699,0};
 			};
 			side="Empty";
 			flags=4;
@@ -1892,7 +1892,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6912.9473,4.6049995,7425.1128};
-				angles[]={-0,1.3762178,0};
+				angles[]={0,1.3762178,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2049,28 +2049,11 @@ class Mission
 		};
 		class Item6
 		{
-			dataType="Trigger";
-			position[]={7027.0049,2.6600001,7644.2295};
-			class Attributes
-			{
-				text="Start Intel";
-				condition="true";
-				onActivation="[getPosATL thisTrigger] spawn SHZ_fnc_msnDownloadIntel;";
-				sizeA=100;
-				sizeB=100;
-				timeout[]={3,3,3};
-				isServerOnly=1;
-			};
-			id=104;
-			type="EmptyDetector";
-		};
-		class Item7
-		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={6917.314,5.3758059,7440.3672};
-				angles[]={-0,1.355395,0};
+				angles[]={0,1.355395,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2082,7 +2065,7 @@ class Mission
 			type="RHS_UH60M";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Trigger";
 			position[]={6923.77,2.6600001,7386.458};
@@ -2090,7 +2073,7 @@ class Mission
 			{
 				text="Start Random Intels";
 				condition="true";
-				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 4 do {" \n "    [] spawn SHZ_fnc_msnDownloadIntel;" \n "    sleep 1;" \n "  };" \n "};";
+				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnDownloadIntel;" \n "    sleep 1;" \n "  };" \n "};";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={3,3,3};
@@ -2099,7 +2082,7 @@ class Mission
 			id=110;
 			type="EmptyDetector";
 		};
-		class Item9
+		class Item8
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2165,6 +2148,23 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item9
+		{
+			dataType="Trigger";
+			position[]={6926.1631,2.6600001,7370.2559};
+			class Attributes
+			{
+				text="Start Random Clear Zombies";
+				condition="true";
+				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnClearZombies;" \n "    sleep 1;" \n "  };" \n "};";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={3,3,3};
+				isServerOnly=1;
+			};
+			id=122;
+			type="EmptyDetector";
 		};
 	};
 	class Connections
