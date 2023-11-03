@@ -2,14 +2,14 @@
 Function: SHZ_fnc_msnDownloadIntelLaptopTimerCondition
 
 Description:
-	The laptop condition required to maintain download.
+    The laptop condition required to maintain download.
 
 Parameters:
-	Position2D laptopPos:
-		The intel laptop's position.
+    Position2D laptopPos:
+        The intel laptop's position.
 
 Author:
-	thegamecracks
+    thegamecracks
 
 */
 params ["_laptopPos"];

@@ -1,24 +1,24 @@
 /*
-	File: objectGrabber.sqf
-	Author: Joris-Jan van 't Land, thegamecracks
+    File: objectGrabber.sqf
+    Author: Joris-Jan van 't Land, thegamecracks
 
-	Description:
-	Converts a set of placed objects to an object array for the DynO mapper.
-	Places this information in the debug output for processing.
+    Description:
+    Converts a set of placed objects to an object array for the DynO mapper.
+    Places this information in the debug output for processing.
 
-	To use this, create a composition in the editor, place your player beside
-	it, then run the function using the editor's debug console.
+    To use this, create a composition in the editor, place your player beside
+    it, then run the function using the editor's debug console.
 
-	Parameter(s):
-	_this select 0: position of the anchor point (Array)
-	_this select 1: size of the covered area (Scalar)
-	_this select 2: grab object orientation? (Boolean) [default: false]
+    Parameter(s):
+    _this select 0: position of the anchor point (Array)
+    _this select 1: size of the covered area (Scalar)
+    _this select 2: grab object orientation? (Boolean) [default: false]
 
-	Example:
-	[AGLToASL getPos player,10] call SHZ_fnc_objectsGrabber;
+    Example:
+    [AGLToASL getPos player,10] call SHZ_fnc_objectsGrabber;
 
-	Returns:
-	Output text (String)
+    Returns:
+    Output text (String)
 */
 
 private ["_anchorPos", "_anchorDim", "_grabOrientation"];
@@ -45,50 +45,50 @@ _outputText = _outputText + "[" + _br;
 
 //First filter illegal objects
 {
-	//Exclude non-dynamic objects (world objects)
-	private ["_allDynamic"];
-	_allDynamic = allMissionObjects "All";
+    //Exclude non-dynamic objects (world objects)
+    private ["_allDynamic"];
+    _allDynamic = allMissionObjects "All";
 
-	if (_x in _allDynamic) then
-	{
-		//Exclude characters
-		private ["_sim"];
-		_sim = getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation");
+    if (_x in _allDynamic) then
+    {
+        //Exclude characters
+        private ["_sim"];
+        _sim = getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation");
 
-		if (_sim in ["soldier"]) then
-		{
-			_objs set [_forEachIndex, -1];
-		};
-	}
-	else
-	{
-		_objs set [_forEachIndex, -1];
-	};
+        if (_sim in ["soldier"]) then
+        {
+            _objs set [_forEachIndex, -1];
+        };
+    }
+    else
+    {
+        _objs set [_forEachIndex, -1];
+    };
 } forEach _objs;
 
 _objs = _objs - [-1];
 
 //Process remaining objects
 {
-	private ["_type", "_objPos", "_dX", "_dY", "_dZ", "_azimuth", "_fuel", "_damage", "_orientation", "_varName", "_init", "_simulation", "_replaceBy", "_outputArray"];
-	_type = typeOf _x;
-	_objPos = getPosASL _x;
-	_objPos vectorDiff _anchorPos params ["_dX", "_dY", "_dZ"];
-	_azimuth = direction _x;
-	_fuel = fuel _x;
-	_damage = damage _x;
-	if (_grabOrientation) then {_orientation = _x call BIS_fnc_getPitchBank;} else {_orientation = [];};
-	_varName = vehicleVarName _x;
-	_init = _x getVariable ["init", ""];
+    private ["_type", "_objPos", "_dX", "_dY", "_dZ", "_azimuth", "_fuel", "_damage", "_orientation", "_varName", "_init", "_simulation", "_replaceBy", "_outputArray"];
+    _type = typeOf _x;
+    _objPos = getPosASL _x;
+    _objPos vectorDiff _anchorPos params ["_dX", "_dY", "_dZ"];
+    _azimuth = direction _x;
+    _fuel = fuel _x;
+    _damage = damage _x;
+    if (_grabOrientation) then {_orientation = _x call BIS_fnc_getPitchBank;} else {_orientation = [];};
+    _varName = vehicleVarName _x;
+    _init = _x getVariable ["init", ""];
 
-	_replaceBy = _x getVariable ["replaceBy", ""];
-	if (_replaceBy != "") then {_type = _replaceBy;};
+    _replaceBy = _x getVariable ["replaceBy", ""];
+    if (_replaceBy != "") then {_type = _replaceBy;};
 
-	_outputArray = [_type, [_dX, _dY, _dZ], _azimuth, _fuel, _damage, _orientation, _varName, _init, true, true];
-	_outputText = _outputText + _tab + (str _outputArray);
-	_outputText = if (_forEachIndex < ((count _objs) - 1)) then {_outputText + ", " + _br} else {_outputText + _br};
+    _outputArray = [_type, [_dX, _dY, _dZ], _azimuth, _fuel, _damage, _orientation, _varName, _init, true, true];
+    _outputText = _outputText + _tab + (str _outputArray);
+    _outputText = if (_forEachIndex < ((count _objs) - 1)) then {_outputText + ", " + _br} else {_outputText + _br};
 
-	debugLog (format ["Log: objectGrabber: %1", _outputArray]);
+    debugLog (format ["Log: objectGrabber: %1", _outputArray]);
 } forEach _objs;
 
 _outputText = _outputText + "]";

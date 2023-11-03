@@ -2,17 +2,17 @@
 Function: SHZ_fnc_randomString
 
 Description:
-	Generates a random string of the given length.
+    Generates a random string of the given length.
 
 Parameters:
-	Number length:
-		The length of the string.
+    Number length:
+        The length of the string.
 
 Returns:
-	String
+    String
 
 Author:
-	thegamecracks
+    thegamecracks
 
 */
 params ["_length"];

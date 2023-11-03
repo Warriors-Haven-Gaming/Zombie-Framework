@@ -2,22 +2,22 @@
 Function: SHZ_fnc_taskEnd
 
 Description:
-	A simple proxy for BIS_fnc_taskSetState except that after 30 seconds,
-	the task is deleted from all playable units and JIP queue.
-	This function will sleep until the task is deleted so running in
-	scheduled environment is required.
-	See also: https://community.bistudio.com/wiki/BIS_fnc_taskSetState
+    A simple proxy for BIS_fnc_taskSetState except that after 30 seconds,
+    the task is deleted from all playable units and JIP queue.
+    This function will sleep until the task is deleted so running in
+    scheduled environment is required.
+    See also: https://community.bistudio.com/wiki/BIS_fnc_taskSetState
 
 Returns:
-	String
+    String
 
 Examples:
-	(begin example)
-		["myTaskID", "SUCCEEDED", true] spawn SHZ_fnc_taskEnd;
-	(end)
+    (begin example)
+        ["myTaskID", "SUCCEEDED", true] spawn SHZ_fnc_taskEnd;
+    (end)
 
 Author:
-	thegamecracks
+    thegamecracks
 
 */
 params ["_taskID"];

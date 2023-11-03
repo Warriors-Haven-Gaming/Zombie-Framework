@@ -2,19 +2,19 @@
 Function: SHZ_fnc_zombieInit
 
 Description:
-	Initializes a spawned zombie.
+    Initializes a spawned zombie.
 
 Parameters:
-	Object _unit:
-		The zombie that was spawned.
+    Object _unit:
+        The zombie that was spawned.
 
 Examples:
-	(begin example)
-		[_unit] remoteExec ["SHZ_fnc_zombieInit", 0];
-	(end)
+    (begin example)
+        [_unit] remoteExec ["SHZ_fnc_zombieInit", 0];
+    (end)
 
 Author:
-	thegamecracks
+    thegamecracks
 
 */
 params ["_unit"];

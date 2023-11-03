@@ -34,7 +34,7 @@ with [GitHub Flow] to contribute instead.
 
 ## SQF/CPP Style Guide
 
-- All indentation should use tabs
+- All indentation should use 4 spaces
 - Lines should not contain any trailing whitespace
 - Lines should avoid exceeding 80 characters unless its readability would
   be worsened by line breaks

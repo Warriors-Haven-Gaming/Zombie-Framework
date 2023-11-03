@@ -1,41 +1,41 @@
 class CfgFunctions {
-	class SHZ {
-		class Helpers {
-			class displayTimer {};
-			class objectsGrabber {};
-			class objectsMapper {};
-			class randomPos {};
-			class randomString {};
-		};
-		class Missions {
-			class msnClearZombies {};
-			class msnDownloadIntel {};
-			class msnDownloadIntelLaptop {};
-			class msnDownloadIntelLaptopTimer {};
-			class msnDownloadIntelLaptopTimerCondition {};
-		};
-		class Tasks {
-			class randomTaskID {};
-			class taskCreate {};
-			class taskEnd {};
-		};
-		class Zombies {
-			class hordeSpawn {};
-			class hordeSpawnLoop {};
-			class hordeType {};
-			class hordeTypeList {};
-			class zombieInit {};
-		};
-	};
+    class SHZ {
+        class Helpers {
+            class displayTimer {};
+            class objectsGrabber {};
+            class objectsMapper {};
+            class randomPos {};
+            class randomString {};
+        };
+        class Missions {
+            class msnClearZombies {};
+            class msnDownloadIntel {};
+            class msnDownloadIntelLaptop {};
+            class msnDownloadIntelLaptopTimer {};
+            class msnDownloadIntelLaptopTimerCondition {};
+        };
+        class Tasks {
+            class randomTaskID {};
+            class taskCreate {};
+            class taskEnd {};
+        };
+        class Zombies {
+            class hordeSpawn {};
+            class hordeSpawnLoop {};
+            class hordeType {};
+            class hordeTypeList {};
+            class zombieInit {};
+        };
+    };
 };
 
 class CfgTaskDescriptions {
-	class clearZombies {
-		title       = "Clear Area";
-		description = "This area has been infested with zombies. Clear them out!";
-	};
-	class downloadIntel {
-		title       = "Secure Intel";
-		description = "A military research building has been found containing intel. Secure it!";
-	};
+    class clearZombies {
+        title       = "Clear Area";
+        description = "This area has been infested with zombies. Clear them out!";
+    };
+    class downloadIntel {
+        title       = "Secure Intel";
+        description = "A military research building has been found containing intel. Secure it!";
+    };
 };
