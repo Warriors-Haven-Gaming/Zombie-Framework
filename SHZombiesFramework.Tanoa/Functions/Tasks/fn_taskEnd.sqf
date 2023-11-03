@@ -6,6 +6,7 @@ Description:
 	the task is deleted from all playable units and JIP queue.
 	This function will sleep until the task is deleted so running in
 	scheduled environment is required.
+	See also: https://community.bistudio.com/wiki/BIS_fnc_taskSetState
 
 Returns:
 	String
