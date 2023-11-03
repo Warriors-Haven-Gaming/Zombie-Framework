@@ -17,9 +17,8 @@ from the [Eden Editor] in real-time (see also [Link Shell Extension]).
 Once set up, you can follow the [GitHub Flow] to make a new branch, commit your changes,
 and start a pull request on this repository for the owner to review and merge.
 
-Contributors making changes that don't affect gameplay, such as documentation,
-can skip cloning this repository and instead use the [web-based editor]
-with [GitHub Flow] to contribute instead.
+Changes that don't affect gameplay such as documentation can be
+done and submitted more simply by using the [web-based editor].
 
 [fork this repository]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
 [Directory Junction]: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
