@@ -1,0 +1,1 @@
+call SHZ_fnc_musicStartPlaylist;

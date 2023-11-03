@@ -14,6 +14,9 @@ class CfgFunctions {
             class msnDownloadIntelLaptopTimer {};
             class msnDownloadIntelLaptopTimerCondition {};
         };
+        class Music {
+            class musicStartPlaylist {};
+        };
         class Tasks {
             class randomTaskID {};
             class taskCreate {};
