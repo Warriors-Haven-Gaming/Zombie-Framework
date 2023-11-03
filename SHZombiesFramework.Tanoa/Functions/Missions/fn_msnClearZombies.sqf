@@ -29,8 +29,7 @@ if (_center isEqualTo []) then {
 };
 if (_center isEqualTo []) exitWith {};
 
-private _taskID = call SHZ_fnc_randomTaskID;
-[blufor, _taskID, "clearZombies", _center, "CREATED", -1, true, "kill"] call BIS_fnc_taskCreate;
+private _taskID = [blufor, "", "clearZombies", _center, "CREATED", -1, true, "kill"] call SHZ_fnc_taskCreate;
 
 private _activationArea = [_center, 100, 100, 0, false, 20];
 private _spawnerScript = [

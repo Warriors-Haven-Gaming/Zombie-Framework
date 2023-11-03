@@ -7,6 +7,7 @@ Description:
 	multiple calls are made to this function without a task being
 	created for each one. As such, running this in unscheduled environment
 	alongside the task creation would be preferable.
+	See also: SHZ_fnc_taskCreate
 
 Returns:
 	String

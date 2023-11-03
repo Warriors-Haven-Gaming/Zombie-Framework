@@ -50,8 +50,7 @@ private _intelBuilding = [
 ] call SHZ_fnc_objectsMapper;
 private _laptop = _intelBuilding # 7;
 
-private _taskID = call SHZ_fnc_randomTaskID;
-[blufor, _taskID, "downloadIntel", [_laptop,true], "CREATED", -1, true, "documents"] call BIS_fnc_taskCreate;
+private _taskID = [blufor, "", "downloadIntel", [_laptop,true], "CREATED", -1, true, "documents"] call SHZ_fnc_taskCreate;
 
 private _spawnerScript = [
 	blufor,
