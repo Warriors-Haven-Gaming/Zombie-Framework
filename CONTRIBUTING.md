@@ -35,7 +35,8 @@ with [GitHub Flow] to contribute instead.
 ## SQF/CPP Style Guide
 
 - All indentation should use 4 spaces
-- Lines should not contain any trailing whitespace
+- Lines should not contain any trailing whitespace except a newline
+- All files should end with a single trailing newline
 - Lines should avoid exceeding 80 characters unless its readability would
   be worsened by line breaks
 - SQF functions should be documented ([example](/SHZombiesFramework.Tanoa/Functions/Zombies/fn_hordeSpawn.sqf))
