@@ -43,8 +43,6 @@ private _spawnerScript = [
     15
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
-[20, "mixed", SHZ_zombieSide, _center, 75, 1] spawn SHZ_fnc_hordeSpawnLoitering;
-
 while {true} do {
     sleep 10;
     if (scriptDone _spawnerScript && {count (units SHZ_zombieSide inAreaArray _activationArea) < 10}) exitWith {
