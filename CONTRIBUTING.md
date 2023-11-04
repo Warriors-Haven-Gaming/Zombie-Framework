@@ -14,8 +14,9 @@ Mission contributors are recommended to [fork this repository], clone it locally
 then create a [Directory Junction] inside your `<Arma 3 profile>/mpmissions/` folder
 pointing to `SHZombiesFramework.Tanoa/` so your script edits can be previewed
 from the [Eden Editor] in real-time (see also [Link Shell Extension]).
-Once set up, you can follow the [GitHub Flow] to make a new branch, commit your changes,
-and start a pull request on this repository for the owner to review and merge.
+Once set up, you can follow the [GitHub Flow] to make new branches for each
+feature, commit your changes, and start pull requests on this repository
+to be reviewed and merged.
 
 Changes that don't affect gameplay such as documentation can be
 done and submitted more simply by using the [web-based editor].
