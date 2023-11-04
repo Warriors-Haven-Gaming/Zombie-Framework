@@ -18,6 +18,7 @@ class CfgFunctions {
         };
         class Loadouts {
             class getRespawnLoadout {};
+            class setPlayableAILoadouts {};
         };
         class Missions {
             class msnClearZombies {};
