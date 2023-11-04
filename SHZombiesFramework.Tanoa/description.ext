@@ -2,6 +2,7 @@
 class CfgFunctions {
     class SHZ {
         class Helpers {
+            class anyInArea {};
             class displayTimer {};
             class objectsGrabber {};
             class objectsMapper {};

@@ -65,7 +65,7 @@ private _units = [];
 private _isActivated = {
     /* Checks if units from any of the given sides are in the area. */
     private _sideUnits = flatten (_sides apply {units _x});
-    _sideUnits findIf {_x inArea _areaArgs} isNotEqualTo -1
+    [_sideUnits, _areaArgs] call SHZ_fnc_anyInArea
 };
 private _getAliveCount = {
     /* Returns the number of units that are alive.
