@@ -1540,7 +1540,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=2;
+									value=1;
 								};
 							};
 						};
