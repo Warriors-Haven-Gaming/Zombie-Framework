@@ -29,6 +29,7 @@ class CfgFunctions {
             class taskEnd {};
         };
         class Zombies {
+            class ambientHordeLoop {};
             class hordeSpawn {};
             class hordeSpawnLoitering {};
             class hordeSpawnLoop {};
