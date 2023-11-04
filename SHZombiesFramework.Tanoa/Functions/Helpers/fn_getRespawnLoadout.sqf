@@ -2,7 +2,11 @@
 Function: SHZ_fnc_getRespawnLoadout
 
 Description:
-    Returns the loadout for the player to respawn with.
+    Returns the loadout for the given unit to respawn with.
+
+Parameters:
+	Object unit:
+		The unit to retrieve the loadout for.
 
 Returns:
     Array
@@ -11,14 +15,15 @@ Returns:
 
 Examples:
     (begin example)
-        call SHZ_fnc_getRespawnLoadout;
+        [player] call SHZ_fnc_getRespawnLoadout;
     (end)
 
 Author:
     thegamecracks
 
 */
-if (side player isEqualTo blufor) exitWith {
+params ["_unit"];
+if (side _unit isEqualTo blufor) exitWith {
 	selectRandom [
 		[["rhs_weap_m4_carryhandle_m203","","acc_flashlight","rhsusf_acc_ACOG2_USMC",["rhs_mag_30Rnd_556x45_M855_Stanag",30],["rhs_mag_M433_HEDP",1],""],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],["rhs_uniform_FROG01_wd",[["FirstAidKit",1],["rhsusf_ANPVS_14",1],["rhsusf_mag_17Rnd_9x19_JHP",2,17]]],["rhsusf_spc_teamleader",[["rhs_mag_30Rnd_556x45_M855_Stanag",8,30],["rhs_mag_M433_HEDP",5,1],["rhs_mag_m67",2,1],["rhs_mag_m18_yellow",1,1],["rhs_mag_m18_purple",1,1],["rhsusf_mag_17Rnd_9x19_JHP",3,17]]],["rhsusf_falconii_coy_gr",[["rhs_mag_M433_HEDP",10,1],["rhs_mag_M583A1_white",5,1]]],"rhsusf_lwh_helmet_marpatwd_ess","rhs_googles_clear",["Binocular","","","",[],[],""],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]],
 		[["rhs_weap_m27iar_grip","","acc_flashlight","rhsusf_acc_ACOG2_USMC",["rhs_mag_30Rnd_556x45_M855_Stanag",30],[],"rhsusf_acc_harris_bipod"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],["rhs_uniform_FROG01_wd",[["FirstAidKit",1],["rhsusf_ANPVS_14",1],["rhsusf_mag_17Rnd_9x19_JHP",2,17]]],["rhsusf_spc_iar",[["rhs_mag_30Rnd_556x45_M855_Stanag",12,30],["rhs_mag_m67",2,1],["rhsusf_mag_17Rnd_9x19_JHP",5,17]]],["rhsusf_assault_eagleaiii_coy_m27",[["rhs_mag_30Rnd_556x45_M855_Stanag",10,30]]],"rhsusf_lwh_helmet_marpatwd_ess","rhs_googles_clear",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]],
