@@ -16,7 +16,7 @@ params ["_laptop"];
 _laptop addAction [
     "Download Intel",
     {
-        params ["_target", "_caller", "_actionId", ""];
+        params ["_target", "_caller"];
         _target setVariable ["downloadStarted", true, true];
         _caller sideChat "Intel is being downloaded...";
         [_target] remoteExec ["SHZ_fnc_msnDownloadIntelLaptopTimer"];
