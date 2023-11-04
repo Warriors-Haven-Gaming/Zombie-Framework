@@ -64,7 +64,7 @@ done and submitted more simply by using the [web-based editor].
       _x + _y > _z
   };
 
-  // Good: no semi-colon on both sides of the closing curly brace
+  // Good: no semi-colon in front of closing curly brace
   if (some_condition) then {doThis; doThat};
 
   private _myCode = {
