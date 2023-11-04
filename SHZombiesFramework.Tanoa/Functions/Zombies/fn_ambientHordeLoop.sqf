@@ -13,7 +13,9 @@ while {true} do {
     sleep (2 + random 3);
     {
         sleep random 0.5;
-        if (random 1 >= 0.5) then {continue};
+        private _vel = velocity _x;
+        private _speed = vectorMagnitude _vel;
+        if (random 1 >= _speed / 28 max 0.1) then {continue};
         if (getPos _x select 2 > 10) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
@@ -21,9 +23,8 @@ while {true} do {
         private _rate = 0.2 + random 0.3;
 
         // For moving players, try to spawn hordes in front so they can see them.
-        private _vel = velocity _x vectorMultiply [8, 8, 0];
         private _spawnPos = getPosATL _x;
-        _spawnPos = _spawnPos vectorAdd _vel;
+        _spawnPos = _spawnPos vectorAdd (_vel vectorMultiply [8, 8, 0]);
         _spawnPos set [2, 0];
 
         if (surfaceIsWater _spawnPos) then {continue};
