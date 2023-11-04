@@ -4,10 +4,13 @@ class CfgFunctions {
         class Helpers {
             class anyInArea {};
             class displayTimer {};
+            class inAreaMarkers {};
+            class inAreaSafezone {};
             class objectsGrabber {};
             class objectsMapper {};
             class randomPos {};
             class randomString {};
+            class stringStartsWith {};
             class version {};
         };
         class Missions {

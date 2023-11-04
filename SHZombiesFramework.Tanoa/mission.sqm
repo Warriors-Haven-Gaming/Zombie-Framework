@@ -12,15 +12,15 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=125;
+		nextID=126;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class LayerIndexProvider
 	{
-		nextID=11;
+		nextID=12;
 	};
 	class Camera
 	{
@@ -496,7 +496,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			dataType="Group";
@@ -2166,6 +2166,35 @@ class Mission
 			};
 			id=122;
 			type="EmptyDetector";
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={6979.7202,2.6600001,7378.3799};
+			name="SHZ_safezone_1";
+			markerType="ELLIPSE";
+			type="";
+			alpha=0.30000001;
+			a=500;
+			b=500;
+			id=125;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="        if (!isServer || is3DEN || !_value) exitWith {};        _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
