@@ -5,9 +5,11 @@ Description:
     Displays a countdown timer and returns once complete.
 
 Parameters:
-    Number duration:
+    Array | Number duration:
         The amount of time to count down in seconds.
         If fractional, the duration will be rounded down.
+        An array can be passed to specify the time that has already elapsed
+        alongside the duration.
     String message:
         (Optional, default "$STR_SHZ_defaultTimer")
         The message to show to the user, which can be a Structured Text template.
@@ -33,8 +35,12 @@ Examples:
         [60] call SHZ_fnc_displayTimer;
     (end)
     (begin example)
-        _area = [getPos player,50,50,0,false];
-        [60, "$STR_SHZ_defaultTimer", _area, [_area,{player inArea _this}]] call SHZ_fnc_displayTimer;
+    _area = [getPos player,50,50,0,false];
+    [60, "$STR_SHZ_defaultTimer", _area, [_area,{player inArea _this}]] call SHZ_fnc_displayTimer;
+    (end)
+    (begin example)
+        // Start the timer with 30 seconds already elapsed
+        [[30, 60]] call SHZ_fnc_displayTimer;
     (end)
 
 Author:
@@ -42,6 +48,12 @@ Author:
 
 */
 params ["_duration", ["_message","$STR_SHZ_defaultTimer"], ["_area", []], ["_condition", [0, {true}]]];
+
+private _start = 0;
+if (_duration isEqualType []) then {
+    _start = floor (_duration # 0);
+    _duration = _duration # 1;
+};
 
 _duration = floor _duration;
 if (_duration <= 0) exitWith {true};
@@ -56,7 +68,7 @@ private _showHint = {
     hintSilent formatText [_message, _i, _duration, _duration - _i];
 };
 
-private _hasElapsed = for "_i" from 0 to _duration - 1 do {
+private _hasElapsed = for "_i" from _start to _duration - 1 do {
     if !(_conditionArgs call _conditionCode) exitWith {false};
     [_i] call _showHint;
     sleep 1;
