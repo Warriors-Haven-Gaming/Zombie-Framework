@@ -3,13 +3,13 @@ Function: SHZ_fnc_anyInArea
 
 Description:
     Functions similarly to inAreaArray except that this function
-	returns a boolean if any of the given positions are in the area.
-	This takes advantage of short-circuiting so it will perform better
-	when any position that matches is at the start of the array.
-	See also: https://community.bistudio.com/wiki/inAreaArray
+    returns a boolean if any of the given positions are in the area.
+    This takes advantage of short-circuiting so it will perform better
+    when any position that matches is at the start of the array.
+    See also: https://community.bistudio.com/wiki/inAreaArray
 
 Returns:
-	Boolean
+    Boolean
 
 Author:
     thegamecracks
