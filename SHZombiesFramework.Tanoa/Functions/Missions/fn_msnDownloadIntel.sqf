@@ -63,7 +63,7 @@ private _spawnerScript = [
     15
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
-if (random 1 < 0.5 && {count units SHZ_zombieSide < 100}) then {
+if (random 1 < 0.5 && {count units SHZ_zombieSide < SHZ_loiteringHordeThreshold}) then {
     [20, "mixed", SHZ_zombieSide, _intelCenter, 75, 1] spawn SHZ_fnc_hordeSpawn;
 };
 
