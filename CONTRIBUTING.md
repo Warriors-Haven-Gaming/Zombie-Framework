@@ -40,3 +40,35 @@ done and submitted more simply by using the [web-based editor].
 - Lines should avoid exceeding 80 characters unless its readability would
   be worsened by line breaks
 - SQF functions should be documented ([example](/SHZombiesFramework.Tanoa/Functions/Zombies/fn_hordeSpawn.sqf))
+- Strings should use double quotes
+- Open curly braces should be on the same line as the defining construct:
+
+  ```cpp
+  // Good:
+  class CfgFunctions {
+      class SHZ {
+          class Helpers {
+              ...
+          };
+      };
+  };
+  ```
+
+- Statements used to return values in SQF Code types or the last statement
+  in a one-line Code type should not have a trailing semi-colon:
+
+  ```sqf
+  private _myCode = {
+      params ["_x", "_y", "_z"];
+      // Good:
+      _x + _y > _z
+  };
+
+  // Good: no semi-colon on both sides of the closing curly brace
+  if (some_condition) then {doThis; doThat};
+
+  private _myCode = {
+      // Good: lines that don't have a useful return type can end with a semi-colon
+      [1, 2] call SHZ_fnc_returnTypeIsNotImportant;
+  };
+  ```
