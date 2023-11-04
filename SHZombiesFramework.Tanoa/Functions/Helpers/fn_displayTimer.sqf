@@ -50,16 +50,17 @@ _condition params ["_conditionArgs", "_conditionCode"];
 if (_conditionCode isEqualType "") then {_conditionCode = missionNamespace getVariable _conditionCode};
 
 private _playerInArea = {_area isEqualTo [] || {player inArea _area}};
+private _showHint = {
+    if (isDedicated || {!call _playerInArea}) exitWith {};
+    params ["_i"];
+    hintSilent formatText [_message, _i, _duration, _duration - _i];
+};
 
 private _hasElapsed = for "_i" from 0 to _duration - 1 do {
     if !(_conditionArgs call _conditionCode) exitWith {false};
-    if (!isDedicated && {call _playerInArea}) then {
-        hintSilent formatText [_message, _i, _duration, _duration - _i];
-    };
+    [_i] call _showHint;
     sleep 1;
     true
 };
-if (_hasElapsed && {!isDedicated && {call _playerInArea}}) then {
-    hintSilent formatText [_message, _duration, _duration, 0];
-};
+if (_hasElapsed) then {[_duration] call _showHint};
 _hasElapsed
