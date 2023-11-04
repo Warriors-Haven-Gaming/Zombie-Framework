@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=13;
 	};
 	class Camera
 	{
-		pos[]={6913.8745,14.622407,7361.5938};
-		dir[]={-0.12824717,-0.38569361,0.91367012};
-		up[]={-0.053612258,0.92262691,0.38194931};
-		aside[]={0.99029207,3.7252903e-009,0.1390022};
+		pos[]={6919.5469,9.3408766,7403.9688};
+		dir[]={-0.11527466,-0.48774439,0.86534333};
+		up[]={-0.064404845,0.87298572,0.48347384};
+		aside[]={0.99124467,6.1700121e-009,0.13204615};
 	};
 };
 binarizationWanted=0;
@@ -675,6 +675,23 @@ class Mission
 					};
 					id=9;
 					type="rhsusf_usmc_marpat_wd_teamleader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -795,6 +812,23 @@ class Mission
 					};
 					id=10;
 					type="rhsusf_usmc_marpat_wd_autorifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
@@ -905,6 +939,23 @@ class Mission
 					};
 					id=11;
 					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
@@ -1023,6 +1074,23 @@ class Mission
 					};
 					id=12;
 					type="rhsusf_usmc_marpat_wd_riflemanat";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
