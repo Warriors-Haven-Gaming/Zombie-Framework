@@ -7,6 +7,7 @@ class CfgFunctions {
         class Helpers {
             class anyInArea {};
             class displayTimer {};
+            class getRespawnLoadout {};
             class inAreaMarkers {};
             class inAreaSafezone {};
             class objectsGrabber {};
