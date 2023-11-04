@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=11;
 	};
 	class Camera
 	{
-		pos[]={6944.3433,15.407605,7400.084};
-		dir[]={-0.93816465,-0.32537174,0.11823929};
-		up[]={-0.32281801,0.94558614,0.040685583};
-		aside[]={0.12504338,-3.7252903e-009,0.99215132};
+		pos[]={6934.5396,15.407605,7397.9731};
+		dir[]={-0.12824717,-0.38569361,0.91367012};
+		up[]={-0.053612258,0.92262691,0.38194931};
+		aside[]={0.99029207,3.7252903e-009,0.1390022};
 	};
 };
 binarizationWanted=0;
@@ -110,7 +110,7 @@ dlcs[]=
 randomSeed=4942559;
 class ScenarioData
 {
-	author="thegamecracks";
+	author="Warriors Haven Gaming";
 	briefing=0;
 	respawn=3;
 	respawnDelay=5;
@@ -430,6 +430,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="Zombie Framework";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.69908476;
