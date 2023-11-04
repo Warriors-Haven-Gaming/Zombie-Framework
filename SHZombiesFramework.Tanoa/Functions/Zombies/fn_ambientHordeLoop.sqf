@@ -28,7 +28,7 @@ while {true} do {
 
 		if (surfaceIsWater _spawnPos) then {continue};
 
-		[_quantity, "mixed", SHZ_zombieSide, _spawnPos, [20, 50], _rate] spawn SHZ_fnc_hordeSpawn;
+		[_quantity, "mixed", SHZ_zombieSide, _spawnPos, [20, 50], _rate] spawn SHZ_fnc_hordeSpawnLoitering;
 		// TODO: handle automatic zombie deletion
 	} forEach units blufor;
 };
