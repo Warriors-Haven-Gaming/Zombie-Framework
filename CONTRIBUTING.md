@@ -31,6 +31,7 @@ done and submitted more simply by using the [web-based editor].
 ## Resources
 
 - Community Wiki: https://community.bistudio.com/wiki/Main_Page
+- SQF Best Practices: https://community.bistudio.com/wiki/Code_Best_Practices
 
 ## SQF/CPP Style Guide
 
