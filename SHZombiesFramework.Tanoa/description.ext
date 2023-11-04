@@ -1,3 +1,4 @@
+// https://community.bistudio.com/wiki/Arma_3:_Functions_Library
 class CfgFunctions {
     class SHZ {
         class Helpers {
@@ -33,6 +34,7 @@ class CfgFunctions {
     };
 };
 
+// https://community.bistudio.com/wiki/Description.ext#Tasks
 class CfgTaskDescriptions {
     class clearZombies {
         title       = "Clear Area";
