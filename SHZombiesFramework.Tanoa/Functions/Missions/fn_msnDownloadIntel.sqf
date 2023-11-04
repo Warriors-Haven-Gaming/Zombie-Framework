@@ -56,7 +56,7 @@ private _spawnerScript = [
     blufor,
     [_intelCenter, 200, 200, 0, false, 20],
     40 + count allPlayers * 2,
-    300,
+    60 + floor (count allPlayers * 5.2),
     [10 + floor (count allPlayers / 2), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5],
     [20, 100],
     5,
