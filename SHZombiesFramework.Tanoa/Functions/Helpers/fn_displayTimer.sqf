@@ -24,6 +24,8 @@ Parameters:
     Array condition:
         (Optional, default [0, {true}])
         An array containing the arguments and function name or code to run every second.
+        When the callback is ran, it will be passed an array containing the
+        time elapsed, duration, and the user-supplied arguments.
         If the condition returns false, the timer will stop and return false.
 
 Returns:
@@ -69,7 +71,7 @@ private _showHint = {
 };
 
 private _hasElapsed = for "_i" from _start to _duration - 1 do {
-    if !(_conditionArgs call _conditionCode) exitWith {false};
+    if !([_i, _duration, _conditionArgs] call _conditionCode) exitWith {false};
     [_i] call _showHint;
     sleep 1;
     true
