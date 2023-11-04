@@ -1,3 +1,3 @@
 call SHZ_fnc_musicStartPlaylist;
 
-systemChat format ["Local initialization done, running version %1", call SHZ_fnc_version];
+systemChat format ["Finished initialization (%1 v%2)", briefingName, call SHZ_fnc_version];
