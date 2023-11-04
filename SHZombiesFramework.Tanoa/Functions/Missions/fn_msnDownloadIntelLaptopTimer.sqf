@@ -14,9 +14,10 @@ Author:
 */
 params ["_laptop"];
 
+private _duration = _laptop getVariable ["downloadProgress", [0, 60]];
 private _area = [getPosATL _laptop, 100, 100, 0, false];
-private _condition = [[getPosATL _laptop], "SHZ_fnc_msnDownloadIntelLaptopTimerCondition"];
-private _hasElapsed = [60, "$STR_SHZ_defaultTimer", _area, _condition] call SHZ_fnc_displayTimer;
+private _condition = [[_laptop], "SHZ_fnc_msnDownloadIntelLaptopTimerCondition"];
+private _hasElapsed = [_duration, "$STR_SHZ_defaultTimer", _area, _condition] call SHZ_fnc_displayTimer;
 if (!_hasElapsed && {player inArea _area}) exitWith {
     [blufor, "HQ"] sideChat "Someone needs to stay near the intel laptop!";
     _laptop setVariable ["downloadStarted", false];

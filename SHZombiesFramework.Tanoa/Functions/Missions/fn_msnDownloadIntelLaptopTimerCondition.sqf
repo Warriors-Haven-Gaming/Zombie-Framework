@@ -5,13 +5,16 @@ Description:
     The laptop condition required to maintain download.
 
 Parameters:
-    Position2D laptopPos:
-        The intel laptop's position.
+    Position2D laptop:
+        The intel laptop.
 
 Author:
     thegamecracks
 
 */
-params ["", "", "_args"];
-_args params ["_laptopPos"];
-[units blufor, [_laptopPos, 5, 5, 0, false, 5]] call SHZ_fnc_anyInArea
+params ["_elapsed", "_duration", "_args"];
+_args params ["_laptop"];
+private _area = [getPosATL _laptop, 5, 5, 0, false, 5];
+private _bluforInArea = [units blufor, _area] call SHZ_fnc_anyInArea;
+if (_bluforInArea) then {_laptop setVariable ["downloadProgress", [_elapsed, _duration]]};
+_bluforInArea
