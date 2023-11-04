@@ -54,7 +54,7 @@ private _taskID = [blufor, "", "downloadIntel", [_laptop,true], "CREATED", -1, t
 
 private _spawnerScript = [
     blufor,
-    [_intelCenter, 100, 100, 0, false, 20],
+    [_intelCenter, 200, 200, 0, false, 20],
     40 + count allPlayers * 2,
     300,
     [10 + floor (count allPlayers / 2), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5],
