@@ -45,7 +45,14 @@ private _spawnerScript = [
 
 while {true} do {
     sleep 10;
-    if (scriptDone _spawnerScript && {count (units SHZ_zombieSide inAreaArray _activationArea) < 10}) exitWith {
+    if (
+        scriptDone _spawnerScript
+        && {
+            private _nearBlufor = units blufor inAreaArray _activationArea;
+            private _nearZombies = units SHZ_zombieSide inAreaArray _activationArea;
+            count _nearZombies < 10 + count _nearBlufor * 3
+        }
+    ) exitWith {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
