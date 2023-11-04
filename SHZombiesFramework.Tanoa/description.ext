@@ -6,6 +6,7 @@ class CfgFunctions {
             class objectsMapper {};
             class randomPos {};
             class randomString {};
+            class version {};
         };
         class Missions {
             class msnClearZombies {};
