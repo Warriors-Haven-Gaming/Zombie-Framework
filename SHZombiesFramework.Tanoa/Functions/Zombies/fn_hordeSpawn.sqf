@@ -48,7 +48,7 @@ Returns:
 
 Examples:
     (begin example)
-        [20, "fastCivilians", independent, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawn;
+        [20, "fastCivilians", SHZ_zombieSide, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawn;
     (end)
 
 Author:

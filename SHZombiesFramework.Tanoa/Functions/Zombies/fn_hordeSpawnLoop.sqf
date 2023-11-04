@@ -43,7 +43,7 @@ Examples:
             [_yourPos, 50, 50, 0, false, 20],
             20,
             60,
-            [5, "walkerCivilians", independent, [0,0,0], 7, 0.5],
+            [5, "walkerCivilians", SHZ_zombieSide, [0,0,0], 7, 0.5],
             20,
             5,
             4
