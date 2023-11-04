@@ -7,5 +7,5 @@ SHZ_loiteringHordeThreshold = 200;
 SHZ_gcZombieDistance = 500;
 
 if (!isMultiplayer) then {
-	units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
+    units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
 };
