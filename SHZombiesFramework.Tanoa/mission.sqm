@@ -745,11 +745,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={7124.0581,-1.2810631,6295.9873};
+						position[]={7124.0581,-1.2806797,6295.9868};
 					};
 					id=47;
 					type="RyanZM_ModuleCustomDifficulty";
-					atlOffset=17.675562;
+					atlOffset=17.676003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -787,7 +787,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1.5;
+									value=0.5;
 								};
 							};
 						};
