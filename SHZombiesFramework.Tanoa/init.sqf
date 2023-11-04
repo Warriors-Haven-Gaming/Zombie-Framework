@@ -5,3 +5,7 @@ SHZ_zombieSide = independent;
 SHZ_loiteringHordeThreshold = 200;
 // The max distance from any player before a zombie can be garbage collected
 SHZ_gcZombieDistance = 500;
+
+if (!isMultiplayer) then {
+	units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
+};
