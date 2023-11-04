@@ -5,9 +5,6 @@ Description:
     Randomly spawns zombies around players not in a safezone.
 	Function must be ran in scheduled environment.
 
-Returns:
-    Array
-
 Author:
     thegamecracks
 
