@@ -100,9 +100,12 @@ _group setCombatMode "RED";
 private _taskID = [blufor, "", "clearRaiders", [leader _group, false], "CREATED", -1, true, "rifle"] call SHZ_fnc_taskCreate;
 private _taskDestinationScript = [_taskID, _group] spawn {
     params ["_taskID", "_group"];
+    private _lastLeader = leader _group;
     while {true} do {
         sleep 30;
-        [_taskID, [leader _group, false]] call BIS_fnc_taskSetDestination;
+        private _currentLeader = leader _group;
+        if (_currentLeader isEqualTo _lastLeader) then {continue};
+        [_taskID, [_currentLeader, false]] call BIS_fnc_taskSetDestination;
     };
 };
 
