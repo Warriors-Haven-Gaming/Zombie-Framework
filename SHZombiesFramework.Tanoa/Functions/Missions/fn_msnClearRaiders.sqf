@@ -38,15 +38,6 @@ if (surfaceIsWater _center) exitWith {};
 private _terrainObjects = nearestTerrainObjects [_center, [], 15, false];
 _terrainObjects apply {hideObjectGlobal _x};
 
-// TODO stash building
-/*
-Grab data:
-Mission: SHZombiesFramework
-World: Tanoa
-Anchor position: [7120.8, 7515.33]
-Area size: 65
-Using orientation of objects: no
-*/
 private _raiderCamp = [
     _center,
     random 360,
