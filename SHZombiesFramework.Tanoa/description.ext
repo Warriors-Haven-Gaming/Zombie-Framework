@@ -20,6 +20,9 @@ class CfgFunctions {
             class getRespawnLoadout {};
             class setPlayableAILoadouts {};
         };
+        class Map {
+            class setupFriendlyMapIcons {};
+        };
         class Missions {
             class msnClearRaiders {};
             class msnClearZombies {};
