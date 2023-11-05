@@ -21,6 +21,7 @@ class CfgFunctions {
             class setPlayableAILoadouts {};
         };
         class Missions {
+            class msnClearRaiders {};
             class msnClearZombies {};
             class msnDownloadIntel {};
             class msnDownloadIntelLaptop {};
@@ -49,6 +50,10 @@ class CfgFunctions {
 
 // https://community.bistudio.com/wiki/Description.ext#Tasks
 class CfgTaskDescriptions {
+    class clearRaiders {
+        title       = "Clear Raiders";
+        description = "This area is being guarded by raiders. Take them out!";
+    };
     class clearZombies {
         title       = "Clear Area";
         description = "This area has been infested with zombies. Clear them out!";

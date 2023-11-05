@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=442;
+		nextID=443;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={6922.252,4.6246734,7430.168};
-		dir[]={0.24417026,-0.19971955,-0.94894308};
-		up[]={0.049768247,0.97985303,-0.19341928};
-		aside[]={-0.96845436,-3.7252903e-009,-0.24919066};
+		pos[]={6943.7109,20.093426,7342.6475};
+		dir[]={-0.49647561,-0.58620399,0.64021939};
+		up[]={-0.35922989,0.81016213,0.46323735};
+		aside[]={0.79023325,3.5390258e-008,0.61280805};
 	};
 };
 binarizationWanted=0;
@@ -497,7 +497,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			dataType="Object";
@@ -3747,6 +3747,23 @@ class Mission
 				formation="DIAMOND";
 			};
 			id=397;
+		};
+		class Item11
+		{
+			dataType="Trigger";
+			position[]={6928.9028,2.6600001,7357.708};
+			class Attributes
+			{
+				text="Start Random Clear Raiders";
+				condition="true";
+				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnClearRaiders;" \n "    sleep 1;" \n "  };" \n "};";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={3,3,3};
+				isServerOnly=1;
+			};
+			id=442;
+			type="EmptyDetector";
 		};
 	};
 	class Connections
