@@ -19,7 +19,7 @@ while {true} do {
         if (getPos _x select 2 > 10) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
-        private _quantity = 1 + floor random 5;
+        private _quantity = 1 + floor random (_speed / 3 + 3 max 10);
         private _rate = 0.2 + random 0.3;
 
         // For moving players, try to spawn hordes in front so they can see them.
