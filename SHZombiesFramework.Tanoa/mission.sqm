@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={6921.1157,34.083172,7441.9766};
-		dir[]={0.064468034,-0.85136479,-0.52059764};
-		up[]={0.10462929,0.52457416,-0.84491116};
-		aside[]={-0.99241972,3.7252903e-009,-0.12289596};
+		pos[]={6922.252,4.6246734,7430.168};
+		dir[]={0.24417062,-0.1997202,-0.9489463};
+		up[]={0.049768634,0.9798522,-0.19342126};
+		aside[]={-0.96845758,2.3166649e-008,-0.24919091};
 	};
 };
 binarizationWanted=0;
@@ -434,11 +434,11 @@ class Mission
 		briefingName="Zombie Framework";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
-		startWeather=0.69908476;
+		startWeather=1;
 		startFog=1;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.69908476;
+		forecastWeather=1;
 		forecastFog=1;
 		forecastWind=0.1;
 		forecastWaves=0.1;
@@ -448,8 +448,8 @@ class Mission
 		day=6;
 		hour=15;
 		minute=0;
-		startFogDecay=0.0099999998;
-		forecastFogDecay=0.0099999998;
+		startFogDecay=0;
+		forecastFogDecay=0;
 		class CustomAttributes
 		{
 			name="Intel";
