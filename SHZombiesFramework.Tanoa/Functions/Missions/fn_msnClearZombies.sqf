@@ -50,7 +50,7 @@ while {true} do {
         && {
             private _nearBlufor = units blufor inAreaArray _activationArea;
             private _nearZombies = units SHZ_zombieSide inAreaArray _activationArea;
-            count _nearZombies < 10 + count _nearBlufor * 3
+            count _nearZombies < 10 + count _nearBlufor
         }
     ) exitWith {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
