@@ -29,6 +29,15 @@ while {true} do {
 
         if (surfaceIsWater _spawnPos) then {continue};
 
-        [_quantity, "mixed", SHZ_zombieSide, _spawnPos, [20, 50], _rate] spawn SHZ_fnc_hordeSpawnLoitering;
+        private _minRadius = 50 - _speed * 1.5 max 20;
+        private _maxRadius = 100 - _speed * 3 max 50;
+        [
+            _quantity,
+            "mixed",
+            SHZ_zombieSide,
+            _spawnPos,
+            [_minRadius, _maxRadius],
+            _rate
+        ] spawn SHZ_fnc_hordeSpawnLoitering;
     } forEach units blufor;
 };
