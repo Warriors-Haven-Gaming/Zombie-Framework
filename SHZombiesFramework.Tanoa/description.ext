@@ -46,6 +46,7 @@ class CfgFunctions {
             class hordeSpawnLoop {};
             class hordeType {};
             class hordeTypeList {};
+            class loiterThresholdLoop {};
             class zombieInit {};
         };
     };
