@@ -88,4 +88,5 @@ private _roads = _center nearRoads _radius;
         _wrecks pushBack _obj;
     };
 } forEach _roads;
+diag_log text format ["%1 car wrecks spawned", count _wrecks];
 _wrecks
