@@ -44,7 +44,7 @@ private _roads = _center nearRoads _radius;
 {
     getRoadInfo _x params ["_mapType", "_width", "_isPedestrian", "", "", "", "_begPos", "_endPos"];
     if (_isPedestrian) then {continue};
-    if !(_mapType in ["ROAD", "MAIN ROAD"]) then {continue};
+    if !(_mapType in ["ROAD", "MAIN ROAD", "TRACK"]) then {continue};
 
     _width = _width max 8;
 
