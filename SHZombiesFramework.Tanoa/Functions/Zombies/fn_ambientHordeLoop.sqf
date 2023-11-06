@@ -31,6 +31,10 @@ while {true} do {
             };
         };
 
+        if (_x isFlashlightOn currentWeapon _x) then {
+            _chance = _chance + linearConversion [200, 3, getLighting # 1, 0, 0.2, true];
+        };
+
         _chance = _chance max 0.1;
         if (random 1 >= _chance) then {continue};
         if (getPos _x select 2 > 10) then {continue};
