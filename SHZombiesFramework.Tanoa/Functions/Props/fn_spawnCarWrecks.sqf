@@ -84,6 +84,7 @@ private _roads = _center nearRoads _radius;
 
         private _obj = createSimpleObject [selectRandom _wreckTypes, _objPos];
         _obj setDir _objDir;
+        _obj setVectorUp surfaceNormal _objPos;
         _wrecks pushBack _obj;
     };
 } forEach _roads;
