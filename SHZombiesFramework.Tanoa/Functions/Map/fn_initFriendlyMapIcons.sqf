@@ -1,5 +1,5 @@
 /*
-Function: SHZ_fnc_setupFriendlyMapIcons
+Function: SHZ_fnc_initFriendlyMapIcons
 
 Description:
     Sets up the custom friendly map icons.
