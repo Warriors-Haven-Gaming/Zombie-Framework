@@ -21,7 +21,7 @@ Author:
 params ["_center", "_radius"];
 
 private _baseDensity = 50;
-private _townMaxDistance = 400;
+private _townMaxDistance = 1000;
 private _townDensityFactor = 5;
 private _rightHandDrive = true;
 private _wreckTypes = [
