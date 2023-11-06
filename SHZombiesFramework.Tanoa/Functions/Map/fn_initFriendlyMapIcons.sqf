@@ -32,7 +32,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     // Draw unit icons
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
-        private _side = getNumber (_config >> "side") call BIS_fnc_sideType;
+        private _side = side _x;
         private _textScale = 0.03;
         private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {
             _textScale = 0.06;
@@ -72,7 +72,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     // Draw vehicle icons
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
-        private _side = getNumber (_config >> "side") call BIS_fnc_sideType;
+        private _side = side effectiveCommander _x;
         private _pos = getPosWorldVisual _x;
         private _text = if (_mapScale > _textMinMapScale) then {
             groupId group effectiveCommander _x
