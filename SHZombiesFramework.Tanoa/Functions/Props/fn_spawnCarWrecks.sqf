@@ -53,7 +53,11 @@ private _roads = _center nearRoads _radius;
     private _length = vectorMagnitude _lengthVector;
 
     private _density = _baseDensity;
-    private _town = nearestLocation [_begPos, ["NameVillage", "NameCity"], _townMaxDistance];
+    private _town = nearestLocation [
+        _begPos,
+        ["Airport", "NameVillage", "NameCity", "NameCityCapital"],
+        _townMaxDistance
+    ];
     if (!isNull _town) then {
         private _distance = _begPos distance2D locationPosition _town;
         private _factor = linearConversion [0, _townMaxDistance, _distance, _townDensityFactor, 1, true];
