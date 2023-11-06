@@ -15,7 +15,7 @@
     _this select 2: grab object orientation? (Boolean) [default: false]
 
     Example:
-    [AGLToASL getPos player,10] call SHZ_fnc_objectsGrabber;
+    [AGLToASL getPosATL player,10] call SHZ_fnc_objectsGrabber;
 
     Returns:
     Output text (String)
