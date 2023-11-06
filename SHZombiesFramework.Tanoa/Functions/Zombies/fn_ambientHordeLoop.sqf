@@ -13,9 +13,26 @@ while {true} do {
     sleep (2 + random 3);
     {
         sleep random 0.5;
+        private _chance = 0;
+
         private _vel = velocity _x;
         private _speed = vectorMagnitude _vel;
-        if (random 1 >= _speed / 28 max 0.1) then {continue};
+        _chance = _chance + _speed / 28;
+
+        // This would make more sense if it checked every nearby vehicle,
+        // but it might be a bit too performance-heavy to run
+        private _vehicle = objectParent _x;
+        if (!isNull _vehicle) then {
+            if (isEngineOn _vehicle) then {
+                _chance = _chance + 0.2;
+            };
+            if (isLightOn _vehicle) then {
+                _chance = _chance + linearConversion [200, 3, getLighting # 1, 0, 0.2, true];
+            };
+        };
+
+        _chance = _chance max 0.1;
+        if (random 1 >= _chance) then {continue};
         if (getPos _x select 2 > 10) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
