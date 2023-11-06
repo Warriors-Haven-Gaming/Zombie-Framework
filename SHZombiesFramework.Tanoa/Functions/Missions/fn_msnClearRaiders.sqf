@@ -1,5 +1,5 @@
 /*
-Function: SHZ_fnc_msnClearZombies
+Function: SHZ_fnc_msnClearRaiders
 
 Description:
     Players must clear out raiders from an area.
