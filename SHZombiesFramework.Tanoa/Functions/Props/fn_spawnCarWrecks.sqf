@@ -20,7 +20,9 @@ Author:
 */
 params ["_center", "_radius"];
 
-private _density = 50;
+private _baseDensity = 50;
+private _townMaxDistance = 400;
+private _townDensityFactor = 5;
 private _rightHandDrive = true;
 private _wreckTypes = [
     "Land_Wreck_Car_F",
@@ -43,10 +45,20 @@ private _roads = _center nearRoads _radius;
     getRoadInfo _x params ["_mapType", "_width", "_isPedestrian", "", "", "", "_begPos", "_endPos"];
     if (_isPedestrian) then {continue};
     if !(_mapType in ["ROAD", "MAIN ROAD"]) then {continue};
+
     _width = _width max 8;
+
     private _lengthVector = _endPos vectorDiff _begPos;
     private _lengthDir = acos (_lengthVector vectorCos [0, 1, 0]);
     private _length = vectorMagnitude _lengthVector;
+
+    private _density = _baseDensity;
+    private _town = nearestLocation [_begPos, ["NameVillage", "NameCity"], _townMaxDistance];
+    if (!isNull _town) then {
+        private _distance = _begPos distance2D locationPosition _town;
+        private _factor = linearConversion [0, _townMaxDistance, _distance, _townDensityFactor, 1, true];
+        _density = _density / _factor;
+    };
 
     for "_i" from 1 to random (_length / _density + 1) do {
         // NOTE: this could generate two vehicles beside each other,
