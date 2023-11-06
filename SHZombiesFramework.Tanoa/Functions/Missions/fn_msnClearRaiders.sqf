@@ -23,7 +23,7 @@ if (_center isEqualTo []) then {
         ["NameVillage", "NameCity"],
         sqrt 2 / 2 * worldSize
     ];
-    private _pos = [];
+    private _pos = [0,0];
     private _randomPosArgs = [[[locationPosition _location, size _location + [0, false]]]];
     for "_i" from 1 to 30 do {
         _pos = _randomPosArgs call BIS_fnc_randomPos;
