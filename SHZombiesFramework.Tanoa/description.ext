@@ -34,6 +34,9 @@ class CfgFunctions {
         class Music {
             class musicStartPlaylist {};
         };
+        class Props {
+            class spawnCarWrecks {};
+        };
         class Tasks {
             class randomTaskID {};
             class taskCreate {};
