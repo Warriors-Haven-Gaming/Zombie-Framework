@@ -38,7 +38,7 @@ private _intelBuilding = [
     _intelCenter,
     _intelDir,
     [
-        ["Land_Research_house_V1_F",[0.899902,-1.85547,-0.00143886],0,1,0,[],"","",false,true],
+        ["Land_Research_house_V1_F",[0.899902,-1.85547,-0.00143886],0,1,0,[],"","",true,true],
         ["MapBoard_Tanoa_F",[0.391602,-0.604004,0.591373],172.602,1,0,[],"","",false,true],
         ["Land_PortableDesk_01_olive_F",[-0.393555,0.613281,0.727409],0,1,0,[],"","",false,true],
         ["Land_OfficeChair_01_F",[-0.799805,1.44043,0.727409],300,1,0,[],"","",false,true],
