@@ -17,10 +17,7 @@ Author:
 if (!isServer) exitWith {};
 
 {
-    private _loadout = [];
     if (isPlayer _x) then {continue};
-    if (side _x isEqualTo blufor) then {
-        _loadout = [_x] call SHZ_fnc_getRespawnLoadout;
-    };
+    private _loadout = [_x] call SHZ_fnc_getRespawnLoadout;
     if (_loadout isNotEqualTo []) then {_x setUnitLoadout _loadout};
 } forEach playableUnits + switchableUnits;
