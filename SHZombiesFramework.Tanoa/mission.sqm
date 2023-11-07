@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=447;
+		nextID=453;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=18;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={6925.8486,16.470909,7423.9868};
-		dir[]={-0.82685065,-0.5619306,-0.023619615};
-		up[]={-0.56171757,0.82717198,-0.016045902};
-		aside[]={-0.02855465,2.2223685e-007,0.99959391};
+		pos[]={6937.6353,14.179266,7339.8438};
+		dir[]={-0.083476342,-0.89644396,0.43526521};
+		up[]={-0.16884814,0.44312522,0.88041395};
+		aside[]={0.98211706,2.1664891e-007,0.18835418};
 	};
 };
 binarizationWanted=0;
@@ -2075,7 +2075,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6917.2256,5.3758059,7441.1265};
-				angles[]={-0,1.355395,0};
+				angles[]={0,1.355395,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2085,6 +2085,7 @@ class Mission
 			};
 			id=109;
 			type="RHS_UH60M";
+			atlOffset=-2.3841858e-007;
 		};
 		class Item6
 		{
@@ -2222,7 +2223,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=45;
+				items=50;
 				class Item0
 				{
 					dataType="Object";
@@ -3844,6 +3845,186 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item45
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6938.2944,2.6614389,7349.8726};
+						angles[]={-0,6.072629,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=452;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item46
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6940.8706,2.6614389,7347.8667};
+						angles[]={-0,6.072629,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=448;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item47
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6936.7632,2.6614389,7346.9888};
+						angles[]={-0,6.072629,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=449;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item48
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6939.3394,2.6614389,7344.9829};
+						angles[]={-0,6.072629,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=450;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item49
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6941.9155,2.6614389,7342.9775};
+						angles[]={-0,6.072629,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=1;
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=451;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_unitTraits_loadCoef";
+							expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.70000005;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -3874,7 +4055,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6912.1606,4.6049995,7429.1572};
-				angles[]={-0,1.3762178,0};
+				angles[]={0,1.3762178,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3891,7 +4072,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6911.2939,4.6049995,7433.4575};
-				angles[]={-0,1.3762178,0};
+				angles[]={0,1.3762178,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3900,6 +4081,7 @@ class Mission
 			};
 			id=444;
 			type="rhsusf_m998_w_s_4dr";
+			atlOffset=2.3841858e-007;
 		};
 		class Item14
 		{
@@ -3907,7 +4089,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6913.895,5.3758059,7457.6475};
-				angles[]={-0,1.355395,0};
+				angles[]={0,1.355395,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3917,6 +4099,7 @@ class Mission
 			};
 			id=445;
 			type="RHS_UH60M";
+			atlOffset=-2.3841858e-007;
 		};
 		class Item15
 		{
@@ -3924,7 +4107,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6910.6367,5.3758059,7474.2681};
-				angles[]={-0,1.355395,0};
+				angles[]={0,1.355395,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3934,6 +4117,7 @@ class Mission
 			};
 			id=446;
 			type="RHS_UH60M";
+			atlOffset=-2.3841858e-007;
 		};
 	};
 	class Connections
