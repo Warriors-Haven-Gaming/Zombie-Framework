@@ -2006,7 +2006,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="0";
+							value="1";
 						};
 					};
 				};
