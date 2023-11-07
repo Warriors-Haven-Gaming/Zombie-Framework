@@ -14,7 +14,7 @@ while {true} do {
     {
         sleep random 0.5;
 
-        if (getPos _x select 2 > 10) then {continue};
+        if (getPos _x select 2 > 30) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
         private _chance = 0;
