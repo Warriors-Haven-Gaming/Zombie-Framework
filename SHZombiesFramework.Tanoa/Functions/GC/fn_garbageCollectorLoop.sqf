@@ -14,7 +14,7 @@ private _isZombie = {
     _zombieTypes findIf {_unit isKindOf _x} isNotEqualTo -1
 };
 private _processDiscreetQueue = {
-    params ["_queue", "_players", "_minDistance", "_callback"];
+    params ["_queue", "_units", "_minDistance", "_callback"];
     private _queueProcessed = [];
     {
         private _objects = _x select {!isNull _x};
@@ -25,7 +25,7 @@ private _processDiscreetQueue = {
 
         private _center = _objects # 0;
         private _area = [getPosATL _center, _minDistance, _minDistance, 0, false];
-        if ([_players, _area] call SHZ_fnc_anyInArea) then {continue};
+        if ([_units, _area] call SHZ_fnc_anyInArea) then {continue};
 
         _callback forEach _objects;
         _queueProcessed pushBack _forEachIndex;
@@ -35,8 +35,9 @@ private _processDiscreetQueue = {
 
 while {true} do {
     sleep (10 + random 10);
-    private _players = allPlayers;
-    private _remoteControlledUnits = _players apply {remoteControlled _x} select {!isNull _x};
+    private _remoteControlledUnits = allPlayers apply {remoteControlled _x} select {!isNull _x};
+    private _units = units blufor + allPlayers + _remoteControlledUnits;
+    _units = _units arrayIntersect _units;
 
     private _zombies = units SHZ_zombieSide select {
         if (isPlayer _x) exitWith {false};
@@ -49,9 +50,9 @@ while {true} do {
         private _area = [getPosATL _x, SHZ_gcZombieDistance, SHZ_gcZombieDistance, 0, false, 250];
         private _nearZombies = _zombies inAreaArray _area;
         _zombies = _zombies - _nearZombies;
-    } forEach _players + _remoteControlledUnits;
+    } forEach _units;
     {deleteVehicle _x} forEach _zombies;
 
-    [SHZ_gcDeletionQueue, _players, SHZ_gcDeletionDistance, {deleteVehicle _x}] call _processDiscreetQueue;
-    [SHZ_gcUnhideQueue, _players, SHZ_gcUnhideDistance, {_x hideObjectGlobal false}] call _processDiscreetQueue;
+    [SHZ_gcDeletionQueue, _units, SHZ_gcDeletionDistance, {deleteVehicle _x}] call _processDiscreetQueue;
+    [SHZ_gcUnhideQueue, _units, SHZ_gcUnhideDistance, {_x hideObjectGlobal false}] call _processDiscreetQueue;
 };
