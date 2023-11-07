@@ -8,6 +8,7 @@ Author:
     Zenovoid, thegamecracks
 
 */
+waitUntil {sleep 1; !isNull (findDisplay 12 displayCtrl 51)};
 findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     params ["_display"];
 
