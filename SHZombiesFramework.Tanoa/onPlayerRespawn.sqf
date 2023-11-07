@@ -7,3 +7,6 @@ if (_loadout isEqualTo []) then {
 if (_loadout isNotEqualTo []) then {_newUnit setUnitLoadout _loadout};
 
 _newUnit setUnitTrait ["loadCoef", 0.7];
+_newUnit setUnitTrait ["engineer", true];
+_newUnit setUnitTrait ["explosiveSpecialist", true];
+_newUnit setUnitTrait ["medic", true];
