@@ -3,6 +3,8 @@ class CfgFunctions {
     class SHZ {
         class GC {
             class garbageCollectorLoop {};
+            class queueGCDeletion {};
+            class queueGCUnhide {};
         };
         class Helpers {
             class anyInArea {};

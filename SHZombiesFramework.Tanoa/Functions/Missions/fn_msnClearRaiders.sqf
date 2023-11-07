@@ -114,6 +114,6 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
-_raiderCamp spawn {sleep 120; _this apply {deleteVehicle _x}}; // TODO: schedule raider camp objects to be deleted
-_terrainObjects spawn {sleep 120; _this apply {_x hideObjectGlobal false}}; // TODO: schedule terrain objects to be unhidden
+[_raiderCamp] call SHZ_fnc_queueGCDeletion;
+[_terrainObjects] call SHZ_fnc_queueGCUnhide;
 terminate _taskDestinationScript;

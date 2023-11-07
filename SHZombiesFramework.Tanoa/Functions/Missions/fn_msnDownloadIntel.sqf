@@ -71,6 +71,6 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
-_intelBuilding spawn {sleep 120; _this apply {deleteVehicle _x}}; // TODO: schedule intel building objects to be deleted
-_terrainObjects spawn {sleep 120; _this apply {_x hideObjectGlobal false}}; // TODO: schedule terrain objects to be unhidden
+[_intelBuilding] call SHZ_fnc_queueGCDeletion;
+[_terrainObjects] call SHZ_fnc_queueGCUnhide;
 _spawnerScript spawn {sleep 120; terminate _this};
