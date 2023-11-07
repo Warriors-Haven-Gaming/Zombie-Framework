@@ -104,6 +104,7 @@ private _taskDestinationScript = [_taskID, _group] spawn {
         private _currentLeader = leader _group;
         if (_currentLeader isEqualTo _lastLeader) then {continue};
         [_taskID, [_currentLeader, false]] call BIS_fnc_taskSetDestination;
+        _lastLeader = _currentLeader;
     };
 };
 
