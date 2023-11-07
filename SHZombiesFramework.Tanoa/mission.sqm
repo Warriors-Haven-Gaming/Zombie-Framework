@@ -1928,7 +1928,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="100";
+							value="500";
 						};
 					};
 				};
