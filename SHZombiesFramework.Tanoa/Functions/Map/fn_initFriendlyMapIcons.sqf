@@ -21,13 +21,19 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     // Separate units from vehicles
     private _allUnits = units side player;
     private _standaloneUnits = [];
+    private _leaders = [];
     private _vehicles = [];
     {
         private _vehicle = objectParent _x;
         if (!isNull _vehicle) then {
             _vehicles pushBackUnique _vehicle;
         } else {
-            _standaloneUnits pushBack _x;
+            if (_mapScale > _textMinMapScale && {_x isEqualTo leader _x}) then {
+                // Leaders should be rendered afterwards with group icons
+                _leaders pushBack _x;
+            } else {
+                _standaloneUnits pushBack _x;
+            };
         };
     } forEach _allUnits;
 
@@ -36,10 +42,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
         private _side = side _x;
         private _textScale = 0.03;
-        private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {
-            _textScale = 0.06;
-            if (_x isEqualTo leader _x) then {groupId group _x} else {""}
-        };
+        private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {""};
         _display drawIcon [
             getText (_config >> "icon"),
             [_side] call BIS_fnc_sideColor,
@@ -54,6 +57,23 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             "right"
         ];
     } forEach _standaloneUnits;
+
+    {
+        private _config = configFile >> "CfgGroupIcons" >> "b_inf";
+        _display drawIcon [
+            getText (_config >> "icon"),
+            [side _x] call BIS_fnc_sideColor,
+            getPosWorldVisual _x,
+            _iconScale * 1.5,
+            _iconScale * 1.5,
+            0,
+            groupId group _x,
+            1,
+            0.06,
+            "TahomaB",
+            "right"
+        ];
+    } forEach _leaders;
 
     // Draw unit lines
     if (_mapScale < _lineMinMapScale) then {
@@ -108,24 +128,4 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             "right"
         ];
     } forEach _vehicles;
-
-    // Draw group icons
-    // {
-    //     private _pos = getPosWorldVisual leader _x vectorAdd [10, 10, 0];
-    //     private _config = configFile >> "CfgGroupIcons" >> _x getVariable ["ZEN_groupIcon","b_inf"];
-    //     private _grpInfoText = _x getVariable ["ZEN_groupInfoText", groupId _x];
-    //     _display drawIcon [
-    //         getText (_config >> "icon"),
-    //         getArray (_config >> "color") apply {call compile _x},
-    //         _pos,
-    //         _iconScale,
-    //         _iconScale,
-    //         0,
-    //         _grpInfoText,
-    //         1,
-    //         0.03,
-    //         "TahomaB",
-    //         "right"
-    //     ];
-    // } forEach groups side player;
 }];
