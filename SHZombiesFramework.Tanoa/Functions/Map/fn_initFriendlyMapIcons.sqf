@@ -29,11 +29,9 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             _vehicles pushBackUnique _vehicle;
         } else {
             if (_mapScale > _textMinMapScale && {_x isEqualTo leader _x}) then {
-                // Leaders should be rendered afterwards with group icons
                 _leaders pushBack _x;
-            } else {
-                _standaloneUnits pushBack _x;
             };
+            _standaloneUnits pushBack _x;
         };
     } forEach _allUnits;
 
@@ -76,12 +74,19 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
 
     {
         private _config = configFile >> "CfgGroupIcons" >> "b_inf";
+        private _pos = getPosWorldVisual _x;
+        private _offsetPos = _pos vectorAdd [50, 50, 0];
+        _display drawLine [
+            _pos,
+            _offsetPos,
+            [1,1,1,0.6]
+        ];
         _display drawIcon [
             getText (_config >> "icon"),
             [side _x] call BIS_fnc_sideColor,
-            getPosWorldVisual _x,
-            _iconScale * 1.5,
-            _iconScale * 1.5,
+            _offsetPos,
+            _iconScale,
+            _iconScale,
             0,
             groupId group _x,
             1,
