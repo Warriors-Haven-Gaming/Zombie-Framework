@@ -113,6 +113,7 @@ private _hordeCallback = [
         _unit setVariable ["deletedQueue", _deleted];
         _unit addEventHandler ["Deleted", {
             params ["_unit"];
+            if (alive _unit) exitWith {};
             _deleted = _unit getVariable ["deletedQueue", []];
             _deleted pushBack true;
         }];
