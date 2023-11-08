@@ -113,7 +113,11 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
         private _side = side effectiveCommander _x;
         private _pos = getPosWorldVisual _x;
+        private _iconScale = _iconScale;
+        private _textScale = 0.03;
         private _text = if (_mapScale > _textMinMapScale) then {
+            _iconScale = _iconScale * 1.5;
+            _textScale = _textScale * 2;
             groupId group effectiveCommander _x
         } else {
             private _commander = effectiveCommander _x;
@@ -140,7 +144,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             getDirVisual _x,
             _text,
             1,
-            0.03,
+            _textScale,
             "TahomaB",
             "right"
         ];
