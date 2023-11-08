@@ -86,11 +86,30 @@ private _getAliveCount = {
         _tempAlive + ({alive _x} count (_units select [_totalUnits]))
     }
 };
+
+// To keep track of deleted units and respawn them, we'll give them an array
+// that they can append to. Note that the spawner can still be exhausted, in
+// which case deleted zombies won't re-activate the spawner.
+private _deleted = [];
+private _collectDeletedUnits = {
+    /* Returns the number of units deleted since this function was last called. */
+    private _total = count _deleted;
+    _deleted deleteRange [0, _total];
+    _total
+};
+
 private _hordeCallback = [
-    _units,
+    [_units, _deleted],
     {
-        params ["_unit", "_units"];
+        params ["_unit", "_args"];
+        _args params ["_units", "_deleted"];
         _units pushBack _unit;
+        _unit setVariable ["deletedQueue", _deleted];
+        _unit addEventHandler ["Deleted", {
+            params ["_unit"];
+            _deleted = _unit getVariable ["deletedQueue", []];
+            _deleted pushBack true;
+        }];
     }
 ];
 private _makeHordeArgs = {
@@ -112,6 +131,7 @@ private _makeHordeArgs = {
 
 while {true} do {
     sleep (_hordeDelay + random 1);
+    _spawned = _spawned - call _collectDeletedUnits;
     if (_spawned >= _maxSpawned) exitWith {};
     if !(call _isActivated) then {continue};
     if !(_activatedOnce) then {_activatedOnce = true; sleep _initialDelay};
