@@ -88,8 +88,14 @@ private _getAliveCount = {
 };
 
 // To keep track of deleted units and respawn them, we'll give them an array
-// that they can append to. Note that the spawner can still be exhausted, in
-// which case deleted zombies won't re-activate the spawner.
+// that they can append to. Currently deleted zombies can re-activate a spawner,
+// but in the future we might add a new parameter like:
+//     Boolean waitUntilDead:
+//         (Optional, default true)
+//         If true, this function will continue to run after maxSpawned
+//         has been reached until all zombies have died. This also allows
+//         the spawner to be "resurrected" if the remaining zombies are deleted.
+//         If false, this function will return after the last horde has spawned.
 private _deleted = [];
 private _collectDeletedUnits = {
     /* Returns the number of units deleted since this function was last called. */
@@ -128,11 +134,16 @@ private _makeHordeArgs = {
 
     _hordeArgs
 };
+private _canSpawnerStop = {
+    if (_spawned < _maxSpawned) exitWith {false};
+    if (call _getAliveCount > 0) exitWith {false};
+    true
+};
 
 while {true} do {
     sleep (_hordeDelay + random 1);
     _spawned = _spawned - call _collectDeletedUnits;
-    if (_spawned >= _maxSpawned) exitWith {};
+    if (call _canSpawnerStop) exitWith {};
     if !(call _isActivated) then {continue};
     if !(_activatedOnce) then {_activatedOnce = true; sleep _initialDelay};
 
