@@ -135,15 +135,29 @@ private _makeHordeArgs = {
     _hordeArgs
 };
 private _canSpawnerStop = {
+    _spawned = _spawned - call _collectDeletedUnits;
     if (_spawned < _maxSpawned) exitWith {false};
     if (call _getAliveCount > 0) exitWith {false};
     true
 };
+private _sleepIteration = {
+    /* Sleeps for a single iteration, periodically checking if the spawner can stop.
+
+    Returns true if the full duration elapsed, false otherwise.
+
+    */
+    private _timeLeft = _hordeDelay + random 1;
+    while {_timeLeft > 0} do {
+        private _interval = _timeLeft min (2 + random 3);
+        sleep _interval;
+        if (call _canSpawnerStop) exitWith {false};
+        _timeLeft = _timeLeft - _interval;
+        true
+    }
+};
 
 while {true} do {
-    sleep (_hordeDelay + random 1);
-    _spawned = _spawned - call _collectDeletedUnits;
-    if (call _canSpawnerStop) exitWith {};
+    if !(call _sleepIteration) exitWith {};
     if !(call _isActivated) then {continue};
     if !(_activatedOnce) then {_activatedOnce = true; sleep _initialDelay};
 
