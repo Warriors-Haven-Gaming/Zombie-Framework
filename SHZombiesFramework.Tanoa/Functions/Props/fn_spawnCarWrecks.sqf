@@ -83,8 +83,32 @@ private _roads = _center nearRoads _radius;
         _objDir = _objDir + 180; // all the wreck types are facing the wrong way
 
         private _obj = createSimpleObject [selectRandom _wreckTypes, _objPos];
-        _obj setDir _objDir;
-        _obj setVectorUp surfaceNormal _objPos;
+        // Sometimes the generated position is floating above/under ground,
+        // so we'll need to find the nearest surface
+        // (for whatever reason setPos ASLToATL embeds them in the ground?)
+        private _surfaces = lineIntersectsSurfaces [
+            _objPos vectorAdd [0, 0, 5],
+            _objPos vectorAdd [0, 0,-5],
+            _obj,
+            objNull,
+            false,
+            1,
+            "ROADWAY",
+            "GEOM"
+        ] select {
+            // Surface normal doesn't make stacked cars look natural,
+            // so we'd be better off ignoring those intersections
+            isNull (_x # 2)
+        };
+        if (count _surfaces > 0) then {
+            _surfaces # 0 params ["_intersectPosASL", "_surfaceNormal"];
+            _obj setPosASL _intersectPosASL;
+            _obj setDir _objDir;
+            _obj setVectorUp _surfaceNormal;
+        } else {
+            _obj setDir _objDir;
+            _obj setVectorUp surfaceNormal _objPos;
+        };
         _wrecks pushBack _obj;
     };
 } forEach _roads;
