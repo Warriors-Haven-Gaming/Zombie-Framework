@@ -30,7 +30,7 @@ if (_center isEqualTo []) then {
         if (_pos isNotEqualTo [0,0]) exitWith {};
     };
     if (_pos isEqualTo [0,0]) exitWith {};
-    _center = [locationPosition _location, 0, -1, 10, 0, 0.3, 0, [], [_pos,_pos]] call BIS_fnc_findSafePos;
+    _center = [_pos, 0, -1, 10, 0, 0.3, 0, [], [_pos,_pos]] call BIS_fnc_findSafePos;
     if (count _center < 3) then {_center pushBack 0};
 };
 if (surfaceIsWater _center) exitWith {};
