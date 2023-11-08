@@ -32,6 +32,7 @@ private _processDiscreetQueue = {
     } forEach _queue;
     {_queue deleteAt _x} forEachReversed _queueProcessed;
 };
+private _lootLifetime = 300;
 
 while {true} do {
     sleep (10 + random 10);
@@ -52,6 +53,18 @@ while {true} do {
         _zombies = _zombies - _nearZombies;
     } forEach _units;
     {deleteVehicle _x} forEach _zombies;
+
+    private _time = time;
+    {
+        if (_x getVariable ["noGarbageCollection", false]) then {continue};
+        private _collectAt = _x getVariable "garbageCollectAt";
+        if (isNil "_collectAt") then {
+            _x setVariable ["garbageCollectAt", _time + _lootLifetime];
+            continue;
+        };
+        if (_time < _collectAt) then {continue};
+        deleteVehicle _x;
+    } forEach ("GroundWeaponHolder" allObjects 0);
 
     [SHZ_gcDeletionQueue, _units, SHZ_gcDeletionDistance, {deleteVehicle _x}] call _processDiscreetQueue;
     [SHZ_gcUnhideQueue, _units, SHZ_gcUnhideDistance, {_x hideObjectGlobal false}] call _processDiscreetQueue;
