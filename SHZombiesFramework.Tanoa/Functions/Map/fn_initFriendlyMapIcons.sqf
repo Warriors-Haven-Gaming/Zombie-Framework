@@ -3,6 +3,7 @@ Function: SHZ_fnc_initFriendlyMapIcons
 
 Description:
     Sets up the custom friendly map icons.
+    Function must be ran in scheduled environment.
 
 Author:
     Zenovoid, thegamecracks
