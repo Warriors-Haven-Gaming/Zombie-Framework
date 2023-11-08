@@ -35,6 +35,18 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         };
     } forEach _allUnits;
 
+    private _getVibrantSideColor = {
+        params ["_side"];
+        switch (_side) do {
+            // Preferably wouldn't hardcode this, but it's fast enough
+            case blufor: {[0, 0.45, 0.9, 1]};
+            case opfor: {[0.75, 0, 0, 1]};
+            case independent: {[0, 0.75, 0, 1]};
+            case civilian: {[0.6, 0, 0.75, 1]};
+            default {[_side] call BIS_fnc_sideColor}
+        }
+    };
+
     // Draw unit lines
     if (_mapScale < _lineMinMapScale) then {
         private _getUnitPos = {
@@ -83,7 +95,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         ];
         _display drawIcon [
             getText (_config >> "icon"),
-            [side _x] call BIS_fnc_sideColor,
+            [side _x] call _getVibrantSideColor,
             _offsetPos,
             _iconScale,
             _iconScale,
