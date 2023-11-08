@@ -22,7 +22,7 @@ Author:
     thegamecracks
 
 */
-private _ret = false;
+private _ret = "";
 isNil {
     _this set [1, call SHZ_fnc_randomTaskID];
     _ret = _this call BIS_fnc_taskCreate;
