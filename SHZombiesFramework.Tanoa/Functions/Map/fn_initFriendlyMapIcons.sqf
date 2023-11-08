@@ -37,6 +37,22 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         };
     } forEach _allUnits;
 
+    // Draw unit lines
+    if (_mapScale < _lineMinMapScale) then {
+        private _getUnitPos = {
+            params ["_unit"];
+            private _vehicle = objectParent _unit;
+            if (!isNull _vehicle) then {getPosWorldVisual _vehicle} else {getPosWorldVisual _unit}
+        };
+        {
+            _display drawLine [
+                _x call _getUnitPos,
+                leader _x call _getUnitPos,
+                [1,1,1,0.6]
+            ];
+        } forEach _allUnits;
+    };
+
     // Draw unit icons
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
@@ -74,22 +90,6 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             "right"
         ];
     } forEach _leaders;
-
-    // Draw unit lines
-    if (_mapScale < _lineMinMapScale) then {
-        private _getUnitPos = {
-            params ["_unit"];
-            private _vehicle = objectParent _unit;
-            if (!isNull _vehicle) then {getPosWorldVisual _vehicle} else {getPosWorldVisual _unit}
-        };
-        {
-            _display drawLine [
-                _x call _getUnitPos,
-                leader _x call _getUnitPos,
-                [1,1,1,0.6]
-            ];
-        } forEach _allUnits;
-    };
 
     // Draw vehicle icons
     {
