@@ -39,12 +39,12 @@ _safezone setMarkerAlpha 0.7;
 private _spawnerScript = [
     blufor,
     _activationArea,
-    20 + count allPlayers,
-    40 + floor (count allPlayers * 3.2),
+    40 + count allPlayers,
+    60 + floor (count allPlayers * 3.6),
     [20 + floor (count allPlayers * 0.5), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.25 + random 0.75],
     100,
     5,
-    15
+    30
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
 while {true} do {
