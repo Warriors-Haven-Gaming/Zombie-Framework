@@ -1947,6 +1947,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 			};
 			id=102;
 			type="rhsusf_m998_w_s_4dr";
@@ -2108,6 +2109,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 				reportOwnPosition=1;
 			};
 			id=109;
@@ -4088,6 +4090,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 			};
 			id=443;
 			type="rhsusf_m998_w_s_4dr";
@@ -4105,6 +4108,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 			};
 			id=444;
 			type="rhsusf_m998_w_s_4dr";
@@ -4122,6 +4126,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 				reportOwnPosition=1;
 			};
 			id=445;
@@ -4140,6 +4145,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				lock="UNLOCKED";
 				reportOwnPosition=1;
 			};
 			id=446;
