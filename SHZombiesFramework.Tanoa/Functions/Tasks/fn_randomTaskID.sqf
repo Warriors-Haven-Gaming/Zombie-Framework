@@ -11,6 +11,7 @@ Description:
 
 Returns:
     String
+        A unique task ID, or an empty string if unsuccessful.
 
 Author:
     thegamecracks
@@ -19,7 +20,7 @@ Author:
 private _taskID = "";
 for "_i" from 1 to 100 do {
     // NOTE: as per documentation, string should be below 15 characters
-    _taskID = [6] call SHZ_fnc_randomString;
-    if !([_taskID] call BIS_fnc_taskExists) exitWith {};
+    private _id = [6] call SHZ_fnc_randomString;
+    if !([_id] call BIS_fnc_taskExists) exitWith {_taskID = _id};
 };
 _taskID
