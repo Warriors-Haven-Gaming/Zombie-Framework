@@ -1,6 +1,13 @@
+disableChannels[] = {
+    {2, true, true},
+};
+
 // https://community.bistudio.com/wiki/Arma_3:_Functions_Library
 class CfgFunctions {
     class SHZ {
+        class Channels {
+            class updateChannelLoop {};
+        };
         class GC {
             class garbageCollectorLoop {};
             class queueGCDeletion {};
