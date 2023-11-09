@@ -102,6 +102,7 @@ private _taskDestinationScript = [_taskID, _group] spawn {
     while {true} do {
         sleep 30;
         private _currentLeader = leader _group;
+        if (isNull _currentLeader) exitWith {};
         if (_currentLeader isEqualTo _lastLeader) then {continue};
         [_taskID, [_currentLeader, false]] call BIS_fnc_taskSetDestination;
         _lastLeader = _currentLeader;
