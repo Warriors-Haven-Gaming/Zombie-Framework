@@ -44,7 +44,8 @@ private _spawnerScript = [
     [20 + floor (count allPlayers * 0.5), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.25 + random 0.75],
     100,
     5,
-    30
+    30,
+    10
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
 while {true} do {
