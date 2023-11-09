@@ -33,6 +33,9 @@ private _taskID = [blufor, "", "clearZombies", _center, "CREATED", -1, true, "ki
 
 private _activationArea = [_center, 100, 100, 0, false, 20];
 private _safezone = [_activationArea, true] call SHZ_fnc_createSafezone;
+_safezone setMarkerBrushLocal "FDiagonal";
+_safezone setMarkerColorLocal "ColorRed";
+_safezone setMarkerAlpha 0.7;
 private _spawnerScript = [
     blufor,
     _activationArea,
@@ -50,4 +53,7 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
+_safezone setMarkerBrushLocal "SolidBorder";
+_safezone setMarkerColorLocal "ColorBlue";
+_safezone setMarkerAlpha 0.2;
 _safezone spawn {sleep 1800; deleteMarker _this}; // TODO: announce safezone disappearing
