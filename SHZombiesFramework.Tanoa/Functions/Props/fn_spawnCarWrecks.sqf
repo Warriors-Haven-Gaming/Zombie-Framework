@@ -91,7 +91,7 @@ private _roads = _center nearRoads _radius;
             _objPos vectorAdd [0, 0,-5],
             _obj,
             objNull,
-            false,
+            true,
             1,
             "ROADWAY",
             "GEOM"
