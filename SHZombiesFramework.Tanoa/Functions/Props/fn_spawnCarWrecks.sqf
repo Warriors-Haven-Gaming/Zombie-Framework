@@ -96,9 +96,8 @@ private _roads = _center nearRoads _radius;
             "ROADWAY",
             "GEOM"
         ] select {
-            // Surface normal doesn't make stacked cars look natural,
-            // so we'd be better off ignoring those intersections
-            isNull (_x # 2)
+            // Only place on top of terrain or simple objects like bridges
+            typeOf (_x # 2) isEqualTo ""
         };
         if (count _surfaces > 0) then {
             _surfaces # 0 params ["_intersectPosASL", "_surfaceNormal"];
