@@ -50,4 +50,4 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
-_safezone spawn {sleep 300; deleteMarkerLocal _this};
+_safezone spawn {sleep 1800; deleteMarker _this}; // TODO: announce safezone disappearing
