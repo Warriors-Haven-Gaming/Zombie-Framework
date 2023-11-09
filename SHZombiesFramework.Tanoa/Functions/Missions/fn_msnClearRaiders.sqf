@@ -72,7 +72,7 @@ private _raiderCamp = [
     ]
 ] call SHZ_fnc_objectsMapper;
 
-private _group = createGroup opfor;
+private _group = createGroup [opfor, true];
 private _quantity = 10 + floor random (count allPlayers min 20);
 private _unitTypes = [
     "I_C_Soldier_Para_7_F",
