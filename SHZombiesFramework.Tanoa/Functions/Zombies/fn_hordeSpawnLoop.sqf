@@ -35,6 +35,12 @@ Parameters:
         so keep this at a reasonable duration.
         There is also a random 1 second delay to avoid performance stutters
         with other spawners that were started at the same time.
+    Number waitAlive:
+        (Optional, default 0)
+        The maximum number of zombies that can be alive after maxSpawned
+        has been reached before the spawner is considered completed.
+        If set to a negative number, the spawner will return after
+        the last horde has spawned.
 
 Examples:
     (begin example)
@@ -54,7 +60,17 @@ Author:
     thegamecracks
 
 */
-params ["_sides", "_areaArgs", "_maxAlive", "_maxSpawned", "_hordeArgs", "_hordeRadius", "_initialDelay", "_hordeDelay"];
+params [
+    "_sides",
+    "_areaArgs",
+    "_maxAlive",
+    "_maxSpawned",
+    "_hordeArgs",
+    "_hordeRadius",
+    "_initialDelay",
+    "_hordeDelay",
+    ["_waitAlive", 0]
+];
 
 if !(_sides isEqualType []) then {_sides = [_sides]};
 
@@ -88,14 +104,7 @@ private _getAliveCount = {
 };
 
 // To keep track of deleted units and respawn them, we'll give them an array
-// that they can append to. Currently deleted zombies can re-activate a spawner,
-// but in the future we might add a new parameter like:
-//     Boolean waitUntilDead:
-//         (Optional, default true)
-//         If true, this function will continue to run after maxSpawned
-//         has been reached until all zombies have died. This also allows
-//         the spawner to be "resurrected" if the remaining zombies are deleted.
-//         If false, this function will return after the last horde has spawned.
+// that they can append to.
 private _deleted = [];
 private _collectDeletedUnits = {
     /* Returns the number of units deleted since this function was last called. */
@@ -138,7 +147,7 @@ private _makeHordeArgs = {
 private _canSpawnerStop = {
     _spawned = _spawned - call _collectDeletedUnits;
     if (_spawned < _maxSpawned) exitWith {false};
-    if (call _getAliveCount > 0) exitWith {false};
+    if (_waitAlive >= 0 && {call _getAliveCount > _waitAlive}) exitWith {false};
     true
 };
 private _sleepIteration = {
