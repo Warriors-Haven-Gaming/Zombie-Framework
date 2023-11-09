@@ -178,6 +178,8 @@ while {true} do {
     if (_hordeArgs isEqualTo []) then {continue};
 
     _hordeArgs params ["_quantity"];
+    if (_quantity < 1) then {continue};
+
     _hordeArgs spawn SHZ_fnc_hordeSpawn;
     _spawned = _spawned + _quantity;
 };
