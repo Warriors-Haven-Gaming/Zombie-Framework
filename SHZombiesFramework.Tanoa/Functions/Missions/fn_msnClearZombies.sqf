@@ -32,6 +32,7 @@ if (_center isEqualTo []) exitWith {};
 private _taskID = [blufor, "", "clearZombies", _center, "CREATED", -1, true, "kill"] call SHZ_fnc_taskCreate;
 
 private _activationArea = [_center, 100, 100, 0, false, 20];
+private _safezone = [_activationArea, true] call SHZ_fnc_createSafezone;
 private _spawnerScript = [
     blufor,
     _activationArea,
@@ -56,3 +57,4 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
+_safezone spawn {sleep 300; deleteMarkerLocal _this};

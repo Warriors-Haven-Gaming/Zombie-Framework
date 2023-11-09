@@ -17,7 +17,6 @@ class CfgFunctions {
             class anyInArea {};
             class displayTimer {};
             class inAreaMarkers {};
-            class inAreaSafezone {};
             class objectsGrabber {};
             class objectsMapper {};
             class randomPos {};
@@ -45,6 +44,11 @@ class CfgFunctions {
         };
         class Props {
             class spawnCarWrecks {};
+        };
+        class Safezones {
+            class createSafezone {};
+            class inAreaSafezone {};
+            class randomSafezoneID {};
         };
         class Tasks {
             class randomTaskID {};
