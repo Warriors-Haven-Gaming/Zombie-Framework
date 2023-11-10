@@ -553,13 +553,14 @@ class Mission
 		timeOfChanges=1800.0002;
 		startWeather=1;
 		startFog=1;
-		startWind=0.1;
+		startWind=0;
 		startWaves=0.1;
 		forecastWeather=1;
 		forecastFog=1;
-		forecastWind=0.1;
+		forecastWind=0;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		windForced=1;
 		year=2035;
 		month=6;
 		day=6;
