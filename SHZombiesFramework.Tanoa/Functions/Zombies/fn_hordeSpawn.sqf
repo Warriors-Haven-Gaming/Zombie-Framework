@@ -73,6 +73,7 @@ for "_i" from 1 to _quantity do {
 
     [_unit,_pos] spawn {
         params ["_unit", "_pos"];
+        scriptName "SHZ_fnc_hordeSpawn_teleport";
         // Delayed teleportation should hide the zombie A-posing
         sleep 0.1;
         _unit setPosATL _pos;
@@ -84,6 +85,7 @@ for "_i" from 1 to _quantity do {
 };
 
 _group spawn {
+    scriptName "SHZ_fnc_hordeSpawn_enableDynamicSimulation";
     sleep 1;
     [_this, true] remoteExec ["enableDynamicSimulation"];
 };

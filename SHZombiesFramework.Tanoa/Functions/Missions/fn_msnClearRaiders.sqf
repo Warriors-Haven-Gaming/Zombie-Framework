@@ -98,6 +98,7 @@ _group setCombatMode "RED";
 private _taskID = [blufor, "", "clearRaiders", [leader _group, false], "CREATED", -1, true, "rifle"] call SHZ_fnc_taskCreate;
 private _taskDestinationScript = [_taskID, _group] spawn {
     params ["_taskID", "_group"];
+    scriptName "SHZ_fnc_msnClearRaiders_taskDestinationScript";
     private _lastLeader = leader _group;
     while {true} do {
         sleep 30;

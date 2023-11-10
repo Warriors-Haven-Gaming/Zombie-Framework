@@ -73,4 +73,8 @@ while {true} do {
 };
 [_intelBuilding] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
-_spawnerScript spawn {sleep 120; terminate _this};
+_spawnerScript spawn {
+    scriptName "SHZ_fnc_msnDownloadIntel_spawnerTermination";
+    sleep 120;
+    terminate _this;
+};
