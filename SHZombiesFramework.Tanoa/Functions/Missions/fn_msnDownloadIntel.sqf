@@ -71,6 +71,7 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
+
 [_intelBuilding] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
 _spawnerScript spawn {

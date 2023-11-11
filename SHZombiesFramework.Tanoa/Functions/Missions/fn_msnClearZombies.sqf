@@ -54,6 +54,7 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
+
 _safezone setMarkerSizeLocal (markerSize _safezone vectorMultiply [2, 2]);
 _safezone setMarkerBrushLocal "SolidBorder";
 _safezone setMarkerColorLocal "ColorBlue";

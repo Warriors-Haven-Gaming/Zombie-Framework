@@ -116,6 +116,7 @@ while {true} do {
         [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
     };
 };
+
 [_raiderCamp] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
 terminate _taskDestinationScript;
