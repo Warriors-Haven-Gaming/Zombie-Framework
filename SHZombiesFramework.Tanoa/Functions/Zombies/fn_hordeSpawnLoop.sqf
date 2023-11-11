@@ -113,6 +113,13 @@ private _collectDeletedUnits = {
     _total
 };
 
+private _hordeScripts = [];
+private _activeHordeScripts = {
+    /* Returns the number of horde scripts still active. */
+    _hordeScripts = _hordeScripts select {!scriptDone _x};
+    count _hordeScripts
+};
+
 private _hordeCallback = [
     [_units, _deleted],
     {
@@ -148,6 +155,7 @@ private _canSpawnerStop = {
     _spawned = _spawned - call _collectDeletedUnits;
     if (_spawned < _maxSpawned) exitWith {false};
     if (_waitAlive >= 0 && {call _getAliveCount > _waitAlive}) exitWith {false};
+    if (call _activeHordeScripts > 0) exitWith {false};
     true
 };
 private _sleepIteration = {
@@ -180,6 +188,7 @@ while {true} do {
     _hordeArgs params ["_quantity"];
     if (_quantity < 1) then {continue};
 
-    _hordeArgs spawn SHZ_fnc_hordeSpawn;
+    private _script = _hordeArgs spawn SHZ_fnc_hordeSpawn;
+    _hordeScripts pushBack _script;
     _spawned = _spawned + _quantity;
 };
