@@ -31,15 +31,23 @@ Parameters:
         An initial delay after the spawner is activated before spawning hordes.
     Number hordeDelay:
         The delay between hordes spawned.
+        This is not affected by how long it takes for a single horde to spawn,
+        meaning that hordes can spawn concurrently.
         This also affects how frequently the activation area is checked,
         so keep this at a reasonable duration.
         There is also a random 1 second delay to avoid performance stutters
         with other spawners that were started at the same time.
     Number waitAlive:
         (Optional, default 0)
-        The maximum number of zombies that can be alive after maxSpawned
-        has been reached before the spawner is considered completed.
-        If set to a negative number, the spawner will return after
+        The maximum number of zombies that can be alive before the spawner
+        is completed. Note that the following conditions are also required
+        alongside this:
+            - maxSpawned been reached
+            - all hordes have finished spawning
+        This is useful for allowing the last horde to be despawned if all
+        units leave the area, and to return early if there are only a few
+        zombies left.
+        If set to a negative number, the spawner will simply return after
         the last horde has spawned.
 
 Examples:
