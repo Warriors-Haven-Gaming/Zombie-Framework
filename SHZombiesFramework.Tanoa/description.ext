@@ -50,6 +50,13 @@ class CfgFunctions {
             class inAreaSafezone {};
             class randomSafezoneID {};
         };
+        class Saves {
+            class getSave {};
+            class getSaveVariable {};
+            class getSaveVariableDefault {};
+            class saveLoop {};
+            class setSaveVariable {};
+        };
         class Tasks {
             class randomTaskID {};
             class taskCreate {};
