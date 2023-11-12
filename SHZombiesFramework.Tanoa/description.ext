@@ -43,6 +43,7 @@ class CfgFunctions {
             class musicStartPlaylist {};
         };
         class Props {
+            class initStatsBoard {};
             class spawnCarWrecks {};
         };
         class Safezones {
@@ -59,6 +60,8 @@ class CfgFunctions {
         };
         class Stats {
             class initStatsTracking {};
+            class sendPlayerStats {};
+            class showPlayerStats {};
         };
         class Tasks {
             class randomTaskID {};

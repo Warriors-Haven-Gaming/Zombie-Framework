@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=453;
+		nextID=454;
 	};
 	class MarkerIDProvider
 	{
@@ -41,13 +41,14 @@ addons[]=
 	"A3_Modules_F_Multiplayer",
 	"RHS_US_A2_AirImport",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Props_F_Argo_Civilian_InfoBoards"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			className="A3_Weapons_F";
@@ -101,11 +102,19 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item8
+		{
+			className="A3_Props_F_Argo";
+			name="Arma 3 Malden - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
 {
-	"RHS_USAF"
+	"RHS_USAF",
+	"Argo"
 };
 randomSeed=4942559;
 class ScenarioData
@@ -615,7 +624,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			dataType="Object";
@@ -4152,6 +4161,41 @@ class Mission
 			id=446;
 			type="RHS_UH60M";
 			atlOffset=-2.3841858e-007;
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6914.2549,3.6288815,7417.2529};
+				angles[]={0,4.5242424,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this] call SHZ_fnc_initStatsBoard;";
+				disableSimulation=1;
+			};
+			id=453;
+			type="MapBoard_Tanoa_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
