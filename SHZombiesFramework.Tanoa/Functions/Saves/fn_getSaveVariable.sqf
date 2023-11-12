@@ -25,11 +25,8 @@ if (!isServer) exitWith {};
 params ["_name", ["_saveName", SHZ_saveName]];
 
 private _selectedSave = [_saveName] call SHZ_fnc_getSave;
-
-private _value = _selectedSave get _name;
-if (isNil "_value") then {
-    _value = [_name] call SHZ_fnc_getSaveVariableDefault;
-    _selectedSave set [_name, _value];
-};
-
-_value
+_selectedSave getOrDefaultCall [
+    _name,
+    {[_name] call SHZ_fnc_getSaveVariableDefault},
+    true
+]
