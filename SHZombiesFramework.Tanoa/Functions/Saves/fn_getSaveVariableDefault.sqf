@@ -17,5 +17,6 @@ Author:
 */
 params ["_name"];
 switch (_name) do {
+    case "zombieKills": {createHashMap};
     default {nil};
 }

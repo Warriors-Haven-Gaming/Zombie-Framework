@@ -57,6 +57,9 @@ class CfgFunctions {
             class saveLoop {};
             class setSaveVariable {};
         };
+        class Stats {
+            class initStatsTracking {};
+        };
         class Tasks {
             class randomTaskID {};
             class taskCreate {};
@@ -69,6 +72,7 @@ class CfgFunctions {
             class hordeSpawnLoop {};
             class hordeType {};
             class hordeTypeList {};
+            class isZombie {};
             class loiterThresholdLoop {};
             class zombieInit {};
         };

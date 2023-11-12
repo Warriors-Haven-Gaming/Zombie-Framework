@@ -6,3 +6,4 @@ SHZ_garbageCollector = 0 spawn SHZ_fnc_garbageCollectorLoop;
 
 SHZ_saveName = "default";
 SHZ_saveScript = 0 spawn SHZ_fnc_saveLoop;
+call SHZ_fnc_initStatsTracking;

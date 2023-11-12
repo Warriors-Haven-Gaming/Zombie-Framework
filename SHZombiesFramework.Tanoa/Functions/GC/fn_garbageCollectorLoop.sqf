@@ -8,11 +8,6 @@ Author:
     thegamecracks
 
 */
-private _zombieTypes = ["RyanZombieCivilian_F", "RyanZombieB_Soldier_base_F"];
-private _isZombie = {
-    params ["_unit"];
-    _zombieTypes findIf {_unit isKindOf _x} isNotEqualTo -1
-};
 private _processDiscreetQueue = {
     params ["_queue", "_units", "_minDistance", "_callback"];
     private _queueProcessed = [];
@@ -43,7 +38,7 @@ while {true} do {
     private _zombies = units SHZ_zombieSide select {
         if (isPlayer _x) exitWith {false};
         if (_x in _remoteControlledUnits) exitWith {false};
-        if !([_x] call _isZombie) exitWith {false};
+        if !([_x] call SHZ_fnc_isZombie) exitWith {false};
         if (_x getVariable ["noGarbageCollection", false]) exitWith {false};
         true
     };
