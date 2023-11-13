@@ -17,6 +17,8 @@ Author:
 */
 params ["_name"];
 switch (_name) do {
+    case "allMissionsCompleted": {createHashMap};
+    case "missionsCompleted": {createHashMap};
     case "zombieKills": {createHashMap};
     default {nil};
 }

@@ -59,6 +59,7 @@ class CfgFunctions {
             class setSaveVariable {};
         };
         class Stats {
+            class addCompletedMission {};
             class initStatsTracking {};
             class sendPlayerStats {};
             class showPlayerStats {};
