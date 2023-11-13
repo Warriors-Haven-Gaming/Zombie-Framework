@@ -14,6 +14,28 @@ Author:
 */
 params ["_obj"];
 
+private _condition = "!isMultiplayer || {call BIS_fnc_admin > 0}";
+
+_obj addAction [
+    "Save Now",
+    {
+        params ["_target", "_caller"];
+        private _result = [
+            "Are you sure you want to save?",
+            "Save Now",
+            true,
+            true
+        ] call BIS_fnc_guiMessage;
+        if (!_result) exitWith {};
+        [_caller] remoteExec ["SHZ_fnc_adminForceSave", 2];
+    },
+    [],
+    1.5,
+    true,
+    true,
+    "",
+    _condition
+];
 _obj addAction [
     "Reset Current Save",
     {
@@ -32,5 +54,5 @@ _obj addAction [
     true,
     true,
     "",
-    "!isMultiplayer || {call BIS_fnc_admin > 0}"
+    _condition
 ];

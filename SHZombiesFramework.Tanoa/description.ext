@@ -54,6 +54,7 @@ class CfgFunctions {
             class randomSafezoneID {};
         };
         class Saves {
+            class adminForceSave {};
             class adminResetSave {};
             class getSave {};
             class getSaveVariable {};
