@@ -2,6 +2,7 @@ params ["_player"];
 
 if (!hasInterface) exitWith {};
 
+// Set a random loadout before it gets saved by onPlayerKilled.sqf
 private _loadout = [_player] call SHZ_fnc_getRespawnLoadout;
 if (_loadout isNotEqualTo []) then {_player setUnitLoadout _loadout};
 
