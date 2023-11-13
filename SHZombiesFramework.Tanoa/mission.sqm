@@ -624,7 +624,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=17;
+		items=14;
 		class Item0
 		{
 			dataType="Object";
@@ -2128,23 +2128,6 @@ class Mission
 		};
 		class Item6
 		{
-			dataType="Trigger";
-			position[]={6923.77,2.6600001,7386.458};
-			class Attributes
-			{
-				text="Start Random Intels";
-				condition="true";
-				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnDownloadIntel;" \n "    sleep 1;" \n "  };" \n "};";
-				sizeA=0;
-				sizeB=0;
-				timeout[]={3,3,3};
-				isServerOnly=1;
-			};
-			id=110;
-			type="EmptyDetector";
-		};
-		class Item7
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -2210,24 +2193,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item8
-		{
-			dataType="Trigger";
-			position[]={6926.1631,2.6600001,7370.2559};
-			class Attributes
-			{
-				text="Start Random Clear Zombies";
-				condition="true";
-				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnClearZombies;" \n "    sleep 1;" \n "  };" \n "};";
-				sizeA=0;
-				sizeB=0;
-				timeout[]={3,3,3};
-				isServerOnly=1;
-			};
-			id=122;
-			type="EmptyDetector";
-		};
-		class Item9
+		class Item7
 		{
 			dataType="Marker";
 			position[]={6979.7202,2.6600001,7378.3799};
@@ -2256,7 +2222,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Group";
 			side="West";
@@ -4071,24 +4037,7 @@ class Mission
 			};
 			id=397;
 		};
-		class Item11
-		{
-			dataType="Trigger";
-			position[]={6928.9028,2.6600001,7357.708};
-			class Attributes
-			{
-				text="Start Random Clear Raiders";
-				condition="true";
-				onActivation="0 spawn {" \n "  for ""_i"" from 1 to 5 do {" \n "    [] spawn SHZ_fnc_msnClearRaiders;" \n "    sleep 1;" \n "  };" \n "};";
-				sizeA=0;
-				sizeB=0;
-				timeout[]={3,3,3};
-				isServerOnly=1;
-			};
-			id=442;
-			type="EmptyDetector";
-		};
-		class Item12
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4106,7 +4055,7 @@ class Mission
 			type="rhsusf_m998_w_s_4dr";
 			atlOffset=2.3841858e-007;
 		};
-		class Item13
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4124,7 +4073,7 @@ class Mission
 			type="rhsusf_m998_w_s_4dr";
 			atlOffset=2.3841858e-007;
 		};
-		class Item14
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4143,7 +4092,7 @@ class Mission
 			type="RHS_UH60M";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item15
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4162,7 +4111,7 @@ class Mission
 			type="RHS_UH60M";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item16
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo

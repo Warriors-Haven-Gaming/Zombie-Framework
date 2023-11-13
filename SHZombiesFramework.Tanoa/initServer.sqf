@@ -1,5 +1,6 @@
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
+SHZ_missionLoopScript = 0 spawn SHZ_fnc_missionLoop;
 SHZ_ambientHordeScript = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector = 0 spawn SHZ_fnc_garbageCollectorLoop;
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
