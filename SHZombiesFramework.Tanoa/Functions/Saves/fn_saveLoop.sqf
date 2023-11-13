@@ -13,6 +13,7 @@ if (!isServer) exitWith {};
 
 while {true} do {
     sleep 300;
+    if (!isDedicated) then {systemChat "Autosaving mission..."};
     saveMissionProfileNamespace;
     diag_log text "Saved mission profile namespace";
 };
