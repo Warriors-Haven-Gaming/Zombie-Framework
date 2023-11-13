@@ -22,6 +22,7 @@ addMissionEventHandler ["EntityKilled", {
         // player driven vehicle road kill
         _instigator = _killer;
     };
+    if (isNull _instigator || {!isPlayer _instigator}) exitWith {};
 
     private _uid = getPlayerUID _instigator;
     if (_uid isEqualTo "") exitWith {};
