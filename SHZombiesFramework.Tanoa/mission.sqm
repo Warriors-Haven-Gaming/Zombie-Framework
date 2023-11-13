@@ -4174,7 +4174,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this] call SHZ_fnc_initStatsBoard;";
+				init="[this] call SHZ_fnc_initStatsBoard;" \n "[this] call SHZ_fnc_initAdminBoard;";
 				disableSimulation=1;
 			};
 			id=453;
