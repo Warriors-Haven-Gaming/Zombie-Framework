@@ -31,6 +31,7 @@ private _lookupPlayerStat = {
 
 private _stats = createHashMapFromArray [
     ["_missionsCompleted", ["missionsCompleted",0] call _lookupPlayerStat],
+    ["_playerDeaths", ["playerDeaths",0] call _lookupPlayerStat],
     ["_zombieKills", ["zombieKills",0] call _lookupPlayerStat]
 ];
 

@@ -11,6 +11,7 @@ Author:
 */
 if (!isServer) exitWith {};
 
+// Track zombie kills
 addMissionEventHandler ["EntityKilled", {
 	params ["_killed", "_killer", "_instigator"];
     if !([_killed] call SHZ_fnc_isZombie) exitWith {};
@@ -29,4 +30,16 @@ addMissionEventHandler ["EntityKilled", {
 
     private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
     _kills set [_uid, (_kills getOrDefault [_uid, 0]) + 1];
+}];
+
+// Track player deaths
+addMissionEventHandler ["EntityKilled", {
+    params ["_killed"];
+    if (!isPlayer [_killed]) exitWith {};
+
+    private _uid = getPlayerUID _killed;
+    if (_uid isEqualTo "") exitWith {};
+
+    private _deaths = ["playerDeaths"] call SHZ_fnc_getSaveVariable;
+    _deaths set [_uid, (_deaths getOrDefault [_uid, 0]) + 1];
 }];

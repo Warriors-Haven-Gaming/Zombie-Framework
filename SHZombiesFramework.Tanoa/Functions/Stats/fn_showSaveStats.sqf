@@ -25,5 +25,8 @@ hint composeText [
     lineBreak,
     "Missions completed: ",
     str _allMissionsCompleted,
+    lineBreak,
+    "Player deaths: ",
+    str _playerDeaths,
     lineBreak
 ];

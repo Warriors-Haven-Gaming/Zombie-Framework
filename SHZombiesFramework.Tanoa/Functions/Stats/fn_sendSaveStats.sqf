@@ -29,6 +29,11 @@ private _allMissionsCompleted = 0;
     _allMissionsCompleted = _allMissionsCompleted + _y
 } forEach (["allMissionsCompleted"] call SHZ_fnc_getSaveVariable);
 
+private _playerDeaths = 0;
+{
+    _playerDeaths = _playerDeaths + _y
+} forEach (["playerDeaths"] call SHZ_fnc_getSaveVariable);
+
 private _zombieKills = 0;
 {
     _zombieKills = _zombieKills + _y
@@ -36,6 +41,7 @@ private _zombieKills = 0;
 
 private _stats = createHashMapFromArray [
     ["_allMissionsCompleted", _allMissionsCompleted],
+    ["_playerDeaths", _playerDeaths],
     ["_zombieKills", _zombieKills]
 ];
 
