@@ -14,7 +14,7 @@ Author:
 */
 params ["_obj"];
 
-private _condition = "!isMultiplayer || {call BIS_fnc_admin > 0}";
+private _condition = "isServer || {call BIS_fnc_admin > 0}";
 
 _obj addAction [
     "Toggle Autosaving",

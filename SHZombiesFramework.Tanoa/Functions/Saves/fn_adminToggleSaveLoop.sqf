@@ -14,12 +14,10 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
+if (!call SHZ_fnc_isRemoteExecutedByAdmin) exitWith {};
 
 params ["_player"];
 if (!isPlayer _player) exitWith {};
 if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
-if (isMultiplayer && {admin remoteExecutedOwner isEqualTo 0}) exitWith {};
 
 [!scriptDone SHZ_saveScript] remoteExec ["SHZ_fnc_adminToggleSaveLoopPrompt", remoteExecutedOwner];

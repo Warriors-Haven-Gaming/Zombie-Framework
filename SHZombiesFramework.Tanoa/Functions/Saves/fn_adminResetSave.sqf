@@ -14,13 +14,11 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
+if (!call SHZ_fnc_isRemoteExecutedByAdmin) exitWith {};
 
 params ["_player"];
 if (!isPlayer _player) exitWith {};
 if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
-if (isMultiplayer && {admin remoteExecutedOwner isEqualTo 0}) exitWith {};
 
 diag_log text format ["Admin %1 (%2) requested reset save", name _player, getPlayerUID _player];
 private _saves = missionProfileNamespace getVariable "SHZ_saves";

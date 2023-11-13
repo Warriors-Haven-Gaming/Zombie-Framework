@@ -18,13 +18,11 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
+if (!call SHZ_fnc_isRemoteExecutedByAdmin) exitWith {};
 
 params ["_player", "_lastAutosaving"];
 if (!isPlayer _player) exitWith {};
 if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
-if (isMultiplayer && {admin remoteExecutedOwner isEqualTo 0}) exitWith {};
 
 private _autosaving = !scriptDone SHZ_saveScript;
 // TODO: proper response function for SHZ_fnc_adminToggleSaveLoopCallback
