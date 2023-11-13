@@ -146,7 +146,7 @@ private _hordeCallback = [
 private _makeHordeArgs = {
     /* Generates the arguments for a new horde. */
     params ["_aliveCount"];
-    private _hordeArgs = +_hordeArgs;
+    private _hordeArgs = [] + _hordeArgs;
     _hordeArgs params ["_quantity", "", "", "", "", "", ["_callbacks", []]];
 
     _quantity = _quantity min (_maxSpawned - _spawned) min (_maxAlive - _aliveCount);
