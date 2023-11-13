@@ -24,8 +24,14 @@ if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
 private _uid = getPlayerUID _player;
 if (_uid isEqualTo "") exitWith {};
 
+private _lookupPlayerStat = {
+    params ["_name", "_default"];
+    [_name] call SHZ_fnc_getSaveVariable getOrDefault [_uid, _default]
+};
+
 private _stats = createHashMapFromArray [
-    ["_zombieKills", ["zombieKills"] call SHZ_fnc_getSaveVariable getOrDefault [_uid, 0]]
+    ["_missionsCompleted", ["missionsCompleted",0] call _lookupPlayerStat],
+    ["_zombieKills", ["zombieKills",0] call _lookupPlayerStat]
 ];
 
 [_stats] remoteExec ["SHZ_fnc_showPlayerStats", remoteExecutedOwner];

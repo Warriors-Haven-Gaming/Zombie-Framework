@@ -19,7 +19,11 @@ if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_stats"];
 values _stats params keys _stats;
 
-hint formatText [
-    "Zombie kills: %1",
-    _zombieKills
+hint composeText [
+    "Zombie kills: ",
+    str _zombieKills,
+    lineBreak,
+    "Missions completed: ",
+    str _missionsCompleted,
+    lineBreak
 ];
