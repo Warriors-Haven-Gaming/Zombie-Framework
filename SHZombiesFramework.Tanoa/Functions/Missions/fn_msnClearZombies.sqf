@@ -60,7 +60,7 @@ private _spawnerScript = [
 while {true} do {
     sleep 10;
     if (scriptDone _spawnerScript) exitWith {
-        [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
+        [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
     };
 };
 

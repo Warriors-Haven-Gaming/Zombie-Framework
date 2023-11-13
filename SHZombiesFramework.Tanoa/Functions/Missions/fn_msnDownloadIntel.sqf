@@ -68,7 +68,7 @@ while {true} do {
     sleep 3;
     if (_laptop getVariable ["downloadStarted", false]) then {};
     if (_laptop getVariable ["downloadEnded", false]) exitWith {
-        [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
+        [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
     };
 };
 

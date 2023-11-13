@@ -115,7 +115,7 @@ private _taskDestinationScript = [_taskID, _group] spawn {
 while {true} do {
     sleep 10;
     if (units _group findIf {alive _x} isEqualTo -1) exitWith {
-        [_taskID, "SUCCEEDED"] call SHZ_fnc_taskEnd;
+        [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
     };
 };
 
