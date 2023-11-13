@@ -36,12 +36,21 @@ private _safezone = [_activationArea, true] call SHZ_fnc_createSafezone;
 _safezone setMarkerBrushLocal "FDiagonal";
 _safezone setMarkerColorLocal "ColorRed";
 _safezone setMarkerAlpha 0.7;
+private _participants = [];
 private _spawnerScript = [
     blufor,
     _activationArea,
     40 + count allPlayers,
     100 + count allPlayers * 5 min 300,
-    [20 + floor (count allPlayers * 0.5), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.25 + random 0.75],
+    [
+        20 + floor (count allPlayers * 0.5),
+        "mixed",
+        SHZ_zombieSide,
+        [0,0,0],
+        10,
+        0.25 + random 0.75,
+        [[_participants, SHZ_fnc_addParticipantHandler]]
+    ],
     100,
     5,
     20,
@@ -55,6 +64,7 @@ while {true} do {
     };
 };
 
+[_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
 _safezone setMarkerSizeLocal (markerSize _safezone vectorMultiply [2, 2]);
 _safezone setMarkerBrushLocal "SolidBorder";
 _safezone setMarkerColorLocal "ColorBlue";

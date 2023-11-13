@@ -32,6 +32,7 @@ class CfgFunctions {
             class initFriendlyMapIcons {};
         };
         class Missions {
+            class addParticipantHandler {};
             class msnClearRaiders {};
             class msnClearZombies {};
             class msnDownloadIntel {};

@@ -72,6 +72,7 @@ private _raiderCamp = [
     ]
 ] call SHZ_fnc_objectsMapper;
 
+private _participants = [];
 private _group = createGroup [opfor, true];
 private _quantity = 10 + floor random (count allPlayers min 20);
 private _unitTypes = [
@@ -89,6 +90,7 @@ for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, _center, [], 50, "NONE"];
     [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
+    [_unit, _participants] call SHZ_fnc_addParticipantHandler;
 };
 _group setBehaviourStrong "SAFE";
 _group setCombatMode "RED";
@@ -117,6 +119,7 @@ while {true} do {
     };
 };
 
+[_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
 [_raiderCamp] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
 terminate _taskDestinationScript;
