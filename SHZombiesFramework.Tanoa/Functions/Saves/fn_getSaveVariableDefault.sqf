@@ -17,8 +17,8 @@ Author:
 */
 params ["_name"];
 switch (_name) do {
-    case "allMissionsCompleted": {createHashMap};
-    case "missionsCompleted": {createHashMap};
-    case "zombieKills": {createHashMap};
+    case "allMissionsCompleted": {createHashMap}; // {String mission: Number total}
+    case "missionsCompleted": {createHashMap}; // {String uid: Number total}
+    case "zombieKills": {createHashMap}; // {String uid: Number total}
     default {nil};
 }
