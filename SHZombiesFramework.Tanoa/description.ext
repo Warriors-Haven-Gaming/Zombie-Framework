@@ -56,6 +56,9 @@ class CfgFunctions {
         class Saves {
             class adminForceSave {};
             class adminResetSave {};
+            class adminToggleSaveLoop {};
+            class adminToggleSaveLoopCallback {};
+            class adminToggleSaveLoopPrompt {};
             class getSave {};
             class getSaveVariable {};
             class getSaveVariableDefault {};

@@ -17,6 +17,19 @@ params ["_obj"];
 private _condition = "!isMultiplayer || {call BIS_fnc_admin > 0}";
 
 _obj addAction [
+    "Toggle Autosaving",
+    {
+        params ["_target", "_caller"];
+        [_caller] remoteExec ["SHZ_fnc_adminToggleSaveLoop", 2];
+    },
+    [],
+    1.5,
+    true,
+    true,
+    "",
+    _condition
+];
+_obj addAction [
     "Save Now",
     {
         params ["_target", "_caller"];
