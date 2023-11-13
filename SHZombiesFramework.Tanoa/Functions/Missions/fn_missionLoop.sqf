@@ -13,12 +13,8 @@ private _functions = [
     "SHZ_fnc_msnClearZombies",
     "SHZ_fnc_msnDownloadIntel"
 ];
-private _minScripts = 1;
-private _midScripts = 5;
-private _maxScripts = 30;
-private _getIterationDelay = {random 10};
-private _minChance = 1;
-private _midChance = 0.25;
+private _minScripts = 6;
+private _maxScripts = 15;
 // NOTE: above variables could be parameterized
 
 private _functionCounts = createHashMapFromArray (_functions apply {[_x, 0]});
@@ -28,14 +24,6 @@ private _countActiveScripts = {
         if (scriptDone _x) then {_scripts deleteAt _forEachIndex};
     } forEachReversed _scripts;
     count _scripts
-};
-private _getIterationChance = {
-    private _nScripts = call _countActiveScripts;
-    if (_minScripts < _midScripts) then {
-        linearConversion [_minScripts, _midScripts, _nScripts, _minChance, _midChance, true]
-    } else {
-        linearConversion [_midScripts, _maxScripts, _nScripts, _midChance, 0, true]
-    }
 };
 private _refreshFunctionCounts = {
     /* Ensures that function counts don't go out of bounds. */
@@ -63,9 +51,14 @@ private _selectRandomFunction = {
 };
 
 while {true} do {
-    sleep call _getIterationDelay;
-    if (random 1 >= call _getIterationChance) then {continue};
-    private _function = call _selectRandomFunction;
-    private _script = [] spawn (missionNamespace getVariable _function);
-    _scripts pushBack _script;
+    private _nScripts = call _countActiveScripts;
+    if (_nScripts < _minScripts) then {
+        for "_i" from 1 to (_maxScripts - _nScripts) do {
+            private _function = call _selectRandomFunction;
+            private _script = [] spawn (missionNamespace getVariable _function);
+            _scripts pushBack _script;
+            sleep (1 + random 4);
+        };
+    };
+    sleep (60 + random 120);
 };
