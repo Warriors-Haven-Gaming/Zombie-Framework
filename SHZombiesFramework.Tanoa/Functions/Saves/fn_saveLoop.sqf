@@ -13,7 +13,8 @@ if (!isServer) exitWith {};
 
 while {true} do {
     sleep 300;
-    if (!isDedicated) then {systemChat "Autosaving mission..."};
+    // TODO: proper autosave message function for SHZ_fnc_saveLoop
+    ["Autosaving mission..."] remoteExec ["systemChat", [0, -2] select isDedicated];
     saveMissionProfileNamespace;
     diag_log text "Saved mission profile namespace";
 };
