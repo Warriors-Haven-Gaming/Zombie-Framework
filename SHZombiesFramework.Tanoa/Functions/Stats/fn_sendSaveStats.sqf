@@ -24,20 +24,21 @@ if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
 private _uid = getPlayerUID _player;
 if (_uid isEqualTo "") exitWith {};
 
-private _allMissionsCompleted = 0;
-{
-    _allMissionsCompleted = _allMissionsCompleted + _y
-} forEach (["allMissionsCompleted"] call SHZ_fnc_getSaveVariable);
+private _sumHashMapValues = {
+    params ["_map"];
+    private _total = 0;
+    {_total = _total + _y} forEach _map;
+    _total
+};
 
-private _playerDeaths = 0;
-{
-    _playerDeaths = _playerDeaths + _y
-} forEach (["playerDeaths"] call SHZ_fnc_getSaveVariable);
+private _allMissionsCompleted = ["allMissionsCompleted"]
+    call SHZ_fnc_getSaveVariable call _sumHashMapValues;
 
-private _zombieKills = 0;
-{
-    _zombieKills = _zombieKills + _y
-} forEach (["zombieKills"] call SHZ_fnc_getSaveVariable);
+private _playerDeaths = ["playerDeaths"]
+    call SHZ_fnc_getSaveVariable call _sumHashMapValues;
+
+private _zombieKills = ["zombieKills"]
+    call SHZ_fnc_getSaveVariable call _sumHashMapValues;
 
 private _stats = createHashMapFromArray [
     ["_allMissionsCompleted", _allMissionsCompleted],
