@@ -63,7 +63,9 @@ class CfgFunctions {
             class addCompletedMission {};
             class initStatsTracking {};
             class sendPlayerStats {};
+            class sendSaveStats {};
             class showPlayerStats {};
+            class showSaveStats {};
         };
         class Tasks {
             class randomTaskID {};
