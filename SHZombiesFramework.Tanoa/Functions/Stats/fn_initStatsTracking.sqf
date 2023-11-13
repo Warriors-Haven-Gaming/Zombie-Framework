@@ -40,6 +40,8 @@ addMissionEventHandler ["EntityKilled", {
     private _uid = getPlayerUID _killed;
     if (_uid isEqualTo "") exitWith {};
 
+    if ([_killed] call SHZ_fnc_inAreaSafezone isNotEqualTo []) exitWith {};
+
     private _deaths = ["playerDeaths"] call SHZ_fnc_getSaveVariable;
     _deaths set [_uid, (_deaths getOrDefault [_uid, 0]) + 1];
 }];
