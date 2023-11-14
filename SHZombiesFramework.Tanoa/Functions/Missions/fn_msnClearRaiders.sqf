@@ -90,6 +90,9 @@ for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, _center, [], 50, "NONE"];
     [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
+    _unit addPrimaryWeaponItem "acc_flashlight";
+    _unit addHandgunItem "acc_flashlight_pistol";
+    _unit enableGunLights "ForceOn";
     [_unit, _participants] call SHZ_fnc_addParticipantHandler;
 };
 _group setBehaviourStrong "SAFE";
