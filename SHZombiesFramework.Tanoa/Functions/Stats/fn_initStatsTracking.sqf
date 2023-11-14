@@ -40,7 +40,11 @@ addMissionEventHandler ["EntityKilled", {
     private _uid = getPlayerUID _killed;
     if (_uid isEqualTo "") exitWith {};
 
-    if ([_killed] call SHZ_fnc_inAreaSafezone isNotEqualTo []) exitWith {};
+    // If they're close to the origin they probably just joined... thanks Arma
+    if (_killed distance2D [0,0,0] < 50) exitWith {};
+    private _respawn = [_killed] call SHZ_fnc_nearestRespawnPosition;
+    if (_respawn isEqualTo []) exitWith {};
+    if (_killed distance2D _respawn < 500) exitWith {};
 
     private _deaths = ["playerDeaths"] call SHZ_fnc_getSaveVariable;
     _deaths set [_uid, (_deaths getOrDefault [_uid, 0]) + 1];

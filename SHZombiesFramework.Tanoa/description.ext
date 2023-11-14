@@ -18,6 +18,7 @@ class CfgFunctions {
             class displayTimer {};
             class inAreaMarkers {};
             class isRemoteExecutedByAdmin {};
+            class nearestRespawnPosition {};
             class objectsGrabber {};
             class objectsMapper {};
             class randomPos {};
