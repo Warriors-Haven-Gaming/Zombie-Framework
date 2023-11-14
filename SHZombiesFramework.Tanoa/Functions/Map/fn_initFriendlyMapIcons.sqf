@@ -19,7 +19,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     private _lineMinMapScale = 0.175;
 
     // Separate units from vehicles
-    private _allUnits = units side player;
+    private _allUnits = units side group player;
     private _standaloneUnits = [];
     private _leaders = [];
     private _vehicles = [];
@@ -66,7 +66,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     // Draw unit icons
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
-        private _side = side _x;
+        private _side = side group _x;
         private _textScale = 0.03;
         private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {""};
         _display drawIcon [
@@ -95,7 +95,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         ];
         _display drawIcon [
             getText (_config >> "icon"),
-            [side _x] call _getVibrantSideColor,
+            [side group _x] call _getVibrantSideColor,
             _offsetPos,
             _iconScale,
             _iconScale,
@@ -111,7 +111,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     // Draw vehicle icons
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
-        private _side = side effectiveCommander _x;
+        private _side = side group effectiveCommander _x;
         private _pos = getPosWorldVisual _x;
         private _iconScale = _iconScale;
         private _textScale = 0.03;
