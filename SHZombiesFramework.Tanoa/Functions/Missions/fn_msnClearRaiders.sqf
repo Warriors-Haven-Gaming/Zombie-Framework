@@ -27,13 +27,15 @@ if (_center isEqualTo []) then {
     private _randomPosArgs = [[[locationPosition _location, size _location + [0, false]]]];
     for "_i" from 1 to 30 do {
         _pos = _randomPosArgs call BIS_fnc_randomPos;
-        if (_pos isNotEqualTo [0,0]) exitWith {};
+        if (_pos isEqualTo [0,0]) then {continue};
+        if (surfaceIsWater _pos) then {continue};
+        break;
     };
     if (_pos isEqualTo [0,0]) exitWith {};
     _center = [_pos, 0, -1, 10, 0, 0.3, 0, [], [_pos,_pos]] call BIS_fnc_findSafePos;
     if (count _center < 3) then {_center pushBack 0};
 };
-if (surfaceIsWater _center) exitWith {};
+if (_center isEqualTo []) exitWith {};
 
 private _terrainObjects = nearestTerrainObjects [_center, [], 15, false];
 _terrainObjects apply {hideObjectGlobal _x};
