@@ -84,7 +84,7 @@ _objs = _objs - [-1];
     _replaceBy = _x getVariable ["replaceBy", ""];
     if (_replaceBy != "") then {_type = _replaceBy;};
 
-    _outputArray = [_type, [_dX, _dY, _dZ], _azimuth, _fuel, _damage, _orientation, _varName, _init, true, true];
+    _outputArray = [_type, [_dX, _dY, _dZ], _azimuth, _fuel, _damage, _orientation, _varName, _init, true, _dZ > 0.5];
     _outputText = _outputText + _tab + (str _outputArray);
     _outputText = if (_forEachIndex < ((count _objs) - 1)) then {_outputText + ", " + _br} else {_outputText + _br};
 
