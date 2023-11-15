@@ -150,14 +150,17 @@ _multiplyMatrixFunc =
         if (_ASL) then {_newPos set [2, _newPos # 2 + _posZ]};
 
         //Create the object and make sure it's in the correct location
-        _newObj = _type createVehicle _newPos;
-        _newObj setDir (_azi + _azimuth);
+        _newObj = _type createVehicle [-random 500, -random 500, random 500];
+
+        if (!isNil "_simulation") then {_newObj enableSimulationGlobal _simulation; _newObj setVariable ["BIS_DynO_simulation", _simulation];};
+
         if (_ASL) then {
             _newObj setPosASL _newPos
         } else {
             _newObj setPosATL _newPos;
             _newObj setVectorUp surfaceNormal _newPos;
         };
+        _newObj setDir (_azi + _azimuth);
 
         //If fuel and damage were grabbed, map them
         if (!isNil "_fuel") then {_newObj setFuel _fuel};
@@ -178,7 +181,6 @@ _multiplyMatrixFunc =
             };
         };
         if (!isNil "_init") then {_newObj call (compile ("this = _this; " + _init));}; //TODO: remove defining this hotfix?
-        if (!isNil "_simulation") then {_newObj enableSimulationGlobal _simulation; _newObj setVariable ["BIS_DynO_simulation", _simulation];};
 
         _newObjs = _newObjs + [_newObj];
     };
