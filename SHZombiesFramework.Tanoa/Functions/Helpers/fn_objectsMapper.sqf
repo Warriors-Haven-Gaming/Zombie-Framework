@@ -154,13 +154,13 @@ _multiplyMatrixFunc =
 
         if (!isNil "_simulation") then {_newObj enableSimulationGlobal _simulation; _newObj setVariable ["BIS_DynO_simulation", _simulation];};
 
+        _newObj setDir (_azi + _azimuth);
         if (_ASL) then {
             _newObj setPosASL _newPos
         } else {
             _newObj setPosATL _newPos;
             _newObj setVectorUp surfaceNormal _newPos;
         };
-        _newObj setDir (_azi + _azimuth);
 
         //If fuel and damage were grabbed, map them
         if (!isNil "_fuel") then {_newObj setFuel _fuel};
