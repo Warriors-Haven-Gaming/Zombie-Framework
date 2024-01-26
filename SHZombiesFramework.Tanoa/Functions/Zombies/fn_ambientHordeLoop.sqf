@@ -12,10 +12,9 @@ Author:
 while {true} do {
     sleep (2 + random 3);
     {
-        sleep random 0.5;
-
         if (getPos _x select 2 > 30) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
+        sleep random 0.5;
 
         private _chance = 0;
 
