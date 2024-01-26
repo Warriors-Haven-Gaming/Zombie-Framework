@@ -73,6 +73,8 @@ private _roads = _center nearRoads _radius;
         _normal = _normal vectorMultiply _normalScale;
         _objPos = _objPos vectorAdd _normal;
 
+        if ([_objPos] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
+
         private _objDir = _lengthDir + random [-180, 0, 180];
         switch (true) do {
             case (_rightHandDrive && {_normalScale < 0});
