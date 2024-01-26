@@ -42,7 +42,7 @@ Parameters:
         The maximum number of zombies that can be alive before the spawner
         is completed. Note that the following conditions are also required
         alongside this:
-            - maxSpawned been reached
+            - maxSpawned has been reached
             - all hordes have finished spawning
         This is useful for allowing the last horde to be despawned if all
         units leave the area, and to return early if there are only a few
