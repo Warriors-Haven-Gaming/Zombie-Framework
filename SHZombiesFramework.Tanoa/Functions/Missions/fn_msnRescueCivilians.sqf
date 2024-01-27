@@ -129,7 +129,7 @@ private _captureCount = 0;
 while {true} do {
     sleep 10;
 
-    private _nearbyPlayers = allPlayers inAreaArray [_building, 25, 25, 0, false, 25];
+    private _nearbyPlayers = allPlayers inAreaArray [_building, 50, 50, 0, false, 50];
     {_participants pushBackUnique _x} forEach _nearbyPlayers;
 
     {
