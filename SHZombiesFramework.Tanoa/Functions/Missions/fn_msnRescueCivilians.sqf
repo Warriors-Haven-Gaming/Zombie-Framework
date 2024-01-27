@@ -51,13 +51,15 @@ if (isNull _building || {_building isEqualTo []}) then {
 
 if (isNull _building) exitWith {};
 
-private _units = [];
-private _group = createGroup [civilian, true];
 private _buildingPositions = _building buildingPos -1 call BIS_fnc_arrayShuffle;
 private _quantity =
     _minQuantity
     + floor random (_maxQuantity - _minQuantity + 1)
     min count _buildingPositions;
+if (_quantity < 1) exitWith {};
+
+private _units = [];
+private _group = createGroup [civilian, true];
 private _unitTypes = [
     "C_man_1",
     "C_Man_casual_1_F",
