@@ -18,6 +18,11 @@ private _minScripts = 6;
 private _maxScripts = 15;
 // NOTE: above variables could be parameterized
 
+_functions = _functions select {
+    private _predicate = missionNamespace getVariable [_x + "PreCondition", {true}];
+    [] call _predicate
+};
+
 private _functionCounts = createHashMapFromArray (_functions apply {[_x, 0]});
 private _scripts = [];
 private _countActiveScripts = {

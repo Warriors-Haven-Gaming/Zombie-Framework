@@ -43,6 +43,7 @@ class CfgFunctions {
             class msnDownloadIntelLaptopTimer {};
             class msnDownloadIntelLaptopTimerCondition {};
             class msnRescueCivilians {};
+            class msnRescueCiviliansPreCondition {};
         };
         class Music {
             class musicStartPlaylist {};
