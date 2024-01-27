@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=454;
+		nextID=477;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class LayerIndexProvider
 	{
-		nextID=19;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={6937.6353,14.179266,7339.8438};
-		dir[]={-0.083476342,-0.89644396,0.43526521};
-		up[]={-0.16884814,0.44312522,0.88041395};
-		aside[]={0.98211706,2.1664891e-007,0.18835418};
+		pos[]={6924.5571,7.9938655,7415.1904};
+		dir[]={-0.81760645,-0.54941189,-0.1722587};
+		up[]={-0.53761077,0.83555114,-0.11326779};
+		aside[]={-0.20616145,5.9022568e-008,0.97852206};
 	};
 };
 binarizationWanted=0;
@@ -42,13 +42,15 @@ addons[]=
 	"RHS_US_A2_AirImport",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
-	"A3_Props_F_Argo_Civilian_InfoBoards"
+	"A3_Props_F_Argo_Civilian_InfoBoards",
+	"A3_Structures_F_Walls",
+	"A3_Structures_F_Heli_Items_Airport"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=11;
 		class Item0
 		{
 			className="A3_Weapons_F";
@@ -109,12 +111,27 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item9
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
 {
 	"RHS_USAF",
-	"Argo"
+	"Argo",
+	"Heli"
 };
 randomSeed=4942559;
 class ScenarioData
@@ -624,7 +641,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=14;
+		items=25;
 		class Item0
 		{
 			dataType="Object";
@@ -2209,7 +2226,7 @@ class Mission
 				class Attribute0
 				{
 					property="ENH_markerHideOnStart";
-					expression="        if (!isServer || is3DEN || !_value) exitWith {};        _this setMarkerAlpha 0";
+					expression="        if (!isServer || is3DEN || !_value) exitWith {};        missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];        _this setMarkerAlpha 0";
 					class Value
 					{
 						class data
@@ -4145,6 +4162,360 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6913.6475,3.3465803,7408.2261};
+				angles[]={0,2.9393277,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=454;
+			type="Land_IndFnc_3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6915.4478,3.3465803,7414.6553};
+				angles[]={0,2.9393787,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=458;
+			type="Land_IndFnc_3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6912.5435,3.3465803,7414.0771};
+				angles[]={0,2.9393787,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=459;
+			type="Land_IndFnc_3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6917.8071,3.3465803,7410.6426};
+				angles[]={0,4.5100179,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=460;
+			type="Land_IndFnc_3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6917.2305,3.3465803,7413.5449};
+				angles[]={0,4.5100179,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=461;
+			type="Land_IndFnc_3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6918.1201,2.7706804,7409.104};
+				angles[]={0,6.0441976,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=471;
+			type="PortableHelipadLight_01_red_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6915.0903,2.7706804,7408.375};
+				angles[]={-0,6.0441976,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=472;
+			type="PortableHelipadLight_01_red_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6916.8096,2.7706804,7414.7466};
+				angles[]={-0,6.0441976,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=473;
+			type="PortableHelipadLight_01_red_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6911.2056,2.8799255,7413.6699};
+				angles[]={-0,6.0441976,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=474;
+			type="PortableHelipadLight_01_red_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6912.2642,2.8799253,7408.0728};
+				angles[]={-0,6.0441976,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=475;
+			type="PortableHelipadLight_01_red_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={6914.6802,2.6600001,7411.3599};
+			name="SHZ_prison_1";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorOrange";
+			alpha=0.30000001;
+			a=2.796;
+			b=2.7909999;
+			angle=348.12299;
+			id=476;
 		};
 	};
 	class Connections

@@ -11,7 +11,8 @@ Author:
 private _functions = [
     "SHZ_fnc_msnClearRaiders",
     "SHZ_fnc_msnClearZombies",
-    "SHZ_fnc_msnDownloadIntel"
+    "SHZ_fnc_msnDownloadIntel",
+    "SHZ_fnc_msnRescueCivilians"
 ];
 private _minScripts = 6;
 private _maxScripts = 15;

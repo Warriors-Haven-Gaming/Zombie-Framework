@@ -42,9 +42,16 @@ class CfgFunctions {
             class msnDownloadIntelLaptop {};
             class msnDownloadIntelLaptopTimer {};
             class msnDownloadIntelLaptopTimerCondition {};
+            class msnRescueCivilians {};
         };
         class Music {
             class musicStartPlaylist {};
+        };
+        class Prisoners {
+            class addEscortAction {};
+            class captureUnit {};
+            class inAreaPrison {};
+            class unitIsCaptured {};
         };
         class Props {
             class initAdminBoard {};
@@ -108,5 +115,9 @@ class CfgTaskDescriptions {
     class downloadIntel {
         title       = "Secure Intel";
         description = "A military research building has been found containing intel. Secure it!";
+    };
+    class rescueCivilians {
+        title       = "Rescue Civilians";
+        description = "A group of civilians have been taking shelter from the apocalypse. Save them!";
     };
 };
