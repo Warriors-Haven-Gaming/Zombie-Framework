@@ -47,5 +47,10 @@ _unit addAction [
         _units joinSilent _caller;
     },
     [_linked],
-    6
+    6,
+    true,
+    true,
+    "",
+    "true",
+    3
 ];
