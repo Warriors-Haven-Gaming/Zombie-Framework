@@ -51,6 +51,6 @@ _unit addAction [
     true,
     true,
     "",
-    "true",
+    "group _originalTarget isNotEqualTo group _this",
     3
 ];
