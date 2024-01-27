@@ -578,11 +578,11 @@ class Mission
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=1;
-		startFog=1;
+		startFog=0.80000001;
 		startWind=0;
 		startWaves=0.1;
 		forecastWeather=1;
-		forecastFog=1;
+		forecastFog=0.80000001;
 		forecastWind=0;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
@@ -592,8 +592,8 @@ class Mission
 		day=6;
 		hour=15;
 		minute=0;
-		startFogDecay=0;
-		forecastFogDecay=0;
+		startFogDecay=0.02;
+		forecastFogDecay=0.02;
 		class CustomAttributes
 		{
 			name="Intel";
