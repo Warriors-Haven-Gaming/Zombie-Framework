@@ -103,17 +103,19 @@ _group spawn {sleep 1; [_this, true] remoteExec ["enableDynamicSimulation"]};
     [_x, _units] remoteExec ["SHZ_fnc_addEscortAction", _locality, _x];
 } forEach _units;
 
+private _unitNeedsRescuing = {
+    params ["_unit"];
+    alive _unit && {!([_unit] call SHZ_fnc_unitIsCaptured)}
+};
+
 private _taskID = [blufor, "", "rescueCivilians", [_units # 0, false], "CREATED", -1, true, "help"] call SHZ_fnc_taskCreate;
-private _taskDestinationScript = [_taskID, _units] spawn {
-    params ["_taskID", "_units"];
+private _taskDestinationScript = [_taskID, _units, _unitNeedsRescuing] spawn {
+    params ["_taskID", "_units", "_unitNeedsRescuing"];
     scriptName "SHZ_fnc_msnRescueCivilians_taskDestinationScript";
     private _target = _units # 0;
     while {true} do {
         sleep 30;
-        private _targetIndex = _units findIf {
-            alive _x
-            && {!([_x] call SHZ_fnc_unitIsCaptured)}
-        };
+        private _targetIndex = _units findIf {_x call _unitNeedsRescuing};
         if (_targetIndex isEqualTo -1) exitWith {};
         if (_units # _targetIndex isEqualTo _target) then {continue};
         _target = _units # _targetIndex;
@@ -131,19 +133,13 @@ while {true} do {
     {_participants pushBackUnique _x} forEach _nearbyPlayers;
 
     {
-        if (!alive _x) then {continue};
-        if ([_x] call SHZ_fnc_unitIsCaptured) then {continue};
+        if !(_x call _unitNeedsRescuing) then {continue};
         if ([_x] call SHZ_fnc_inAreaPrison isEqualTo []) then {continue};
         [_x, "rescue"] call SHZ_fnc_captureUnit;
         _captureCount = _captureCount + 1;
     } forEach _units;
 
-    if (
-        _units findIf {
-            alive _x
-            && {!([_x] call SHZ_fnc_unitIsCaptured)}
-        } isEqualTo -1
-    ) exitWith {
+    if (_units findIf {_x call _unitNeedsRescuing} isEqualTo -1) exitWith {
         private _state = ["FAILED", "SUCCEEDED"] select (_captureCount > 0);
         [_taskID, _state] spawn SHZ_fnc_taskEnd;
     };
