@@ -21,5 +21,6 @@ Author:
 
 */
 params ["_unit", "_type"];
+[_unit] joinSilent grpNull;
 _unit disableAI "all";
 _unit setVariable ["SHZ_captured", true, true];
