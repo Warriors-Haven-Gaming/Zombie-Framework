@@ -38,6 +38,13 @@ while {true} do {
             _chance = _chance + linearConversion [200, 3, getLighting # 1, 0, 0.2, true];
         };
 
+        private _pos = getPosATL _x;
+        private _location = nearestLocation [_pos, ["NameVillage", "NameCity"], 1000];
+        if (!isNull _location) then {
+            private _distance = position _location distance2D _pos;
+            _chance = _chance + linearConversion [1000, 50, _distance, 0, 0.2, true];
+        };
+
         _chance = _chance max 0.1;
         if (random 1 >= _chance) then {continue};
 
