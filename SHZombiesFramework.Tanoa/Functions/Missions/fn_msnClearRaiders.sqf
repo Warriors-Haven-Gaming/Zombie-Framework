@@ -102,7 +102,7 @@ _group setCombatMode "RED";
 [_group, _center] call BIS_fnc_taskDefend;
 [_group, true] remoteExec ["enableDynamicSimulation"];
 
-private _taskID = [blufor, "", "clearRaiders", [leader _group, false], "CREATED", -1, true, "rifle"] call SHZ_fnc_taskCreate;
+private _taskID = [blufor, "", "clearRaiders", [leader _group, true], "CREATED", -1, true, "rifle"] call SHZ_fnc_taskCreate;
 private _taskDestinationScript = [_taskID, _group] spawn {
     params ["_taskID", "_group"];
     scriptName "SHZ_fnc_msnClearRaiders_taskDestinationScript";

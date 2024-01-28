@@ -108,7 +108,7 @@ private _unitNeedsRescuing = {
     alive _unit && {!([_unit] call SHZ_fnc_unitIsCaptured)}
 };
 
-private _taskID = [blufor, "", "rescueCivilians", [_units # 0, false], "CREATED", -1, true, "help"] call SHZ_fnc_taskCreate;
+private _taskID = [blufor, "", "rescueCivilians", [_units # 0, true], "CREATED", -1, true, "help"] call SHZ_fnc_taskCreate;
 private _taskDestinationScript = [_taskID, _units, _unitNeedsRescuing] spawn {
     params ["_taskID", "_units", "_unitNeedsRescuing"];
     scriptName "SHZ_fnc_msnRescueCivilians_taskDestinationScript";
