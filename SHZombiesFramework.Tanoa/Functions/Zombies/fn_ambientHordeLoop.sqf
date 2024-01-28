@@ -39,7 +39,11 @@ while {true} do {
         };
 
         private _pos = getPosATL _x;
-        private _location = nearestLocation [_pos, ["NameVillage", "NameCity"], 1000];
+        private _location = nearestLocation [
+            _pos,
+            ["NameVillage", "NameCity", "NameCityCapital"],
+            1000
+        ];
         if (!isNull _location) then {
             private _distance = position _location distance2D _pos;
             _chance = _chance + linearConversion [1000, 50, _distance, 0, 0.4, true];
