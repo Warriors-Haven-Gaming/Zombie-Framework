@@ -23,6 +23,7 @@ class CfgFunctions {
             class objectsMapper {};
             class randomPos {};
             class randomString {};
+            class setWeather {};
             class stringStartsWith {};
             class version {};
         };
