@@ -13,3 +13,6 @@ if (["autosave"] call SHZ_fnc_getSaveVariable) then {
 call SHZ_fnc_initStatsTracking;
 
 call SHZ_fnc_setWeather;
+
+// Why is this needed on dedicated server?
+civilian setFriend [blufor, 1];
