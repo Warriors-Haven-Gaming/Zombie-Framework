@@ -33,7 +33,9 @@ while {true} do {
     sleep (10 + random 10);
     private _remoteControlledUnits = allPlayers apply {remoteControlled _x} select {!isNull _x};
     private _units = units blufor select {
-        isPlayer _x || {[_x] call SHZ_fnc_inAreaSafezone isEqualTo []}
+        isPlayer _x
+        || {!(_x getVariable ["SHZ_disableAmbientHordes", false])
+        && {[_x] call SHZ_fnc_inAreaSafezone isEqualTo []}}
     };
     _units append allPlayers;
     _units append _remoteControlledUnits;
