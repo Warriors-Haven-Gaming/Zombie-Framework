@@ -24,6 +24,9 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     private _leaders = [];
     private _vehicles = [];
     {
+        if (_x getVariable ["SHZ_hiddenFromMap", false]) then {continue};
+        if (_x isKindOf "Logic") then {continue};
+
         private _vehicle = objectParent _x;
         if (!isNull _vehicle) then {
             _vehicles pushBackUnique _vehicle;

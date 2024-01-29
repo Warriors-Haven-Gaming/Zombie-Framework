@@ -23,6 +23,7 @@ class CfgFunctions {
             class objectsMapper {};
             class randomPos {};
             class randomString {};
+            class setWeather {};
             class stringStartsWith {};
             class version {};
         };
@@ -100,6 +101,30 @@ class CfgFunctions {
             class loiterThresholdLoop {};
             class zombieInit {};
         };
+    };
+};
+
+// https://community.bistudio.com/wiki/Description.ext#CfgRadio
+class CfgRadio {
+    class DeconVehicleStart {
+        name	= "Start Vehicle Decon";
+        sound[]	= {"Radio\DeconVehicleStart.ogg", 1, 1};
+        title   = "Drive through the shower slowly while we decontaminate your vehicle.";
+    };
+    class DeconVehicleGate {
+        name	= "Park Vehicle at Gate";
+        sound[]	= {"Radio\DeconVehicleGate.ogg", 1, 1};
+        title   = "Alright, park up next to the gate and dismount.";
+    };
+    class DeconTentStart {
+        name	= "Step Into Decon Tent";
+        sound[]	= {"Radio\DeconTentStart.ogg", 1, 1};
+        title   = "Please step into the tent for decontamination.";
+    };
+    class DeconTentFinish {
+        name	= "Exit Decon Tent";
+        sound[]	= {"Radio\DeconTentFinish.ogg", 1, 1};
+        title   = "Okay, you're all clear.";
     };
 };
 
