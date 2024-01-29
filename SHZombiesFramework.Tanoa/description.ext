@@ -34,6 +34,11 @@ class CfgFunctions {
         class Map {
             class initFriendlyMapIcons {};
         };
+        class Markers {
+            class createAreaMarker {};
+            class createLocalMarker {};
+            class randomMarkerID {};
+        };
         class Missions {
             class addParticipantHandler {};
             class missionLoop {};
@@ -63,7 +68,6 @@ class CfgFunctions {
         class Safezones {
             class createSafezone {};
             class inAreaSafezone {};
-            class randomSafezoneID {};
         };
         class Saves {
             class adminForceSave {};

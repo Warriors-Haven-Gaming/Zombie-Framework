@@ -23,21 +23,4 @@ Author:
 
 */
 params ["_area", ["_local", false]];
-_area params ["_center", "_a", "_b", "_angle", "_isRectangle"];
-private _marker = "";
-
-// Possibly prone to race conditions if more than one client uses this function
-isNil {
-    _marker = call SHZ_fnc_randomSafezoneID;
-    _marker = createMarkerLocal [_marker, _center];
-};
-
-if (_marker isEqualTo "") exitWith {_marker};
-
-private _shape = ["ELLIPSE", "RECTANGLE"] select _isRectangle;
-_marker setMarkerShapeLocal _shape;
-_marker setMarkerDirLocal _angle;
-_marker setMarkerSizeLocal [_a, _b];
-if (_local) then {_marker setMarkerAlphaLocal 0} else {_marker setMarkerAlpha 0};
-
-_marker
+[["SHZ_safezone_"], _area, _local] call SHZ_fnc_createAreaMarker

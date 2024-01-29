@@ -1,25 +1,39 @@
 /*
-Function: SHZ_fnc_randomSafezoneID
+Function: SHZ_fnc_randomMarkerID
 
 Description:
-    Generates a random safezone marker ID not in use.
+    Generates a random marker ID with the given prefix that is not in use.
     Note that this can potentially return a duplicate string if
     multiple calls are made to this function without a marker being
     created for each one. As such, running this in unscheduled environment
     alongside the marker creation would be preferable.
-    See also: SHZ_fnc_createSafezone
+
+Parameters:
+    String prefix:
+        (Optional, default "")
+        The prefix to use for the marker.
 
 Returns:
     String
         A unique marker name, or an empty string if unsuccessful.
 
+Examples:
+    (begin example)
+        [] call SHZ_fnc_randomMarkerID;
+    (end)
+    (begin example)
+        ["SHZ_safezone_"] call SHZ_fnc_randomMarkerID;
+    (end)
+
 Author:
     thegamecracks
 
 */
+params [["_prefix", ""]];
+
 private _marker = "";
 for "_i" from 1 to 100 do {
-    private _id = format ["SHZ_safezone_%1", [6] call SHZ_fnc_randomString];
+    private _id = format ["%1%2", _prefix, [6] call SHZ_fnc_randomString];
     if (markerColor _id isEqualTo "") exitWith {_marker = _id};
 };
 _marker
