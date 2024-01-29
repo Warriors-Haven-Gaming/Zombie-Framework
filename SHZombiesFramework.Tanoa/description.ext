@@ -42,6 +42,7 @@ class CfgFunctions {
         class Missions {
             class addParticipantHandler {};
             class missionLoop {};
+            class msnAssistSoldiers {};
             class msnClearDemons {};
             class msnClearRaiders {};
             class msnClearZombies {};
@@ -135,6 +136,10 @@ class CfgRadio {
 
 // https://community.bistudio.com/wiki/Description.ext#Tasks
 class CfgTaskDescriptions {
+    class assistSoldiers {
+        title       = "Assist Soldiers";
+        description = "Zombies are being fought off by soldiers here. Provide support!";
+    };
     class clearDemons {
         title       = "Hunt Demons";
         description = "A few groups of demons are roaming this area. Clear them out!";

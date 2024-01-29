@@ -9,6 +9,7 @@ Author:
 
 */
 private _functions = [
+    "SHZ_fnc_msnAssistSoldiers",
     "SHZ_fnc_msnClearDemons",
     "SHZ_fnc_msnClearRaiders",
     "SHZ_fnc_msnClearZombies",
