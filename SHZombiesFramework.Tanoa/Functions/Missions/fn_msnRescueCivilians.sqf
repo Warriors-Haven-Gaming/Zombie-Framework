@@ -125,6 +125,7 @@ private _taskDestinationScript = [_taskID, _units, _unitNeedsRescuing] spawn {
 
 private _participants = [];
 private _captureCount = 0;
+private _succeeded = false;
 
 while {true} do {
     sleep 10;
@@ -140,10 +141,12 @@ while {true} do {
     } forEach _units;
 
     if (_units findIf {_x call _unitNeedsRescuing} isEqualTo -1) exitWith {
-        private _state = ["FAILED", "SUCCEEDED"] select (_captureCount > 0);
-        [_taskID, _state] spawn SHZ_fnc_taskEnd;
+        _succeeded = _captureCount > 0;
+        [_taskID, ["FAILED", "SUCCEEDED"] select _succeeded] spawn SHZ_fnc_taskEnd;
     };
 };
 
-[_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
+if (_succeeded) then {
+    [_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
+};
 terminate _taskDestinationScript;
