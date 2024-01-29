@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6836.8979,36.48299,7435.335};
-		dir[]={-0.57488137,-0.73349744,0.36266062};
-		up[]={-0.6203844,0.67966926,0.3913655};
-		aside[]={0.53355449,1.2014061e-007,0.84577847};
+		pos[]={6871.8628,36.48299,7406.8276};
+		dir[]={-0.36893559,-0.4990539,-0.7841363};
+		up[]={-0.21247628,0.86654985,-0.45159847};
+		aside[]={-0.90486401,2.1606684e-007,0.42573816};
 	};
 };
 binarizationWanted=0;
@@ -39585,7 +39585,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=5;
 								};
 							};
 						};
@@ -39598,7 +39598,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=50;
+									value=100;
 								};
 							};
 						};
@@ -39637,7 +39637,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=5;
 								};
 							};
 						};
@@ -39663,7 +39663,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -39689,7 +39689,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=2;
+									value=5;
 								};
 							};
 						};
@@ -39702,7 +39702,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=500;
+									value=100;
 								};
 							};
 						};
@@ -39715,7 +39715,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=2;
+									value=5;
 								};
 							};
 						};
@@ -39728,7 +39728,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1000;
+									value=100;
 								};
 							};
 						};
@@ -39741,7 +39741,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=2;
+									value=5;
 								};
 							};
 						};
