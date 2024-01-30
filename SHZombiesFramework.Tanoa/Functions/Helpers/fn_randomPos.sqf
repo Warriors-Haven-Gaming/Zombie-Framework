@@ -47,7 +47,11 @@ if (_minRadius > 0) then {
 
 for "_i" from 1 to 30 do {
     _pos = _randomPosArgs call BIS_fnc_randomPos;
-    if (_pos isNotEqualTo [0,0]) exitWith {};
+    if (_pos isEqualTo [0,0]) then {continue};
+    private _empty = _pos findEmptyPosition [0, 50];
+    if (_empty isEqualTo []) then {continue};
+    _pos = _empty;
+    break;
 };
 if (_pos isEqualTo [0,0]) then {
     private _empty = _center findEmptyPosition [_minRadius, _maxRadius];
