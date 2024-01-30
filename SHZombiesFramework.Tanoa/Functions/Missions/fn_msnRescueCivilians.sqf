@@ -59,7 +59,7 @@ private _quantity =
 if (_quantity < 1) exitWith {};
 
 private _units = [];
-private _group = createGroup [civilian, true];
+private _group = createGroup civilian;
 private _unitTypes = [
     "C_man_1",
     "C_Man_casual_1_F",

@@ -57,7 +57,7 @@ Author:
 */
 params ["_quantity", "_types", "_side", "_center", "_radius", ["_rate", 0], ["_callbacks",[]]];
 
-private _group = createGroup [_side, true];
+private _group = createGroup _side;
 private _unitTypes = _types call SHZ_fnc_hordeType;
 if (count _unitTypes < 1) then {throw format ["Invalid horde type(s): %1", _types]};
 

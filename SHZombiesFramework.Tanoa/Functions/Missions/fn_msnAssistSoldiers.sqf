@@ -64,7 +64,7 @@ private _quantity =
 if (_quantity < 1) exitWith {};
 
 private _units = [];
-private _group = createGroup [blufor, true];
+private _group = createGroup blufor;
 private _unitTypes = [
     "rhsusf_usmc_marpat_wd_squadleader",
     "rhsusf_usmc_marpat_wd_teamleader",
