@@ -129,6 +129,9 @@
         </Key>
     </Container>
     <Container name="Stats">
+        <Key ID="STR_SHZ_showPlayerStats_playerMoney">
+            <Original>Available currency: $</Original>
+        </Key>
         <Key ID="STR_SHZ_showPlayerStats_zombieKills">
             <Original>Zombie kills: </Original>
         </Key>
@@ -137,6 +140,9 @@
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_deaths">
             <Original>Deaths: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showGameStats_playerMoney">
+            <Original>Total team currency: $</Original>
         </Key>
         <Key ID="STR_SHZ_showGameStats_zombieKills">
             <Original>Zombie kills: </Original>
