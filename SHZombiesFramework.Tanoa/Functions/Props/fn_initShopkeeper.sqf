@@ -19,7 +19,14 @@ _obj addAction [
     {
         params ["", "_caller"];
         [_caller] remoteExec ["SHZ_fnc_viewMoney", 2];
-    }
+    },
+    [],
+    1.5,
+    true,
+    true,
+    "",
+    "true",
+    3
 ];
 
 private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
