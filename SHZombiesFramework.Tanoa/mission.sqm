@@ -57900,7 +57900,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Base Repawn";
+							value="Base Respawn";
 						};
 					};
 				};
