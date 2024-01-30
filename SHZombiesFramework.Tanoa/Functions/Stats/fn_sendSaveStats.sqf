@@ -14,15 +14,10 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
-
 params ["_player"];
-if (!isPlayer _player) exitWith {};
-if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
+if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 
 private _uid = getPlayerUID _player;
-if (_uid isEqualTo "") exitWith {};
 
 private _sumHashMapValues = {
     params ["_map"];

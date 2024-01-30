@@ -23,6 +23,7 @@ class CfgFunctions {
             class anyInArea {};
             class displayTimer {};
             class inAreaMarkers {};
+            class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
             class nearestRespawnPosition {};
             class objectsGrabber {};
