@@ -81,6 +81,7 @@ for "_i" from 1 to _quantity do {
     _unit setPosATL (_buildingPositions select _i - 1);
     if (random 1 < 0.5) then {doStop [_unit]};
     _unit setVariable ["SHZ_disableAmbientHordes", true, true];
+    _unit setVariable ["SHZ_hiddenFromMap", true, true];
 };
 _group setBehaviourStrong "COMBAT";
 _group setCombatMode "RED";
