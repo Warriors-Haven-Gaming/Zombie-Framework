@@ -63,6 +63,7 @@ private _quantity =
     min count _buildingPositions;
 if (_quantity < 1) exitWith {};
 
+private _units = [];
 private _group = createGroup [blufor, true];
 private _unitTypes = [
     "rhsusf_usmc_marpat_wd_squadleader",
@@ -74,6 +75,7 @@ private _unitTypes = [
 ];
 for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, [0,0,0], [], 50, "NONE"];
+    _units pushBack _unit;
     [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
     _unit setPosATL (_buildingPositions select _i - 1);
@@ -121,7 +123,7 @@ while {true} do {
         [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
     };
 
-    if (units _group findIf {alive _x} isEqualTo -1) exitWith {
+    if (_units findIf {alive _x} isEqualTo -1) exitWith {
         _succeeded = false;
         [_taskID, "FAILED"] spawn SHZ_fnc_taskEnd;
     };
@@ -143,3 +145,4 @@ if (_succeeded) then {
     deleteMarker _safezone;
     terminate _spawnerScript;
 };
+[_units] call SHZ_fnc_queueGCDeletion;
