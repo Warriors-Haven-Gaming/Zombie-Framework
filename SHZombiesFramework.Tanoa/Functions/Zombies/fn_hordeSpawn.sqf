@@ -90,4 +90,23 @@ _group spawn {
     [_this, true] remoteExec ["enableDynamicSimulation"];
 };
 
+_group spawn {
+    // https://steamcommunity.com/workshop/filedetails/discussion/501966277/1734342793781632134/
+    scriptName "SHZ_fnc_hordeSpawn_stuckCheck";
+    sleep 1;
+    private _lastPos = getPosASL leader _this;
+    while {units _this findIf {alive _x} > -1} do {
+        sleep (5 + random 6);
+
+        private _leader = leader _this;
+        if (!simulationEnabled _leader) then {continue};
+
+        private _currentPos = getPosASL _leader;
+        private _distanceSqr = _currentPos vectorDistanceSqr _lastPos;
+        _lastPos = _currentPos;
+
+        if (_distanceSqr < 1) then {doStop _leader};
+    };
+};
+
 _units
