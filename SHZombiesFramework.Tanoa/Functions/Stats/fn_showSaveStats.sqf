@@ -22,6 +22,7 @@ values _stats params keys _stats;
 hint composeText [
     localize "$STR_SHZ_showGameStats_playerMoney",
     str _playerMoney,
+    lineBreak,
     localize "$STR_SHZ_showGameStats_zombieKills",
     str _zombieKills,
     lineBreak,
