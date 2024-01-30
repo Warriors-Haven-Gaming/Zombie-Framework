@@ -19,14 +19,14 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     private _lineMinMapScale = 0.175;
 
     // Separate units from vehicles
-    private _allUnits = units side group player;
+    private _allUnits = units side group player select {
+        !(_x getVariable ["SHZ_hiddenFromMap", false])
+        && {!(_x isKindOf "Logic")}
+    };
     private _standaloneUnits = [];
     private _leaders = [];
     private _vehicles = [];
     {
-        if (_x getVariable ["SHZ_hiddenFromMap", false]) then {continue};
-        if (_x isKindOf "Logic") then {continue};
-
         private _vehicle = objectParent _x;
         if (!isNull _vehicle) then {
             _vehicles pushBackUnique _vehicle;
