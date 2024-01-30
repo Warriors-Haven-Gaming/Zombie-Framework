@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="SHZombiesFramework">
+    <Container name="CfgRadio">
+        <Key ID="STR_SHZ_DeconVehicleStart_name">
+            <Original>Start Vehicle Decon</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconVehicleStart_title">
+            <Original>Drive through the shower slowly while we decontaminate your vehicle.</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconVehicleGate_name">
+            <Original>Park Vehicle at Gate</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconVehicleGate_title">
+            <Original>Alright, park up next to the gate and dismount.</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconTentStart_name">
+            <Original>Step Into Decon Tent</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconTentStart_title">
+            <Original>Please step into the tent for decontamination.</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconTentFinish_name">
+            <Original>Exit Decon Tent</Original>
+        </Key>
+        <Key ID="STR_SHZ_DeconTentFinish_title">
+            <Original>Okay, you're all clear.</Original>
+        </Key>
+    </Container>
     <Container name="CfgTaskDescriptions">
         <Key ID="STR_SHZ_assistSoldiers_title">
             <Original>Assist Soldiers</Original>
