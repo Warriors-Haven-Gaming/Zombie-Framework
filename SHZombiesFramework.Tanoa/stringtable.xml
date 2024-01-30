@@ -65,6 +65,13 @@
         </Key>
     </Container>
     <Container name="Economy">
+        <Key ID="STR_SHZ_showInsufficientFunds">
+            <Original>You cannot purchase %1! It requires $%2, but you only have $%3.</Original>
+        </Key>
+    <Container name="Economy">
+        <Key ID="STR_SHZ_showInsufficientFunds_defaultItem">
+            <Original>this</Original>
+        </Key>
         <Key ID="STR_SHZ_viewMoneyCallback_money">
             <Original>You have $%1 to spend.</Original>
         </Key>

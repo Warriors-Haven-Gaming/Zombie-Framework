@@ -11,6 +11,11 @@ class CfgFunctions {
         class Economy {
             class addMoney {};
             class addZombieKillMoney {};
+            class buyPills {};
+            class checkMoney {};
+            class lookupShopkeeperCatalog {};
+            class requestToBuyItem {};
+            class showInsufficientFunds {};
             class viewMoney {};
             class viewMoneyCallback {};
         };
