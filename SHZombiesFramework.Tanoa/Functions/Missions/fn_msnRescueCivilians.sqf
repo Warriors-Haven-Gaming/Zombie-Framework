@@ -149,4 +149,5 @@ while {true} do {
 if (_succeeded) then {
     [_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
 };
+[_units] call SHZ_fnc_queueGCDeletion;
 terminate _taskDestinationScript;
