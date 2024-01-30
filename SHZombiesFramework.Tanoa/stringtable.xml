@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="SHZombiesFramework">
+    <Container name="CfgTaskDescriptions">
+        <Key ID="STR_SHZ_assistSoldiers_title">
+            <Original>Assist Soldiers</Original>
+        </Key>
+        <Key ID="STR_SHZ_assistSoldiers_description">
+            <Original>Zombies are being fought off by soldiers here. Provide support!</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearDemons_title">
+            <Original>Hunt Demons</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearDemons_description">
+            <Original>A few groups of demons are roaming this area. Clear them out!</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearRaiders_title">
+            <Original>Clear Raiders</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearRaiders_description">
+            <Original>This area is being guarded by raiders. Take them out!</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearZombies_title">
+            <Original>Clear Area</Original>
+        </Key>
+        <Key ID="STR_SHZ_clearZombies_description">
+            <Original>This area has been infested with zombies. Clear them out!</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntel_title">
+            <Original>Secure Intel</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntel_description">
+            <Original>A military research building has been found containing intel. Secure it!</Original>
+        </Key>
+        <Key ID="STR_SHZ_rescueCivilians_title">
+            <Original>Rescue Civilians</Original>
+        </Key>
+        <Key ID="STR_SHZ_rescueCivilians_description">
+            <Original>A group of civilians have been taking shelter from the apocalypse. Save them!</Original>
+        </Key>
+    </Container>
     <Container name="Helpers">
         <Key ID="STR_SHZ_defaultTimer">
             <Original>Time Left: %3/%2</Original>
