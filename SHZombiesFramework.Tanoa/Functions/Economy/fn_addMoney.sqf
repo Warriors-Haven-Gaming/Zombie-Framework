@@ -27,6 +27,6 @@ if (_uid isEqualTo "") exitWith {
 };
 
 private _playerMoney = ["playerMoney"] call SHZ_fnc_getSaveVariable;
-private _newMoney = (_playerMoney getOrDefault [_uid, 0]) + _money;
+private _newMoney = (_playerMoney getOrDefault [_uid, 0]) + _money max 0;
 _playerMoney set [_uid, _newMoney];
 _newMoney
