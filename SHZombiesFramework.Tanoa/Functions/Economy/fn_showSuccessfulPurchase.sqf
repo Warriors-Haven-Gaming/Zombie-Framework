@@ -21,3 +21,4 @@ hint format [
     _item get "_displayName",
     _money
 ];
+playSoundUI ["a3\3den\data\sound\cfgsound\notificationdefault.wss"];

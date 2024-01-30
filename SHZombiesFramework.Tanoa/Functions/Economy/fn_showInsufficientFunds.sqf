@@ -26,3 +26,4 @@ params [
 ];
 if (_item select [0,1] isEqualTo "$") then {_item = localize _item};
 hint format [localize "$STR_SHZ_showInsufficientFunds", _item, _required, _current];
+playSoundUI ["a3\missions_f_beta\data\sounds\firing_drills\checkpoint_not_clear.wss"];
