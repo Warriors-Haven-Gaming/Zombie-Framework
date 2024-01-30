@@ -12,6 +12,8 @@ Parameters:
     Array areaArgs:
         The activation area defined as [center, a, b, angle, isRectangle, c?].
         This also defines the center where hordes will spawn.
+        The activation center's Z height has no effect and will always
+        be set to 0 metres (AGL).
         See also: https://community.bistudio.com/wiki/inArea
     Number maxAlive:
         The maximum number of alive zombies allowed.
@@ -82,6 +84,9 @@ params [
 ];
 
 if !(_sides isEqualType []) then {_sides = [_sides]};
+
+_areaArgs = +_areaArgs;
+_areaArgs # 0 set [2, 0];
 
 private _activatedOnce = false;
 private _spawned = 0;
