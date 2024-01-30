@@ -8,6 +8,7 @@ Description:
 Parameters:
     Array | Side sides:
         One or more sides that can activate the spawner.
+        Units with "SHZ_disableAmbientHordes" set to true will always be ignored.
     Array areaArgs:
         The activation area defined as [center, a, b, angle, isRectangle, c?].
         This also defines the center where hordes will spawn.
@@ -88,7 +89,9 @@ private _units = [];
 
 private _isActivated = {
     /* Checks if units from any of the given sides are in the area. */
-    private _sideUnits = flatten (_sides apply {units _x});
+    private _sideUnits =
+        flatten (_sides apply {units _x})
+        select {!(_x getVariable ["SHZ_disableAmbientHordes", false])};
     [_sideUnits, _areaArgs] call SHZ_fnc_anyInArea
 };
 private _getAliveCount = {
