@@ -64,7 +64,7 @@ while {true} do {
     };
 };
 
-[_fnc_scriptName, _participants] call SHZ_fnc_addCompletedMission;
+[_fnc_scriptName, _participants, 0] call SHZ_fnc_addCompletedMission;
 _safezone setMarkerSizeLocal (markerSize _safezone vectorMultiply [2, 2]);
 _safezone setMarkerBrushLocal "SolidBorder";
 _safezone setMarkerColorLocal "ColorBlue";
