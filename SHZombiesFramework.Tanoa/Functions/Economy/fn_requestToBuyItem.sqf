@@ -40,8 +40,13 @@ _context set ["_itemID", _itemID];
 _context set ["_money", _moneyOld];
 
 private _function = missionNamespace getVariable _functionName;
-[_context] call _function;
+private _success = [_context] call _function;
 
-private _moneyNew = [getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
-_context set ["_money", _moneyNew];
-[_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
+if (!isNil "_success" && {_success isEqualTo true}) then {
+    private _moneyNew = [getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
+    _context set ["_money", _moneyNew];
+    [_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
+} else {
+    private _message = "Something went wrong with the purchase.";
+    [_message] remoteExec ["hint", _player]; // TODO: proper response
+};
