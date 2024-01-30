@@ -11,10 +11,9 @@ Author:
 */
 if (!isServer) exitWith {};
 
-// Track zombie kills
+// Track zombie/enemy kills
 addMissionEventHandler ["EntityKilled", {
 	params ["_killed", "_killer", "_instigator"];
-    if !([_killed] call SHZ_fnc_isZombie) exitWith {};
 	if (isNull _instigator) then {
         // UAV/UGV player operated road kill
         _instigator = UAVControl vehicle _killer # 0;
@@ -28,10 +27,15 @@ addMissionEventHandler ["EntityKilled", {
     private _uid = getPlayerUID _instigator;
     if (_uid isEqualTo "") exitWith {};
 
-    private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
-    _kills set [_uid, (_kills getOrDefault [_uid, 0]) + 1];
+    if ([_killed] call SHZ_fnc_isZombie) exitWith {
+        private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
+        _kills set [_uid, (_kills getOrDefault [_uid, 0]) + 1];
+        [_uid, _killed] call SHZ_fnc_addZombieKillMoney;
+    };
 
-    [_uid, _killed] call SHZ_fnc_addZombieKillMoney;
+    if ([side group _instigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {
+        [_uid, 10] call SHZ_fnc_addMoney;
+    };
 }];
 
 // Track player deaths
