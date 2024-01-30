@@ -79,7 +79,7 @@ for "_i" from 1 to _quantity do {
     [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
     _unit setPosATL (_buildingPositions select _i - 1);
-    if (random 1 < 0.5) then {doStop [_unit]};
+    if (random 1 < 0.5) then {doStop _unit};
     _unit setVariable ["SHZ_disableAmbientHordes", true, true];
     _unit setVariable ["SHZ_hiddenFromMap", true, true];
 };
