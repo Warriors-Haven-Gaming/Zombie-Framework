@@ -64,6 +64,20 @@
             <Original>A group of civilians have been taking shelter from the apocalypse. Save them!</Original>
         </Key>
     </Container>
+    <Container name="Economy">
+        <Key ID="STR_SHZ_showInsufficientFunds">
+            <Original>You cannot purchase %1! It requires $%2, but you only have $%3.</Original>
+        </Key>
+        <Key ID="STR_SHZ_showInsufficientFunds_defaultItem">
+            <Original>this</Original>
+        </Key>
+        <Key ID="STR_SHZ_showSuccessfulPurchase">
+            <Original>Successfully purchased %1! You have $%2 left.</Original>
+        </Key>
+        <Key ID="STR_SHZ_viewMoneyCallback_money">
+            <Original>You have $%1 to spend.</Original>
+        </Key>
+    </Container>
     <Container name="Helpers">
         <Key ID="STR_SHZ_defaultTimer">
             <Original>Time Left: %3/%2</Original>
@@ -110,6 +124,9 @@
         <Key ID="STR_SHZ_initAdminBoard_resetSave_confirm">
             <Original>Are you sure you want to reset the current save?</Original>
         </Key>
+        <Key ID="STR_SHZ_initShopkeeper_viewMoney">
+            <Original>View Currency</Original>
+        </Key>
         <Key ID="STR_SHZ_initStatsBoard_viewPlayerStats">
             <Original>View Personal Stats</Original>
         </Key>
@@ -129,6 +146,9 @@
         </Key>
     </Container>
     <Container name="Stats">
+        <Key ID="STR_SHZ_showPlayerStats_playerMoney">
+            <Original>Available currency: $</Original>
+        </Key>
         <Key ID="STR_SHZ_showPlayerStats_zombieKills">
             <Original>Zombie kills: </Original>
         </Key>
@@ -137,6 +157,9 @@
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_deaths">
             <Original>Deaths: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showGameStats_playerMoney">
+            <Original>Total team currency: $</Original>
         </Key>
         <Key ID="STR_SHZ_showGameStats_zombieKills">
             <Original>Zombie kills: </Original>

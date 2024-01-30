@@ -8,6 +8,18 @@ class CfgFunctions {
         class Channels {
             class updateChannelLoop {};
         };
+        class Economy {
+            class addMoney {};
+            class addZombieKillMoney {};
+            class buyPills {};
+            class checkMoney {};
+            class lookupShopkeeperCatalog {};
+            class requestToBuyItem {};
+            class showInsufficientFunds {};
+            class showSuccessfulPurchase {};
+            class viewMoney {};
+            class viewMoneyCallback {};
+        };
         class GC {
             class garbageCollectorLoop {};
             class queueGCDeletion {};
@@ -17,6 +29,7 @@ class CfgFunctions {
             class anyInArea {};
             class displayTimer {};
             class inAreaMarkers {};
+            class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
             class nearestRespawnPosition {};
             class objectsGrabber {};
@@ -64,6 +77,7 @@ class CfgFunctions {
         };
         class Props {
             class initAdminBoard {};
+            class initShopkeeper {};
             class initStatsBoard {};
             class spawnCarWrecks {};
         };

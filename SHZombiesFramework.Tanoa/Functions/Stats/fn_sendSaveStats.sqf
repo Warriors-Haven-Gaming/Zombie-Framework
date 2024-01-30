@@ -14,15 +14,10 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
-
 params ["_player"];
-if (!isPlayer _player) exitWith {};
-if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
+if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 
 private _uid = getPlayerUID _player;
-if (_uid isEqualTo "") exitWith {};
 
 private _sumHashMapValues = {
     params ["_map"];
@@ -37,12 +32,16 @@ private _allMissionsCompleted = ["allMissionsCompleted"]
 private _playerDeaths = ["playerDeaths"]
     call SHZ_fnc_getSaveVariable call _sumHashMapValues;
 
+private _playerMoney = ["playerMoney"]
+    call SHZ_fnc_getSaveVariable call _sumHashMapValues;
+
 private _zombieKills = ["zombieKills"]
     call SHZ_fnc_getSaveVariable call _sumHashMapValues;
 
 private _stats = createHashMapFromArray [
     ["_allMissionsCompleted", _allMissionsCompleted],
     ["_playerDeaths", _playerDeaths],
+    ["_playerMoney", _playerMoney],
     ["_zombieKills", _zombieKills]
 ];
 

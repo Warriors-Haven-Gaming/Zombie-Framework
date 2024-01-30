@@ -14,15 +14,10 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-if (remoteExecutedOwner isEqualTo 0 && {isMultiplayer}) exitWith {};
-
 params ["_player"];
-if (!isPlayer _player) exitWith {};
-if (owner _player isNotEqualTo remoteExecutedOwner) exitWith {};
+if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 
 private _uid = getPlayerUID _player;
-if (_uid isEqualTo "") exitWith {};
 
 private _lookupPlayerStat = {
     params ["_name", "_default"];
@@ -32,6 +27,7 @@ private _lookupPlayerStat = {
 private _stats = createHashMapFromArray [
     ["_missionsCompleted", ["missionsCompleted",0] call _lookupPlayerStat],
     ["_playerDeaths", ["playerDeaths",0] call _lookupPlayerStat],
+    ["_playerMoney", ["playerMoney",0] call _lookupPlayerStat],
     ["_zombieKills", ["zombieKills",0] call _lookupPlayerStat]
 ];
 
