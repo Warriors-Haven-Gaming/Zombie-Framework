@@ -71,6 +71,9 @@
         <Key ID="STR_SHZ_showInsufficientFunds_defaultItem">
             <Original>this</Original>
         </Key>
+        <Key ID="STR_SHZ_showSuccessfulPurchase">
+            <Original>Successfully purchased %1! You have $%2 left.</Original>
+        </Key>
         <Key ID="STR_SHZ_viewMoneyCallback_money">
             <Original>You have $%1 to spend.</Original>
         </Key>

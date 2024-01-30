@@ -37,7 +37,7 @@ private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
         {
             params ["_target", "_caller", "", "_arguments"];
             private _context = _target getVariable "SHZ_shopkeeper_context";
-            [_caller, _arguments, _context] remoteExec ["SHZ_fnc_requestToBuyItem", 2];
+            [_target, _caller, _arguments, _context] remoteExec ["SHZ_fnc_requestToBuyItem", 2];
         },
         _x,
         1.5,

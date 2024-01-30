@@ -6,11 +6,9 @@ Description:
     Function must be executed on server.
 
 Parameters:
-    Object player:
-        The player buying this item.
-        This must be owned by the same client remote executing this function.
     HashMap context:
-        The shopkeeper's context.
+        The context of the purchase.
+        See SHZ_fnc_requestToBuyItem for details on the format.
 
 Returns:
     Boolean
@@ -20,8 +18,8 @@ Author:
     thegamecracks
 
 */
-if (!isServer) exitWith {};
-params ["_player", "_context"];
+if (!isServer) exitWith {false};
+params ["_context"];
+values _context params keys _context;
 _player addItem "RyanZombiesAntiVirusTemporary_Item";
-["Successfully bought pills!"] remoteExec ["hint", _player]; // TODO: proper response
 true

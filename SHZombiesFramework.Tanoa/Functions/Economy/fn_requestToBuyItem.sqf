@@ -6,8 +6,10 @@ Description:
     Function must be remote executed on server from a client.
 
 Parameters:
+    Object shopkeeper:
+        The shopkeeper providing the item.
     Object player:
-        The player buying an item.
+        The player buying the item.
         This must be owned by the same client remote executing this function.
     String itemID:
         The item to buy.
@@ -18,7 +20,7 @@ Author:
     thegamecracks
 
 */
-params ["_player", "_itemID", "_context"];
+params ["_shopkeeper", "_player", "_itemID", "_context"];
 if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 if (_itemID isEqualTo "") exitWith {};
 
@@ -27,10 +29,19 @@ if (count _item < 1) exitWith {};
 
 values _item params keys _item;
 
-private _money = [_player, _cost, _displayName] call SHZ_fnc_checkMoney;
-if (isNil "_money") exitWith {};
+private _moneyOld = [_player, _cost, _displayName] call SHZ_fnc_checkMoney;
+if (isNil "_moneyOld") exitWith {};
+
+_context = +_context;
+_context set ["_shopkeeper", _shopkeeper];
+_context set ["_player", _player];
+_context set ["_item", _item];
+_context set ["_itemID", _itemID];
+_context set ["_money", _moneyOld];
 
 private _function = missionNamespace getVariable _functionName;
-[_player, _context] call _function;
+[_context] call _function;
 
-[getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
+private _moneyNew = [getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
+_context set ["_money", _moneyNew];
+[_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];

@@ -11,6 +11,10 @@ Parameters:
     Number money:
         The money to add.
 
+Returns:
+    Number
+        The amount of money the player has afterwards.
+
 Author:
     thegamecracks
 
@@ -23,4 +27,6 @@ if (_uid isEqualTo "") exitWith {
 };
 
 private _playerMoney = ["playerMoney"] call SHZ_fnc_getSaveVariable;
-_playerMoney set [_uid, (_playerMoney getOrDefault [_uid, 0]) + _money];
+private _newMoney = (_playerMoney getOrDefault [_uid, 0]) + _money;
+_playerMoney set [_uid, _newMoney];
+_newMoney

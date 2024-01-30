@@ -16,6 +16,7 @@ class CfgFunctions {
             class lookupShopkeeperCatalog {};
             class requestToBuyItem {};
             class showInsufficientFunds {};
+            class showSuccessfulPurchase {};
             class viewMoney {};
             class viewMoneyCallback {};
         };
