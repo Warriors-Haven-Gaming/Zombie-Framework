@@ -11,6 +11,8 @@ class CfgFunctions {
         class Economy {
             class addMoney {};
             class addZombieKillMoney {};
+            class viewMoney {};
+            class viewMoneyCallback {};
         };
         class GC {
             class garbageCollectorLoop {};
@@ -68,6 +70,7 @@ class CfgFunctions {
         };
         class Props {
             class initAdminBoard {};
+            class initShopkeeper {};
             class initStatsBoard {};
             class spawnCarWrecks {};
         };
