@@ -1,9 +1,8 @@
 /*
-Function: SHZ_fnc_showPlayerStats
+Function: SHZ_fnc_viewMoneyCallback
 
 Description:
-    Shows the given player stats.
-    Function must be remote executed on client from the server.
+    Shows the player's money.
 
 Parameters:
     Number money:
