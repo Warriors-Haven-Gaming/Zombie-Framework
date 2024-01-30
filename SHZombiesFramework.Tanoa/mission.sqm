@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=623;
+		nextID=646;
 	};
 	class Camera
 	{
-		pos[]={6896.8862,5.8511839,7443.0083};
-		dir[]={-0.82770085,-0.55734348,0.065418266};
-		up[]={-0.55561084,0.83028209,0.043913327};
-		aside[]={0.078790426,0,0.99689126};
+		pos[]={6875.8008,7.5108676,7399.2339};
+		dir[]={-0.63726074,-0.63382494,0.43838519};
+		up[]={-0.52220798,0.77346599,0.35923767};
+		aside[]={0.56677061,-1.7392449e-007,0.82388777};
 	};
 };
 binarizationWanted=0;
@@ -9673,8 +9673,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						skill=0.7620526;
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -9973,6 +9973,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -10122,14 +10124,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -10161,14 +10163,14 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -10187,6 +10189,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -10336,14 +10340,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -10375,14 +10379,14 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -10595,7 +10599,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -10693,8 +10697,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -10843,8 +10847,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -10883,7 +10887,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -10981,14 +10985,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -11131,14 +11135,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -11340,7 +11344,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -11439,8 +11443,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -11589,8 +11593,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -11630,7 +11634,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -11728,14 +11732,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -11878,14 +11882,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -16779,7 +16783,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -16878,14 +16882,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -17028,14 +17032,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -17069,7 +17073,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -17167,14 +17171,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -17317,14 +17321,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -18953,7 +18957,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -19052,8 +19056,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -19202,8 +19206,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -19593,7 +19597,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -19692,8 +19696,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -19866,8 +19870,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -22294,7 +22298,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -22393,14 +22397,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -22543,14 +22547,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -22584,7 +22588,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -22682,8 +22686,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -22832,8 +22836,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -22907,7 +22911,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -23005,8 +23009,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -23155,8 +23159,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25000,7 +25004,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -25098,8 +25102,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -25248,8 +25252,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25288,7 +25292,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -25387,14 +25391,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -25537,14 +25541,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -40638,7 +40642,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -40946,6 +40951,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 					};
@@ -40969,14 +40976,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -41008,14 +41015,14 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -41034,6 +41041,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 					};
@@ -41057,14 +41066,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -41109,14 +41118,14 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -41135,6 +41144,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -41534,6 +41545,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -41974,8 +41987,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						skill=0.7620526;
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -42272,8 +42285,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						skill=0.7620526;
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -42570,8 +42583,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						skill=0.7620526;
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -53016,7 +53029,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -53115,8 +53128,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -53265,8 +53278,8 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -66729,8 +66742,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						skill=0.7620526;
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -67029,6 +67042,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -67230,6 +67245,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -69655,7 +69672,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -69754,14 +69771,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -69904,14 +69921,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -69945,7 +69962,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -70044,14 +70061,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -70194,14 +70211,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -70235,7 +70252,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						rank="SERGEANT";
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];";
 						stance="Up";
 						class Inventory
@@ -70333,14 +70350,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -70483,14 +70500,14 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -110356,7 +110373,8 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="CORPORAL";
+						skill=1;
+						rank="COLONEL";
 						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "]];" \n "[this] call SHZ_fnc_initShopkeeper;";
 						stance="Up";
 					};
