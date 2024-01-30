@@ -17,7 +17,7 @@ params ["_obj"];
 private _condition = "isServer || {call BIS_fnc_admin > 0}";
 
 _obj addAction [
-    "Toggle Autosaving",
+    localize "$STR_SHZ_initAdminBoard_toggleSaveLoop_action",
     {
         params ["_target", "_caller"];
         [_caller] remoteExec ["SHZ_fnc_adminToggleSaveLoop", 2];
@@ -30,12 +30,12 @@ _obj addAction [
     _condition
 ];
 _obj addAction [
-    "Save Now",
+    localize "$STR_SHZ_initAdminBoard_forceSave_action",
     {
         params ["_target", "_caller"];
         private _result = [
-            "Are you sure you want to save?",
-            "Save Now",
+            localize "$STR_SHZ_initAdminBoard_forceSave_confirm",
+            localize "$STR_SHZ_initAdminBoard_forceSave_action",
             true,
             true
         ] call BIS_fnc_guiMessage;
@@ -50,12 +50,12 @@ _obj addAction [
     _condition
 ];
 _obj addAction [
-    "Reset Current Save",
+    localize "$STR_SHZ_initAdminBoard_resetSave_action",
     {
         params ["_target", "_caller"];
         private _result = [
-            "Are you sure you want to reset the current save?",
-            "Reset Current Save",
+            localize "$STR_SHZ_initAdminBoard_resetSave_confirm",
+            localize "$STR_SHZ_initAdminBoard_resetSave_action",
             true,
             true
         ] call BIS_fnc_guiMessage;

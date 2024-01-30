@@ -18,10 +18,10 @@ if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_autosaving"];
 private _result = [
     [
-        "Are you sure you want to enable autosaving?",
-        "Are you sure you want to disable autosaving?"
+        localize "$STR_SHZ_adminToggleSaveLoopPrompt_confirm_enable",
+        localize "$STR_SHZ_adminToggleSaveLoopPrompt_confirm_disable"
     ] select _autosaving,
-    "Toggle Autosaving",
+    localize "$STR_SHZ_initAdminBoard_toggleSaveLoop_action",
     true,
     true
 ] call BIS_fnc_guiMessage;

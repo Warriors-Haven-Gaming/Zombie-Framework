@@ -34,13 +34,13 @@ if (isDedicated) exitWith {};
 params ["_unit", ["_linked", []]];
 
 _unit addAction [
-    "Escort",
+    localize "$STR_SHZ_addEscortAction_action",
     {
         params ["_target", "_caller", "", "_arguments"];
         _arguments params ["_linked"];
 
         if (leader _caller isNotEqualTo _caller) exitWith {
-            hint "Only your group leader can escort units!";
+            hint localize "$STR_SHZ_addEscortAction_notLeader";
         };
 
         private _units = _linked + [_target];

@@ -20,14 +20,16 @@ private _condition = [[_laptop], "SHZ_fnc_msnDownloadIntelLaptopTimerCondition"]
 private _hasElapsed = [_duration, "$STR_SHZ_defaultTimer", _area, _condition] call SHZ_fnc_displayTimer;
 if (!_hasElapsed) exitWith {
     if (hasInterface && {player inArea _area}) then {
-        [blufor, "HQ"] sideChat "Someone needs to stay near the intel laptop!";
+        [blufor, "HQ"] sideChat localize "$STR_SHZ_downloadIntelLaptop_interrupted";
     };
     _laptop setVariable ["downloadStarted", false];
 };
 _laptop setVariable ["downloadEnded", true];
 
 if (hasInterface) then {
-    private _message = "Intel has been downloaded!";
-    if (player inArea _area) then {_message = _message + " Time for you to move out!"};
-    [blufor, "HQ"] sideChat _message;
+    if (player inArea _area) then {
+        [blufor, "HQ"] sideChat localize "$STR_SHZ_downloadIntelLaptop_ended_inArea";
+    } else {
+        [blufor, "HQ"] sideChat localize "$STR_SHZ_downloadIntelLaptop_ended";
+    };
 };

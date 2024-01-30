@@ -5,4 +5,83 @@
             <Original>Time Left: %3/%2</Original>
         </Key>
     </Container>
+    <Container name="Missions">
+        <Key ID="STR_SHZ_downloadIntelLaptop_action">
+            <Original>Download Intel</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntelLaptop_start">
+            <Original>Intel is being downloaded...</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntelLaptop_interrupted">
+            <Original>Someone needs to stay near the intel laptop!</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntelLaptop_ended">
+            <Original>Intel has been downloaded!</Original>
+        </Key>
+        <Key ID="STR_SHZ_downloadIntelLaptop_ended_inArea">
+            <Original>Intel has been downloaded! Time for you to move out!</Original>
+        </Key>
+    </Container>
+    <Container name="Prisoners">
+        <Key ID="STR_SHZ_addEscortAction_action">
+            <Original>Escort</Original>
+        </Key>
+        <Key ID="STR_SHZ_addEscortAction_notLeader">
+            <Original>Only your group leader can escort units!</Original>
+        </Key>
+    </Container>
+    <Container name="Props">
+        <Key ID="STR_SHZ_initAdminBoard_toggleSaveLoop_action">
+            <Original>Toggle Autosaving</Original>
+        </Key>
+        <Key ID="STR_SHZ_initAdminBoard_forceSave_action">
+            <Original>Save Now</Original>
+        </Key>
+        <Key ID="STR_SHZ_initAdminBoard_forceSave_confirm">
+            <Original>Are you sure you want to save?</Original>
+        </Key>
+        <Key ID="STR_SHZ_initAdminBoard_resetSave_action">
+            <Original>Reset Current Save</Original>
+        </Key>
+        <Key ID="STR_SHZ_initAdminBoard_resetSave_confirm">
+            <Original>Are you sure you want to reset the current save?</Original>
+        </Key>
+        <Key ID="STR_SHZ_initStatsBoard_viewPlayerStats">
+            <Original>View Personal Stats</Original>
+        </Key>
+        <Key ID="STR_SHZ_initStatsBoard_viewGameStats">
+            <Original>View Game Stats</Original>
+        </Key>
+    </Container>
+    <Container name="Saves">
+        <Key ID="STR_SHZ_adminToggleSaveLoopPrompt_confirm_enable">
+            <Original>Are you sure you want to enable autosaving?</Original>
+        </Key>
+        <Key ID="STR_SHZ_adminToggleSaveLoopPrompt_confirm_disable">
+            <Original>Are you sure you want to disable autosaving?</Original>
+        </Key>
+        <Key ID="STR_SHZ_saveLoop_saved">
+            <Original>Saved mission profile namespace</Original>
+        </Key>
+    </Container>
+    <Container name="Stats">
+        <Key ID="STR_SHZ_showPlayerStats_zombieKills">
+            <Original>Zombie kills: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showPlayerStats_missionsCompleted">
+            <Original>Missions completed: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showPlayerStats_deaths">
+            <Original>Deaths: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showGameStats_zombieKills">
+            <Original>Zombie kills: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showGameStats_missionsCompleted">
+            <Original>Missions completed: </Original>
+        </Key>
+        <Key ID="STR_SHZ_showGameStats_deaths">
+            <Original>Player deaths: </Original>
+        </Key>
+    </Container>
 </Project>

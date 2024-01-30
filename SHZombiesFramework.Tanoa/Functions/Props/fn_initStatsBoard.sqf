@@ -15,14 +15,14 @@ Author:
 params ["_obj"];
 
 _obj addAction [
-    "View Personal Stats",
+    localize "$STR_SHZ_initStatsBoard_viewPlayerStats",
     {
         params ["", "_caller"];
         [_caller] remoteExec ["SHZ_fnc_sendPlayerStats", 2];
     }
 ];
 _obj addAction [
-    "View Game Stats",
+    localize "$STR_SHZ_initStatsBoard_viewGameStats",
     {
         params ["", "_caller"];
         [_caller] remoteExec ["SHZ_fnc_sendSaveStats", 2];

@@ -20,13 +20,13 @@ params ["_stats"];
 values _stats params keys _stats;
 
 hint composeText [
-    "Zombie kills: ",
+    localize "$STR_SHZ_showGameStats_zombieKills",
     str _zombieKills,
     lineBreak,
-    "Missions completed: ",
+    localize "$STR_SHZ_showGameStats_missionsCompleted",
     str _allMissionsCompleted,
     lineBreak,
-    "Player deaths: ",
+    localize "$STR_SHZ_showGameStats_deaths",
     str _playerDeaths,
     lineBreak
 ];
