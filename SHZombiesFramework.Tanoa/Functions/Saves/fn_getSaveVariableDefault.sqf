@@ -21,6 +21,7 @@ switch (_name) do {
     case "autosave": {true};
     case "missionsCompleted": {createHashMap}; // {String uid: Number total}
     case "playerDeaths": {createHashMap}; // {String uid: Number total}
+    case "playerMoney": {createHashMap}; // {String uid: Number money}
     case "zombieKills": {createHashMap}; // {String uid: Number total}
     default {nil};
 }

@@ -30,6 +30,8 @@ addMissionEventHandler ["EntityKilled", {
 
     private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
     _kills set [_uid, (_kills getOrDefault [_uid, 0]) + 1];
+
+    [_uid, _killed] call SHZ_fnc_addZombieKillMoney;
 }];
 
 // Track player deaths

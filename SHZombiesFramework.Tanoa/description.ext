@@ -8,6 +8,10 @@ class CfgFunctions {
         class Channels {
             class updateChannelLoop {};
         };
+        class Economy {
+            class addMoney {};
+            class addZombieKillMoney {};
+        };
         class GC {
             class garbageCollectorLoop {};
             class queueGCDeletion {};
