@@ -650,6 +650,7 @@ randomSeed=4942559;
 class ScenarioData
 {
 	author="Warriors Haven Gaming";
+	overviewPicture="splash.jpg";
 	briefing=0;
 	disabledAI=1;
 	respawn=3;
