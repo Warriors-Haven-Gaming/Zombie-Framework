@@ -28,6 +28,7 @@ class CfgFunctions {
         class Helpers {
             class anyInArea {};
             class displayTimer {};
+            class formatMoney {};
             class inAreaMarkers {};
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};

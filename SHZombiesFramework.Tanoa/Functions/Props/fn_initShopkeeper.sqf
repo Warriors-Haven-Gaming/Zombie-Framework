@@ -33,7 +33,7 @@ private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
 {
     values _y params keys _y;
     _obj addAction [
-        format ["Buy %1 ($%2)", _displayName, _cost], // TODO: localize
+        format ["Buy %1 (%2)", _displayName, _cost call SHZ_fnc_formatMoney], // TODO: localize
         {
             params ["_target", "_caller", "", "_arguments"];
             private _context = _target getVariable "SHZ_shopkeeper_context";

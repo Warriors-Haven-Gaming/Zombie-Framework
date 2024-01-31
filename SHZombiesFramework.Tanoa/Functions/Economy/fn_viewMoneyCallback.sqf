@@ -14,4 +14,7 @@ Author:
 */
 if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_money"];
-hint format [localize "$STR_SHZ_viewMoneyCallback_money", _money];
+hint format [
+    localize "$STR_SHZ_viewMoneyCallback_money",
+    _money call SHZ_fnc_formatMoney
+];

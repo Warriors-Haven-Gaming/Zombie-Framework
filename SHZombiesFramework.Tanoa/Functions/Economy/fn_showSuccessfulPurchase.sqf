@@ -19,6 +19,6 @@ values _context params keys _context;
 hint format [
     localize "$STR_SHZ_showSuccessfulPurchase",
     _item get "_displayName",
-    _money
+    _money call SHZ_fnc_formatMoney
 ];
 playSoundUI ["a3\3den\data\sound\cfgsound\notificationdefault.wss"];

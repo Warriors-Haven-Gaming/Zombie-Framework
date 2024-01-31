@@ -66,16 +66,16 @@
     </Container>
     <Container name="Economy">
         <Key ID="STR_SHZ_showInsufficientFunds">
-            <Original>You cannot purchase %1! It requires $%2, but you only have $%3.</Original>
+            <Original>You cannot purchase %1! It requires %2, but you only have %3.</Original>
         </Key>
         <Key ID="STR_SHZ_showInsufficientFunds_defaultItem">
             <Original>this</Original>
         </Key>
         <Key ID="STR_SHZ_showSuccessfulPurchase">
-            <Original>Successfully purchased %1! You have $%2 left.</Original>
+            <Original>Successfully purchased %1! You have %2 left.</Original>
         </Key>
         <Key ID="STR_SHZ_viewMoneyCallback_money">
-            <Original>You have $%1 to spend.</Original>
+            <Original>You have %1 to spend.</Original>
         </Key>
     </Container>
     <Container name="Helpers">
@@ -147,7 +147,7 @@
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showPlayerStats_playerMoney">
-            <Original>Available currency: $</Original>
+            <Original>Available currency: </Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_zombieKills">
             <Original>Zombie kills: </Original>
@@ -159,7 +159,7 @@
             <Original>Deaths: </Original>
         </Key>
         <Key ID="STR_SHZ_showGameStats_playerMoney">
-            <Original>Total team currency: $</Original>
+            <Original>Total team currency: </Original>
         </Key>
         <Key ID="STR_SHZ_showGameStats_zombieKills">
             <Original>Zombie kills: </Original>
