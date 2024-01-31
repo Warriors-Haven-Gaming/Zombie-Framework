@@ -20,16 +20,16 @@ params ["_stats"];
 values _stats params keys _stats;
 
 hint composeText [
-    localize "$STR_SHZ_showGameStats_playerMoney",
+    localize "$STR_SHZ_showSaveStats_playerMoney",
     _playerMoney call SHZ_fnc_formatMoney,
     lineBreak,
-    localize "$STR_SHZ_showGameStats_zombieKills",
+    localize "$STR_SHZ_showSaveStats_zombieKills",
     str _zombieKills,
     lineBreak,
-    localize "$STR_SHZ_showGameStats_missionsCompleted",
+    localize "$STR_SHZ_showSaveStats_missionsCompleted",
     str _allMissionsCompleted,
     lineBreak,
-    localize "$STR_SHZ_showGameStats_deaths",
+    localize "$STR_SHZ_showSaveStats_deaths",
     str _playerDeaths,
     lineBreak
 ];

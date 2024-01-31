@@ -130,7 +130,7 @@
         <Key ID="STR_SHZ_initStatsBoard_viewPlayerStats">
             <Original>View Personal Stats</Original>
         </Key>
-        <Key ID="STR_SHZ_initStatsBoard_viewGameStats">
+        <Key ID="STR_SHZ_initStatsBoard_showSaveStats">
             <Original>View Game Stats</Original>
         </Key>
     </Container>
@@ -158,16 +158,16 @@
         <Key ID="STR_SHZ_showPlayerStats_deaths">
             <Original>Deaths: </Original>
         </Key>
-        <Key ID="STR_SHZ_showGameStats_playerMoney">
+        <Key ID="STR_SHZ_showSaveStats_playerMoney">
             <Original>Total team currency: </Original>
         </Key>
-        <Key ID="STR_SHZ_showGameStats_zombieKills">
+        <Key ID="STR_SHZ_showSaveStats_zombieKills">
             <Original>Zombie kills: </Original>
         </Key>
-        <Key ID="STR_SHZ_showGameStats_missionsCompleted">
+        <Key ID="STR_SHZ_showSaveStats_missionsCompleted">
             <Original>Missions completed: </Original>
         </Key>
-        <Key ID="STR_SHZ_showGameStats_deaths">
+        <Key ID="STR_SHZ_showSaveStats_deaths">
             <Original>Player deaths: </Original>
         </Key>
     </Container>

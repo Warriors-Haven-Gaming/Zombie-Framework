@@ -22,7 +22,7 @@ _obj addAction [
     }
 ];
 _obj addAction [
-    localize "$STR_SHZ_initStatsBoard_viewGameStats",
+    localize "$STR_SHZ_initStatsBoard_showSaveStats",
     {
         params ["", "_caller"];
         [_caller] remoteExec ["SHZ_fnc_sendSaveStats", 2];
