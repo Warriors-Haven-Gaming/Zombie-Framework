@@ -1,6 +1,7 @@
 """Updates the mission version across relevant files."""
 import argparse
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -25,6 +26,11 @@ def subn_briefing_name(content: str, new_version: str):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--commit",
+        action="store_true",
+        help="Stage and commit changes to git",
+    )
     parser.add_argument("version", help="The new version string to use")
     args = parser.parse_args()
 
@@ -68,6 +74,11 @@ def main():
     mission_sqm.write_text(sqm_content, ENCODING)
     version_function.write_text(version_content, ENCODING)
     print(f"Version updated to v{new_version}")
+
+    if args.commit:
+        subprocess.check_call(["git", "restore", "--staged", "."])
+        subprocess.check_call(["git", "add", mission_sqm, version_function])
+        subprocess.check_call(["git", "commit", "-m", f"build: bump version to v{new_version}"])
 
 
 if __name__ == "__main__":
