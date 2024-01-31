@@ -101,6 +101,7 @@ class CfgFunctions {
             class addCompletedMission {};
             class initStatsTracking {};
             class sendPlayerStats {};
+            class showCompletedMission {};
             class sendSaveStats {};
             class showPlayerStats {};
             class showSaveStats {};
