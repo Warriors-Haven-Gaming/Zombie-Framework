@@ -1,7 +1,9 @@
 # Zombie-Framework (Pre-alpha)
 
-A whole map multiplayer mission using RyanD's [Zombies and Demons] mod,
-inspired by Quiksilver's Invade & Annex [Apex-Framework].
+An open world multiplayer mission using RyanD's [Zombies and Demons] mod,
+inspired by Quiksilver's Invade & Annex [Apex-Framework]. You will be
+working with your team to deal with the widespread infection and complete
+objectives across the islands of Tanoa.
 
 For developers interested in helping, please see the [contributing guide]!
 
