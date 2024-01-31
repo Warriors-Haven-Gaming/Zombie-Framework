@@ -25,6 +25,8 @@ _functions = _functions select {
     [] call _predicate
 };
 
+if (count _functions < 1) exitWith {};
+
 private _functionCounts = createHashMapFromArray (_functions apply {[_x, 0]});
 private _scripts = [];
 private _countActiveScripts = {
@@ -43,6 +45,13 @@ private _refreshFunctionCounts = {
 private _selectRandomFunction = {
     /* Selects a random mission function to be spawned. */
     call _refreshFunctionCounts;
+
+    if (count _functionCounts < 2) exitWith {
+        private _selected = keys _functionCounts select 0;
+        _functionCounts set [_selected, (_functionCounts get _selected) + 1];
+        _selected
+    };
+
     private _total = 0;
     {_total = _total + _y} forEach _functionCounts;
 
