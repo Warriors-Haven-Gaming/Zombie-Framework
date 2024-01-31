@@ -2,23 +2,21 @@
 Function: SHZ_fnc_missionLoop
 
 Description:
-    Periodically spawns missions.
+    Periodically spawns the given missions.
+
+Parameters:
+    Array functions:
+        The function names of each mission to spawn.
+    Number minScripts:
+        The minimum number of active missions allowed.
+    Number maxScripts:
+        The maximum number of active missions allowed.
 
 Author:
     thegamecracks
 
 */
-private _functions = [
-    "SHZ_fnc_msnAssistSoldiers",
-    "SHZ_fnc_msnClearDemons",
-    "SHZ_fnc_msnClearRaiders",
-    "SHZ_fnc_msnClearZombies",
-    "SHZ_fnc_msnDownloadIntel",
-    "SHZ_fnc_msnRescueCivilians"
-];
-private _minScripts = 6;
-private _maxScripts = 15;
-// NOTE: above variables could be parameterized
+params ["_functions", "_minScripts", "_maxScripts"];
 
 _functions = _functions select {
     private _predicate = missionNamespace getVariable [_x + "PreCondition", {true}];
