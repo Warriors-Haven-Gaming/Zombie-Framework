@@ -10,6 +10,11 @@ Parameters:
     Array | Number radius:
         The radius of the area.
         An array can be passed to specify the minimum and maximum radius.
+    Array condition:
+        (Optional, default [0, {true}])
+        The [arguments, code] callback used to determine if a given
+        position is allowed. The code will be passed an array containing
+        the PositionAGL and user-supplied arguments.
 
 Returns:
     Array
@@ -27,7 +32,7 @@ Author:
     thegamecracks
 
 */
-params ["_center", "_radius"];
+params ["_center", "_radius", ["_condition", [0, {true}]]];
 
 private _pos = [0,0];
 private _randomPosArgs = [];
@@ -40,6 +45,12 @@ if (_radius isEqualType []) then {
     _maxRadius = _radius;
 };
 
+_condition params ["_conditionArgs", "_conditionCode"];
+private _checkCondition = {
+    params ["_pos"];
+    [_empty, _conditionArgs] call _conditionCode isEqualTo true
+};
+
 _randomPosArgs pushBack [[_center, _maxRadius]];
 if (_minRadius > 0) then {
     _randomPosArgs pushBack [[_center, _minRadius]];
@@ -50,11 +61,14 @@ for "_i" from 1 to 30 do {
     if (_pos isEqualTo [0,0]) then {continue};
     private _empty = _pos findEmptyPosition [0, 50];
     if (_empty isEqualTo []) then {continue};
+    if !([_empty] call _checkCondition) then {continue};
     _pos = _empty;
     break;
 };
 if (_pos isEqualTo [0,0]) then {
     private _empty = _center findEmptyPosition [_minRadius, _maxRadius];
-    if (_empty isNotEqualTo []) then {_pos = _empty};
+    if (_empty isEqualTo []) then {continue};
+    if !([_empty] call _checkCondition) exitWith {};
+    _pos = _empty;
 };
 _pos
