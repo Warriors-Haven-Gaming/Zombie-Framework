@@ -70,7 +70,9 @@ private _killEH = addMissionEventHandler [
         private _uid = getPlayerUID _instigator;
         if (_uid isEqualTo "") exitWith {};
 
-        if !([side group _instigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {};
+        private _sideInstigator = side group _instigator;
+        if (_sideInstigator isNotEqualTo blufor) exitWith {};
+        if !([_sideInstigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {};
 
         _thisArgs params ["_area", "_kills"];
         if !(_killed inArea _area) exitWith {};
