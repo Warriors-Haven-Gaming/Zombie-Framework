@@ -93,6 +93,8 @@ private _getSupportUnitCount = {
     [_supportUnits, {alive _x}] call SHZ_fnc_shrinkCount
 };
 private _spawnSupportUnits = {
+    params ["_area", "_supportTypes", "_supportUnits"];
+    scriptName "SHZ_fnc_msnMainClearZombies_spawnSupportUnits";
     private _supportType = selectRandomWeighted _supportTypes;
     switch (_supportType) do {
         case "demons": {
@@ -151,7 +153,7 @@ while {true} do {
         && {call _getSupportUnitCount < _supportLimit
         && {[allPlayers, _area] call SHZ_fnc_anyInArea}}
     ) then {
-        call _spawnSupportUnits;
+        [_area, _supportTypes, _supportUnits] spawn _spawnSupportUnits;
     };
 };
 
