@@ -79,6 +79,48 @@ private _killEH = addMissionEventHandler [
     [_area, _kills]
 ];
 
+private _supportZombieBias = random 14 - 7;
+private _supportTypes = [
+    "demons",  1 + (_supportZombieBias max 0),
+    "raiders", 1 - (_supportZombieBias min 0)
+];
+private _supportLimitBase = 20 + floor (_area # 1 / 50);
+private _supportUnits = [];
+private _getSupportUnitCount = {
+    [_supportUnits, {alive _x}] call SHZ_fnc_shrinkCount
+};
+private _spawnSupportUnits = {
+    private _supportType = selectRandomWeighted _supportTypes;
+    switch (_supportType) do {
+        case "demons": {
+            [
+                1 + floor random (3 + count allPlayers / 10),
+                "demons",
+                SHZ_zombieSide,
+                _area # 0,
+                _area # 1 * 0.5,
+                1,
+                [[_supportUnits, {
+                    params ["_unit", "_supportUnits"];
+                    _supportUnits pushBack _unit;
+                }]]
+            ] spawn SHZ_fnc_hordeSpawn;
+        };
+        case "raiders": {
+            private _pos = [_area # 0, _area # 1, 100] call SHZ_fnc_randomPosHidden;
+            if (_pos isEqualTo [0,0]) exitWith {};
+
+            private _quantity = 1 + floor random (3 + count allPlayers / 5);
+            private _group = [_quantity, _pos, 50, true] call SHZ_fnc_spawnRaiders;
+            private _waypoint = _group addWaypoint [_pos, 0];
+            _waypoint setWaypointType "SAD";
+            _waypoint setWaypointCompletionRadius 20;
+            _supportUnits append units _group;
+        };
+        default {throw format ["Unknown support type %1", _supportType]};
+    };
+};
+
 private _lastKillCount = -1;
 private _lastKillCountTime = -1;
 while {true} do {
@@ -99,9 +141,19 @@ while {true} do {
             [0, -2] select isDedicated
         ];
     };
+
+    private _supportLimit = _supportLimitBase + count allPlayers;
+    if (
+        random 1 < 0.3 + count allPlayers / 50
+        && {call _getSupportUnitCount < _supportLimit
+        && {[allPlayers, _area] call SHZ_fnc_anyInArea}}
+    ) then {
+        call _spawnSupportUnits;
+    };
 };
 
 removeMissionEventHandler ["EntityKilled", _killEH];
 deleteMarker _areaMarker;
 deleteMarker _killCountMarker;
+[_supportUnits] call SHZ_fnc_queueGCDeletion;
 [_fnc_scriptName, keys _kills, 500] call SHZ_fnc_addCompletedMission;
