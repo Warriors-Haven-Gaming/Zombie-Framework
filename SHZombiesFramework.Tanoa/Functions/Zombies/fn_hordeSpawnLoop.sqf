@@ -100,26 +100,8 @@ private _isActivated = {
     [_sideUnits, _areaArgs] call SHZ_fnc_anyInArea
 };
 private _getAliveCount = {
-    /* Returns the number of units that are alive.
-
-    To avoid a memory leak and degraded* performance, this function
-    will clean up the units array once it reaches 1000 units.
-
-    * Very mild performance degredation:
-         100 units: 0.03ms
-        1000 units: 0.3ms
-
-    */
-    if (count _units < 1000) then {{alive _x} count _units} else {
-        // Another function might push to the array while this is running
-        // so we need to be careful with how we remove from the array
-        private _copy = +_units;
-        _units deleteRange [0, count _copy];
-        _copy = _copy select {alive _x};
-        private _remaining = {alive _x} count _units;
-        _units append _copy;
-        count _copy + _remaining
-    }
+    /* Returns the number of units that are alive. */
+    [_units, {alive _x}] call SHZ_fnc_shrinkCount
 };
 
 // To keep track of deleted units and respawn them, we'll give them an array
