@@ -13,6 +13,7 @@ class CfgFunctions {
             class addZombieKillMoney {};
             class buyBradley {};
             class buyPills {};
+            class buyQuadbike {};
             class checkMoney {};
             class lookupShopkeeperCatalog {};
             class requestToBuyItem {};

@@ -32,6 +32,11 @@ private _index = createHashMapFromArray [
         ["_displayName", "Pills"], // TODO: localize
         ["_functionName", "SHZ_fnc_buyPills"],
         ["_cost", 150]
+    ]],
+    ["quadbike", createHashMapFromArray [
+        ["_displayName", "Quadbike"],
+        ["_functionName", "SHZ_fnc_buyQuadbike"],
+        ["_cost", 1000]
     ]]
 ];
 
