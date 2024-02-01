@@ -51,7 +51,9 @@ if (_center isEqualTo []) then {
     };
 };
 
-if (count _buildings < 1) exitWith {};
+if (count _buildings < 1) exitWith {
+    diag_log text format ["%1: No buildings found", _fnc_scriptName];
+};
 
 private _buildingPositions = [];
 _buildings = _buildings call BIS_fnc_arrayShuffle;
@@ -61,7 +63,10 @@ private _quantity =
     _minQuantity
     + floor random (_maxQuantity - _minQuantity + 1)
     min count _buildingPositions;
-if (_quantity < 1) exitWith {};
+
+if (_quantity < 1) exitWith {
+    diag_log text format ["%1: No room to spawn soldiers", _fnc_scriptName];
+};
 
 private _units = [];
 private _group = createGroup blufor;

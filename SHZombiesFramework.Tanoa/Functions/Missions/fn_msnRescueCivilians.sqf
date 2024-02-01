@@ -32,7 +32,10 @@ private _getSuitableBuilding = {
 
 if (_building isEqualType [] && {count _building >= 2}) then {
     _building = [_building] call _getSuitableBuilding;
-    if (isNull _building) exitWith {breakOut "main"};
+    if (isNull _building) exitWith {
+        diag_log text format ["%1: No building found", _fnc_scriptName];
+        breakOut "main";
+    };
 };
 
 if (isNull _building || {_building isEqualTo []}) then {
@@ -49,14 +52,19 @@ if (isNull _building || {_building isEqualTo []}) then {
     };
 };
 
-if (isNull _building) exitWith {};
+if (isNull _building) exitWith {
+    diag_log text format ["%1: No building found", _fnc_scriptName];
+};
 
 private _buildingPositions = _building buildingPos -1 call BIS_fnc_arrayShuffle;
 private _quantity =
     _minQuantity
     + floor random (_maxQuantity - _minQuantity + 1)
     min count _buildingPositions;
-if (_quantity < 1) exitWith {};
+
+if (_quantity < 1) exitWith {
+    diag_log text format ["%1: No room to spawn civilians", _fnc_scriptName];
+};
 
 private _units = [];
 private _group = createGroup civilian;

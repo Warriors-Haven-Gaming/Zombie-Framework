@@ -27,7 +27,9 @@ if (_center isEqualTo []) then {
         break;
     } forEach _options;
 };
-if (_center isEqualTo []) exitWith {};
+if (_center isEqualTo []) exitWith {
+    diag_log text format ["%1: No center found", _fnc_scriptName];
+};
 
 private _taskID = [blufor, "", "clearDemons", _center, "CREATED", -1, true, "danger"] call SHZ_fnc_taskCreate;
 

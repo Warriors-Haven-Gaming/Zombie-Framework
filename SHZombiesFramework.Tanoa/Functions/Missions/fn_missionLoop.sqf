@@ -23,7 +23,9 @@ _functions = _functions select {
     [] call _predicate
 };
 
-if (count _functions < 1) exitWith {};
+if (count _functions < 1) exitWith {
+    diag_log text format ["%1: No functions to call", _fnc_scriptName];
+};
 
 private _functionCounts = createHashMapFromArray (_functions apply {[_x, 0]});
 private _scripts = [];

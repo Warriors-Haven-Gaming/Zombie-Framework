@@ -35,7 +35,9 @@ if (_center isEqualTo []) then {
     _center = [_pos, 0, -1, 10, 0, 0.3, 0, [], [_pos,_pos]] call BIS_fnc_findSafePos;
     if (count _center < 3) then {_center pushBack 0};
 };
-if (_center isEqualTo []) exitWith {};
+if (_center isEqualTo []) exitWith {
+    diag_log text format ["%1: No center found", _fnc_scriptName];
+};
 
 private _terrainObjects = nearestTerrainObjects [_center, [], 15, false];
 _terrainObjects apply {hideObjectGlobal _x};

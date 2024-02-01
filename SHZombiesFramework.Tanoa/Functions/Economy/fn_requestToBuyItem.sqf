@@ -22,10 +22,14 @@ Author:
 */
 params ["_shopkeeper", "_player", "_itemID", "_context"];
 if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
-if (_itemID isEqualTo "") exitWith {};
+if (_itemID isEqualTo "") exitWith {
+    diag_log text format ["%1: No item ID from %2", _fnc_scriptName, name _player];
+};
 
 private _item = [_itemID] call SHZ_fnc_lookupShopkeeperCatalog;
-if (count _item < 1) exitWith {};
+if (count _item < 1) exitWith {
+    diag_log text format ["%1: Invalid item ID %2 from %3", _fnc_scriptName, _itemID, name _player];
+};
 
 values _item params keys _item;
 
