@@ -65,6 +65,7 @@ class CfgFunctions {
             class msnDownloadIntelLaptop {};
             class msnDownloadIntelLaptopTimer {};
             class msnDownloadIntelLaptopTimerCondition {};
+            class msnMainClearZombies {};
             class msnRescueCivilians {};
             class msnRescueCiviliansPreCondition {};
         };
@@ -174,6 +175,10 @@ class CfgTaskDescriptions {
     class downloadIntel {
         title       = "$STR_SHZ_downloadIntel_title";
         description = "$STR_SHZ_downloadIntel_description";
+    };
+    class mainClearZombies {
+        title       = "$STR_SHZ_mainClearZombies_title";
+        description = "$STR_SHZ_mainClearZombies_description";
     };
     class rescueCivilians {
         title       = "$STR_SHZ_rescueCivilians_title";

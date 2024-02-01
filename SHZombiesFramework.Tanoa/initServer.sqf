@@ -1,7 +1,14 @@
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
 
-SHZ_missionLoopScript = [
+SHZ_mainMissionLoopScript = [
+    [
+        "SHZ_fnc_msnMainClearZombies"
+    ],
+    1,
+    1
+] spawn SHZ_fnc_missionLoop;
+SHZ_sideMissionLoopScript = [
     [
         "SHZ_fnc_msnAssistSoldiers",
         "SHZ_fnc_msnClearDemons",

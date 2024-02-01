@@ -57,6 +57,12 @@
         <Key ID="STR_SHZ_downloadIntel_description">
             <Original>A military research building has been found containing intel. Secure it!</Original>
         </Key>
+        <Key ID="STR_SHZ_mainClearZombies_title">
+            <Original>Main Mission: Clear Region</Original>
+        </Key>
+        <Key ID="STR_SHZ_mainClearZombies_description">
+            <Original>We have been tasked to fight off zombies in this region.</Original>
+        </Key>
         <Key ID="STR_SHZ_rescueCivilians_title">
             <Original>Rescue Civilians</Original>
         </Key>
