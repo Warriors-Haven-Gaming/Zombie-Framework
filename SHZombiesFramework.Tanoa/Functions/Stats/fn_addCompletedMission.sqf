@@ -10,7 +10,7 @@ Parameters:
         The mission function's name that was completed.
         Usually this should be `_fnc_scriptName`.
     Array participants:
-        An array of players that participated in the mission.
+        An array of players or UIDs that participated in the mission.
         Duplicates will be ignored.
     Number money:
         The amount of money to reward each participant.
@@ -27,7 +27,7 @@ _allMissionsCompleted set [_name, (_allMissionsCompleted getOrDefault [_name, 0]
 
 private _missionsCompleted = ["missionsCompleted"] call SHZ_fnc_getSaveVariable;
 {
-    private _uid = getPlayerUID _x;
+    private _uid = if (_x isEqualType "") then {_x} else {getPlayerUID _x};
     if (_uid isEqualTo "") then {continue};
     _missionsCompleted set [_uid, (_missionsCompleted getOrDefault [_uid, 0]) + 1];
 
