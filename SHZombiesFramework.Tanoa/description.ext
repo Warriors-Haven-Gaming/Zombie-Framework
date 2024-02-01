@@ -85,6 +85,8 @@ class CfgFunctions {
         class Safezones {
             class createSafezone {};
             class inAreaSafezone {};
+            class inAreaTeamSafezone {};
+            class initTeamSafezoneHandlers {};
         };
         class Saves {
             class adminForceSave {};
