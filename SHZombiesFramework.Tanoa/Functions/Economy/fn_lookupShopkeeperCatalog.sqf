@@ -23,6 +23,11 @@ Author:
 params [["_itemID", ""]];
 
 private _index = createHashMapFromArray [
+    ["bradley", createHashMapFromArray [
+        ["_displayName", "M2 Bradley"],
+        ["_functionName", "SHZ_fnc_buyBradley"],
+        ["_cost", 5000]
+    ]],
     ["pills", createHashMapFromArray [
         ["_displayName", "Pills"], // TODO: localize
         ["_functionName", "SHZ_fnc_buyPills"],
