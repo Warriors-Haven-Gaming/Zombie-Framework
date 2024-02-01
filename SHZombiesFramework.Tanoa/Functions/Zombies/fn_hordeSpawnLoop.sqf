@@ -111,11 +111,14 @@ private _getAliveCount = {
 
     */
     if (count _units < 1000) then {{alive _x} count _units} else {
-        private _totalUnits = count _units;
-        private _temp = _units select [0, _totalUnits] select {alive _x};
-        private _tempAlive = count _temp;
-        _units deleteRange [0, _totalUnits];
-        _tempAlive + ({alive _x} count (_units select [_totalUnits]))
+        // Another function might push to the array while this is running
+        // so we need to be careful with how we remove from the array
+        private _copy = +_units;
+        _units deleteRange [0, count _copy];
+        _copy = _copy select {alive _x};
+        private _remaining = {alive _x} count _units;
+        _units append _copy;
+        count _copy + _remaining
     }
 };
 
