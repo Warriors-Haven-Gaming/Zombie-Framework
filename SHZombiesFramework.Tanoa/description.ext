@@ -37,6 +37,7 @@ class CfgFunctions {
             class objectsGrabber {};
             class objectsMapper {};
             class randomPos {};
+            class randomPosHidden {};
             class randomString {};
             class setWeather {};
             class shrinkCount {};
