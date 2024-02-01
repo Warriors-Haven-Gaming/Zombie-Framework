@@ -79,8 +79,8 @@ private _killEH = addMissionEventHandler [
     [_area, _kills]
 ];
 
-private _lastKillCount = call _getKillCount;
-private _lastKillCountTime = diag_tickTime;
+private _lastKillCount = -1;
+private _lastKillCountTime = -1;
 while {true} do {
     sleep 10;
 
