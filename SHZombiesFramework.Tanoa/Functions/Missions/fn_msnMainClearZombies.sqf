@@ -57,7 +57,6 @@ private _killEH = addMissionEventHandler [
     "EntityKilled",
     {
         params ["_killed", "_killer", "_instigator"];
-        if !([_killed] call SHZ_fnc_isZombie) exitWith {};
         if (isNull _instigator) then {
             // UAV/UGV player operated road kill
             _instigator = UAVControl vehicle _killer # 0;
@@ -70,6 +69,8 @@ private _killEH = addMissionEventHandler [
 
         private _uid = getPlayerUID _instigator;
         if (_uid isEqualTo "") exitWith {};
+
+        if !([side group _instigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {};
 
         _thisArgs params ["_area", "_kills"];
         if !(_killed inArea _area) exitWith {};
