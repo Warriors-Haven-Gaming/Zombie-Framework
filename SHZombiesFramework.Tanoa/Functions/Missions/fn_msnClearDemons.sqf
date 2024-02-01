@@ -70,7 +70,7 @@ while {true} do {
     };
 };
 
-[_fnc_scriptName, _participants, 0] call SHZ_fnc_addCompletedMission;
+[_fnc_scriptName, _participants, 500] call SHZ_fnc_addCompletedMission;
 
 deleteMarker _areaMarker;
 private _safezone = [_activationArea, true] call SHZ_fnc_createSafezone;

@@ -80,4 +80,4 @@ while {true} do {
 
 removeMissionEventHandler ["EntityKilled", _killEH];
 deleteMarker _areaMarker;
-[_fnc_scriptName, keys _kills, 0] call SHZ_fnc_addCompletedMission;
+[_fnc_scriptName, keys _kills, 500] call SHZ_fnc_addCompletedMission;

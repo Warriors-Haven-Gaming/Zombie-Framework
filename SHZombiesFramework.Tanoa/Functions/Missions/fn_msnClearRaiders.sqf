@@ -126,7 +126,7 @@ while {true} do {
     };
 };
 
-[_fnc_scriptName, _participants, 0] call SHZ_fnc_addCompletedMission;
+[_fnc_scriptName, _participants, 500] call SHZ_fnc_addCompletedMission;
 [_raiderCamp] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
 terminate _taskDestinationScript;

@@ -75,7 +75,7 @@ while {true} do {
 };
 
 private _participants = allPlayers inAreaArray [_intelCenter, 100, 100, 0, false, 20];
-[_fnc_scriptName, _participants, 0] call SHZ_fnc_addCompletedMission;
+[_fnc_scriptName, _participants, 500] call SHZ_fnc_addCompletedMission;
 [_intelBuilding] call SHZ_fnc_queueGCDeletion;
 [_terrainObjects] call SHZ_fnc_queueGCUnhide;
 _spawnerScript spawn {
