@@ -30,8 +30,12 @@ _obj addAction [
 ];
 
 private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
+private _itemOrder = _items apply {[_y get "_cost", _y get "_displayName", _x]};
+_itemOrder sort true;
 {
-    values _y params keys _y;
+    private _itemID = _x # 2;
+    private _item = _items get _itemID;
+    values _item params keys _item;
     _obj addAction [
         format ["Buy %1 (%2)", _displayName, _cost call SHZ_fnc_formatMoney], // TODO: localize
         {
@@ -39,7 +43,7 @@ private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
             private _context = _target getVariable "SHZ_shopkeeper_context";
             [_target, _caller, _arguments, _context] remoteExec ["SHZ_fnc_requestToBuyItem", 2];
         },
-        _x,
+        _itemID,
         1.5,
         true,
         true,
@@ -47,4 +51,4 @@ private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
         "true",
         3
     ];
-} forEach _items;
+} forEach _itemOrder;
