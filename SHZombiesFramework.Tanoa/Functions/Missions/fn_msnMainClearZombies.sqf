@@ -35,6 +35,14 @@ _areaMarker setMarkerBrushLocal "FDiagonal";
 _areaMarker setMarkerColorLocal "ColorRed";
 _areaMarker setMarkerAlpha 0.7;
 
+private _killCountMarker = [
+    ["SHZ_mainMission_killCount"],
+    _area # 0 vectorAdd [_area # 1 + 50, 0, 0]
+] call SHZ_fnc_createLocalMarker;
+_killCountMarker setMarkerColorLocal "ColorRed";
+_killCountMarker setMarkerTypeLocal "KIA";
+_killCountMarker setMarkerAlpha 0.7;
+
 private _taskID = [blufor, "", "mainClearZombies", _area # 0, "CREATED", -1, true, "attack"] call SHZ_fnc_taskCreate;
 
 private _killThreshold = 400 + count allPlayers * 10 + floor random 101;
@@ -71,13 +79,29 @@ private _killEH = addMissionEventHandler [
     [_area, _kills]
 ];
 
+private _lastKillCount = call _getKillCount;
+private _lastKillCountTime = diag_tickTime;
 while {true} do {
     sleep 10;
-    if (call _getKillCount >= _killThreshold) exitWith {
+
+    private _now = diag_tickTime;
+    private _killCount = call _getKillCount;
+
+    if (_killCount >= _killThreshold) exitWith {
         [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
+    };
+
+    if (_now >= _lastKillCountTime + 30 && {_killCount isNotEqualTo _lastKillCount}) then {
+        _lastKillCount = _killCount;
+        _lastKillCountTime = _now;
+        [_killCountMarker, _killCount, _killThreshold] remoteExec [
+            "SHZ_fnc_updateKillCountMarker",
+            [0, -2] select isDedicated
+        ];
     };
 };
 
 removeMissionEventHandler ["EntityKilled", _killEH];
 deleteMarker _areaMarker;
+deleteMarker _killCountMarker;
 [_fnc_scriptName, keys _kills, 500] call SHZ_fnc_addCompletedMission;

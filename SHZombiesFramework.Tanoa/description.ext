@@ -68,6 +68,7 @@ class CfgFunctions {
             class msnMainClearZombies {};
             class msnRescueCivilians {};
             class msnRescueCiviliansPreCondition {};
+            class updateKillCountMarker {};
         };
         class Music {
             class musicStartPlaylist {};
