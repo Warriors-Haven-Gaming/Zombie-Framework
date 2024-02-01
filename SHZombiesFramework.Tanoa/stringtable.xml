@@ -147,28 +147,28 @@
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showPlayerStats_playerMoney">
-            <Original>Available currency: </Original>
+            <Original>Available currency: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_zombieKills">
-            <Original>Zombie kills: </Original>
+            <Original>Zombie kills: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_missionsCompleted">
-            <Original>Missions completed: </Original>
+            <Original>Missions completed: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_deaths">
-            <Original>Deaths: </Original>
+            <Original>Deaths: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showSaveStats_playerMoney">
-            <Original>Total team currency: </Original>
+            <Original>Total team currency: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showSaveStats_zombieKills">
-            <Original>Zombie kills: </Original>
+            <Original>Zombie kills: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showSaveStats_missionsCompleted">
-            <Original>Missions completed: </Original>
+            <Original>Missions completed: %1</Original>
         </Key>
         <Key ID="STR_SHZ_showSaveStats_deaths">
-            <Original>Player deaths: </Original>
+            <Original>Player deaths: %1</Original>
         </Key>
     </Container>
 </Project>
