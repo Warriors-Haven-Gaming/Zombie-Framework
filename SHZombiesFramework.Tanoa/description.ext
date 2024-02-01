@@ -41,6 +41,7 @@ class CfgFunctions {
             class randomString {};
             class setWeather {};
             class shrinkCount {};
+            class spawnRaiders {};
             class stringStartsWith {};
             class version {};
         };

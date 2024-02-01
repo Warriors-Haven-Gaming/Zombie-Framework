@@ -77,32 +77,12 @@ private _raiderCamp = [
 ] call SHZ_fnc_objectsMapper;
 
 private _participants = [];
-private _group = createGroup opfor;
 private _quantity = 10 + floor random (count allPlayers min 20);
-private _unitTypes = [
-    "I_C_Soldier_Para_7_F",
-    "I_C_Soldier_Para_2_F",
-    "I_C_Soldier_Para_3_F",
-    "I_C_Soldier_Para_1_F",
-    "I_L_Criminal_SG_F",
-    "I_L_Looter_Rifle_F",
-    "I_L_Looter_Pistol_F",
-    "I_L_Looter_SG_F",
-    "I_C_Soldier_Bandit_4_F"
-];
-for "_i" from 1 to _quantity do {
-    private _unit = _group createUnit [selectRandom _unitTypes, _center, [], 50, "NONE"];
-    [_unit] joinSilent _group;
-    _unit triggerDynamicSimulation false;
-    _unit addPrimaryWeaponItem "acc_flashlight";
-    _unit addHandgunItem "acc_flashlight_pistol";
-    _unit enableGunLights "ForceOn";
-    [_unit, _participants] call SHZ_fnc_addParticipantHandler;
-};
-_group setBehaviourStrong "SAFE";
-_group setCombatMode "RED";
+private _group = [_quantity, _center, 50, true] call SHZ_fnc_spawnRaiders;
+{
+    [_x, _participants] call SHZ_fnc_addParticipantHandler;
+} forEach units _group;
 [_group, _center] call BIS_fnc_taskDefend;
-[_group, true] remoteExec ["enableDynamicSimulation"];
 
 private _taskID = [blufor, "", "clearRaiders", [leader _group, true], "CREATED", -1, true, "rifle"] call SHZ_fnc_taskCreate;
 private _taskDestinationScript = [_taskID, _group] spawn {
