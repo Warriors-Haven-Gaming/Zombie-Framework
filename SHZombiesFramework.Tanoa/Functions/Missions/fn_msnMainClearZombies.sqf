@@ -45,7 +45,7 @@ _killCountMarker setMarkerAlpha 0.7;
 
 private _taskID = [blufor, "", "mainClearZombies", _area # 0, "CREATED", -1, true, "attack"] call SHZ_fnc_taskCreate;
 
-private _killThreshold = 400 + count allPlayers * 10 + floor random 101;
+private _killThreshold = 600 + count allPlayers * 20 + floor random 251;
 private _kills = createHashMap;
 private _getKillCount = {
     private _total = 0;
