@@ -92,6 +92,11 @@
             <Original>Time Left: %3/%2</Original>
         </Key>
     </Container>
+    <Container name="Map">
+        <Key ID="STR_SHZ_playerMoneyMarkerCallback">
+            <Original>%1</Original>
+        </Key>
+    </Container>
     <Container name="Missions">
         <Key ID="STR_SHZ_downloadIntelLaptop_action">
             <Original>Download Intel</Original>

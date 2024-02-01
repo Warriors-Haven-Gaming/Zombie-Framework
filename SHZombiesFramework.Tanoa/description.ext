@@ -48,6 +48,8 @@ class CfgFunctions {
         };
         class Map {
             class initFriendlyMapIcons {};
+            class playerMoneyMarkerCallback {};
+            class playerMoneyMarkerLoop {};
         };
         class Markers {
             class createAreaMarker {};
