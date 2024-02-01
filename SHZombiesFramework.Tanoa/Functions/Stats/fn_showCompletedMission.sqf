@@ -17,3 +17,10 @@ Author:
 */
 if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_name", "_money"];
+
+if (_money > 0) then {
+    hint format [
+        localize "$STR_SHZ_showCompletedMission_money",
+        _money call SHZ_fnc_formatMoney
+    ];
+};
