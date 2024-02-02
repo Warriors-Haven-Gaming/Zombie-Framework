@@ -7,12 +7,16 @@ Description:
 Parameters:
     Object obj:
         The object to initialize.
+    Array categories:
+        (Optional, default [])
+        The categories of items the shopkeeper can offer.
+        If set to an empty array, all items are offerred.
 
 Author:
     thegamecracks
 
 */
-params ["_obj"];
+params ["_obj", ["_categories", []]];
 
 _obj addAction [
     localize "$STR_SHZ_initShopkeeper_viewMoney",
@@ -30,6 +34,16 @@ _obj addAction [
 ];
 
 private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
+if (count _categories > 0) then {
+    private _skipped =
+        keys _items
+        select {
+            private _item = _items get _x;
+            private _category = _item get "_category";
+            !(_category in _categories)
+        };
+    {_items deleteAt _x} forEach _skipped;
+};
 private _itemOrder = _items apply {[_y get "_cost", _y get "_displayName", _x]};
 _itemOrder sort true;
 {
