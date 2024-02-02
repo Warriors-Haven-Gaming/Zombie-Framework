@@ -38,6 +38,11 @@ private _index = createHashMapFromArray [
         ["_functionName", "SHZ_fnc_buyGryphon"],
         ["_cost", 27500]
     ]],
+    ["littlebird_armed", createHashMapFromArray [
+        ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
+        ["_functionName", "SHZ_fnc_buyAH6MLittlebird"],
+        ["_cost", 10000]
+    ]],
     ["matv", createHashMapFromArray [
         ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
         ["_functionName", "SHZ_fnc_buyMATV"],

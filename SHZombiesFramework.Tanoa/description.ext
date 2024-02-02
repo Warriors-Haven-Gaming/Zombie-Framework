@@ -11,6 +11,7 @@ class CfgFunctions {
         class Economy {
             class addMoney {};
             class addZombieKillMoney {};
+            class buyAH6MLittlebird {};
             class buyBradley {};
             class buyGryphon {};
             class buyMATV {};
