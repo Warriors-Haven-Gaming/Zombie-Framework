@@ -12,6 +12,7 @@ class CfgFunctions {
             class addMoney {};
             class addZombieKillMoney {};
             class buyBradley {};
+            class buyGryphon {};
             class buyPills {};
             class buyQuadbike {};
             class checkMoney {};
@@ -29,6 +30,7 @@ class CfgFunctions {
         };
         class Helpers {
             class anyInArea {};
+            class clearPylonLoadout {};
             class displayTimer {};
             class formatMoney {};
             class inAreaMarkers {};

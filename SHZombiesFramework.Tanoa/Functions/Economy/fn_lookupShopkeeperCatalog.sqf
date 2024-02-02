@@ -22,11 +22,21 @@ Author:
 */
 params [["_itemID", ""]];
 
+private _getVehicleName = {
+    params ["_cls"];
+    getText (configFile >> "CfgVehicles" >> _cls >> "displayName")
+};
+
 private _index = createHashMapFromArray [
     ["bradley", createHashMapFromArray [
         ["_displayName", "M2 Bradley"],
         ["_functionName", "SHZ_fnc_buyBradley"],
         ["_cost", 5000]
+    ]],
+    ["gryphon", createHashMapFromArray [
+        ["_displayName", "I_Plane_Fighter_04_F" call _getVehicleName],
+        ["_functionName", "SHZ_fnc_buyGryphon"],
+        ["_cost", 27500]
     ]],
     ["pills", createHashMapFromArray [
         ["_displayName", "Pills"], // TODO: localize
