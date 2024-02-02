@@ -1,4 +1,4 @@
-# Zombie-Framework (Pre-alpha)
+# Zombie-Framework
 
 An open world multiplayer mission inspired by Quiksilver's Invade & Annex
 [Apex-Framework], created with the use of [RHSUSAF] and RyanD's
@@ -6,7 +6,8 @@ An open world multiplayer mission inspired by Quiksilver's Invade & Annex
 You will be working with your team to deal with the widespread infection
 and complete objectives across the islands of Tanoa.
 
-For developers interested in helping, please see the [contributing guide]!
+We are currently in Alpha development. For developers interested in helping,
+please see the [contributing guide]!
 
 ![](docs/images/banner_1.jpg)
 ![](docs/images/banner_2.jpg)
