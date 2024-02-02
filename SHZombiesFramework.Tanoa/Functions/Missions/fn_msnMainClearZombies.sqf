@@ -161,4 +161,5 @@ removeMissionEventHandler ["EntityKilled", _killEH];
 deleteMarker _areaMarker;
 deleteMarker _killCountMarker;
 [_supportUnits] call SHZ_fnc_queueGCDeletion;
-[_fnc_scriptName, keys _kills, 500] call SHZ_fnc_addCompletedMission;
+private _money = 1000 + 250 * (floor random 5);
+[_fnc_scriptName, keys _kills, _money] call SHZ_fnc_addCompletedMission;
