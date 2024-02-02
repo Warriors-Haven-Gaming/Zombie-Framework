@@ -46,7 +46,7 @@ while {true} do {
         if (isPlayer _x) exitWith {false};
         if (_x in _remoteControlledUnits) exitWith {false};
         if !([_x] call SHZ_fnc_isZombie) exitWith {false};
-        if (_x getVariable ["SHZ_disableGC", false]) exitWith {false};
+        if (_x getVariable ["SHZ_disableGC", false] isEqualTo true) exitWith {false};
         true
     };
     {
@@ -58,7 +58,7 @@ while {true} do {
 
     private _time = time;
     {
-        if (_x getVariable ["SHZ_disableGC", false]) then {continue};
+        if (_x getVariable ["SHZ_disableGC", false] isEqualTo true) then {continue};
         private _collectAt = _x getVariable "garbageCollectAt";
         if (isNil "_collectAt") then {
             _x setVariable ["garbageCollectAt", _time + _lootLifetime];

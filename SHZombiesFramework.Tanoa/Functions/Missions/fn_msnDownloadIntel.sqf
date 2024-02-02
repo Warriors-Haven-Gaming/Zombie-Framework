@@ -68,8 +68,8 @@ private _spawnerScript = [
 
 while {true} do {
     sleep 3;
-    if (_laptop getVariable ["downloadStarted", false]) then {};
-    if (_laptop getVariable ["downloadEnded", false]) exitWith {
+    if (_laptop getVariable ["downloadStarted", false] isEqualTo true) then {};
+    if (_laptop getVariable ["downloadEnded", false] isEqualTo true) exitWith {
         [_taskID, "SUCCEEDED"] spawn SHZ_fnc_taskEnd;
     };
 };

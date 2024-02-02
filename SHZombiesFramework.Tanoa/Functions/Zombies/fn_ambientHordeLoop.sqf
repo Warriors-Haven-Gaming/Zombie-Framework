@@ -12,7 +12,7 @@ Author:
 while {true} do {
     sleep (2 + random 3);
     {
-        if (_x getVariable ["SHZ_disableAmbientHordes", false]) then {continue};
+        if (_x getVariable ["SHZ_disableAmbientHordes", false] isEqualTo true) then {continue};
         if (getPos _x select 2 > 30) then {continue};
         if (_x call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
         sleep random 0.5;

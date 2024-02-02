@@ -24,4 +24,4 @@ Author:
 
 */
 if !(_this isEqualType []) then {_this = [_this]};
-_this findIf {!(_x getVariable ["SHZ_captured", false])} isEqualTo -1
+_this findIf {_x getVariable ["SHZ_captured", false] isNotEqualTo true} isEqualTo -1
