@@ -62,6 +62,11 @@ private _index = createHashMapFromArray [
         ["_displayName", "Quadbike"],
         ["_functionName", "SHZ_fnc_buyQuadbike"],
         ["_cost", 1000]
+    ]],
+    ["stomper_rcws", createHashMapFromArray [
+        ["_displayName", "B_T_UGV_01_rcws_olive_F" call _getVehicleName],
+        ["_functionName", "SHZ_fnc_buyStomperRCWS"],
+        ["_cost", 5000]
     ]]
 ];
 

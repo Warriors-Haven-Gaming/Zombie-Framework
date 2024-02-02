@@ -19,6 +19,7 @@ class CfgFunctions {
             class buyMATV {};
             class buyPills {};
             class buyQuadbike {};
+            class buyStomperRCWS {};
             class checkMoney {};
             class lookupShopkeeperCatalog {};
             class requestToBuyItem {};
