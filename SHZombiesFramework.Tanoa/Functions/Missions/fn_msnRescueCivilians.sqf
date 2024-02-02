@@ -102,6 +102,7 @@ for "_i" from 1 to _quantity do {
     [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
     _unit setPosATL (_buildingPositions select _i - 1);
+    [_unit, "NoVoice"] remoteExec ["setSpeaker", 0, _unit];
 };
 doStop _units;
 _group spawn {sleep 1; [_this, true] remoteExec ["enableDynamicSimulation"]};
