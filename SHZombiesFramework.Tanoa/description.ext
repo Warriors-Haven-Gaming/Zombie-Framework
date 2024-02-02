@@ -44,6 +44,7 @@ class CfgFunctions {
             class inAreaMarkers {};
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
+            class lockVehicleToPlayer {};
             class nearestRespawnPosition {};
             class objectsGrabber {};
             class objectsMapper {};
