@@ -38,6 +38,11 @@ private _index = createHashMapFromArray [
         ["_functionName", "SHZ_fnc_buyGryphon"],
         ["_cost", 27500]
     ]],
+    ["matv", createHashMapFromArray [
+        ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
+        ["_functionName", "SHZ_fnc_buyMATV"],
+        ["_cost", 3500]
+    ]],
     ["pills", createHashMapFromArray [
         ["_displayName", "Pills"], // TODO: localize
         ["_functionName", "SHZ_fnc_buyPills"],
