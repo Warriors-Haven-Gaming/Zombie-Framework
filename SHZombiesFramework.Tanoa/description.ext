@@ -20,6 +20,7 @@ class CfgFunctions {
             class buyMATV {};
             class buyPills {};
             class buyQuadbike {};
+            class buySentinel {};
             class buyStomperRCWS {};
             class checkMoney {};
             class lookupShopkeeperCatalog {};
