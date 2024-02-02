@@ -26,6 +26,10 @@ private _getVehicleName = {
     params ["_cls"];
     getText (configFile >> "CfgVehicles" >> _cls >> "displayName")
 };
+private _getWeaponName = {
+    params ["_cls"];
+    getText (configFile >> "CfgWeapons" >> _cls >> "displayName")
+};
 
 private _index = createHashMapFromArray [
     ["blackfish_armed", createHashMapFromArray [
@@ -65,7 +69,7 @@ private _index = createHashMapFromArray [
         ["_cost", 3500]
     ]],
     ["pills", createHashMapFromArray [
-        ["_displayName", "Pills"], // TODO: localize
+        ["_displayName", "RyanZombiesAntiVirusTemporary_Item" call _getWeaponName],
         ["_functionName", "SHZ_fnc_buyPills"],
         ["_category", "medical"],
         ["_cost", 150]
