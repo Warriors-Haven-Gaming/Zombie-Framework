@@ -25,6 +25,7 @@ class CfgFunctions {
             class buyStomperRCWS {};
             class checkMoney {};
             class lookupShopkeeperCatalog {};
+            class moneyMultiplierLoop {};
             class requestToBuyItem {};
             class showInsufficientFunds {};
             class showSuccessfulPurchase {};

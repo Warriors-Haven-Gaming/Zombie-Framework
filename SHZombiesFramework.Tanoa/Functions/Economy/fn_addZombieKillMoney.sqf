@@ -35,4 +35,4 @@ if (alive _zombie) exitWith {
 };
 
 private _money = [10, 100] select (_zombie isKindOf "RyanZombieboss1");
-[_uid, _money] call SHZ_fnc_addMoney;
+[_uid, _money, true, true] call SHZ_fnc_addMoney;

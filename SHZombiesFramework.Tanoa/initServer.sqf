@@ -21,6 +21,11 @@ SHZ_sideMissionLoopScript = [
     15
 ] spawn SHZ_fnc_missionLoop;
 
+SHZ_moneyMultipliers_rate = 1 / 10000;
+SHZ_moneyMultipliers_moneyEarned = createHashMap;
+SHZ_moneyMultipliers_current = createHashMap;
+SHZ_moneyMultipliers_script = 0 spawn SHZ_fnc_moneyMultiplierLoop;
+
 SHZ_ambientHordeScript = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector = 0 spawn SHZ_fnc_garbageCollectorLoop;
 SHZ_playerMoneyMarkerScript = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;

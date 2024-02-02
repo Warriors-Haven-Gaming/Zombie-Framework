@@ -34,7 +34,7 @@ addMissionEventHandler ["EntityKilled", {
     };
 
     if ([side group _instigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {
-        [_uid, 10] call SHZ_fnc_addMoney;
+        [_uid, 10, true, true] call SHZ_fnc_addMoney;
     };
 }];
 
