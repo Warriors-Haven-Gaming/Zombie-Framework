@@ -31,7 +31,7 @@ private _index = createHashMapFromArray [
     ["blackfoot", createHashMapFromArray [
         ["_displayName", "B_Heli_Attack_01_dynamicLoadout_F" call _getVehicleName],
         ["_functionName", "SHZ_fnc_buyBlackfoot"],
-        ["_cost", 17500]
+        ["_cost", 20000]
     ]],
     ["bradley", createHashMapFromArray [
         ["_displayName", "M2 Bradley"],
