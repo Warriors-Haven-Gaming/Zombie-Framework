@@ -26,7 +26,7 @@ if (isNil "_vehicleSpawn") exitWith {false};
 if (isNil "_vehicleSpawnDir") exitWith {false};
 
 private _type = "I_Plane_Fighter_04_F";
-private _pos = _vehicleSpawn findEmptyPosition [0, 50, _type];
+private _pos = _vehicleSpawn findEmptyPosition [10, 50, _type];
 if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir _vehicleSpawnDir;

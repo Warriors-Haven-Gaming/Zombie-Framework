@@ -25,7 +25,7 @@ values _context params keys _context;
 if (isNil "_vehicleSpawn") exitWith {false};
 
 private _type = "RHS_MELB_AH6M";
-private _pos = _vehicleSpawn findEmptyPosition [0, 50, _type];
+private _pos = _vehicleSpawn findEmptyPosition [10, 50, _type];
 if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir random 360;
