@@ -60,7 +60,7 @@ private _spawnerScript = [
     100,
     5,
     20,
-    10
+    5
 ] spawn SHZ_fnc_hordeSpawnLoop;
 
 while {true} do {
