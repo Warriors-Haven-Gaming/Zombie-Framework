@@ -26,6 +26,7 @@ if (isNil "_vehicleSpawn") exitWith {false};
 
 private _type = "B_T_Quadbike_01_F";
 private _pos = _vehicleSpawn findEmptyPosition [0, 50, _type];
+if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir random 360;
 
