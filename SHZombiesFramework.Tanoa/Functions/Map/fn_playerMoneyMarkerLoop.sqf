@@ -13,29 +13,30 @@ if (!isServer) exitWith {};
 
 // To optimize network traffic, we will only send updates to players
 // whose money has changed or has recently connected.
-private _lastPlayerMoney = createHashMap;
+private _allStates = createHashMap;
 private _connectEH = addMissionEventHandler [
     "PlayerConnected",
     {
         params ["", "_uid", "", "", "_owner"];
-        _thisArgs params ["_lastPlayerMoney"];
+        _thisArgs params ["_allStates"];
 
         private _currentPlayerMoney = ["playerMoney"] call SHZ_fnc_getSaveVariable;
         private _currentMoney = _currentPlayerMoney getOrDefault [_uid, 0];
+        private _currentMultiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
 
         [_currentMoney] remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _owner];
-        _lastPlayerMoney set [_uid, _currentMoney];
+        _allStates set [_uid, [_currentMoney, _currentMultiplier]];
     },
-    [_lastPlayerMoney]
+    [_allStates]
 ];
 private _disconnectEH = addMissionEventHandler [
     "PlayerDisconnected",
     {
         params ["", "_uid"];
-        _thisArgs params ["_lastPlayerMoney"];
-        _lastPlayerMoney deleteAt _uid;
+        _thisArgs params ["_allStates"];
+        _allStates deleteAt _uid;
     },
-    [_lastPlayerMoney]
+    [_allStates]
 ];
 
 while {true} do {
@@ -44,12 +45,15 @@ while {true} do {
         private _uid = getPlayerUID _x;
         if (_uid isEqualTo "") then {continue};
 
-        private _currentMoney = _currentPlayerMoney getOrDefault [_uid, 0];
-        private _lastMoney = _lastPlayerMoney getOrDefault [_uid, -1];
-        if (_currentMoney isEqualTo _lastMoney) then {continue};
+        private _currentState = [
+            _currentPlayerMoney getOrDefault [_uid, 0],
+            SHZ_moneyMultipliers_current getOrDefault [_uid, 1]
+        ];
+        private _lastState = _allStates getOrDefault [_uid, []];
+        if (_currentState isEqualTo _lastState) then {continue};
 
-        [_currentMoney] remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _x];
-        _lastPlayerMoney set [_uid, _currentMoney];
+        _currentState remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _x];
+        _allStates set [_uid, _currentState];
     } forEach allPlayers;
     sleep 60;
 };

@@ -94,7 +94,7 @@
     </Container>
     <Container name="Map">
         <Key ID="STR_SHZ_playerMoneyMarkerCallback">
-            <Original>%1</Original>
+            <Original>%1 (%2x)</Original>
         </Key>
     </Container>
     <Container name="Missions">
