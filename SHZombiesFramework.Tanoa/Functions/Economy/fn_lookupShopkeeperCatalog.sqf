@@ -28,6 +28,11 @@ private _getVehicleName = {
 };
 
 private _index = createHashMapFromArray [
+    ["blackfish_armed", createHashMapFromArray [
+        ["_displayName", "B_T_VTOL_01_armed_F" call _getVehicleName],
+        ["_functionName", "SHZ_fnc_buyBlackfishArmed"],
+        ["_cost", 30000]
+    ]],
     ["blackfoot", createHashMapFromArray [
         ["_displayName", "B_Heli_Attack_01_dynamicLoadout_F" call _getVehicleName],
         ["_functionName", "SHZ_fnc_buyBlackfoot"],
