@@ -46,7 +46,7 @@ if (_center isEqualTo []) then {
             continue;
         };
 
-        _center = _pos;
+        _center = _pos vectorMultiply [1, 1, 0];
         break;
     };
 };
