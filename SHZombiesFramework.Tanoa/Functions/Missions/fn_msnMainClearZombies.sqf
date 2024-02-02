@@ -24,7 +24,8 @@ if (_area isEqualTo []) then {
         sqrt 2 / 2 * worldSize
     ];
     private _radius = selectMax size _location * 2;
-    _area = [locationPosition _location, _radius, _radius, 0, false];
+    private _center = locationPosition _location vectorMultiply [1, 1, 0];
+    _area = [_center, _radius, _radius, 0, false];
 };
 if (_area isEqualTo []) exitWith {
     diag_log text format ["%1: No area found", _fnc_scriptName];
