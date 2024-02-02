@@ -37,8 +37,8 @@ Examples:
         [60] call SHZ_fnc_displayTimer;
     (end)
     (begin example)
-    _area = [getPos player,50,50,0,false];
-    [60, "$STR_SHZ_defaultTimer", _area, [_area,{player inArea _this}]] call SHZ_fnc_displayTimer;
+        _area = [getPos player,50,50,0,false];
+        [60, "$STR_SHZ_defaultTimer", _area, [_area,{player inArea _this}]] call SHZ_fnc_displayTimer;
     (end)
     (begin example)
         // Start the timer with 30 seconds already elapsed
