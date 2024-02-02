@@ -41,7 +41,7 @@ private _index = createHashMapFromArray [
     ["gryphon", createHashMapFromArray [
         ["_displayName", "I_Plane_Fighter_04_F" call _getVehicleName],
         ["_functionName", "SHZ_fnc_buyGryphon"],
-        ["_cost", 27500]
+        ["_cost", 25000]
     ]],
     ["littlebird_armed", createHashMapFromArray [
         ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
