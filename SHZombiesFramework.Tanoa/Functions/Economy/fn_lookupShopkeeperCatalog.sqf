@@ -34,6 +34,12 @@ private _getWeaponName = {
 private _index = localNamespace getVariable "SHZ_shopkeeper_catalog";
 if (isNil "_index") then {
     _index = compileFinal createHashMapFromArray [
+        ["ah64d", createHashMapFromArray [
+            ["_displayName", "RHS_AH64D_wd" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyAH64D"],
+            ["_category", "cas_heli"],
+            ["_cost", 20000]
+        ]],
         ["blackfish_armed", createHashMapFromArray [
             ["_displayName", "B_T_VTOL_01_armed_F" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buyBlackfishArmed"],

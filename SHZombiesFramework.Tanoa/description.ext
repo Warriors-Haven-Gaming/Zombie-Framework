@@ -13,6 +13,7 @@ class CfgFunctions {
         class Economy {
             class addMoney {};
             class addZombieKillMoney {};
+            class buyAH64D {};
             class buyAH6MLittlebird {};
             class buyBlackfishArmed {};
             class buyBlackfoot {};
