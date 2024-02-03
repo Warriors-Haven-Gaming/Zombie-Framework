@@ -11,4 +11,4 @@ Author:
     thegamecracks
 
 */
-"0.12.0"
+"0.12.1"

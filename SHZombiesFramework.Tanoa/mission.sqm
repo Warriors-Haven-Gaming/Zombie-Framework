@@ -1149,7 +1149,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Zombie Framework v0.12.0";
+		briefingName="Zombie Framework v0.12.1";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=1;
