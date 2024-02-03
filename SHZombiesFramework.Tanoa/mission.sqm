@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=8712;
+		nextID=8713;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=859;
+		nextID=934;
 	};
 	class Camera
 	{
-		pos[]={6906.9561,5.3941922,7464.9346};
-		dir[]={-0.60889709,-0.57171547,0.54990852};
-		up[]={-0.42429233,0.82045138,0.38318765};
-		aside[]={0.67024726,-1.9883737e-007,0.74214476};
+		pos[]={6914.5381,5.3941922,7444.4805};
+		dir[]={-0.61713141,-0.46683267,-0.63342947};
+		up[]={-0.32577023,0.88434422,-0.3343741};
+		aside[]={-0.71626621,-1.5483238e-007,0.69783616};
 	};
 };
 binarizationWanted=0;
@@ -9243,14 +9243,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -9393,21 +9393,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -9544,8 +9544,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -9694,6 +9694,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -9702,19 +9715,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -10014,14 +10014,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -10164,21 +10164,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -10315,8 +10315,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -10465,6 +10465,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -10473,19 +10486,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -15509,8 +15509,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -15659,6 +15659,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -15667,19 +15680,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -15811,8 +15811,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -15961,6 +15961,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -15969,19 +15982,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -17709,14 +17709,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -17859,21 +17859,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -18326,14 +18326,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -18500,21 +18500,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -21038,8 +21038,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -21188,6 +21188,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -21196,19 +21209,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -21340,14 +21340,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -21490,21 +21490,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -21676,14 +21676,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -21826,21 +21826,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23052,14 +23052,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -23202,21 +23202,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23354,8 +23354,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -23504,6 +23504,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -23512,19 +23525,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -38507,14 +38507,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -38546,14 +38546,14 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -38597,14 +38597,14 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -38649,14 +38649,14 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -50548,14 +50548,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -50698,21 +50698,21 @@ class Mission
 						};
 						class Attribute8
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute9
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -66088,8 +66088,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -66238,6 +66238,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -66246,19 +66259,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -66391,8 +66391,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -66541,6 +66541,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -66549,19 +66562,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -66693,8 +66693,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -66843,6 +66843,19 @@ class Mission
 						};
 						class Attribute8
 						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -66851,19 +66864,6 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
 								};
 							};
 						};
@@ -67769,8 +67769,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -67961,8 +67961,8 @@ class Mission
 						};
 						class Attribute10
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -69857,8 +69857,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -70033,8 +70033,8 @@ class Mission
 						};
 						class Attribute10
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -70616,7 +70616,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6807.2329,2.6449683,7375.1348};
-			angle=2.3887966;
+			angle=2.3887959;
 			class Attributes
 			{
 				text="Side Access";
@@ -71242,7 +71242,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""cas_plane"", ""mrap"", ""uav"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
+						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""cas_plane"", ""heli"", ""mrap"", ""uav"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
 						stance="Up";
 						class Inventory
 						{
