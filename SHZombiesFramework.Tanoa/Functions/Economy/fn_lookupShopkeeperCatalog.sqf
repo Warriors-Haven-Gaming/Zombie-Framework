@@ -34,59 +34,59 @@ private _getWeaponName = {
 private _index = localNamespace getVariable "SHZ_shopkeeper_catalog";
 if (isNil "_index") then {
     _index = compileFinal createHashMapFromArray [
-        ["ah64d", createHashMapFromArray [
-            ["_displayName", "RHS_AH64D_wd" call _getVehicleName],
-            ["_functionName", "SHZ_fnc_buyAH64D"],
-            ["_category", "cas_heli"],
-            ["_cost", 20000]
-        ]],
-        ["blackfish_armed", createHashMapFromArray [
-            ["_displayName", "B_T_VTOL_01_armed_F" call _getVehicleName],
-            ["_functionName", "SHZ_fnc_buyBlackfishArmed"],
-            ["_category", "cas_plane"],
-            ["_cost", 30000]
-        ]],
-        ["blackfoot", createHashMapFromArray [
-            ["_displayName", "B_Heli_Attack_01_dynamicLoadout_F" call _getVehicleName],
-            ["_functionName", "SHZ_fnc_buyBlackfoot"],
-            ["_category", "cas_heli"],
-            ["_cost", 20000]
-        ]],
-        ["bradley", createHashMapFromArray [
+        ["apc_bradley", createHashMapFromArray [
             ["_displayName", "M2 Bradley"],
             ["_functionName", "SHZ_fnc_buyBradley"],
             ["_category", "apc"],
             ["_cost", 5000]
         ]],
-        ["gryphon", createHashMapFromArray [
-            ["_displayName", "I_Plane_Fighter_04_F" call _getVehicleName],
-            ["_functionName", "SHZ_fnc_buyGryphon"],
-            ["_category", "cas_plane"],
-            ["_cost", 25000]
+        ["car_quadbike", createHashMapFromArray [
+            ["_displayName", "Quadbike"],
+            ["_functionName", "SHZ_fnc_buyQuadbike"],
+            ["_category", "car"],
+            ["_cost", 1000]
         ]],
-        ["littlebird_armed", createHashMapFromArray [
+        ["cas_heli_ah64d", createHashMapFromArray [
+            ["_displayName", "RHS_AH64D_wd" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyAH64D"],
+            ["_category", "cas_heli"],
+            ["_cost", 20000]
+        ]],
+        ["cas_heli_blackfoot", createHashMapFromArray [
+            ["_displayName", "B_Heli_Attack_01_dynamicLoadout_F" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyBlackfoot"],
+            ["_category", "cas_heli"],
+            ["_cost", 20000]
+        ]],
+        ["cas_heli_littlebird_armed", createHashMapFromArray [
             ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buyAH6MLittlebird"],
             ["_category", "cas_heli"],
             ["_cost", 10000]
         ]],
-        ["matv", createHashMapFromArray [
-            ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
-            ["_functionName", "SHZ_fnc_buyMATV"],
-            ["_category", "mrap"],
-            ["_cost", 3500]
+        ["cas_plane_blackfish_armed", createHashMapFromArray [
+            ["_displayName", "B_T_VTOL_01_armed_F" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyBlackfishArmed"],
+            ["_category", "cas_plane"],
+            ["_cost", 30000]
         ]],
-        ["pills", createHashMapFromArray [
+        ["cas_plane_gryphon", createHashMapFromArray [
+            ["_displayName", "I_Plane_Fighter_04_F" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyGryphon"],
+            ["_category", "cas_plane"],
+            ["_cost", 25000]
+        ]],
+        ["medical_pills", createHashMapFromArray [
             ["_displayName", "RyanZombiesAntiVirusTemporary_Item" call _getWeaponName],
             ["_functionName", "SHZ_fnc_buyPills"],
             ["_category", "medical"],
             ["_cost", 150]
         ]],
-        ["quadbike", createHashMapFromArray [
-            ["_displayName", "Quadbike"],
-            ["_functionName", "SHZ_fnc_buyQuadbike"],
-            ["_category", "car"],
-            ["_cost", 1000]
+        ["mrap_matv", createHashMapFromArray [
+            ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
+            ["_functionName", "SHZ_fnc_buyMATV"],
+            ["_category", "mrap"],
+            ["_cost", 3500]
         ]],
         ["recruit_autorifleman_m249", createHashMapFromArray [
             ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman_m249" call _getVehicleName],
@@ -144,13 +144,13 @@ if (isNil "_index") then {
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
-        ["sentinel", createHashMapFromArray [
+        ["uav_sentinel", createHashMapFromArray [
             ["_displayName", "B_UAV_05_F" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buySentinel"],
             ["_category", "uav"],
             ["_cost", 10000]
         ]],
-        ["stomper_rcws", createHashMapFromArray [
+        ["ugv_stomper_rcws", createHashMapFromArray [
             ["_displayName", "B_T_UGV_01_rcws_olive_F" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buyStomperRCWS"],
             ["_category", "ugv"],
