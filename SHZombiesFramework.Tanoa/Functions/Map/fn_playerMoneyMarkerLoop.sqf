@@ -24,7 +24,7 @@ private _connectEH = addMissionEventHandler [
         private _currentMoney = _currentPlayerMoney getOrDefault [_uid, 0];
         private _currentMultiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
 
-        [_currentMoney] remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _owner];
+        [_currentMoney, _currentMultiplier] remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _owner];
         _allStates set [_uid, [_currentMoney, _currentMultiplier]];
     },
     [_allStates]
