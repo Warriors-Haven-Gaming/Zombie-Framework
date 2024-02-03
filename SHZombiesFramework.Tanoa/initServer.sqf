@@ -1,3 +1,4 @@
+skipTime random 24;
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
 
