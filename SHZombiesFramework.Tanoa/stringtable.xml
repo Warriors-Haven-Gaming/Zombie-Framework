@@ -74,6 +74,9 @@
         </Key>
     </Container>
     <Container name="Economy">
+        <Key ID="STR_SHZ_showGenericPurchaseError">
+            <Original>Something went wrong with the purchase.</Original>
+        </Key>
         <Key ID="STR_SHZ_showInsufficientFunds">
             <Original>You cannot purchase %1! It requires %2, but you only have %3.</Original>
         </Key>

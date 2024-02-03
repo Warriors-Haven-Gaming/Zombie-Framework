@@ -51,6 +51,5 @@ if (!isNil "_success" && {_success isEqualTo true}) then {
     _context set ["_money", _moneyNew];
     [_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
 } else {
-    private _message = "Something went wrong with the purchase.";
-    [_message] remoteExec ["hint", _player]; // TODO: proper response
+    remoteExec ["SHZ_fnc_showGenericPurchaseError", _player];
 };
