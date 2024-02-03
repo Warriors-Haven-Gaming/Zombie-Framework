@@ -26,7 +26,7 @@ while {true} do {
         if !([_time, _vehicle] call _shouldRemoveHandler) then {continue};
         {_vehicle removeEventHandler _x} forEach _eventHandlers;
         _processed pushBack _forEachIndex;
-    } forEach SHZ_vehicleRefundHandlers;
-    {SHZ_vehicleRefundHandlers deleteAt _x} forEachReversed _processed;
+    } forEach SHZ_vehicleRefund_handlers;
+    {SHZ_vehicleRefund_handlers deleteAt _x} forEachReversed _processed;
     sleep 10;
 };

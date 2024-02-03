@@ -44,4 +44,4 @@ private _index = _vehicle addEventHandler ["Killed", {
     [_uid, _money] call SHZ_fnc_addMoney;
     [_vehicle, _money, _rate] remoteExec ["SHZ_fnc_showVehicleRefund", _player];
 }];
-SHZ_vehicleRefundHandlers pushBack [_time, _vehicle, [["Killed", _index]]];
+SHZ_vehicleRefund_handlers pushBack [_time, _vehicle, [["Killed", _index]]];
