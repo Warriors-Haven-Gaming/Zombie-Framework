@@ -47,6 +47,7 @@ class CfgFunctions {
             class clearPylonLoadout {};
             class displayTimer {};
             class formatMoney {};
+            class formatPercent {};
             class inAreaMarkers {};
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
