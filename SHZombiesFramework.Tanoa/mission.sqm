@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6910.02,9.9173536,7395.8379};
-		dir[]={-0.58742279,-0.69803041,-0.40957987};
-		up[]={-0.57259363,0.71606272,-0.39924029};
-		aside[]={-0.57196844,-2.2584572e-007,0.82032096};
+		pos[]={6819.5444,14.893556,7384.6172};
+		dir[]={-0.59014356,-0.65644568,-0.46999103};
+		up[]={-0.5135113,0.75436175,-0.40896142};
+		aside[]={-0.62300634,-3.0139927e-007,0.78227514};
 	};
 };
 binarizationWanted=0;
@@ -66006,7 +66006,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				name="gate_fob_hope_decon_3";
+				name="gate_fob_hope_side_1";
 			};
 			id=8144;
 			type="Land_NetFence_02_m_gate_v2_F";
@@ -66186,7 +66186,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				name="gate_fob_hope_decon_4";
+				name="gate_fob_hope_side_2";
 			};
 			id=8148;
 			type="Land_NetFence_02_m_gate_v2_F";
@@ -110216,12 +110216,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6807.2329,2.6449683,7375.1348};
-			angle=2.3887959;
+			angle=2.388797;
 			class Attributes
 			{
 				text="Side Access";
 				condition="_now = diag_tickTime;" \n "_cooldown = thisTrigger getVariable [""SHZ_cooldown"",-1];" \n "_now > _cooldown && {player inArea thisTrigger}";
-				onActivation="thisTrigger setVariable [""SHZ_cooldown"", diag_tickTime + 60];" \n "hq_fob_hope_security sideChat ""Side gate open!"";" \n "gate_fob_hope_decon_3 animate [""door_1_rot"", 1];gate_fob_hope_decon_3 animate [""door_2_rot"", 1];" \n "gate_fob_hope_decon_4 animate [""door_1_rot"", 1];gate_fob_hope_decon_4 animate [""door_2_rot"", 1];";
+				onActivation="thisTrigger setVariable [""SHZ_cooldown"", diag_tickTime + 60];" \n "gate_fob_hope_side_1 animate [""door_1_rot"", 1];" \n "gate_fob_hope_side_1 animate [""door_2_rot"", 1];" \n "gate_fob_hope_side_2 animate [""door_1_rot"", 1];" \n "gate_fob_hope_side_2 animate [""door_2_rot"", 1];";
 				sizeA=9.6350002;
 				sizeB=4.2620001;
 				sizeC=10;
