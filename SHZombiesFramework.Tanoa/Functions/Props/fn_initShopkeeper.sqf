@@ -33,22 +33,26 @@ _obj addAction [
     3
 ];
 
-private _items = [] call SHZ_fnc_lookupShopkeeperCatalog;
+private _catalog = [] call SHZ_fnc_lookupShopkeeperCatalog;
+
+private _selectedItems = keys _catalog;
 if (count _categories > 0) then {
-    private _skipped =
-        keys _items
-        select {
-            private _item = _items get _x;
-            private _category = _item get "_category";
-            !(_category in _categories)
-        };
-    {_items deleteAt _x} forEach _skipped;
+    _selectedItems = _selectedItems select {
+        private _item = _catalog get _x;
+        private _category = _item get "_category";
+        !(_category in _categories)
+    };
 };
-private _itemOrder = _items apply {[_y get "_cost", _y get "_displayName", _x]};
+
+private _itemOrder = _selectedItems apply {
+    private _item = _catalog get _x;
+    [_item get "_cost", _item get "_displayName", _x]
+};
 _itemOrder sort true;
+
 {
     private _itemID = _x # 2;
-    private _item = _items get _itemID;
+    private _item = _catalog get _itemID;
     values _item params keys _item;
     _obj addAction [
         format ["Buy %1 (%2)", _displayName, _cost call SHZ_fnc_formatMoney], // TODO: localize
