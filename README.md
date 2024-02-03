@@ -27,5 +27,5 @@ for it (see [cba_settings.sqf]), and they can be overwritten by the server as us
 [Apex-Framework]: https://github.com/auQuiksilver/Apex-Framework
 [contributing guide]: /CONTRIBUTING.md
 [ACE]: https://steamcommunity.com/sharedfiles/filedetails/?id=463939057
-[cba_settings.sqf]: /SHZombieFramework.Tanoa/cba_settings.sqf
+[cba_settings.sqf]: /SHZombiesFramework.Tanoa/cba_settings.sqf
 [ACE No Medical]: https://steamcommunity.com/sharedfiles/filedetails/?id=3053169823
