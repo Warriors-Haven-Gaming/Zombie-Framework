@@ -46,10 +46,13 @@ _context set ["_money", _moneyOld];
 private _function = missionNamespace getVariable _functionName;
 private _success = [_context] call _function;
 
-if (!isNil "_success" && {_success isEqualTo true}) then {
+if (!isNil "_success" && {_success isEqualTo true}) exitWith {
     private _moneyNew = [getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
     _context set ["_money", _moneyNew];
     [_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
-} else {
-    remoteExec ["SHZ_fnc_showGenericPurchaseError", _player];
 };
+if (!isNil "_success" && {_success isEqualType []}) exitWith {
+    _success params ["_params", "_function"];
+    _params remoteExec [_function, _player];
+};
+remoteExec ["SHZ_fnc_showGenericPurchaseError", _player];

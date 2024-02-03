@@ -11,8 +11,10 @@ Parameters:
         See SHZ_fnc_requestToBuyItem for details on the format.
 
 Returns:
-    Boolean
+    Array | Boolean
         True if successful, false otherwise.
+        An array can also be returned containing the parameters
+        and function name to be remote executed on the client.
 
 Author:
     thegamecracks
