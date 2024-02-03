@@ -40,7 +40,7 @@ if (count _categories > 0) then {
     _selectedItems = _selectedItems select {
         private _item = _catalog get _x;
         private _category = _item get "_category";
-        !(_category in _categories)
+        _category in _categories
     };
 };
 
