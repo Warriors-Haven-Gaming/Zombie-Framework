@@ -24,7 +24,7 @@ Author:
 */
 params ["_vehicle", "_player", "_money"];
 
-private _time = diag_tickTime;
+private _time = time;
 _vehicle setVariable ["SHZ_vehicleRefund_time", _time];
 _vehicle setVariable ["SHZ_vehicleRefund_player", _player];
 _vehicle setVariable ["SHZ_vehicleRefund_money", _money];

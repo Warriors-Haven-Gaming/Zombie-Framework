@@ -19,7 +19,7 @@ private _shouldRemoveHandler = {
 };
 
 while {true} do {
-    private _now = diag_tickTime;
+    private _now = time;
     private _processed = [];
     {
         _x params ["_time", "_vehicle", "_eventHandlers"];

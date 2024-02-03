@@ -7,9 +7,9 @@ Description:
 Parameters:
     Number time:
         The time at which the vehicle was purchased,
-        as returned by diag_tickTime.
+        based on the time command.
     Number now:
-        (Optional, default diag_tickTime)
+        (Optional, default time)
         The current time.
 
 Returns:
@@ -19,7 +19,7 @@ Author:
     thegamecracks
 
 */
-params ["_time", ["_now", diag_tickTime]];
+params ["_time", ["_now", time]];
 private _minTime = 60;
 private _maxTime = 120;
 private _maxRate = 1;

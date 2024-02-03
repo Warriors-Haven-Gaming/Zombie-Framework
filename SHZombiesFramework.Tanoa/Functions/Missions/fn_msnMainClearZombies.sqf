@@ -130,7 +130,7 @@ private _lastKillCountTime = -1;
 while {true} do {
     sleep 10;
 
-    private _now = diag_tickTime;
+    private _now = time;
     private _killCount = call _getKillCount;
 
     if (_killCount >= _killThreshold) exitWith {
