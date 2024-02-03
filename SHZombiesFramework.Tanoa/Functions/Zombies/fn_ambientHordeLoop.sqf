@@ -36,7 +36,7 @@ while {true} do {
         };
 
         if (_x isFlashlightOn currentWeapon _x) then {
-            _chance = _chance + linearConversion [200, 3, getLighting # 1, 0, 0.1, true];
+            _chance = _chance + linearConversion [200, 3, getLighting # 1, 0, 0.05, true];
         };
 
         private _pos = getPosATL _x;
