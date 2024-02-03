@@ -26,6 +26,9 @@ SHZ_moneyMultipliers_moneyEarned = createHashMap;
 SHZ_moneyMultipliers_current = createHashMap;
 SHZ_moneyMultipliers_script = 0 spawn SHZ_fnc_moneyMultiplierLoop;
 
+SHZ_vehicleRefundHandlers = [];
+SHZ_vehicleRefundScript = 0 spawn SHZ_fnc_vehicleRefundLoop;
+
 SHZ_ambientHordeScript = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector = 0 spawn SHZ_fnc_garbageCollectorLoop;
 SHZ_playerMoneyMarkerScript = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;

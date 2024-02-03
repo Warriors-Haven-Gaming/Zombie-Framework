@@ -31,6 +31,7 @@ if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir _vehicleSpawnDir;
 
+[_vehicle, _player, _item get "_cost"] call SHZ_fnc_addVehicleRefund;
 [_vehicle, _player] call SHZ_fnc_lockVehicleToPlayer;
 
 true

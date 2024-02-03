@@ -83,6 +83,9 @@
         <Key ID="STR_SHZ_showSuccessfulPurchase">
             <Original>Successfully purchased %1! You have %2 left.</Original>
         </Key>
+        <Key ID="STR_SHZ_showVehicleRefund">
+            <Original>%1 was refunded to you for %2.</Original>
+        </Key>
         <Key ID="STR_SHZ_viewMoneyCallback_money">
             <Original>You have %1 to spend.</Original>
         </Key>

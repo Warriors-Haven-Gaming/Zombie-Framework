@@ -12,6 +12,7 @@ class CfgFunctions {
         };
         class Economy {
             class addMoney {};
+            class addVehicleRefund {};
             class addZombieKillMoney {};
             class buyAH64D {};
             class buyAH6MLittlebird {};
@@ -30,6 +31,8 @@ class CfgFunctions {
             class requestToBuyItem {};
             class showInsufficientFunds {};
             class showSuccessfulPurchase {};
+            class showVehicleRefund {};
+            class vehicleRefundLoop {};
             class viewMoney {};
             class viewMoneyCallback {};
         };

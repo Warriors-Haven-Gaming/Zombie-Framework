@@ -31,4 +31,6 @@ private _vehicle = createVehicle [_type, _pos];
 createVehicleCrew _vehicle;
 _vehicle setDir random 360;
 
+[_vehicle, _player, _item get "_cost"] call SHZ_fnc_addVehicleRefund;
+
 true
