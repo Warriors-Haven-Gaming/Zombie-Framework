@@ -28,9 +28,12 @@ private _recruitType = _item get "_recruitType";
 if (isNil "_recruitType") exitWith {false};
 if (isNil "_vehicleSpawn") exitWith {false};
 
-// FIXME: proper response for max AI
+private _groupLimit = 6;
 private _playerAICount = {!isPlayer _x} count units _player;
-if (_playerAICount > 6) exitWith {false};
+if (_playerAICount > _groupLimit) exitWith {[
+    [_groupLimit],
+    "SHZ_fnc_showBuyAIRecruitLimit"
+]};
 
 private _group = group _player;
 private _unit = _group createUnit [_recruitType, _vehicleSpawn, [], 0, "NONE"];

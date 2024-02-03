@@ -74,6 +74,9 @@
         </Key>
     </Container>
     <Container name="Economy">
+        <Key ID="STR_SHZ_showBuyAIRecruitLimit">
+            <Original>You have reached the recruit limit of %1.</Original>
+        </Key>
         <Key ID="STR_SHZ_showGenericPurchaseError">
             <Original>Something went wrong with the purchase.</Original>
         </Key>

@@ -31,6 +31,7 @@ class CfgFunctions {
             class lookupShopkeeperCatalog {};
             class moneyMultiplierLoop {};
             class requestToBuyItem {};
+            class showBuyAIRecruitLimit {};
             class showGenericPurchaseError {};
             class showInsufficientFunds {};
             class showSuccessfulPurchase {};
