@@ -28,7 +28,7 @@ if (isNil "_vehicleSpawn") exitWith {false};
 
 // FIXME: proper response for max AI
 private _playerAICount = {!isPlayer _x} count units _player;
-if (_playerAICount > 8) exitWith {false};
+if (_playerAICount > 6) exitWith {false};
 
 private _group = group _player;
 private _unit = _group createUnit [_recruitType, _vehicleSpawn, [], 0, "NONE"];
