@@ -24,4 +24,4 @@ Author:
 
 */
 params ["_percentage"];
-format ["%1%%", floor (_percentage * 100)]
+format ["%1%2", ceil (_percentage * 100), "%"]
