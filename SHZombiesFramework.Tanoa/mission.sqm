@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6912.2485,4.557673,7465.2173};
-		dir[]={-0.0098106898,-0.99994999,-0.0019354539};
-		up[]={-0.98104149,0.00999978,-0.19353996};
-		aside[]={-0.19354965,0,0.98109055};
+		pos[]={6913.9355,4.557673,7444.7378};
+		dir[]={-0.51452148,-0.42248434,-0.74617571};
+		up[]={-0.23983118,0.90636981,-0.3478111};
+		aside[]={-0.8232556,-9.6624717e-009,0.56767166};
 	};
 };
 binarizationWanted=0;
@@ -71233,7 +71233,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6911.9673,2.6614389,7441.1104};
+						position[]={6911.9668,2.6614389,7441.1108};
 						angles[]={0,6.1120205,0};
 					};
 					side="West";
@@ -71242,7 +71242,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "[this] call SHZ_fnc_initShopkeeper;";
+						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""cas_plane"", ""mrap"", ""uav"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
 						stance="Up";
 						class Inventory
 						{
