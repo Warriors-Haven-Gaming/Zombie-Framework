@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6842.3218,38.406647,7330.7837};
-		dir[]={0.26105917,-0.39802834,0.87949806};
-		up[]={0.11327339,0.91735733,0.38161308};
-		aside[]={0.95870858,-3.6065467e-007,-0.28457004};
+		pos[]={6912.8726,30.32,7450.3809};
+		dir[]={0.013657287,-0.99971288,0.019695869};
+		up[]={0.56965786,0.02395172,0.82153267};
+		aside[]={0.82176888,1.1641532e-009,-0.56982166};
 	};
 };
 binarizationWanted=0;
@@ -40682,12 +40682,14 @@ class Mission
 		class Item701
 		{
 			dataType="Marker";
-			position[]={6782.709,2.681958,7291.3462};
+			position[]={6782.709,2.6819999,7291.3462};
 			name="marker_0";
 			text="Rescue / Prison Area";
 			type="mil_end";
 			colorName="ColorWEST";
+			alpha=0.60000002;
 			id=7461;
+			atlOffset=4.196167e-005;
 		};
 		class Item702
 		{
@@ -67448,6 +67450,7 @@ class Mission
 			text="Vehicle Shopkeeper";
 			type="mil_box";
 			colorName="ColorWEST";
+			alpha=0.60000002;
 			id=8499;
 		};
 		class Item1088
@@ -71215,6 +71218,7 @@ class Mission
 			text="AI Shopkeeper";
 			type="mil_box";
 			colorName="ColorWEST";
+			alpha=0.60000002;
 			id=8577;
 		};
 		class Item1163
