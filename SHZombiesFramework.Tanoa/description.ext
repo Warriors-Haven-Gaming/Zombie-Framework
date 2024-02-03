@@ -1,5 +1,6 @@
 cba_settings_hasSettingsFile = 1;
 disableChannels[] = {
+    {0, true, true},
     {1, false, true},
     {2, true, true},
 };
