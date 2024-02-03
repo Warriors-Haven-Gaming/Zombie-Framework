@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=8711;
+		nextID=8712;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6999.8721,50.267082,7428.8711};
-		dir[]={-0.65710509,-0.75239593,0.045993991};
-		up[]={-0.75055742,0.65871358,0.052534986};
-		aside[]={0.069824047,5.4715201e-009,0.99755979};
+		pos[]={6912.2485,4.557673,7465.2173};
+		dir[]={-0.0098106898,-0.99994999,-0.0019354539};
+		up[]={-0.98104149,0.00999978,-0.19353996};
+		aside[]={-0.19354965,0,0.98109055};
 	};
 };
 binarizationWanted=0;
@@ -1216,7 +1216,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1258;
+		items=1259;
 		class Item0
 		{
 			dataType="Object";
@@ -117635,6 +117635,18 @@ class Mission
 			};
 			id=8710;
 			atlOffset=-0.04788208;
+		};
+		class Item1258
+		{
+			dataType="Marker";
+			position[]={6912.229,2.6600001,7465.2119};
+			name="recruit_shop_fob_hope";
+			text="Recruited AI";
+			type="mil_dot";
+			colorName="ColorWEST";
+			alpha=0.30024734;
+			angle=75.999992;
+			id=8711;
 		};
 	};
 	class Connections
