@@ -66,7 +66,7 @@ private _killEH = addMissionEventHandler [
             // player driven vehicle road kill
             _instigator = _killer;
         };
-        if (isNull _instigator || {!isPlayer _instigator}) exitWith {};
+        if (isNull _instigator) exitWith {};
 
         private _sideInstigator = side group _instigator;
         if (_sideInstigator isNotEqualTo blufor) exitWith {};
