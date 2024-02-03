@@ -20,6 +20,7 @@ class CfgFunctions {
             class buyBlackfishArmed {};
             class buyBlackfoot {};
             class buyBradley {};
+            class buyChinook {};
             class buyGryphon {};
             class buyMATV {};
             class buyMH6MLittlebird {};
