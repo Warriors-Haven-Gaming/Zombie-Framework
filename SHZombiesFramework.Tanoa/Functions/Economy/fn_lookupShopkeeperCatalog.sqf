@@ -88,6 +88,62 @@ if (isNil "_index") then {
             ["_category", "car"],
             ["_cost", 1000]
         ]],
+        ["recruit_autorifleman_m249", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman_m249" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_autorifleman_m249"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 150]
+        ]],
+        ["recruit_autorifleman_m27", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_autorifleman"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 150]
+        ]],
+        ["recruit_engineer", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_engineer" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_engineer"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 200]
+        ]],
+        ["recruit_grenadier", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_grenadier" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_grenadier"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 200]
+        ]],
+        ["recruit_marksman", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_marksman" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_marksman"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 150]
+        ]],
+        ["recruit_rifleman", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_rifleman_m4" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_rifleman_m4"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 100]
+        ]],
+        ["recruit_shotgun", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_rifleman_m590" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_rifleman_m590"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 150]
+        ]],
+        ["recruit_sniper", createHashMapFromArray [
+            ["_displayName", "rhsusf_usmc_marpat_wd_sniper" call _getVehicleName],
+            ["_recruitType", "rhsusf_usmc_marpat_wd_sniper"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 150]
+        ]],
         ["sentinel", createHashMapFromArray [
             ["_displayName", "B_UAV_05_F" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buySentinel"],
