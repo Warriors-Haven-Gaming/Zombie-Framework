@@ -26,6 +26,7 @@ class CfgFunctions {
             class buySentinel {};
             class buyStomperRCWS {};
             class checkMoney {};
+            class getVehicleRefundRate {};
             class lookupShopkeeperCatalog {};
             class moneyMultiplierLoop {};
             class requestToBuyItem {};
