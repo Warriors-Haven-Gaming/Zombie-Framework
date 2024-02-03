@@ -47,7 +47,7 @@ while {true} do {
         ];
         if (!isNull _location) then {
             private _distance = position _location distance2D _pos;
-            _chance = _chance + linearConversion [1000, 50, _distance, 0, 0.4, true];
+            _chance = _chance + linearConversion [1000, 200, _distance, 0, 0.2, true];
         };
 
         _chance = _chance max 0.01;
