@@ -76,6 +76,12 @@ if (isNil "_index") then {
             ["_category", "cas_plane"],
             ["_cost", 25000]
         ]],
+        ["heli_chinook", createHashMapFromArray [
+            ["_displayName", "RHS_CH_47F_10" call _getVehicleName],
+            ["_functionName", "SHZ_fnc_buyChinook"],
+            ["_category", "heli"],
+            ["_cost", 4000]
+        ]],
         ["heli_littlebird", createHashMapFromArray [
             ["_displayName", "RHS_MELB_MH6M" call _getVehicleName],
             ["_functionName", "SHZ_fnc_buyMH6MLittlebird"],
