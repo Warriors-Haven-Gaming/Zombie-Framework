@@ -43,11 +43,10 @@ while {true} do {
     _units = _units arrayIntersect _units;
 
     private _zombies = units SHZ_zombieSide select {
-        if (isPlayer _x) exitWith {false};
-        if (_x in _remoteControlledUnits) exitWith {false};
-        if !([_x] call SHZ_fnc_isZombie) exitWith {false};
-        if (_x getVariable ["SHZ_disableGC", false] isEqualTo true) exitWith {false};
-        true
+        !isPlayer _x
+        && {!(_x in _remoteControlledUnits)
+        && {[_x] call SHZ_fnc_isZombie
+        && {_x getVariable ["SHZ_disableGC", false] isNotEqualTo true}}}
     };
     {
         private _area = [getPosATL _x, SHZ_gcZombieDistance, SHZ_gcZombieDistance, 0, false, 250];
