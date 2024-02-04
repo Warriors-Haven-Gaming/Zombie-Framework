@@ -74,7 +74,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {""};
         _display drawIcon [
             getText (_config >> "icon"),
-            [_side] call BIS_fnc_sideColor,
+            [_side] call _getVibrantSideColor,
             getPosWorldVisual _x,
             _iconScale,
             _iconScale,
@@ -140,7 +140,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         };
         _display drawIcon [
             getText (_config >> "icon"),
-            [_side] call BIS_fnc_sideColor,
+            [_side] call _getVibrantSideColor,
             _pos,
             _iconScale,
             _iconScale,
