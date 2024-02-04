@@ -39,7 +39,7 @@ forceWeatherChange;
     0.5,                            // rndDir
     0.02,                           // dropWidth
     0.02,                           // dropHeight
-    [0.1, 0.1, 0.1, 1],             // dropColor
+    [0, 0, 0, 1],                   // dropColor
     0.1,                            // lumSunFront
     0.1,                            // lumSunBack
     5.5,                            // refractCoef
