@@ -37538,7 +37538,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.80000001;
+									value=0.69999999;
 								};
 							};
 						};
@@ -37551,7 +37551,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=1.5;
 								};
 							};
 						};
@@ -37590,7 +37590,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=0.5;
 								};
 							};
 						};
@@ -37616,7 +37616,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.80000001;
+									value=0.60000002;
 								};
 							};
 						};
