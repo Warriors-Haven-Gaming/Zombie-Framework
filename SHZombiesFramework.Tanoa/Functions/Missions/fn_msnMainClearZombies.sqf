@@ -89,8 +89,8 @@ private _killEH = addMissionEventHandler [
 ];
 
 private _supportTypes = [
-    "demons",  5,
-    "raiders", 95
+    "specials", 20,
+    "raiders",  80
 ];
 private _supportLimitBase = 10 + floor (_area # 1 / 80);
 private _supportUnits = [];
@@ -102,10 +102,10 @@ private _spawnSupportUnits = {
     scriptName "SHZ_fnc_msnMainClearZombies_spawnSupportUnits";
     private _supportType = selectRandomWeighted _supportTypes;
     switch (_supportType) do {
-        case "demons": {
+        case "specials": {
             [
                 1 + floor random (3 + count allPlayers / 10),
-                "demons",
+                "specials",
                 SHZ_zombieSide,
                 _area # 0,
                 _area # 1 * 0.5,

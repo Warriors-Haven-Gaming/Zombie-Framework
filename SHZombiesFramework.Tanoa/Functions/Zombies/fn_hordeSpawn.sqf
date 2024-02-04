@@ -9,19 +9,25 @@ Parameters:
         The number of zombies to spawn.
     Array | String types:
         One or more horde types to spawn. Can be any of:
-            "fastCivilians"
-            "fastSoldiers"
-            "mediumCivilians"
-            "mediumSoldiers"
-            "slowCivilians"
-            "slowSoldiers"
-            "walkerCivilians"
-            "walkerSoldiers"
-            "demons"
-            "spiders"
+            "aaf"
+            "civilians"
+            "csat"
+            "fia"
+            "ldf"
+            "nato"
+            "angry"
+            "calm"
             "crawlers"
-            "mixed"
-            "mixedStanding"
+            "shamblers"
+            "shooters"
+            "walkers"
+            "bloaters"
+            "corrupted"
+            "leapers"
+            "screamers"
+            "smashers"
+            "mixed" (all non-special types)
+            "specials" (all specials except smashers)
         Unlike SHZ_fnc_hordeType, this function will throw an exception
         if none of the types are valid.
     Side side:
@@ -48,7 +54,7 @@ Returns:
 
 Examples:
     (begin example)
-        [20, "fastCivilians", SHZ_zombieSide, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawn;
+        [20, "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawn;
     (end)
 
 Author:

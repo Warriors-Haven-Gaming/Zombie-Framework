@@ -10,7 +10,7 @@ Returns:
 
 Examples:
     (begin example)
-        [20, "fastCivilians", SHZ_zombieSide, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawnLoitering;
+        [20, "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5] spawn SHZ_fnc_hordeSpawnLoitering;
     (end)
 
 Author:

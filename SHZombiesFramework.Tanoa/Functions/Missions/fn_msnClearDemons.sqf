@@ -50,7 +50,7 @@ private _spawnerScript = [
     20 + count allPlayers * 2 min 100,
     [
         5 + floor (count allPlayers * 0.5),
-        "demons",
+        "specials",
         SHZ_zombieSide,
         [0,0,0],
         10,

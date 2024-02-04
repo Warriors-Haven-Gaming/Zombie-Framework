@@ -3,7 +3,7 @@ Function: SHZ_fnc_hordeTypeList
 
 Description:
     Returns an array of all horde types supported by SHZ_fnc_hordeType,
-    not including the "mixed" and "mixedStanding" types.
+    not including the "mixed" and "specials" types.
 
 Returns:
     Array
@@ -13,15 +13,21 @@ Author:
 
 */
 [
-    "fastCivilians",
-    "fastSoldiers",
-    "mediumCivilians",
-    "mediumSoldiers",
-    "slowCivilians",
-    "slowSoldiers",
-    "walkerCivilians",
-    "walkerSoldiers",
-    "demons",
-    "spiders",
-    "crawlers"
+    "aaf",
+    "civilians",
+    "csat",
+    "fia",
+    "ldf",
+    "nato",
+    "angry",
+    "calm",
+    "crawlers",
+    "shamblers",
+    "shooters",
+    "walkers",
+    "bloaters",
+    "corrupted",
+    "leapers",
+    "screamers",
+    "smashers"
 ]
