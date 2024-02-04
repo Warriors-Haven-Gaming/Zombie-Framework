@@ -13,12 +13,12 @@ if (!isServer) exitWith {};
 
 // Track zombie/enemy kills
 addMissionEventHandler ["EntityKilled", {
-	params ["_killed", "_killer", "_instigator"];
-	if (isNull _instigator) then {
+    params ["_killed", "_killer", "_instigator"];
+    if (isNull _instigator) then {
         // UAV/UGV player operated road kill
         _instigator = UAVControl vehicle _killer # 0;
     };
-	if (isNull _instigator) then {
+    if (isNull _instigator) then {
         // player driven vehicle road kill
         _instigator = _killer;
     };
