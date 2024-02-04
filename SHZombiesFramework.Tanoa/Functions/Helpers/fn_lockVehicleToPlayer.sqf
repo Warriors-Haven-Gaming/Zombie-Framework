@@ -22,4 +22,5 @@ if (isNull _player) exitWith {diag_log text format ["%1: Player is null", _fnc_s
 if (isClass (configFile >> "CfgPatches" >> "ace_vehiclelock")) then {
     [_player, _vehicle, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
     _vehicle lock 2;
+    [_vehicle] remoteExec ["SHZ_fnc_showACEVehicleLock", _player];
 };
