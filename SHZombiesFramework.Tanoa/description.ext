@@ -27,7 +27,6 @@ class CfgFunctions {
             class addZombieKillMoney {};
             class buyAIRecruit {};
             class buyCargoBox {};
-            class buyPills {};
             class buyVehicle {};
             class checkMoney {};
             class getMoney {};

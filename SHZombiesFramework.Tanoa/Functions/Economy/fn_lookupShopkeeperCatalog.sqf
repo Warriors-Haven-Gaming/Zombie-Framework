@@ -384,12 +384,6 @@ if (isNil "_index") then {
             ["_category", "heli"],
             ["_cost", 12000]
         ]],
-        ["medical_pills", createHashMapFromArray [
-            ["_displayName", "RyanZombiesAntiVirusTemporary_Item" call _getWeaponName],
-            ["_functionName", "SHZ_fnc_buyPills"],
-            ["_category", "medical"],
-            ["_cost", 150]
-        ]],
         ["mrap_matv", createHashMapFromArray [
             ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
             ["_vehicleType", "rhsusf_m1240a1_m2crows_usmc_wd"],
