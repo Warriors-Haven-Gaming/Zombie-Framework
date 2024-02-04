@@ -109,4 +109,29 @@ _group spawn {
     };
 };
 
+_group spawn {
+    scriptName "SHZ_fnc_hordeSpawn_forgetTargets";
+    while {units _this findIf {alive _x} > -1} do {
+        sleep (10 + random 20);
+
+        private _leader = leader _this;
+        if (!alive _leader) then {continue};
+        if (!simulationEnabled _leader) then {continue};
+
+        private _units = units _this select {alive _x};
+        private _targets = _units apply {_x findNearestEnemy _x};
+        _targets = _targets select {!isNull _x};
+        _targets = _targets arrayIntersect _targets;
+
+        {
+            private _target = _x;
+            private _canSee = _units findIf {
+                [_x, "VIEW"] checkVisibility [eyePos _x, getPosASL _target] > 0.1
+            } > -1;
+
+            if (!_canSee) then {_this forgetTarget _target};
+        } forEach _targets;
+    };
+};
+
 _units
