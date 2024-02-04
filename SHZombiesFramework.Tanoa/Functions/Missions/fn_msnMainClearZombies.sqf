@@ -81,10 +81,9 @@ private _killEH = addMissionEventHandler [
     [_area, _kills]
 ];
 
-private _supportZombieBias = random 14 - 7;
 private _supportTypes = [
-    "demons",  1 + (_supportZombieBias max 0),
-    "raiders", 1 - (_supportZombieBias min 0)
+    "demons",  5,
+    "raiders", 95
 ];
 private _supportLimitBase = 20 + floor (_area # 1 / 50);
 private _supportUnits = [];
