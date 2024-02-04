@@ -18,5 +18,7 @@ Author:
 
 */
 params ["_unit"];
-if (!isNil "ryanzombiesstartinganim") exitWith {};
-_unit switchMove "AmovPercMstpSnonWnonDnon_SaluteOut";
+_unit setSkill 0;
+if (isNil "ryanzombiesstartinganim") then {
+    _unit switchMove "AmovPercMstpSnonWnonDnon_SaluteOut";
+};
