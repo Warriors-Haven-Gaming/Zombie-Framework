@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=984;
+		nextID=1009;
 	};
 	class Camera
 	{
-		pos[]={6936.4346,33.058006,7466.9561};
-		dir[]={-0.61713141,-0.46683267,-0.63342947};
-		up[]={-0.32577023,0.88434422,-0.3343741};
-		aside[]={-0.71626621,-1.5483238e-007,0.69783616};
+		pos[]={6943.249,14.70223,7418.0977};
+		dir[]={-0.71016157,-0.4338766,-0.55445945};
+		up[]={-0.34199101,0.90097028,-0.26700962};
+		aside[]={-0.61540043,2.7939677e-008,0.78821605};
 	};
 };
 binarizationWanted=0;
@@ -54407,7 +54407,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6900.8496,2.6614389,7392.3086};
+						position[]={6900.8501,2.6614389,7392.3086};
 						angles[]={0,6.072629,0};
 					};
 					side="West";
@@ -54416,6 +54416,7 @@ class Mission
 					{
 						skill=1;
 						rank="SERGEANT";
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=10042;
@@ -54431,7 +54432,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.812289;
+									value=0.81;
 								};
 							};
 						};
@@ -54548,7 +54549,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.78415471;
+									value=0.77999997;
 								};
 							};
 						};
