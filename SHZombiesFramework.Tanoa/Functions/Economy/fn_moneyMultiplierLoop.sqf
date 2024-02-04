@@ -17,7 +17,6 @@ private _killedEH = addMissionEventHandler [
         params ["_unit"];
         private _uid = getPlayerUID _unit;
         if (_uid isEqualTo "") exitWith {};
-        SHZ_moneyMultipliers_current deleteAt _uid;
         SHZ_moneyMultipliers_moneyEarned deleteAt _uid;
     }
 ];
@@ -35,11 +34,13 @@ while {true} do {
         private _uid = getPlayerUID _x;
         if (_uid isEqualTo "") then {continue};
         if ([_x] call SHZ_fnc_inAreaTeamSafezone isNotEqualTo []) then {
-            SHZ_moneyMultipliers_current deleteAt _uid;
             SHZ_moneyMultipliers_moneyEarned deleteAt _uid;
         } else {
             private _moneyEarned = SHZ_moneyMultipliers_moneyEarned getOrDefault [_uid, 0];
-            private _multiplier = 1 + _moneyEarned * SHZ_moneyMultipliers_rate;
+            private _multiplier =
+                1
+                + _moneyEarned * SHZ_moneyMultipliers_rate
+                + linearConversion [200, 3, getLighting # 1, 0, 0.5, true];
             SHZ_moneyMultipliers_current set [_uid, _multiplier];
         };
         sleep random 0.1;
