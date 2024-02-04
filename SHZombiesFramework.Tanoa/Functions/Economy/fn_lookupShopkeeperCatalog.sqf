@@ -135,6 +135,13 @@ if (isNil "_index") then {
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
+        ["recruit_medic", createHashMapFromArray [
+            ["_displayName", "rhsusf_socom_marsoc_sarc" call _getVehicleName],
+            ["_recruitType", "rhsusf_socom_marsoc_sarc"],
+            ["_functionName", "SHZ_fnc_buyAIRecruit"],
+            ["_category", "recruit"],
+            ["_cost", 200]
+        ]],
         ["recruit_rifleman", createHashMapFromArray [
             ["_displayName", "rhsusf_usmc_marpat_wd_rifleman_m4" call _getVehicleName],
             ["_recruitType", "rhsusf_usmc_marpat_wd_rifleman_m4"],
