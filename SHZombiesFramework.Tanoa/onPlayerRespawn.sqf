@@ -7,7 +7,7 @@ if (_loadout isEqualTo []) then {
 if (_loadout isNotEqualTo []) then {_newUnit setUnitLoadout _loadout};
 
 _newUnit setUnitTrait ["audibleCoef", 0.5];
-_newUnit setUnitTrait ["camouflageCoef", 0.5];
+_newUnit setUnitTrait ["camouflageCoef", 0.2];
 _newUnit setUnitTrait ["loadCoef", 0.7];
 _newUnit setUnitTrait ["engineer", true];
 _newUnit setUnitTrait ["explosiveSpecialist", true];
