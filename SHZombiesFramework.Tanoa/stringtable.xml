@@ -44,11 +44,11 @@
         <Key ID="STR_SHZ_assistSoldiers_description">
             <Original>Zombies are being fought off by soldiers here. Provide support!</Original>
         </Key>
-        <Key ID="STR_SHZ_clearDemons_title">
-            <Original>Hunt Demons</Original>
+        <Key ID="STR_SHZ_clearSpecials_title">
+            <Original>Hunt Specials</Original>
         </Key>
-        <Key ID="STR_SHZ_clearDemons_description">
-            <Original>A few groups of demons are roaming this area. Clear them out!</Original>
+        <Key ID="STR_SHZ_clearSpecials_description">
+            <Original>A few groups of special infected are roaming this area. Clear them out!</Original>
         </Key>
         <Key ID="STR_SHZ_clearRaiders_title">
             <Original>Clear Raiders</Original>

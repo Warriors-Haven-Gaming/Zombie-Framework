@@ -112,7 +112,7 @@ class CfgFunctions {
             class addParticipantHandler {};
             class missionLoop {};
             class msnAssistSoldiers {};
-            class msnClearDemons {};
+            class msnClearSpecials {};
             class msnClearRaiders {};
             class msnClearZombies {};
             class msnDownloadIntel {};
@@ -278,9 +278,9 @@ class CfgTaskDescriptions {
         title       = "STR_SHZ_assistSoldiers_title";
         description = "STR_SHZ_assistSoldiers_description";
     };
-    class clearDemons {
-        title       = "STR_SHZ_clearDemons_title";
-        description = "STR_SHZ_clearDemons_description";
+    class clearSpecials {
+        title       = "STR_SHZ_clearSpecials_title";
+        description = "STR_SHZ_clearSpecials_description";
     };
     class clearRaiders {
         title       = "STR_SHZ_clearRaiders_title";
