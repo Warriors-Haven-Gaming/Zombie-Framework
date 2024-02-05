@@ -21,4 +21,5 @@ params ["_stringName"];
 
 private _string = localize _stringName;
 _string = _string regexReplace ["\s{2,}", " "];
+_string = _string regexReplace ["<br/>\s+", "<br/>"];
 _string
