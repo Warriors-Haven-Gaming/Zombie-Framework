@@ -16,5 +16,5 @@ _newUnit setUnitTrait ["medic", true];
 [_newUnit] remoteExec [
     "SHZ_fnc_initMoneyShareActions",
     SHZ_globalPlayerTarget,
-    _newUnit
+    (_newUnit call BIS_fnc_netId) + ":SHZ_moneyShare"
 ];
