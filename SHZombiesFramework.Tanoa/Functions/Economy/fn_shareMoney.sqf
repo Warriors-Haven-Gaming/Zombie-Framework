@@ -21,6 +21,7 @@ Author:
 params ["_from", "_to", "_money"];
 if !([_from] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 if (_from isEqualTo _to) exitWith {};
+if (_money <= 0) exitWith {};
 
 private _fromUID = getPlayerUID _from;
 private _toUID = getPlayerUID _to;
