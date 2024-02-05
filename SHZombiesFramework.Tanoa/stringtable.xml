@@ -160,6 +160,22 @@
                 to share your money in increments.
             </Original>
         </Key>
+        <Key ID="STR_SHZ_addRecordCredits_subject">
+            <Original>Credits</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordCredits_authors_title">
+            <Original>Authors</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordCredits_authors_description">
+            <Original>
+                This mission was developed by thegamecracks and ZenoVoid
+                as part of the Warriors Haven Gaming community.
+                You can find our development work on GitHub!
+                &lt;br/&gt;
+                &lt;br/&gt;
+                https://github.com/Warriors-Haven-Gaming/Zombie-Framework
+            </Original>
+        </Key>
     </Container>
     <Container name="Economy">
         <Key ID="STR_SHZ_initMoneyShareActions">

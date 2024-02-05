@@ -17,3 +17,4 @@ Author:
 if (!hasInterface) exitWith {};
 
 call SHZ_fnc_addRecordACE;
+call SHZ_fnc_addRecordCredits;
