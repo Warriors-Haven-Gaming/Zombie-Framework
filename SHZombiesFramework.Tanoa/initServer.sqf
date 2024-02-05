@@ -29,6 +29,7 @@ SHZ_moneyMultipliers_rate = 1 / 5000;
 SHZ_moneyMultipliers_moneyEarned = createHashMap;
 SHZ_moneyMultipliers_current = createHashMap;
 SHZ_moneyMultipliers_script = 0 spawn SHZ_fnc_moneyMultiplierLoop;
+call SHZ_fnc_initMoneyShareActionsServer;
 
 SHZ_vehicleRefund_handlers = [];
 SHZ_vehicleRefund_script = 0 spawn SHZ_fnc_vehicleRefundLoop;

@@ -36,6 +36,7 @@ class CfgFunctions {
             class checkMoney {};
             class getVehicleRefundRate {};
             class initMoneyShareActions {};
+            class initMoneyShareActionsServer {};
             class lookupShopkeeperCatalog {};
             class moneyMultiplierLoop {};
             class requestToBuyItem {};
