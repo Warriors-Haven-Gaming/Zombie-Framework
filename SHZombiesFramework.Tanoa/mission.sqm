@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1354;
+		nextID=1387;
 	};
 	class Camera
 	{
@@ -120108,12 +120108,12 @@ class Mission
 						angles[]={0,0.62182432,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=11547;
 					type="Box_NATO_Wps_F";
-					atlOffset=0.95636559;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -143127,10 +143127,10 @@ class Mission
 			name="marker_109";
 			markerType="RECTANGLE";
 			type="";
-			colorName="ColorWhite";
+			colorName="ColorGrey";
 			fillName="SolidBorder";
 			a=426.521;
-			b=377.77084;
+			b=377.771;
 			drawBorder=1;
 			id=12805;
 			atlOffset=39.802074;
@@ -146291,14 +146291,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -146428,14 +146428,14 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -146946,7 +146946,7 @@ class Mission
 			alpha=0.30000001;
 			a=8.7930002;
 			b=6.7509999;
-			angle=312.39294;
+			angle=312.39291;
 			id=12990;
 		};
 		class Item2378
