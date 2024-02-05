@@ -12,3 +12,9 @@ _newUnit setUnitTrait ["loadCoef", 0.7];
 _newUnit setUnitTrait ["engineer", true];
 _newUnit setUnitTrait ["explosiveSpecialist", true];
 _newUnit setUnitTrait ["medic", true];
+
+[_newUnit] remoteExec [
+    "SHZ_fnc_initMoneyShareActions",
+    [0, -2] select isDedicated,
+    _newUnit
+];
