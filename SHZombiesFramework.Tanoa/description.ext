@@ -11,6 +11,10 @@ class CfgFunctions {
         class Channels {
             class updateChannelLoop {};
         };
+        class Diary {
+            class addRecordACE {};
+            class initDiary {};
+        };
         class Economy {
             class addMoney {};
             class addVehicleRefund {};
@@ -63,6 +67,7 @@ class CfgFunctions {
             class inAreaMarkers {};
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
+            class localize {};
             class lockVehicleToPlayer {};
             class nearestRespawnPosition {};
             class objectsGrabber {};

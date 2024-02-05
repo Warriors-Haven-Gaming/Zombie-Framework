@@ -73,6 +73,94 @@
             <Original>Kills: %1 / %2</Original>
         </Key>
     </Container>
+    <Container name="Diary">
+        <Key ID="STR_SHZ_addRecordACE_subject">
+            <Original>ACE Guide</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_basics_title">
+            <Original>Basics</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_basics_description">
+            <Original>
+                ACE is being used by this mission. Here are some basic tips
+                if you are not familiar with ACE:
+                &lt;br/&gt;
+                - Hold [Ctrl+Windows] to show self-interactions
+                  &lt;br/&gt;
+                - Hover over an interaction and release to perform it
+                  &lt;br/&gt;
+                - Hold [Windows] to interact with players and objects
+                  &lt;br/&gt;
+                - If your weapon jams, you can unjam it by pressing [Shift+R]
+                  &lt;br/&gt;
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_servicing_title">
+            <Original>Vehicle Servicing</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_servicing_description">
+            <Original>
+                There are various vehicle service stations around base.
+                Once you are parked beside one, you will need to exit the
+                vehicle to service it.
+                &lt;br/&gt;
+                Refuel:
+                Walk to the gas station / fuel container and interact with it
+                to grab the fuel pump.
+                &lt;br/&gt;
+                Rearm:
+                Walk to the vehicle rearm container and interact with it
+                to rearm your vehicle.
+                &lt;br/&gt;
+                Repair:
+                Grab a toolkit and interact with your vehicle to perform a
+                "Full Repair".
+                &lt;br/&gt;
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_pylons_title">
+            <Original>Pylon Management</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_pylons_description">
+            <Original>
+                At a rearm station, ACE can be used to replace weapon pylons
+                on an existing aircraft:
+                &lt;br/&gt;
+                1. Grab a toolkit.
+                   &lt;br/&gt;
+                2. Park the aircraft near a vehicle rearm station.
+                   &lt;br/&gt;
+                3. Exit the vehicle, interact with it, and select "Configure Pylons".
+                   &lt;br/&gt;
+                4. Choose the pylons you want and click "OK" to start replacing pylons.
+                   &lt;br/&gt;
+                5. Once complete, walk to the rearm station and interact with
+                   it to load the modified pylons with their corresponding munitions.
+                   &lt;br/&gt;
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_vehicleLocking_title">
+            <Original>Vehicle Locking</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_vehicleLocking_description">
+            <Original>
+                When you purchase a vehicle from a vendor, you will be given
+                the keys for that vehicle. To unlock it: walk up to the vehicle,
+                interact with it, and select "Unlock vehicle".
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_moneyShare_title">
+            <Original>Sharing Money</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordACE_moneyShare_description">
+            <Original>
+                Using the ACE interaction menu, you can share money with other
+                players to help them purchase more expensive items.
+                When interacting with a player, you should see the options
+                to share your money in increments.
+            </Original>
+        </Key>
+    </Container>
     <Container name="Economy">
         <Key ID="STR_SHZ_initMoneyShareActions">
             <Original>Share Money</Original>
