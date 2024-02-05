@@ -15,7 +15,7 @@ Author:
 */
 if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_vehicle"];
-hint format [
+systemChat format [
     localize "$STR_SHZ_showACEVehicleLock",
     getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
 ];
