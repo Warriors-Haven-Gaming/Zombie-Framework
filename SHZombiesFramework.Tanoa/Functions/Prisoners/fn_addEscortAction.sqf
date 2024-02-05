@@ -28,7 +28,7 @@ Author:
     thegamecracks
 
 */
-if (isDedicated) exitWith {};
+if (!hasInterface) exitWith {};
 
 params ["_unit", ["_linked", []]];
 

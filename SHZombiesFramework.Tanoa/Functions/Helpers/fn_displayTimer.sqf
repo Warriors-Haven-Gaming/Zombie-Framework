@@ -65,7 +65,7 @@ if (_conditionCode isEqualType "") then {_conditionCode = missionNamespace getVa
 
 private _playerInArea = {_area isEqualTo [] || {player inArea _area}};
 private _showHint = {
-    if (isDedicated || {!call _playerInArea}) exitWith {};
+    if (!hasInterface || {!call _playerInArea}) exitWith {};
     params ["_i"];
     hintSilent formatText [_message, _i, _duration, _duration - _i];
 };
