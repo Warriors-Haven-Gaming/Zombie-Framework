@@ -187,7 +187,7 @@
             <Original>You have shared %1 with %2! You have %3 left.</Original>
         </Key>
         <Key ID="STR_SHZ_showSharedMoneyTo">
-            <Original>You were given %1 from %2!</Original>
+            <Original>You were given %1 from %2! You now have %3.</Original>
         </Key>
         <Key ID="STR_SHZ_showSuccessfulPurchase">
             <Original>Successfully purchased %1! You have %2 left.</Original>
