@@ -143123,17 +143123,17 @@ class Mission
 		class Item2288
 		{
 			dataType="Marker";
-			position[]={15827.998,-24.450001,13519.4};
+			position[]={16386.441,-24.450001,14251.254};
 			name="marker_109";
 			markerType="RECTANGLE";
 			type="";
 			colorName="ColorGrey";
 			fillName="SolidBorder";
-			a=426.521;
-			b=377.771;
+			a=984.96533;
+			b=1109.6235;
 			drawBorder=1;
 			id=12805;
-			atlOffset=39.802074;
+			atlOffset=42.13686;
 		};
 		class Item2289
 		{
