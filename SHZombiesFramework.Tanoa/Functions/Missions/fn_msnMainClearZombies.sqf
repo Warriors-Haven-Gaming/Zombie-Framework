@@ -141,7 +141,7 @@ while {true} do {
         _lastKillCountTime = _now;
         [_killCountMarker, _killCount, _killThreshold] remoteExec [
             "SHZ_fnc_updateKillCountMarker",
-            [0, -2] select isDedicated
+            SHZ_globalPlayerTarget
         ];
     };
 

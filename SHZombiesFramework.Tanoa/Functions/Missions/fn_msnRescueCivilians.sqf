@@ -108,8 +108,7 @@ doStop _units;
 _group spawn {sleep 1; [_this, true] remoteExec ["enableDynamicSimulation"]};
 
 {
-    private _locality = [0, -2] select isDedicated;
-    [_x, _units] remoteExec ["SHZ_fnc_addEscortAction", _locality, _x];
+    [_x, _units] remoteExec ["SHZ_fnc_addEscortAction", SHZ_globalPlayerTarget, _x];
 } forEach _units;
 
 private _unitNeedsRescuing = {

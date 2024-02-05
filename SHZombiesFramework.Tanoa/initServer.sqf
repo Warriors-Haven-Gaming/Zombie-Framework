@@ -2,6 +2,9 @@ skipTime random 24;
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
 
+SHZ_globalPlayerTarget = [0, -2] select isDedicated;
+publicVariable "SHZ_globalPlayerTarget";
+
 SHZ_mainMissionLoop_script = [
     [
         "SHZ_fnc_msnMainClearZombies"

@@ -15,6 +15,6 @@ _newUnit setUnitTrait ["medic", true];
 
 [_newUnit] remoteExec [
     "SHZ_fnc_initMoneyShareActions",
-    [0, -2] select isDedicated,
+    SHZ_globalPlayerTarget,
     _newUnit
 ];

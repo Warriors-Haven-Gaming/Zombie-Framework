@@ -20,8 +20,7 @@ Examples:
     (begin example)
         _units = [_unitA, _unitB, _unitC];
         {
-            private _locality = [0, -2] select isDedicated;
-            [_x, _units] remoteExec ["SHZ_fnc_addEscortAction", _locality, _x];
+            [_x, _units] remoteExec ["SHZ_fnc_addEscortAction", SHZ_globalPlayerTarget, _x];
         } forEach _units;
     (end)
 
