@@ -11,7 +11,7 @@ Parameters:
 
 Examples:
     (begin example)
-        call SHZ_fnc_initMoneyShareActions;
+        [_unit] call SHZ_fnc_initMoneyShareActions;
     (end)
 
 Author:
