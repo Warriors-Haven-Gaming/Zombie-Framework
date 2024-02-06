@@ -150,14 +150,14 @@
             </Original>
         </Key>
         <Key ID="STR_SHZ_addRecordACE_moneyShare_title">
-            <Original>Sharing Money</Original>
+            <Original>Sharing Points</Original>
         </Key>
         <Key ID="STR_SHZ_addRecordACE_moneyShare_description">
             <Original>
-                Using the ACE interaction menu, you can share money with other
+                Using the ACE interaction menu, you can share points with other
                 players to help them purchase more expensive items.
                 When interacting with a player, you should see the options
-                to share your money in increments.
+                to share your points in increments.
             </Original>
         </Key>
         <Key ID="STR_SHZ_addRecordCredits_subject">
@@ -179,7 +179,7 @@
     </Container>
     <Container name="Economy">
         <Key ID="STR_SHZ_initMoneyShareActions">
-            <Original>Share Money</Original>
+            <Original>Share Points</Original>
         </Key>
         <Key ID="STR_SHZ_showACEVehicleLock">
             <Original>You have received ACE keys to unlock your %1.</Original>
@@ -267,7 +267,7 @@
             <Original>Are you sure you want to reset the current save?</Original>
         </Key>
         <Key ID="STR_SHZ_initShopkeeper_viewMoney">
-            <Original>View Currency</Original>
+            <Original>View Points</Original>
         </Key>
         <Key ID="STR_SHZ_initStatsBoard_viewPlayerStats">
             <Original>View Personal Stats</Original>
