@@ -23,12 +23,14 @@ Author:
 
 */
 params ["_vehicle", "_player", "_money"];
+if (isNull _vehicle) exitWith {};
 
 private _time = time;
 _vehicle setVariable ["SHZ_vehicleRefund_time", _time];
 _vehicle setVariable ["SHZ_vehicleRefund_player", _player];
 _vehicle setVariable ["SHZ_vehicleRefund_money", _money];
-private _index = _vehicle addEventHandler ["Killed", {
+
+private _refundHandler = {
     params ["_vehicle"];
     private _time = _vehicle getVariable "SHZ_vehicleRefund_time";
     private _player = _vehicle getVariable "SHZ_vehicleRefund_player";
@@ -43,5 +45,11 @@ private _index = _vehicle addEventHandler ["Killed", {
 
     [_uid, _money] call SHZ_fnc_addMoney;
     [_vehicle, _money, _rate] remoteExec ["SHZ_fnc_showVehicleRefund", _player];
-}];
+};
+
+if (!alive _vehicle) exitWith {
+    [_vehicle] call _refundHandler;
+};
+
+private _index = _vehicle addEventHandler ["Killed", _refundHandler];
 SHZ_vehicleRefund_handlers pushBack [_time, _vehicle, [["Killed", _index]]];
