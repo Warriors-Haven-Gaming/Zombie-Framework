@@ -27,10 +27,22 @@ _allMissionsCompleted set [_name, (_allMissionsCompleted getOrDefault [_name, 0]
 
 private _missionsCompleted = ["missionsCompleted"] call SHZ_fnc_getSaveVariable;
 {
-    private _uid = if (_x isEqualType "") then {_x} else {getPlayerUID _x};
+    private _player = objNull;
+    private _uid = "";
+
+    if (_x isEqualType "") then {
+        _uid = _x;
+        _player = _x call BIS_fnc_getUnitByUID;
+    } else {
+        _player = _x;
+        _uid = getPlayerUID _x;
+    };
+
     if (_uid isEqualTo "") then {continue};
     _missionsCompleted set [_uid, (_missionsCompleted getOrDefault [_uid, 0]) + 1];
-
     [_uid, _money, true, true] call SHZ_fnc_addMoney;
-    [_name, _money] remoteExec ["SHZ_fnc_showCompletedMission", _x];
+
+    if (!isNull _player) then {
+        [_name, _money] remoteExec ["SHZ_fnc_showCompletedMission", _player];
+    };
 } forEach (_participants arrayIntersect _participants);
