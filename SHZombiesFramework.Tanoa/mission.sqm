@@ -1038,7 +1038,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="SCALAR";
-					value=10;
+					value=6;
 				};
 			};
 		};
