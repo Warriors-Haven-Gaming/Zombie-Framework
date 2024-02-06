@@ -19,6 +19,7 @@ ace_finger_enabled = true;
 // ACE Repair
 force ace_repair_engineerSetting_fullRepair = 1;
 force ace_repair_fullRepairLocation = 3;
+force ace_repair_fullRepairRequiredItems = [];
 force ace_repair_miscRepairTime = 10;
 force ace_repair_patchWheelTime = 2.5;
 force ace_repair_timeCoefficientFullRepair = 0.5;
