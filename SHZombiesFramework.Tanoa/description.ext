@@ -127,6 +127,7 @@ class CfgFunctions {
             class initShopkeeper {};
             class initStatsBoard {};
             class spawnCarWrecks {};
+            class spawnDamagedVehicles {};
         };
         class Safezones {
             class createSafezone {};

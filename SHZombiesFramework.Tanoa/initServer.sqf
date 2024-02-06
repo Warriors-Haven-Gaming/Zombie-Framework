@@ -38,6 +38,7 @@ SHZ_ambientHorde_script = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector_script = 0 spawn SHZ_fnc_garbageCollectorLoop;
 SHZ_playerMoneyMarker_script = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
+[[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnDamagedVehicles;
 
 SHZ_saveName = "default";
 SHZ_saveScript = scriptNull;
