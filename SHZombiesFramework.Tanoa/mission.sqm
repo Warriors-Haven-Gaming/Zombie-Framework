@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1616;
+		nextID=1648;
 	};
 	class Camera
 	{
-		pos[]={6890.4468,12.758514,7381.1187};
-		dir[]={-0.3962245,-0.36073151,0.84432197};
-		up[]={-0.15324903,0.93266958,0.32656118};
-		aside[]={0.90527463,1.2572855e-008,0.42482865};
+		pos[]={6923.1602,9.8506927,7262.3057};
+		dir[]={0.26424718,-0.35032231,0.89858341};
+		up[]={0.09883555,0.93662918,0.33609435};
+		aside[]={0.95938146,-5.8207661e-008,-0.28212604};
 	};
 };
 binarizationWanted=0;
@@ -89967,8 +89967,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair_fob_hope_3_attachment_3]};";
-				name="Repair2_fob_hope_attachment";
+				init="if (isServer) then {this attachTo [repair_fob_hope_1]};";
 			};
 			id=10854;
 			type="Land_RepairDepot_01_green_F";
@@ -90015,11 +90014,10 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair2_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_1]};";
 			};
 			id=10855;
 			type="Land_fs_feed_F";
-			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -90050,8 +90048,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair_fob_hope_4_attachment_4]};";
-				name="Repair1_fob_hope_attachment";
+				init="if (isServer) then {this attachTo [repair_fob_hope_3]};";
 			};
 			id=10858;
 			type="Land_RepairDepot_01_green_F";
@@ -90098,11 +90095,10 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair1_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_3]};";
 			};
 			id=10859;
 			type="Land_fs_feed_F";
-			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -90126,18 +90122,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7003.7373,3.4860001,7290.3071};
-				angles[]={0,5.3160377,0};
+				position[]={7003.7368,3.4860001,7290.3071};
+				angles[]={0,5.3160462,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair3_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_2]};";
 			};
 			id=10860;
 			type="Land_fs_feed_F";
-			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -90168,8 +90163,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair_fob_hope_2_attachment_2]};";
-				name="Repair3_fob_hope_attachment";
+				init="if (isServer) then {this attachTo [repair_fob_hope_2]};";
 			};
 			id=10861;
 			type="Land_RepairDepot_01_green_F";
@@ -107095,13 +107089,13 @@ class Mission
 						angles[]={0,0.62182432,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						dynamicSimulation=1;
 					};
 					id=11547;
 					type="Box_NATO_Wps_F";
-					atlOffset=0.95636559;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -121417,14 +121411,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -121554,14 +121548,14 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -122140,18 +122134,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6926.9551,4.045177,7275.5313};
+				position[]={6926.9546,4.0452185,7275.5313};
 				angles[]={0,1.3454045,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair1_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_3]};";
 			};
 			id=12998;
 			type="B_Slingload_01_Ammo_F";
-			atlOffset=0.066016436;
+			atlOffset=0.066058159;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -122252,11 +122246,10 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair2_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_1]};";
 			};
 			id=13007;
 			type="B_Slingload_01_Ammo_F";
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -122358,11 +122351,10 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this attachTo [Repair3_fob_hope_attachment]};";
+				init="if (isServer) then {this attachTo [repair_fob_hope_2]};";
 			};
 			id=13010;
 			type="B_Slingload_01_Ammo_F";
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -122589,16 +122581,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7004.5439,2.6600001,7287.978};
-				angles[]={0,3.6779323,0};
+				position[]={7004.5439,2.6600001,7288.9209};
+				angles[]={0,3.7323225,-0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="Repair_fob_hope_2_attachment_2";
-				createAsLocalObject=1;
-				disableSimulation=1;
+				name="repair_fob_hope_2";
 			};
 			id=13016;
 			type="Tarp_01_Large_Green_F";
@@ -122626,7 +122616,7 @@ class Mission
 						class data
 						{
 							singleType="BOOL";
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -122645,9 +122635,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="Repair_fob_hope_3_attachment_3";
-				createAsLocalObject=1;
-				disableSimulation=1;
+				name="repair_fob_hope_1";
 			};
 			id=13017;
 			type="Tarp_01_Large_Green_F";
@@ -122675,7 +122663,7 @@ class Mission
 						class data
 						{
 							singleType="BOOL";
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -122694,9 +122682,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="Repair_fob_hope_4_attachment_4";
-				createAsLocalObject=1;
-				disableSimulation=1;
+				name="repair_fob_hope_3";
 			};
 			id=13018;
 			type="Tarp_01_Large_Green_F";
@@ -122724,7 +122710,7 @@ class Mission
 						class data
 						{
 							singleType="BOOL";
-							value=1;
+							value=0;
 						};
 					};
 				};
