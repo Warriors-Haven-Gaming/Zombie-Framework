@@ -30,7 +30,7 @@ if (isNil "_vehicleSpawn") exitWith {false};
 
 private _groupLimit = 6;
 private _playerAICount = {!isPlayer _x} count units _player;
-if (_playerAICount > _groupLimit) exitWith {[
+if (_playerAICount >= _groupLimit) exitWith {[
     [_groupLimit],
     "SHZ_fnc_showBuyAIRecruitLimit"
 ]};
