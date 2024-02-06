@@ -5,20 +5,6 @@ Description:
     Sets the weather for the map.
     Function must be executed on server.
 
-Parameters:
-    String string:
-        The string to check for a suffix.
-    String prefix:
-        The prefix to look for.
-
-Returns:
-    Boolean
-
-Examples:
-    (begin example)
-        ["foobar", "foo"] call SHZ_fnc_stringStartsWith;
-    (end)
-
 Author:
     thegamecracks
 
