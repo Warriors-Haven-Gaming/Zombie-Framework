@@ -40,6 +40,83 @@ if (isNil "_index") then {
             ["_category", "apc"],
             ["_cost", 5000]
         ]],
+        ["cargo_fuel", createHashMapFromArray [
+            ["_displayName", "FlexibleTank_01_forest_F" call _getVehicleName],
+            ["_cargoType", "FlexibleTank_01_forest_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 1500]
+        ]],
+        ["cargo_explosives", createHashMapFromArray [
+            ["_displayName", "Box_NATO_AmmoOrd_F" call _getVehicleName],
+            ["_cargoType", "Box_NATO_AmmoOrd_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 300]
+        ]],
+        ["cargo_grenades", createHashMapFromArray [
+            ["_displayName", "Box_NATO_Grenades_F" call _getVehicleName],
+            ["_cargoType", "Box_NATO_Grenades_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 300]
+        ]],
+        ["cargo_huron_ammo", createHashMapFromArray [
+            ["_displayName", "B_Slingload_01_Ammo_F" call _getVehicleName],
+            ["_cargoType", "B_Slingload_01_Ammo_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 1000]
+        ]],
+        ["cargo_huron_fuel", createHashMapFromArray [
+            ["_displayName", "B_Slingload_01_Fuel_F" call _getVehicleName],
+            ["_cargoType", "B_Slingload_01_Fuel_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 1000]
+        ]],
+        ["cargo_huron_medical", createHashMapFromArray [
+            ["_displayName", "B_Slingload_01_Medevac_F" call _getVehicleName],
+            ["_cargoType", "B_Slingload_01_Medevac_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 1000]
+        ]],
+        ["cargo_huron_repair", createHashMapFromArray [
+            ["_displayName", "B_Slingload_01_Repair_F" call _getVehicleName],
+            ["_cargoType", "B_Slingload_01_Repair_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 1000]
+        ]],
+        ["cargo_rhsusf_equipment", createHashMapFromArray [
+            ["_displayName", "rhsusf_gear_crate" call _getVehicleName],
+            ["_cargoType", "rhsusf_gear_crate"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 2000]
+        ]],
+        ["cargo_rhsusf_launchers", createHashMapFromArray [
+            ["_displayName", "rhsusf_launcher_crate" call _getVehicleName],
+            ["_cargoType", "rhsusf_launcher_crate"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 2000]
+        ]],
+        ["cargo_rhsusf_weapons", createHashMapFromArray [
+            ["_displayName", "rhsusf_weapon_crate" call _getVehicleName],
+            ["_cargoType", "rhsusf_weapon_crate"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 2000]
+        ]],
+        ["cargo_vehicle_ammo", createHashMapFromArray [
+            ["_displayName", "Box_NATO_AmmoVeh_F" call _getVehicleName],
+            ["_cargoType", "Box_NATO_AmmoVeh_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 2000]
+        ]],
         ["car_quadbike", createHashMapFromArray [
             ["_displayName", "Quadbike"],
             ["_functionName", "SHZ_fnc_buyQuadbike"],

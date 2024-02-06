@@ -26,6 +26,7 @@ class CfgFunctions {
             class buyBlackfishArmed {};
             class buyBlackfoot {};
             class buyBradley {};
+            class buyCargoBox {};
             class buyChinook {};
             class buyGryphon {};
             class buyMATV {};
