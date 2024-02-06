@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6923.1602,9.8506927,7262.3057};
-		dir[]={0.26424718,-0.35032231,0.89858341};
-		up[]={0.09883555,0.93662918,0.33609435};
-		aside[]={0.95938146,-5.8207661e-008,-0.28212604};
+		pos[]={6810.1953,27.46558,7424.8682};
+		dir[]={-0.11161935,-0.80865395,0.5776071};
+		up[]={-0.1534299,0.58828133,0.79396832};
+		aside[]={0.98184204,-5.2154064e-008,0.18973568};
 	};
 };
 binarizationWanted=0;
@@ -1417,15 +1417,15 @@ class Mission
 		class Item2
 		{
 			dataType="Trigger";
-			position[]={6810.0981,2.7060001,7443.6333};
+			position[]={6810.0981,2.7060001,7443.6328};
 			angle=0.45099309;
 			class Attributes
 			{
 				text="Completed Vehicle Decontamination";
 				condition="_now = diag_tickTime;" \n "_cooldown = thisTrigger getVariable [""SHZ_cooldown"",-1];" \n "_now > _cooldown && {player inArea thisTrigger && {!isNull objectParent player}}";
-				onActivation="thisTrigger setVariable [""SHZ_cooldown"", diag_tickTime + 60];" \n "hq_fob_hope_security sideRadio ""DeconVehicleGate"";" \n "gate_fob_hope_decon_1 animate [""door_1_rot"", 0];" \n "gate_fob_hope_decon_2 animate [""door_1_rot"", 0];                          gate_fob_hope_side_1 animate [""door_1_rot"", 0];" \n "gate_fob_hope_side_1 animate [""door_2_rot"", 0];" \n "gate_fob_hope_side_2 animate [""door_1_rot"", 0];" \n "gate_fob_hope_side_2 animate [""door_2_rot"", 0];";
+				onActivation="thisTrigger setVariable [""SHZ_cooldown"", diag_tickTime + 60];" \n "hq_fob_hope_security sideRadio ""DeconVehicleGate"";" \n "gate_fob_hope_decon_1 animate [""door_1_rot"", 0];" \n "gate_fob_hope_decon_2 animate [""door_1_rot"", 0];                      gate_fob_hope_side_1 animate [""door_1_rot"", 0];" \n "gate_fob_hope_side_1 animate [""door_2_rot"", 0];" \n "gate_fob_hope_side_2 animate [""door_1_rot"", 0];" \n "gate_fob_hope_side_2 animate [""door_2_rot"", 0];";
 				sizeA=6.098;
-				sizeB=17.465851;
+				sizeB=17.466;
 				sizeC=10;
 				repeatable=1;
 				isRectangle=1;
