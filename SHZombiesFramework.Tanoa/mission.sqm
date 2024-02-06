@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6951.4775,37.628082,7359.9741};
-		dir[]={-0.71189386,-0.52040368,0.47158146};
-		up[]={-0.43384811,0.8539198,0.28739509};
-		aside[]={0.5522542,5.599577e-008,0.83367628};
+		pos[]={6863.7588,27.66,7346.8862};
+		dir[]={0.026659885,-0.76902699,0.63866341};
+		up[]={0.032073896,0.63921607,0.76835829};
+		aside[]={0.99913162,2.4971087e-008,-0.04170705};
 	};
 };
 binarizationWanted=0;
@@ -23497,11 +23497,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6863.4141,15.033912,7356.3198};
+				position[]={6863.4141,15.033999,7356.3198};
 			};
 			id=9206;
 			type="ModuleRespawnVehicle_F";
-			atlOffset=12.373912;
+			atlOffset=12.374;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23526,7 +23526,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="";
+							value="params [""_new""]; for ""_i"" from 1 to 4 do {_new addMagazineTurret [""rhs_mag_M1069"", [0]]}; for ""_i"" from 1 to 2 do {_new addMagazineTurret [""rhs_mag_M1028_max"", [0]]};";
 						};
 					};
 				};
@@ -88029,21 +88029,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6862.1396,4.2301397,7366.2808};
-						angles[]={0,5.9639082,0};
+						position[]={6862.1401,4.2301397,7366.2803};
+						angles[]={0,5.963912,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 						lock="UNLOCKED";
+						init="if (!isServer) exitWith {};" \n "for ""_i"" from 1 to 4 do {this addMagazineTurret [""rhs_mag_M1069"", [0]]};" \n "for ""_i"" from 1 to 2 do {this addMagazineTurret [""rhs_mag_M1028_max"", [0]]};";
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
 					};
 					id=10436;
 					type="rhsusf_m1a1fep_od";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -88229,6 +88229,7 @@ class Mission
 				};
 			};
 			id=10412;
+			atlOffset=-2.3841858e-007;
 		};
 		class Item1150
 		{
