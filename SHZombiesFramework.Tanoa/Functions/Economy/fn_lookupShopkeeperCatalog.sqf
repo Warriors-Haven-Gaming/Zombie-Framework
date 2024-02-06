@@ -136,8 +136,8 @@ if (isNil "_index") then {
             ["_cost", 150]
         ]],
         ["recruit_medic", createHashMapFromArray [
-            ["_displayName", "rhsusf_navy_marpac_wd_medic" call _getVehicleName],
-            ["_recruitType", "rhsusf_navy_marpac_wd_medic"],
+            ["_displayName", "rhsusf_navy_marpat_wd_medic" call _getVehicleName],
+            ["_recruitType", "rhsusf_navy_marpat_wd_medic"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 200]
