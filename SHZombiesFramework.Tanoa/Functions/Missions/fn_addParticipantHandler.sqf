@@ -2,7 +2,7 @@
 Function: SHZ_fnc_addParticipantHandler
 
 Description:
-    Adds a Killed event handler to a unit that appends players
+    Adds a Killed event handler to a unit that appends player UIDs
     to an array. Helpful for determining the participants in a mission.
     This can be stacked multiple times for the same unit and can also
     be passed directly as a callback for SHZ_fnc_hordeSpawn.
@@ -35,7 +35,7 @@ if (isNil {_unit getVariable "SHZ_participants_ehIDs"}) then {
         if (isNull _instigator) then {_instigator = _killer};
         if (isNull _instigator || {!isPlayer _instigator}) exitWith {};
         {
-            _x pushBackUnique _instigator;
+            _x pushBackUnique getPlayerUID _instigator;
         } forEach (_unit getVariable "SHZ_participants");
     }];
     _unit setVariable ["SHZ_participants_ehIDs", [_killedEH]];

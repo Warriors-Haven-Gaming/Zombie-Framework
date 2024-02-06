@@ -139,7 +139,7 @@ while {true} do {
     sleep 10;
 
     private _nearbyPlayers = allPlayers inAreaArray [_building, 50, 50, 0, false, 50];
-    {_participants pushBackUnique _x} forEach _nearbyPlayers;
+    {_participants pushBackUnique getPlayerUID _x} forEach _nearbyPlayers;
 
     {
         if !(_x call _unitNeedsRescuing) then {continue};
