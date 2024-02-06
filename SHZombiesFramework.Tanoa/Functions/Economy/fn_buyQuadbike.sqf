@@ -27,7 +27,8 @@ values _context params keys _context;
 if (isNil "_vehicleSpawn") exitWith {false};
 
 private _type = "B_T_Quadbike_01_F";
-private _pos = _vehicleSpawn findEmptyPosition [10, 50, _type];
+private _maxRadius = _context getOrDefault ["_vehicleSpawnRadius", 50];
+private _pos = _vehicleSpawn findEmptyPosition [10, _maxRadius, _type];
 if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir random 360;

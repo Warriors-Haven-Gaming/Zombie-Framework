@@ -31,7 +31,8 @@ private _type = selectRandom [
     "RHS_M2A3_BUSKI_wd",
     "RHS_M2A3_BUSKIII_wd"
 ];
-private _pos = _vehicleSpawn findEmptyPosition [10, 50, _type];
+private _maxRadius = _context getOrDefault ["_vehicleSpawnRadius", 50];
+private _pos = _vehicleSpawn findEmptyPosition [10, _maxRadius, _type];
 if (_pos isEqualTo []) exitWith {false};
 private _vehicle = createVehicle [_type, _pos];
 _vehicle setDir random 360;
