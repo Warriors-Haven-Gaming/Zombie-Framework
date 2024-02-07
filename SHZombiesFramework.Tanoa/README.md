@@ -8,6 +8,7 @@ We have summaries for:
 - [Economy](Functions/Economy/)
 - [Garbage Collection](Functions/GC/)
 - [Helpers](Functions/Helpers/)
+- [Missions](Functions/Missions/)
 - [Safezones](Functions/Safezones/)
 - [Saves](Functions/Saves/)
 - [Tasks](Functions/Tasks/)
