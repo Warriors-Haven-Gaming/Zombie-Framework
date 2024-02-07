@@ -34,6 +34,8 @@ about each item like:
     The cost of the item to be purchased.
 - `_functionName`:
     The function to be called by the server when the item is being purchased.
+    It will be given one argument, that being the [context](#context) of the
+    purchase.
     As convention, function names should be prefixed with "buy", for example
     `SHZ_fnc_buyAIRecruit`.
 
