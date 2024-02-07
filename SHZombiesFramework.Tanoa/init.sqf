@@ -1,3 +1,14 @@
+/*
+Script: init.sqf
+
+Description:
+    Executed globally when mission is started.
+    https://community.bistudio.com/wiki/Event_Scripts#init.sqf
+
+Author:
+    thegamecracks
+
+*/
 diag_log text format ["Initializing %1", briefingName];
 
 SHZ_zombieSide = independent;

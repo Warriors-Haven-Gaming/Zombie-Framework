@@ -1,3 +1,18 @@
+/*
+Script: initPlayerLocal.sqf
+
+Description:
+    Executed locally when player joins mission.
+    https://community.bistudio.com/wiki/Event_Scripts#initPlayerLocal.sqf
+
+Parameters:
+    Object player:
+        The player unit.
+
+Author:
+    thegamecracks
+
+*/
 params ["_player"];
 
 if (!hasInterface) exitWith {};

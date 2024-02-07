@@ -1,3 +1,14 @@
+/*
+Script: initServer.sqf
+
+Description:
+    Executed only on server when mission is started.
+    https://community.bistudio.com/wiki/Event_Scripts#initServer.sqf
+
+Author:
+    thegamecracks
+
+*/
 skipTime random 24;
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
