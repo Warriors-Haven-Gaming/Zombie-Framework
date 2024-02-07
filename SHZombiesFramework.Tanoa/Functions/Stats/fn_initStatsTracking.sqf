@@ -22,9 +22,14 @@ addMissionEventHandler ["EntityKilled", {
         // player driven vehicle road kill
         _instigator = _killer;
     };
-    if (isNull _instigator || {!isPlayer _instigator}) exitWith {};
+    if (isNull _instigator) exitWith {};
 
-    private _uid = getPlayerUID _instigator;
+    private _uid = "";
+    if (isPlayer _instigator) then {
+        _uid = getPlayerUID _instigator;
+    } else {
+        _uid = _instigator getVariable ["SHZ_recruitOwnedBy", ""];
+    };
     if (_uid isEqualTo "") exitWith {};
 
     if ([_killed] call SHZ_fnc_isZombie) exitWith {
