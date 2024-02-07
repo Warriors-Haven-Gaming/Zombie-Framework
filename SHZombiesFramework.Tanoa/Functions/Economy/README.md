@@ -23,8 +23,8 @@ the server.
 The shopkeeper objects are initialized separately in [Props/fn_initShopkeeper.sqf],
 but they rely on several functions defined here. The main function involved
 is [fn_lookupShopkeeperCatalog.sqf], which defines all the items that can
-be purchased. Each item has a unique identifier and contains basic information
-about each item like:
+be purchased. Each item has a unique identifier and contains the following
+basic information in their HashMap:
 
 - `_displayName`:
     The localized name of the item shown to the player.
@@ -41,6 +41,11 @@ about each item like:
 
 To purchase an item, the client should remote execute [fn_requestToBuyItem.sqf]
 on the server with the shopkeeper object and the item ID that they're purchasing.
+
+> [!NOTE]
+> Other than the above keys which should always be defined, there is no
+> restriction on defining other keys, and functions are free to take
+> advantage of the item HashMap to customize the function's behaviour.
 
 ### Context
 
