@@ -7,7 +7,7 @@ Description:
 
 Examples:
     (begin example)
-        [player] call SHZ_fnc_initDiary;
+        call SHZ_fnc_initDiary;
     (end)
 
 Author:
