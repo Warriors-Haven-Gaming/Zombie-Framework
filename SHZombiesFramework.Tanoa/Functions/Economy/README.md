@@ -29,7 +29,7 @@ basic information in their HashMap:
 - `_displayName`:
     The localized name of the item shown to the player.
 - `_category`:
-    The item this is categorized under, useful for filtering.
+    A string that can other items can share for grouping/filtering purposes.
 - `_cost`:
     The cost of the item to be purchased.
 - `_functionName`:
