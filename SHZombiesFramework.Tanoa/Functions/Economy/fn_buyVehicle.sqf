@@ -10,6 +10,25 @@ Parameters:
         The context of the purchase.
         See SHZ_fnc_requestToBuyItem for details on the format.
 
+        The item included in the context should define the following keys:
+            String _vehicleType:
+                The vehicle type to spawn in.
+            Boolean _vehicleLock:
+                (Optional, default true)
+                If true, the vehicle will be locked to the player.
+            Array _vehiclePylons:
+                (Optional, default [])
+                An array of pylons to set on the vehicle.
+                Each element can be either a magazine name or a sub-array
+                in the format [magazine, forced, turret].
+                If this isn't needed, an empty array can be passed.
+                See https://community.bistudio.com/wiki/setPylonLoadout for details.
+            Boolean _vehicleRandomDir:
+                (Optional, default true)
+                If true, the vehicle will be spawned in a random direction.
+                If the shopkeeper's context does not define _vehicleSpawnDir,
+                a random direction will always be used.
+
 Returns:
     Array | Boolean
         True if successful, false otherwise.

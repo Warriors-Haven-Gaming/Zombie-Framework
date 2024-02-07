@@ -10,6 +10,10 @@ Parameters:
         The context of the purchase.
         See SHZ_fnc_requestToBuyItem for details on the format.
 
+        The item included in the context should define the following keys:
+            String _recruitType:
+                The unit type to spawn in.
+
 Returns:
     Array | Boolean
         True if successful, false otherwise.
