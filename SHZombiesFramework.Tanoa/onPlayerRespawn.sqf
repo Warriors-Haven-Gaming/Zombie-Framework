@@ -33,3 +33,8 @@ _newUnit setUnitTrait ["medic", true];
     SHZ_globalPlayerTarget,
     (_newUnit call BIS_fnc_netId) + ":SHZ_moneyShare"
 ];
+
+if (isNil "SHZ_shownIntroHint") then {
+    [["Intro", "Welcome"], 15, nil, 35, nil, true, true, false, false] spawn BIS_fnc_advHint;
+    SHZ_shownIntroHint = true;
+};

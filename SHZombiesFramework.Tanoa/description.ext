@@ -167,6 +167,18 @@ class CfgFunctions {
     };
 };
 
+// https://community.bistudio.com/wiki/Arma_3:_Advanced_Hints_(Field_Manual)
+class CfgHints {
+    class Intro {
+        displayName = "$STR_SHZ_Intro_displayName";
+        class Welcome {
+            displayName = "$STR_SHZ_Intro_Welcome_displayName";
+            description = "$STR_SHZ_Intro_Welcome_description";
+            image = "splash.jpg";
+        };
+    };
+};
+
 // https://community.bistudio.com/wiki/Description.ext#CfgRadio
 class CfgRadio {
     class DeconVehicleStart {
