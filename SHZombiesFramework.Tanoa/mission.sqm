@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1872;
+		nextID=1904;
 	};
 	class Camera
 	{
-		pos[]={6991.2437,28.171846,7304.5366};
-		dir[]={0.41712829,-0.65126806,-0.63398361};
-		up[]={0.35797226,0.75884175,-0.54407728};
-		aside[]={-0.83543169,-4.5634806e-007,-0.5496707};
+		pos[]={7027.7441,12.952174,7389.6836};
+		dir[]={-0.02466982,-0.81189489,0.58328217};
+		up[]={-0.034308307,0.58380288,0.81116998};
+		aside[]={0.99910676,4.7730282e-009,0.042257056};
 	};
 };
 binarizationWanted=0;
@@ -36495,8 +36495,6 @@ class Mission
 			class Attributes
 			{
 				name="arty_fob_hope_1_attachment";
-				createAsLocalObject=1;
-				disableSimulation=1;
 			};
 			id=9615;
 			type="Tarp_01_Large_Green_F";
@@ -120494,8 +120492,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -120631,8 +120629,8 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -130399,14 +130397,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -130562,21 +130560,21 @@ class Mission
 						};
 						class Attribute9
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
 						class Attribute10
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
