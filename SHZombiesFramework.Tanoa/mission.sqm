@@ -32484,7 +32484,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.0020000001;
+									value=0.0049999999;
 								};
 							};
 						};
