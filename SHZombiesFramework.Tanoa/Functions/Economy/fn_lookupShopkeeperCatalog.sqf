@@ -46,7 +46,7 @@ if (isNil "_index") then {
             ["_vehiclePylons", []],
             ["_vehicleRandomDir", true],
             ["_category", "apc"],
-            ["_cost", 5000]
+            ["_cost", 15000]
         ]],
         ["cargo_fuel", createHashMapFromArray [
             ["_displayName", "FlexibleTank_01_forest_F" call _getVehicleName],
