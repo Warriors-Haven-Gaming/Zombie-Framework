@@ -75,7 +75,7 @@
     </Container>
     <Container name="Diary">
         <Key ID="STR_SHZ_addRecordACE_subject">
-            <Original>ACE Guide</Original>
+            <Original>ACE Integration</Original>
         </Key>
         <Key ID="STR_SHZ_addRecordACE_basics_title">
             <Original>Basics</Original>
