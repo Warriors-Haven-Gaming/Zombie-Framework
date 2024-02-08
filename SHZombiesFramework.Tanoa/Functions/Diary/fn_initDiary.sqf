@@ -16,6 +16,6 @@ Author:
 */
 if (!hasInterface) exitWith {};
 
+call SHZ_fnc_addRecordGuide;
 call SHZ_fnc_addRecordACE;
 call SHZ_fnc_addRecordCredits;
-call SHZ_fnc_addRecordGuide;
