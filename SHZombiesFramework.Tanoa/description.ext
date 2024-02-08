@@ -37,6 +37,7 @@ class CfgFunctions {
             class showGenericPurchaseError {};
             class showInsufficientFunds {};
             class showInsufficientFundsToShare {};
+            class showMoneyMultiplierReset {};
             class showSharedMoneyFrom {};
             class showSharedMoneyTo {};
             class showSuccessfulPurchase {};

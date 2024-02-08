@@ -199,6 +199,9 @@
         <Key ID="STR_SHZ_showInsufficientFundsToShare">
             <Original>You cannot share %1 to this player as you only have %2.</Original>
         </Key>
+        <Key ID="STR_SHZ_showMoneyMultiplierReset">
+            <Original>Welcome back!&lt;br/&gt;&lt;br/&gt;You earned %1 in this trip, reaching a multiplier of %2x.</Original>
+        </Key>
         <Key ID="STR_SHZ_showSharedMoneyFrom">
             <Original>You have shared %1 with %2! You have %3 left.</Original>
         </Key>
