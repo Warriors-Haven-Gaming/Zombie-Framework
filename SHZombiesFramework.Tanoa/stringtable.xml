@@ -176,6 +176,75 @@
                 https://github.com/Warriors-Haven-Gaming/Zombie-Framework
             </Original>
         </Key>
+        <Key ID="STR_SHZ_addRecordGuide_subject">
+            <Original>Getting Started</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_about_title">
+            <Original>Summary</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_about_description">
+            <Original>
+                This is an open world mission where you will be completing
+                objectives across %1 to fight off the apocalypse.
+                &lt;br/&gt;
+                &lt;br/&gt;
+                Near your spawn should be a whiteboard that shows your statistics
+                across game restarts. For server admins, this also allows them
+                to perform administrative actions for the mission.
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_economy_title">
+            <Original>Economy</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_economy_description">
+            <Original>
+                On the border of the map, you will see the amount of points
+                you have measured in BP. This currency persists across
+                restarts every time the mission is saved, which may be
+                automatic if autosaving is enabled (the default),
+                or otherwise manually saved by the server admin.
+                &lt;br/&gt;
+                &lt;br/&gt;
+                You gain points whenever you kill zombies or hostiles, or complete
+                missions. As you accumulate points, your points multiplier also
+                increases, allowing you to gain points more quickly. This points
+                multiplier gets reset whenever you die or return to base.
+                External factors can also affect your points multiplier,
+                such as whether it is night time.
+                &lt;br/&gt;
+                &lt;br/&gt;
+                Shopkeepers at base can be used to purchase various items
+                and services using the points you've earned, including
+                vehicles and AI recruits. Kills achieved by recruits
+                you've purchased will count towards your kill count
+                and point rewards.
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_safezones_title">
+            <Original>Safezones</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_safezones_description">
+            <Original>
+                Safezones will appear on map in solid blue, indicating areas
+                where zombies will not appear. Some missions produce safezones
+                upon completion, but may only last for a certain period of time
+                before disappearing. Note that safezones do not prevent zombies
+                from entering them.
+            </Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_infection_title">
+            <Original>Infection</Original>
+        </Key>
+        <Key ID="STR_SHZ_addRecordGuide_infection_description">
+            <Original>
+                Zombies and Demons's infection module is enabled, meaning
+                that zombie hits have a chance to cause infection. This
+                infection will progress until it takes over motor functions,
+                at which point you become a zombie. You can recover from
+                infection by taking antivirus medication or by going through
+                a decontamination shower.
+            </Original>
+        </Key>
     </Container>
     <Container name="Economy">
         <Key ID="STR_SHZ_initMoneyShareActions">
