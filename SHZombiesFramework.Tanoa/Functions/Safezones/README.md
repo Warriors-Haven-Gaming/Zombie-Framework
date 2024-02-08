@@ -12,8 +12,8 @@ in different areas.
 
 ## Team Safezones
 
-Team safezones are a separate type of area marker generally used to designate a base.
-They are prefixed with `SHZ_team_safezone`, and exhibit behaviours like:
+Team safezones are a superset of regular safezones generally used to designate a base.
+They are prefixed with `SHZ_safezone_team`, and exhibit behaviours like:
 
 - [fn_initTeamSafezoneHandlers.sqf]:
     Providing immunity to friendly fire from players
@@ -21,10 +21,6 @@ They are prefixed with `SHZ_team_safezone`, and exhibit behaviours like:
     Resetting money multipliers earned by players
 - [fn_addVehicleRefund.sqf]:
     Refunding recently purchased vehicles that explode in the safezone
-
-Note that because `SHZ_team_safezone` is not a superstring of `SHZ_safezone`,
-regular safezone behaviours don't apply to team safezones and must be manually
-overlapped with two markers.
 
 [fn_createSafezone.sqf]: fn_createSafezone.sqf
 [fn_initTeamSafezoneHandlers.sqf]: fn_initTeamSafezoneHandlers.sqf

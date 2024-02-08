@@ -22,4 +22,4 @@ Author:
 
 */
 if !(_this isEqualType []) then {_this = [_this]};
-[_this, "SHZ_team_safezone"] call SHZ_fnc_inAreaMarkers
+[_this, "SHZ_safezone_team"] call SHZ_fnc_inAreaMarkers
