@@ -23,6 +23,7 @@ if (_loadout isNotEqualTo []) then {_player setUnitLoadout _loadout};
 
 call SHZ_fnc_initDiary;
 call SHZ_fnc_initTeamSafezoneHandlers;
+call SHZ_fnc_initIncapacitatedHandlers;
 call SHZ_fnc_musicStartPlaylist;
 0 spawn SHZ_fnc_initFriendlyMapIcons;
 0 spawn SHZ_fnc_updateChannelLoop;

@@ -126,6 +126,7 @@ class CfgFunctions {
             class spawnDamagedVehicles {};
         };
         class Revive {
+            class initIncapacitatedHandlers {};
             class selfReviveCompleted {};
             class selfReviveConditionProgress {};
             class selfReviveLoop {};
