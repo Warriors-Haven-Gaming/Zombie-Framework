@@ -314,7 +314,7 @@
     </Container>
     <Container name="Helpers">
         <Key ID="STR_SHZ_defaultTimer">
-            <Original>Time Left: %3/%2</Original>
+            <Original>Time left: %3/%2</Original>
         </Key>
     </Container>
     <Container name="Locks">
