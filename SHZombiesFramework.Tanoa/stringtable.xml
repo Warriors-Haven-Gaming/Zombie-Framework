@@ -381,6 +381,17 @@
             <Original>View Game Stats</Original>
         </Key>
     </Container>
+    <Container name="Revive">
+        <Key ID="STR_SHZ_selfReviveCompleted">
+            <Original>%1 first aid kits consumed</Original>
+        </Key>
+        <Key ID="STR_SHZ_selfReviveConditionProgress_noFirstAidKits">
+            <Original>You need %1 first aid kits to self-revive! (%2 missing)</Original>
+        </Key>
+        <Key ID="STR_SHZ_selfReviveLoop_action">
+            <Original>Self-Revive</Original>
+        </Key>
+    </Container>
     <Container name="Saves">
         <Key ID="STR_SHZ_adminToggleSaveLoopPrompt_confirm_enable">
             <Original>Are you sure you want to enable autosaving?</Original>

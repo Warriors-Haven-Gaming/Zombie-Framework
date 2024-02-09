@@ -125,6 +125,11 @@ class CfgFunctions {
             class spawnCarWrecks {};
             class spawnDamagedVehicles {};
         };
+        class Revive {
+            class selfReviveCompleted {};
+            class selfReviveConditionProgress {};
+            class selfReviveLoop {};
+        };
         class Safezones {
             class createSafezone {};
             class inAreaSafezone {};
