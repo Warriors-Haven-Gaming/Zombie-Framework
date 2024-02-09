@@ -9,7 +9,7 @@ Author:
 
 */
 player addEventHandler ["HandleDamage", {call {
-    params ["_unit", "_selection"];
+    params ["_unit", "", "", "", "", "_hitIndex"];
     if (lifeState _unit isNotEqualTo "INCAPACITATED") exitWith {};
-    _unit getHit _selection
+    if (_hitIndex >= 0) then {_unit getHitIndex _hitIndex} else {damage _unit}
 }}];
