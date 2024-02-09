@@ -318,6 +318,9 @@
         </Key>
     </Container>
     <Container name="Locks">
+        <Key ID="STR_SHZ_addVehicleUnlockAction_title">
+            <Original>Unlock Vehicle</Original>
+        </Key>
         <Key ID="STR_SHZ_showACEVehicleLock">
             <Original>You have received ACE keys to unlock your %1.</Original>
         </Key>

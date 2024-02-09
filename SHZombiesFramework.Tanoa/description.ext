@@ -78,8 +78,10 @@ class CfgFunctions {
             class setPlayableAILoadouts {};
         };
         class Locks {
+            class addVehicleUnlockAction {};
             class lockVehicleToPlayer {};
             class showACEVehicleLock {};
+            class unlockVehicle {};
         };
         class Map {
             class initFriendlyMapIcons {};
