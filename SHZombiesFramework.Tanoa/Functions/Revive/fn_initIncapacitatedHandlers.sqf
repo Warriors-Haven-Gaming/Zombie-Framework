@@ -11,5 +11,6 @@ Author:
 player addEventHandler ["HandleDamage", {call {
     params ["_unit", "", "", "", "", "_hitIndex"];
     if (lifeState _unit isNotEqualTo "INCAPACITATED") exitWith {};
+    if (isDamageAllowed _unit) then {_unit allowDamage false};
     if (_hitIndex >= 0) then {_unit getHitIndex _hitIndex} else {damage _unit}
 }}];
