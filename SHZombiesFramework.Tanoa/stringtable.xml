@@ -278,9 +278,6 @@
         <Key ID="STR_SHZ_initMoneyShareActions">
             <Original>Share Points</Original>
         </Key>
-        <Key ID="STR_SHZ_showACEVehicleLock">
-            <Original>You have received ACE keys to unlock your %1.</Original>
-        </Key>
         <Key ID="STR_SHZ_showBuyAIRecruitLimit">
             <Original>You have reached the recruit limit of %1.</Original>
         </Key>
@@ -318,6 +315,11 @@
     <Container name="Helpers">
         <Key ID="STR_SHZ_defaultTimer">
             <Original>Time Left: %3/%2</Original>
+        </Key>
+    </Container>
+    <Container name="Locks">
+        <Key ID="STR_SHZ_showACEVehicleLock">
+            <Original>You have received ACE keys to unlock your %1.</Original>
         </Key>
     </Container>
     <Container name="Map">

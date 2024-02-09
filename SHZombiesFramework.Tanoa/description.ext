@@ -33,7 +33,6 @@ class CfgFunctions {
             class moneyMultiplierLoop {};
             class requestToBuyItem {};
             class shareMoney {};
-            class showACEVehicleLock {};
             class showBuyAIRecruitLimit {};
             class showGenericPurchaseError {};
             class showInsufficientFunds {};
@@ -62,7 +61,6 @@ class CfgFunctions {
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
             class localize {};
-            class lockVehicleToPlayer {};
             class nearestRespawnPosition {};
             class objectsGrabber {};
             class objectsMapper {};
@@ -78,6 +76,10 @@ class CfgFunctions {
         class Loadouts {
             class getRespawnLoadout {};
             class setPlayableAILoadouts {};
+        };
+        class Locks {
+            class lockVehicleToPlayer {};
+            class showACEVehicleLock {};
         };
         class Map {
             class initFriendlyMapIcons {};
