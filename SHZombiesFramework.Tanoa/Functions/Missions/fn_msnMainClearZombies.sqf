@@ -44,7 +44,7 @@ _killCountMarker setMarkerColorLocal "ColorRed";
 _killCountMarker setMarkerTypeLocal "KIA";
 _killCountMarker setMarkerAlpha 0.7;
 
-private _taskID = [blufor, "", "mainClearZombies", _area # 0, "CREATED", -1, true, "attack"] call SHZ_fnc_taskCreate;
+private _taskID = [blufor, "", "mainClearZombies", _area # 0, "AUTOASSIGNED", -1, true, "attack"] call SHZ_fnc_taskCreate;
 
 private _killThreshold = 600 + count allPlayers * 20 + floor random 251;
 private _kills = createHashMap;
