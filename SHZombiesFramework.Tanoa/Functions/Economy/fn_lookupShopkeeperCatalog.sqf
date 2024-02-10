@@ -228,7 +228,7 @@ if (isNil "_index") then {
             ["_cost", 2000]
         ]],
         ["heli_chinook", createHashMapFromArray [
-            ["_displayName", "RHS_CH_47F_10" call _getVehicleName],
+            ["_displayName", "CH-47F Chinook"],
             ["_vehicleType", "RHS_CH_47F_10"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
