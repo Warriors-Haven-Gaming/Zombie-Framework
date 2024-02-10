@@ -207,6 +207,16 @@ if (isNil "_index") then {
             ["_vehicleRandomDir", false],
             ["_cost", 25000]
         ]],
+        ["heli_blackhawk", createHashMapFromArray [
+            ["_displayName", "UH-60 Black Hawk"],
+            ["_vehicleType", "RHS_UH60M"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "heli"],
+            ["_cost", 2000]
+        ]],
         ["heli_chinook", createHashMapFromArray [
             ["_displayName", "RHS_CH_47F_10" call _getVehicleName],
             ["_vehicleType", "RHS_CH_47F_10"],
