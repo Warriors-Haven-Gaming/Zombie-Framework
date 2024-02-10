@@ -257,6 +257,16 @@ if (isNil "_index") then {
             ["_category", "heli"],
             ["_cost", 2000]
         ]],
+        ["heli_super_stallion_gau21", createHashMapFromArray [
+            ["_displayName", "CH-53E Super Stallion (GAU-21)"],
+            ["_vehicleType", "rhsusf_CH53E_USMC_GAU21"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "heli"],
+            ["_cost", 12000]
+        ]],
         ["medical_pills", createHashMapFromArray [
             ["_displayName", "RyanZombiesAntiVirusTemporary_Item" call _getWeaponName],
             ["_functionName", "SHZ_fnc_buyPills"],
