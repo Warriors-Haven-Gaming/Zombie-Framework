@@ -48,6 +48,16 @@ if (isNil "_index") then {
             ["_category", "apc"],
             ["_cost", 15000]
         ]],
+        ["apc_stryker_m2", createHashMapFromArray [
+            ["_displayName", "M1126 Stryker (CROWS/M2)"],
+            ["_vehicleType", "rhsusf_stryker_m1126_m2_wd"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "apc"],
+            ["_cost", 5000]
+        ]],
         ["cargo_fuel", createHashMapFromArray [
             ["_displayName", "FlexibleTank_01_forest_F" call _getVehicleName],
             ["_cargoType", "FlexibleTank_01_forest_F"],
