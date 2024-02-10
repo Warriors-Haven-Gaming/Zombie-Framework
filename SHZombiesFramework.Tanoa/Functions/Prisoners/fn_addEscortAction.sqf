@@ -50,6 +50,10 @@ _unit addAction [
     true,
     true,
     "",
-    "alive _originalTarget && {group _originalTarget isNotEqualTo group _this}",
+    "(
+        alive _originalTarget
+        && {group _originalTarget isNotEqualTo group _this
+        && {!(_originalTarget call SHZ_fnc_unitIsCaptured)}}
+    )",
     3
 ];
