@@ -14,10 +14,6 @@ Parameters:
     Number money:
         The money to refund the player when the vehicle is destroyed.
 
-Returns:
-    Number
-        The amount of money the player has afterwards.
-
 Author:
     thegamecracks
 
