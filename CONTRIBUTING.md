@@ -7,6 +7,7 @@
   - [Recommended Setup](#recommended-setup)
   - [Resources](#resources)
   - [SQF/CPP Style Guide](#sqfcpp-style-guide)
+  - [SQF Best Practices](#sqf-best-practices)
 
 ## Recommended Setup
 
@@ -73,3 +74,13 @@ done and submitted more simply by using the [web-based editor].
       [1, 2] call SHZ_fnc_returnTypeIsNotImportant;
   };
   ```
+
+## SQF Best Practices
+
+- Declaring functions in [`CfgFunctions`] should be preferred over compiling
+  or running script files directly, e.g. `compileScript` / `execVM`
+- To help with localization, [stringtable.xml] declarations should be used
+  for any strings that are seen by users
+
+[stringtable.xml]: https://community.bistudio.com/wiki/Stringtable.xml
+[`CfgFunctions`]: https://community.bistudio.com/wiki/Arma_3:_Functions_Library
