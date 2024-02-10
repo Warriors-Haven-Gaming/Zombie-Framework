@@ -283,6 +283,16 @@ if (isNil "_index") then {
             ["_category", "mrap"],
             ["_cost", 5000]
         ]],
+        ["plane_hercules_cargo", createHashMapFromArray [
+            ["_displayName", "RHS_C130J_Cargo" call _getVehicleName],
+            ["_vehicleType", "RHS_C130J_Cargo"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "plane"],
+            ["_cost", 15000]
+        ]],
         ["recruit_autorifleman_m249", createHashMapFromArray [
             ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman_m249" call _getVehicleName],
             ["_recruitType", "rhsusf_usmc_marpat_wd_autorifleman_m249"],

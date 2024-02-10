@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1936;
+		nextID=1968;
 	};
 	class Camera
 	{
@@ -77831,7 +77831,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""cas_plane"", ""heli"", ""mrap"", ""tank"", ""uav"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
+						init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_fob_hope""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_fob_hope""]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""cas_plane"", ""heli"", ""mrap"", ""plane"", ""tank"", ""uav"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
 						stance="Up";
 						class Inventory
 						{
@@ -120492,8 +120492,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -120629,8 +120629,8 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -130397,14 +130397,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -130560,21 +130560,21 @@ class Mission
 						};
 						class Attribute9
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
 						class Attribute10
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
