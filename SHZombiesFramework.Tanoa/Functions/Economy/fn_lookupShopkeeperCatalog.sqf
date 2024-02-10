@@ -180,6 +180,16 @@ if (isNil "_index") then {
             ["_category", "cas_heli"],
             ["_cost", 20000]
         ]],
+        ["cas_heli_huey_armed", createHashMapFromArray [
+            ["_displayName", "UH-1Y Venom (Armed)"],
+            ["_vehicleType", "RHS_UH1Y"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "cas_heli"],
+            ["_cost", 10000]
+        ]],
         ["cas_heli_littlebird_armed", createHashMapFromArray [
             ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
             ["_vehicleType", "RHS_MELB_AH6M"],
