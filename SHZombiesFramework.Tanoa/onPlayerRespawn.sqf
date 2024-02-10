@@ -41,6 +41,6 @@ call SHZ_fnc_initUnflipAction;
 ];
 
 if (isNil "SHZ_shownIntroHint") then {
-    [["Intro", "Welcome"], 15, nil, 35, nil, true, true, false, false] spawn BIS_fnc_advHint;
+    0 spawn SHZ_fnc_showWelcomeScreen;
     SHZ_shownIntroHint = true;
 };

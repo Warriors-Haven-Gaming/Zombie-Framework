@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="SHZombiesFramework">
-    <Container name="CfgHints">
-        <Key ID="STR_SHZ_Intro_displayName">
-            <Original>Introduction</Original>
-        </Key>
-        <Key ID="STR_SHZ_Intro_Welcome_displayName">
-            <Original>Introduction</Original>
-        </Key>
-        <Key ID="STR_SHZ_Intro_Welcome_description">
-            <Original>Welcome to Zombie Framework!%1If you're new to this gamemode, you should check out the Getting Started guide on your map journal.</Original>
-        </Key>
-    </Container>
     <Container name="CfgRadio">
         <Key ID="STR_SHZ_DeconVehicleStart_name">
             <Original>Start Vehicle Decon</Original>
@@ -326,6 +315,11 @@
             <Original>Time left: %3/%2</Original>
         </Key>
     </Container>
+    <Container name="Links">
+        <Key ID="STR_SHZ_link_discord">
+            <Original>https://discord.gg/9uNHvhvJVB</Original>
+        </Key>
+    </Container>
     <Container name="Locks">
         <Key ID="STR_SHZ_addVehicleUnlockAction_title">
             <Original>Unlock vehicle</Original>
@@ -450,6 +444,14 @@
         </Key>
         <Key ID="STR_SHZ_showInsufficientRoomToUnflip">
             <Original>There is not enough space around the vehicle to unflip it!</Original>
+        </Key>
+    </Container>
+    <Container name="Welcome">
+        <Key ID="STR_SHZ_welcomeTitle">
+            <Original>Welcome to Zombie Framework!</Original>
+        </Key>
+        <Key ID="STR_SHZ_welcomeDescription">
+            <Original>If you're new to this gamemode, you should check&lt;br/&gt;out the various guides we have on the map journal.</Original>
         </Key>
     </Container>
 </Project>
