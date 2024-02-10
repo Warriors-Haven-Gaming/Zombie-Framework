@@ -235,7 +235,7 @@ if (isNil "_index") then {
             ["_vehiclePylons", []],
             ["_vehicleRandomDir", true],
             ["_category", "heli"],
-            ["_cost", 4000]
+            ["_cost", 7000]
         ]],
         ["heli_littlebird", createHashMapFromArray [
             ["_displayName", "RHS_MELB_MH6M" call _getVehicleName],
