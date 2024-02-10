@@ -336,6 +336,23 @@ if (isNil "_index") then {
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
+        ["tank_abrams", createHashMapFromArray [
+            ["_displayName", "M1 Abrams"],
+            ["_vehicleType", {selectRandom [
+                "rhsusf_m1a1aimwd_usarmy",
+                "rhsusf_m1a1aim_tuski_wd",
+                "rhsusf_m1a2sep1wd_usarmy",
+                "rhsusf_m1a2sep1tuskiwd_usarmy",
+                "rhsusf_m1a2sep1tuskiiwd_usarmy",
+                "rhsusf_m1a2sep2wd_usarmy"
+            ]}],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "tank"],
+            ["_cost", 10000]
+        ]],
         ["uav_sentinel", createHashMapFromArray [
             ["_displayName", "B_UAV_05_F" call _getVehicleName],
             ["_vehicleType", "B_UAV_05_F"],
