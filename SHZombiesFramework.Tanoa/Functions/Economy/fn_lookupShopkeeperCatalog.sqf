@@ -251,7 +251,7 @@ if (isNil "_index") then {
             ["_vehiclePylons", []],
             ["_vehicleRandomDir", true],
             ["_category", "mrap"],
-            ["_cost", 3500]
+            ["_cost", 5000]
         ]],
         ["recruit_autorifleman_m249", createHashMapFromArray [
             ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman_m249" call _getVehicleName],
