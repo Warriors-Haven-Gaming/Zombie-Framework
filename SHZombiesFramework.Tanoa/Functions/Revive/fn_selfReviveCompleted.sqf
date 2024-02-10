@@ -4,7 +4,7 @@ Function: SHZ_fnc_selfReviveCompleted
 
 Description:
     Self-revives the player.
-	See SHZ_fnc_selfReviveLoop for more details.
+    See SHZ_fnc_selfReviveLoop for more details.
 
 Author:
     thegamecracks
@@ -18,19 +18,19 @@ _arguments params ["_firstAidKitsRequired"];
 SET_STATE(_caller, STATE_REVIVED);
 
 private _firstAidKits = items _caller select {
-	_x call BIS_fnc_itemType select 1 isEqualTo "FirstAidKit"
+    _x call BIS_fnc_itemType select 1 isEqualTo "FirstAidKit"
 };
 
 {
-	if (_forEachIndex + 1 > _firstAidKitsRequired) exitWith {};
-	_caller removeItem _x;
+    if (_forEachIndex + 1 > _firstAidKitsRequired) exitWith {};
+    _caller removeItem _x;
 } forEach _firstAidKits;
 
 50 cutText [
-	format [
-		localize "$STR_SHZ_selfReviveCompleted",
-		_firstAidKitsRequired min count _firstAidKits
-	],
-	"PLAIN DOWN",
-	0.3
+    format [
+        localize "$STR_SHZ_selfReviveCompleted",
+        _firstAidKitsRequired min count _firstAidKits
+    ],
+    "PLAIN DOWN",
+    0.3
 ];
