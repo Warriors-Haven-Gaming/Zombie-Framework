@@ -43,6 +43,7 @@ _unit addAction [
         };
 
         private _units = _linked + [_target];
+        _units = _units select {!(_x call SHZ_fnc_unitIsCaptured)};
         _units joinSilent _caller;
     },
     [_linked],
