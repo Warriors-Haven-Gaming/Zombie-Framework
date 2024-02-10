@@ -44,5 +44,6 @@ private _unit = _group createUnit [_recruitType, _vehicleSpawn, [], 0, "NONE"];
 [_unit] joinSilent _group;
 _unit setDir (_vehicleSpawn getDir _player);
 _unit setVariable ["SHZ_recruitOwnedBy", getPlayerUID _player, true];
+[_unit, "NoVoice"] remoteExec ["setSpeaker", 0, _unit];
 
 true
