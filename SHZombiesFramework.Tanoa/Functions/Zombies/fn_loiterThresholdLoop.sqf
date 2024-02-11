@@ -16,7 +16,7 @@ Author:
 */
 while {true} do {
     SHZ_loiteringHordeThreshold = 200 min (
-        40 + count allPlayers * 3 + floor random 60
+        40 + count allPlayers + floor random 20
     );
     sleep 120;
 };
