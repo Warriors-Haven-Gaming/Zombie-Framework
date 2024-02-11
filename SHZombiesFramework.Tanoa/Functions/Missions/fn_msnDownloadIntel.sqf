@@ -61,7 +61,7 @@ private _spawnerScript = [
     20 + floor (count allPlayers * 0.8),
     60 + floor (count allPlayers * 5.2),
     [10 + floor (count allPlayers / 2), "mixed", SHZ_zombieSide, [0,0,0], 10, 0.5],
-    [20, 100],
+    [20, 50],
     5,
     15
 ] spawn SHZ_fnc_hordeSpawnLoop;
