@@ -12,6 +12,7 @@ Author:
 skipTime random 24;
 enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
+call SHZ_fnc_initChannels;
 
 SHZ_globalPlayerTarget = [0, -2] select isDedicated;
 publicVariable "SHZ_globalPlayerTarget";

@@ -8,6 +8,7 @@ disableChannels[] = {
 class CfgFunctions {
     class SHZ {
         class Channels {
+            class initChannels {};
             class updateChannelLoop {};
         };
         class Diary {
