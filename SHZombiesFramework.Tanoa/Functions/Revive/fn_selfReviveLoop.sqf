@@ -52,6 +52,8 @@ while {true} do {
         if (_reviveActionID < 0 && {_now - _timeIncapacitated > _minTime}) then {
             call _addReviveAction;
         };
+        private _vehicle = objectParent player;
+        if (!isNull _vehicle && {!alive _vehicle}) then {player moveOut _vehicle};
     } else {
         _timeIncapacitated = -1;
         if (_reviveActionID >= 0) then {
