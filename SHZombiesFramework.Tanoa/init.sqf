@@ -17,7 +17,7 @@ SHZ_zombieSide = independent;
 SHZ_loiteringHordeThreshold = 30;
 SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
 // The max distance from any player before a zombie can be garbage collected
-SHZ_gcZombieDistance = 300;
+SHZ_gcZombieDistance = 200;
 // The max distance from any player before queued objects can be deleted
 SHZ_gcDeletionDistance = 500;
 // The max distance from any player before queued objects can be unhidden
