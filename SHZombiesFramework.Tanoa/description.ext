@@ -58,6 +58,7 @@ class CfgFunctions {
             class formatMoney {};
             class formatPercent {};
             class inAreaMarkers {};
+            class initFriendlyFireHandlers {};
             class isPlayerRemoteExecuted {};
             class isRemoteExecutedByAdmin {};
             class localize {};
