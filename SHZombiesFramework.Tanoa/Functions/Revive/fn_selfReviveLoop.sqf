@@ -45,7 +45,7 @@ private _addReviveAction = {
 };
 
 while {true} do {
-    sleep 3;
+    sleep (1 + random 1);
     if (lifeState player isEqualTo "INCAPACITATED") then {
         private _now = time;
         if (_timeIncapacitated < 0) then {_timeIncapacitated = _now};
@@ -54,6 +54,7 @@ while {true} do {
         };
         private _vehicle = objectParent player;
         if (!isNull _vehicle && {!alive _vehicle}) then {player moveOut _vehicle};
+        if (damage player > 0.5) then {player setDamage 0};
     } else {
         _timeIncapacitated = -1;
         if (_reviveActionID >= 0) then {
