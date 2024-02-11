@@ -61,5 +61,9 @@ while {true} do {
             [player, _reviveActionID] call BIS_fnc_holdActionRemove;
             _reviveActionID = -1;
         };
+        if (!isNil {player getVariable "SHZ_incapacitatedInvincibility"}) then {
+            player allowDamage true;
+            player setVariable ["SHZ_incapacitatedInvincibility", nil];
+        };
     };
 };
