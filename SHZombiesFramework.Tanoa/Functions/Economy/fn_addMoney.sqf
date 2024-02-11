@@ -33,14 +33,17 @@ if (_uid isEqualTo "") exitWith {
 };
 
 if (_affectMultipliers && {_money > 0}) then {
-    private _oldMoney = SHZ_moneyMultipliers_moneyEarned getOrDefault [_uid, 0];
-    SHZ_moneyMultipliers_moneyEarned set [_uid, _oldMoney + _money];
+    private _moneyEarned_raw = SHZ_moneyEarned_raw getOrDefault [_uid, 0];
+    SHZ_moneyEarned_raw set [_uid, _moneyEarned_raw + _money];
 };
 
 if (_applyMultipliers && {_money > 0}) then {
     private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
     _money = _money * _multiplier;
 };
+
+private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, 0];
+SHZ_moneyEarned set [_uid, _moneyEarned + _money];
 
 private _playerMoney = ["playerMoney"] call SHZ_fnc_getSaveVariable;
 private _newMoney = (_playerMoney getOrDefault [_uid, 0]) + _money max 0;

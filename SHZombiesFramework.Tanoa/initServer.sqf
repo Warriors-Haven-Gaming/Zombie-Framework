@@ -37,8 +37,9 @@ SHZ_sideMissionLoop_script = [
     15
 ] spawn SHZ_fnc_missionLoop;
 
+SHZ_moneyEarned = createHashMap;
+SHZ_moneyEarned_raw = createHashMap;
 SHZ_moneyMultipliers_rate = 1 / 2500;
-SHZ_moneyMultipliers_moneyEarned = createHashMap;
 SHZ_moneyMultipliers_current = createHashMap;
 SHZ_moneyMultipliers_script = 0 spawn SHZ_fnc_moneyMultiplierLoop;
 call SHZ_fnc_initMoneyShareActionsServer;
