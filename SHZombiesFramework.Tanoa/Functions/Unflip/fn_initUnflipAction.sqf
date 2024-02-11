@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
     localize "$STR_SHZ_initUnflipAction_title",
     "a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff1_ca.paa",
     "a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff2_ca.paa",
-    "call SHZ_fnc_isLookingAtFlippedVehicle",
+    "isNull objectParent _this && {call SHZ_fnc_isLookingAtFlippedVehicle}",
     "true",
     {},
     {},
