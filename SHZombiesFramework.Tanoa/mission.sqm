@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1968;
+		nextID=2000;
 	};
 	class Camera
 	{
@@ -826,12 +826,11 @@ class ScenarioData
 		gameType="Coop";
 	};
 	wreckManagerMode=1;
-	wreckRemovalMinTime=120.00001;
+	wreckRemovalMinTime=60.000004;
 	wreckRemovalMaxTime=300;
 	corpseManagerMode=1;
-	corpseRemovalMinTime=30.000002;
+	corpseRemovalMinTime=3;
 	corpseRemovalMaxTime=180;
-	minPlayerDistance=10;
 };
 class CustomAttributes
 {
@@ -106315,13 +106314,13 @@ class Mission
 						angles[]={0,0.62182432,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						dynamicSimulation=1;
 					};
 					id=11547;
 					type="Box_NATO_Wps_F";
-					atlOffset=0.95636559;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -120492,14 +120491,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -120616,21 +120615,21 @@ class Mission
 						};
 						class Attribute6
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
 						class Attribute7
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -130397,14 +130396,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -130573,14 +130572,14 @@ class Mission
 						};
 						class Attribute10
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
