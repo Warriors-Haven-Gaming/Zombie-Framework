@@ -163,6 +163,12 @@ class CfgFunctions {
             class taskCreate {};
             class taskEnd {};
         };
+        class Unflip {
+            class initUnflipAction {};
+            class isLookingAtFlippedVehicle {};
+            class showInsufficientRoomToUnflip {};
+            class unflipVehicle {};
+        };
         class Zombies {
             class ambientHordeLoop {};
             class hordeSpawn {};
