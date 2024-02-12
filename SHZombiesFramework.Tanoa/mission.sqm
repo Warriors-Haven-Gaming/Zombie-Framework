@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6895.874,15.562323,7309.8247};
-		dir[]={-0.014254002,-0.48001221,0.8771469};
-		up[]={-0.0077993316,0.8772608,0.47994974};
-		aside[]={0.99986833,-4.5401976e-009,0.01624828};
+		pos[]={6903.9487,15.562323,7309.8984};
+		dir[]={0.076951534,-0.50258619,0.8610999};
+		up[]={0.044735283,0.86452442,0.50059259};
+		aside[]={0.99603379,2.7008355e-008,-0.089010023};
 	};
 };
 binarizationWanted=0;
@@ -21029,7 +21029,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6901.8052,9.2089996,7322.1064};
+				position[]={6901.8052,9.2089996,7322.106};
 			};
 			id=9238;
 			type="ModuleRespawnPosition_F";
@@ -21058,7 +21058,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="MRAP Ambulance";
+							value="HEMTT Medical";
 						};
 					};
 				};
