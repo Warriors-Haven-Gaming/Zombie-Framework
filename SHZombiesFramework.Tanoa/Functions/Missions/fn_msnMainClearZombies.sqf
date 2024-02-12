@@ -85,7 +85,7 @@ private _supportTypes = [
     "demons",  5,
     "raiders", 95
 ];
-private _supportLimitBase = 20 + floor (_area # 1 / 50);
+private _supportLimitBase = 10 + floor (_area # 1 / 80);
 private _supportUnits = [];
 private _getSupportUnitCount = {
     [_supportUnits, {alive _x}] call SHZ_fnc_shrinkCount
