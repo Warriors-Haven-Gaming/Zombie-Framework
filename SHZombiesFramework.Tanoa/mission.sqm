@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6903.9487,15.562323,7309.8984};
-		dir[]={0.076951534,-0.50258619,0.8610999};
-		up[]={0.044735283,0.86452442,0.50059259};
-		aside[]={0.99603379,2.7008355e-008,-0.089010023};
+		pos[]={6923.8574,9.2965288,7438.0815};
+		dir[]={-0.78441525,-0.29271808,-0.54684573};
+		up[]={-0.24014078,0.95618933,-0.16741076};
+		aside[]={-0.57189292,5.5762939e-008,0.82034421};
 	};
 };
 binarizationWanted=0;
@@ -110647,7 +110647,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6912.4795,5.2892423,7435.0474};
+						position[]={6912.48,5.2892423,7435.0469};
 						angles[]={0,1.3612522,0};
 					};
 					side="Empty";
@@ -110655,7 +110655,7 @@ class Mission
 					class Attributes
 					{
 						lock="UNLOCKED";
-						init="this lockturret [[0,0],true];   " \n "             " \n "this lockturret [[0],true];  " \n "                                        " \n "this animate [""HideTurret"", 1]; ";
+						init="if (isServer) then {" \n "  this lockTurret [[0,0], true];" \n "  this lockTurret [[0], true];" \n "  this animate [""HideTurret"", 1];" \n "};";
 					};
 					id=13462;
 					type="B_T_APC_Tracked_01_CRV_F";
@@ -119790,7 +119790,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="this removeWeaponTurret [""GMG_40mm"", [0]]; this lockturret [[0,0],true];                  this lockturret [[0],true];                                            this animate [""HideTurret"", 1]; ";
+							value="params [""_vehicle""]; _vehicle lockTurret [[0,0], true]; _vehicle lockTurret [[0], true]; _vehicle animate [""HideTurret"", 1];";
 						};
 					};
 				};
