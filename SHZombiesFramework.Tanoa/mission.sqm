@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6863.377,9.0354471,7285.7974};
-		dir[]={-0.5997889,-0.24997416,-0.76016659};
-		up[]={-0.15486887,0.9682377,-0.19628181};
-		aside[]={-0.78508383,9.8301098e-007,0.61944717};
+		pos[]={6898.9878,22.80794,7330.2739};
+		dir[]={-0.4386695,-0.2881133,0.85127133};
+		up[]={-0.132001,0.95757967,0.25615549};
+		aside[]={0.88895589,5.6112185e-007,0.45809045};
 	};
 };
 binarizationWanted=0;
@@ -1211,10 +1211,11 @@ class Mission
 		briefingName="Zombie Framework v0.12.5";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
-		startWeather=0;
+		startWeather=0.69999999;
+		startFog=0.69999999;
 		startWind=0;
 		startWaves=0.1;
-		forecastWeather=0;
+		forecastWeather=0.69999999;
 		forecastFog=0.69999999;
 		forecastWind=0;
 		forecastWaves=0.1;
