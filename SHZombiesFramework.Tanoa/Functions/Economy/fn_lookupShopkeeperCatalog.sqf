@@ -34,13 +34,9 @@ private _getWeaponName = {
 private _index = localNamespace getVariable "SHZ_shopkeeper_catalog";
 if (isNil "_index") then {
     _index = compileFinal createHashMapFromArray [
-        ["apc_bradley", createHashMapFromArray [
-            ["_displayName", "M2 Bradley"],
-            ["_vehicleType", {selectRandom [
-                "RHS_M2A3_wd",
-                "RHS_M2A3_BUSKI_wd",
-                "RHS_M2A3_BUSKIII_wd"
-            ]}],
+        ["apc_mora", createHashMapFromArray [
+            ["_displayName", "I_APC_tracked_03_cannon_F" call _getVehicleName],
+            ["_vehicleType", "I_APC_tracked_03_cannon_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -48,15 +44,22 @@ if (isNil "_index") then {
             ["_category", "apc"],
             ["_cost", 15000]
         ]],
-        ["apc_stryker_m2", createHashMapFromArray [
-            ["_displayName", "M1126 Stryker (CROWS/M2)"],
-            ["_vehicleType", "rhsusf_stryker_m1126_m2_wd"],
+        ["apc_marshall", createHashMapFromArray [
+            ["_displayName", "B_T_APC_Wheeled_01_cannon_F" call _getVehicleName],
+            ["_vehicleType", "B_T_APC_Wheeled_01_cannon_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
             ["_vehicleRandomDir", true],
             ["_category", "apc"],
-            ["_cost", 5000]
+            ["_cost", 15000]
+        ]],
+        ["cargo_ammo", createHashMapFromArray [
+            ["_displayName", "B_supplyCrate_F" call _getVehicleName],
+            ["_cargoType", "B_supplyCrate_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 650]
         ]],
         ["cargo_fuel", createHashMapFromArray [
             ["_displayName", "FlexibleTank_01_forest_F" call _getVehicleName],
@@ -107,27 +110,6 @@ if (isNil "_index") then {
             ["_category", "cargo"],
             ["_cost", 1000]
         ]],
-        ["cargo_rhsusf_equipment", createHashMapFromArray [
-            ["_displayName", "rhsusf_gear_crate" call _getVehicleName],
-            ["_cargoType", "rhsusf_gear_crate"],
-            ["_functionName", "SHZ_fnc_buyCargoBox"],
-            ["_category", "cargo"],
-            ["_cost", 2000]
-        ]],
-        ["cargo_rhsusf_launchers", createHashMapFromArray [
-            ["_displayName", "rhsusf_launcher_crate" call _getVehicleName],
-            ["_cargoType", "rhsusf_launcher_crate"],
-            ["_functionName", "SHZ_fnc_buyCargoBox"],
-            ["_category", "cargo"],
-            ["_cost", 2000]
-        ]],
-        ["cargo_rhsusf_weapons", createHashMapFromArray [
-            ["_displayName", "rhsusf_weapon_crate" call _getVehicleName],
-            ["_cargoType", "rhsusf_weapon_crate"],
-            ["_functionName", "SHZ_fnc_buyCargoBox"],
-            ["_category", "cargo"],
-            ["_cost", 2000]
-        ]],
         ["cargo_vehicle_ammo", createHashMapFromArray [
             ["_displayName", "Box_NATO_AmmoVeh_F" call _getVehicleName],
             ["_cargoType", "Box_NATO_AmmoVeh_F"],
@@ -135,15 +117,22 @@ if (isNil "_index") then {
             ["_category", "cargo"],
             ["_cost", 2000]
         ]],
-        ["car_humvee", createHashMapFromArray [
-            ["_displayName", "M1151 Humvee (CROWS/M2)"],
-            ["_vehicleType", "rhsusf_m1151_m2crows_usmc_wd"],
+        ["cargo_weapons", createHashMapFromArray [
+            ["_displayName", "Box_T_NATO_Wps_F" call _getVehicleName],
+            ["_cargoType", "Box_T_NATO_Wps_F"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 300]
+        ]],
+        ["car_prowler_light", createHashMapFromArray [
+            ["_displayName", "B_CTRG_LSV_01_light_F" call _getVehicleName],
+            ["_vehicleType", "B_CTRG_LSV_01_light_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
             ["_vehicleRandomDir", true],
             ["_category", "car"],
-            ["_cost", 4000]
+            ["_cost", 2000]
         ]],
         ["car_quadbike", createHashMapFromArray [
             ["_displayName", "Quadbike"],
@@ -155,19 +144,16 @@ if (isNil "_index") then {
             ["_category", "car"],
             ["_cost", 1000]
         ]],
-        ["cas_heli_ah64d", createHashMapFromArray [
-            ["_displayName", "RHS_AH64D_wd" call _getVehicleName],
-            ["_vehicleType", "RHS_AH64D_wd"],
+        ["cas_heli_kajman", createHashMapFromArray [
+            ["_displayName", "O_Heli_Attack_02_dynamicLoadout_F" call _getVehicleName],
+            ["_vehicleType", "O_Heli_Attack_02_dynamicLoadout_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", [
-                "rhs_mag_ATAS_AH64_2",
-                "rhs_mag_M151_19",
-                "rhs_mag_M151_19",
-                "rhs_mag_M151_19",
-                "rhs_mag_M151_19",
-                "rhs_mag_ATAS_AH64_2",
-                "rhsusf_M130_CMFlare_Chaff_Magazine_x2"
+                "PylonRack_19Rnd_Rocket_Skyfire",
+                "PylonMissile_1Rnd_Bomb_03_F",
+                "PylonMissile_1Rnd_Bomb_03_F",
+                "PylonRack_19Rnd_Rocket_Skyfire"
             ]],
             ["_vehicleRandomDir", true],
             ["_category", "cas_heli"],
@@ -190,9 +176,9 @@ if (isNil "_index") then {
             ["_category", "cas_heli"],
             ["_cost", 20000]
         ]],
-        ["cas_heli_huey_armed", createHashMapFromArray [
-            ["_displayName", "UH-1Y Venom (Armed)"],
-            ["_vehicleType", "RHS_UH1Y"],
+        ["cas_heli_hellcat_armed", createHashMapFromArray [
+            ["_displayName", "WY-55 Hellcat (Armed)"],
+            ["_vehicleType", "I_Heli_light_03_dynamicLoadout_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -201,8 +187,8 @@ if (isNil "_index") then {
             ["_cost", 10000]
         ]],
         ["cas_heli_littlebird_armed", createHashMapFromArray [
-            ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
-            ["_vehicleType", "RHS_MELB_AH6M"],
+            ["_displayName", "B_Heli_Light_01_dynamicLoadout_F" call _getVehicleName],
+            ["_vehicleType", "B_Heli_Light_01_dynamicLoadout_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -237,9 +223,9 @@ if (isNil "_index") then {
             ["_vehicleRandomDir", false],
             ["_cost", 25000]
         ]],
-        ["heli_blackhawk", createHashMapFromArray [
-            ["_displayName", "UH-60 Black Hawk"],
-            ["_vehicleType", "RHS_UH60M"],
+        ["heli_ghosthawk", createHashMapFromArray [
+            ["_displayName", "B_CTRG_Heli_Transport_01_tropic_F" call _getVehicleName],
+            ["_vehicleType", "B_CTRG_Heli_Transport_01_tropic_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -247,9 +233,9 @@ if (isNil "_index") then {
             ["_category", "heli"],
             ["_cost", 2000]
         ]],
-        ["heli_chinook", createHashMapFromArray [
-            ["_displayName", "CH-47F Chinook"],
-            ["_vehicleType", "RHS_CH_47F_10"],
+        ["heli_huron", createHashMapFromArray [
+            ["_displayName", "B_Heli_Transport_03_F" call _getVehicleName],
+            ["_vehicleType", "B_Heli_Transport_03_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -258,8 +244,8 @@ if (isNil "_index") then {
             ["_cost", 7000]
         ]],
         ["heli_littlebird", createHashMapFromArray [
-            ["_displayName", "RHS_MELB_MH6M" call _getVehicleName],
-            ["_vehicleType", "RHS_MELB_MH6M"],
+            ["_displayName", "B_Heli_Light_01_F" call _getVehicleName],
+            ["_vehicleType", "B_Heli_Light_01_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -267,25 +253,15 @@ if (isNil "_index") then {
             ["_category", "heli"],
             ["_cost", 2000]
         ]],
-        ["heli_super_stallion_gau21", createHashMapFromArray [
-            ["_displayName", "CH-53E Super Stallion (GAU-21)"],
-            ["_vehicleType", "rhsusf_CH53E_USMC_GAU21"],
-            ["_functionName", "SHZ_fnc_buyVehicle"],
-            ["_vehicleLock", true],
-            ["_vehiclePylons", []],
-            ["_vehicleRandomDir", true],
-            ["_category", "heli"],
-            ["_cost", 12000]
-        ]],
         ["medical_pills", createHashMapFromArray [
             ["_displayName", "RyanZombiesAntiVirusTemporary_Item" call _getWeaponName],
             ["_functionName", "SHZ_fnc_buyPills"],
             ["_category", "medical"],
             ["_cost", 150]
         ]],
-        ["mrap_matv", createHashMapFromArray [
-            ["_displayName", "Oshkosh M-ATV (CROWS/M2)"],
-            ["_vehicleType", "rhsusf_m1240a1_m2crows_usmc_wd"],
+        ["mrap_hunter_hmg", createHashMapFromArray [
+            ["_displayName", "B_T_MRAP_01_hmg_F" call _getVehicleName],
+            ["_vehicleType", "B_T_MRAP_01_hmg_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -293,9 +269,9 @@ if (isNil "_index") then {
             ["_category", "mrap"],
             ["_cost", 5000]
         ]],
-        ["plane_hercules_cargo", createHashMapFromArray [
-            ["_displayName", "RHS_C130J_Cargo" call _getVehicleName],
-            ["_vehicleType", "RHS_C130J_Cargo"],
+        ["plane_blackfish_infantry", createHashMapFromArray [
+            ["_displayName", "B_T_VTOL_01_infantry_F" call _getVehicleName],
+            ["_vehicleType", "B_T_VTOL_01_infantry_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
@@ -303,79 +279,75 @@ if (isNil "_index") then {
             ["_category", "plane"],
             ["_cost", 15000]
         ]],
-        ["recruit_autorifleman_m249", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman_m249" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_autorifleman_m249"],
-            ["_functionName", "SHZ_fnc_buyAIRecruit"],
-            ["_category", "recruit"],
-            ["_cost", 150]
+        ["plane_blackfish_vehicle", createHashMapFromArray [
+            ["_displayName", "B_T_VTOL_01_vehicle_F" call _getVehicleName],
+            ["_vehicleType", "B_T_VTOL_01_vehicle_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "plane"],
+            ["_cost", 15000]
         ]],
-        ["recruit_autorifleman_m27", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_autorifleman" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_autorifleman"],
+        ["recruit_autorifleman", createHashMapFromArray [
+            ["_displayName", "B_T_Soldier_AR_F" call _getVehicleName],
+            ["_recruitType", "B_T_Soldier_AR_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
         ["recruit_engineer", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_engineer" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_engineer"],
+            ["_displayName", "B_T_Engineer_F" call _getVehicleName],
+            ["_recruitType", "B_T_Engineer_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 200]
         ]],
         ["recruit_grenadier", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_grenadier" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_grenadier"],
+            ["_displayName", "B_T_Soldier_GL_F" call _getVehicleName],
+            ["_recruitType", "B_T_Soldier_GL_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 200]
         ]],
         ["recruit_marksman", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_marksman" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_marksman"],
+            ["_displayName", "B_T_soldier_M_F" call _getVehicleName],
+            ["_recruitType", "B_T_soldier_M_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
         ["recruit_medic", createHashMapFromArray [
-            ["_displayName", "rhsusf_navy_marpat_wd_medic" call _getVehicleName],
-            ["_recruitType", "rhsusf_navy_marpat_wd_medic"],
+            ["_displayName", "B_T_Medic_F" call _getVehicleName],
+            ["_recruitType", "B_T_Medic_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 200]
         ]],
         ["recruit_rifleman", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_rifleman_m4" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_rifleman_m4"],
+            ["_displayName", "B_T_Soldier_F" call _getVehicleName],
+            ["_recruitType", "B_T_Soldier_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 100]
         ]],
-        ["recruit_shotgun", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_rifleman_m590" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_rifleman_m590"],
+        ["recruit_recon", createHashMapFromArray [
+            ["_displayName", "B_T_Recon_F" call _getVehicleName],
+            ["_recruitType", "B_T_Recon_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
         ["recruit_sniper", createHashMapFromArray [
-            ["_displayName", "rhsusf_usmc_marpat_wd_sniper" call _getVehicleName],
-            ["_recruitType", "rhsusf_usmc_marpat_wd_sniper"],
+            ["_displayName", "B_T_Sniper_F" call _getVehicleName],
+            ["_recruitType", "B_T_Sniper_F"],
             ["_functionName", "SHZ_fnc_buyAIRecruit"],
             ["_category", "recruit"],
             ["_cost", 150]
         ]],
-        ["tank_abrams", createHashMapFromArray [
-            ["_displayName", "M1 Abrams"],
-            ["_vehicleType", {selectRandom [
-                "rhsusf_m1a1aimwd_usarmy",
-                "rhsusf_m1a1aim_tuski_wd",
-                "rhsusf_m1a2sep1wd_usarmy",
-                "rhsusf_m1a2sep1tuskiwd_usarmy",
-                "rhsusf_m1a2sep1tuskiiwd_usarmy",
-                "rhsusf_m1a2sep2wd_usarmy"
-            ]}],
+        ["tank_slammer", createHashMapFromArray [
+            ["_displayName", "B_T_MBT_01_TUSK_F" call _getVehicleName],
+            ["_vehicleType", "B_T_MBT_01_TUSK_F"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
