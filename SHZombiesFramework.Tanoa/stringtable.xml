@@ -302,6 +302,9 @@
         <Key ID="STR_SHZ_showSharedMoneyTo">
             <Original>You were given %1 from %2! You now have %3.</Original>
         </Key>
+        <Key ID="STR_SHZ_showShareMoneyGUI_confirm">
+            <Original>Share</Original>
+        </Key>
         <Key ID="STR_SHZ_showShopkeeperPurchaseRefund">
             <Original>You have refunded %1 for %2! You now have %3.</Original>
         </Key>

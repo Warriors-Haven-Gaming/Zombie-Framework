@@ -1,3 +1,5 @@
+#include "UI\RscShareMoney.hpp"
+
 cba_settings_hasSettingsFile = 1;
 disableChannels[] = {
     {0, true, true},
@@ -46,6 +48,8 @@ class CfgFunctions {
             class showMoneyMultiplierReset {};
             class showSharedMoneyFrom {};
             class showSharedMoneyTo {};
+            class showShareMoneyGUIClient {};
+            class showShareMoneyGUIServer {};
             class showShopkeeperPurchaseRefund {};
             class showSuccessfulPurchase {};
             class showVehicleRefund {};

@@ -62,6 +62,24 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
     {
         [_unit, 0, ["ACE_MainActions", "SHZ_MoneyShare"], _x] call ace_interact_menu_fnc_addActionToObject;
     } forEach _moneyShareAmounts;
+} else {
+    _unit addAction [
+        localize "$STR_SHZ_initMoneyShareActions",
+        {
+            params ["_target", "_caller"];
+            [_caller, _target] remoteExec ["SHZ_fnc_showShareMoneyGUIServer", 2];
+        },
+        nil,
+        1.5,
+        true,
+        true,
+        "",
+        "(
+            _target isEqualTo _originalTarget
+            && {[_this] call SHZ_fnc_inAreaTeamSafezone isNotEqualTo []}
+        )",
+        3
+    ];
 };
 
 _unit setVariable ["SHZ_initMoneyShareActions", true];
