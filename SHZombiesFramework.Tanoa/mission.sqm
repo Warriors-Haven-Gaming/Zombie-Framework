@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6898.9878,22.80794,7330.2739};
-		dir[]={-0.4386695,-0.2881133,0.85127133};
-		up[]={-0.132001,0.95757967,0.25615549};
-		aside[]={0.88895589,5.6112185e-007,0.45809045};
+		pos[]={6847.5391,9.3809662,7434.2651};
+		dir[]={-0.65736318,-0.64460886,0.3904669};
+		up[]={-0.55423224,0.76449132,0.32920665};
+		aside[]={0.51071531,-2.0256266e-007,0.8598085};
 	};
 };
 binarizationWanted=0;
@@ -107230,7 +107230,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="this removeWeaponTurret [""GMG_40mm"", [0]];";
+							value="params [""_vehicle""]; _vehicle removeWeaponTurret [""GMG_40mm"", [0]];";
 						};
 					};
 				};
@@ -111335,7 +111335,7 @@ class Mission
 					{
 						lock="UNLOCKED";
 						fuel=0.83760983;
-						init="this removeWeaponTurret [""GMG_40mm"", [0]];";
+						init="if (isServer) then {this removeWeaponTurret [""GMG_40mm"", [0]]};";
 					};
 					id=13468;
 					type="B_T_APC_Tracked_01_rcws_F";
