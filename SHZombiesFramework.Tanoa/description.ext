@@ -19,8 +19,8 @@ class CfgFunctions {
         };
         class Economy {
             class addMoney {};
-            class addRefundablePurchaseClient {};
-            class addRefundablePurchaseServer {};
+            class addShopkeeperPurchaseClient {};
+            class addShopkeeperPurchaseServer {};
             class addVehicleRefund {};
             class addZombieKillMoney {};
             class buyAIRecruit {};
