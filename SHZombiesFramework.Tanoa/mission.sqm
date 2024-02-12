@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6847.5391,9.3809662,7434.2651};
-		dir[]={-0.65736318,-0.64460886,0.3904669};
-		up[]={-0.55423224,0.76449132,0.32920665};
-		aside[]={0.51071531,-2.0256266e-007,0.8598085};
+		pos[]={6895.874,15.562323,7309.8247};
+		dir[]={-0.014254002,-0.48001221,0.8771469};
+		up[]={-0.0077993316,0.8772608,0.47994974};
+		aside[]={0.99986833,-4.5401976e-009,0.01624828};
 	};
 };
 binarizationWanted=0;
@@ -40594,7 +40594,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6895.2188,8.96,7319.8384};
+				position[]={6895.2192,8.96,7319.8379};
 			};
 			id=9913;
 			type="ModuleRespawnVehicle_F";
@@ -40623,7 +40623,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="_this removeWeaponTurret [""GMG_40mm"", [0]];  this action [""nvGoggles"", this];";
+							value="params [""_vehicle""]; _vehicle removeWeaponTurret [""GMG_40mm"", [0]];";
 						};
 					};
 				};
@@ -70306,13 +70306,12 @@ class Mission
 						angles[]={0,6.1417789,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=10410;
 					type="B_UAV_AI";
-					atlOffset=2.089339;
 				};
 			};
 			class Attributes
@@ -70351,7 +70350,6 @@ class Mission
 				};
 			};
 			id=10408;
-			atlOffset=2.3841858e-007;
 		};
 		class Item890
 		{
@@ -70365,12 +70363,11 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="_this removeWeaponTurret [""GMG_40mm"", [0]]; this action [""nvGoggles"", this];";
+				init="if (isServer) then {this removeWeaponTurret [""GMG_40mm"", [0]]};";
 				reportOwnPosition=1;
 			};
 			id=10411;
 			type="B_T_UGV_01_rcws_olive_F";
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
