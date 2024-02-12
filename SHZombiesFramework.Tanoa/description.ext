@@ -19,6 +19,8 @@ class CfgFunctions {
         };
         class Economy {
             class addMoney {};
+            class addRefundablePurchaseClient {};
+            class addRefundablePurchaseServer {};
             class addVehicleRefund {};
             class addZombieKillMoney {};
             class buyAIRecruit {};
@@ -26,11 +28,15 @@ class CfgFunctions {
             class buyPills {};
             class buyVehicle {};
             class checkMoney {};
+            class getRecentShopkeeperPurchase {};
             class getVehicleRefundRate {};
             class initMoneyShareActions {};
             class initMoneyShareActionsServer {};
+            class isShopkeeperPurchaseValid {};
             class lookupShopkeeperCatalog {};
             class moneyMultiplierLoop {};
+            class refreshShopkeeperPurchases {};
+            class refundShopkeeperPurchase {};
             class requestToBuyItem {};
             class shareMoney {};
             class showBuyAIRecruitLimit {};
@@ -40,6 +46,7 @@ class CfgFunctions {
             class showMoneyMultiplierReset {};
             class showSharedMoneyFrom {};
             class showSharedMoneyTo {};
+            class showShopkeeperPurchaseRefund {};
             class showSuccessfulPurchase {};
             class showVehicleRefund {};
             class vehicleRefundLoop {};

@@ -38,6 +38,7 @@ if (_pos isEqualTo []) exitWith {false};
 private _box = createVehicle [_cargoType, _pos];
 _box setDir random 360;
 
+[_box, _player, _item get "_cost", _shopkeeper] call SHZ_fnc_addShopkeeperPurchaseServer;
 [_box, _player, _item get "_cost"] call SHZ_fnc_addVehicleRefund;
 
 true

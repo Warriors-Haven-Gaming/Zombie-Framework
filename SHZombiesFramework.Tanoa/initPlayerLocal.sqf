@@ -21,6 +21,8 @@ if (!hasInterface) exitWith {};
 private _loadout = [_player] call SHZ_fnc_getRespawnLoadout;
 if (_loadout isNotEqualTo []) then {_player setUnitLoadout _loadout};
 
+SHZ_shopkeeperPurchases = createHashMap;
+
 call SHZ_fnc_initDiary;
 call SHZ_fnc_initFriendlyFireHandlers;
 call SHZ_fnc_initTeamSafezoneHandlers;

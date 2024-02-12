@@ -83,6 +83,7 @@ if (count _vehiclePylons > 0) then {
     } forEach _vehiclePylons;
 };
 
+[_vehicle, _player, _item get "_cost", _shopkeeper] call SHZ_fnc_addShopkeeperPurchaseServer;
 [_vehicle, _player, _item get "_cost"] call SHZ_fnc_addVehicleRefund;
 
 true

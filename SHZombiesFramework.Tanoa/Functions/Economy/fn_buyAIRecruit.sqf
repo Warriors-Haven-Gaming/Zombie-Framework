@@ -46,4 +46,6 @@ _unit setDir (_vehicleSpawn getDir _player);
 _unit setVariable ["SHZ_recruitOwnedBy", getPlayerUID _player, true];
 [_unit, "NoVoice"] remoteExec ["setSpeaker", 0, _unit];
 
+[_unit, _player, _item get "_cost", _shopkeeper] call SHZ_fnc_addShopkeeperPurchaseServer;
+
 true

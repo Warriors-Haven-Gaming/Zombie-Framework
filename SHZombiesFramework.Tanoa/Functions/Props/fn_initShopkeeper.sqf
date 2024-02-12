@@ -33,6 +33,24 @@ _obj addAction [
     3
 ];
 
+_obj addAction [
+    localize "$STR_SHZ_initShopkeeper_refundRecentPurchase",
+    {
+        params ["_target", "_caller"];
+        call SHZ_fnc_refreshShopkeeperPurchases;
+        [_target] call SHZ_fnc_getRecentShopkeeperPurchase params ["", "_vehicle"];
+        if (isNil "_vehicle") exitWith {};
+        [_vehicle, _caller] remoteExec ["SHZ_fnc_refundShopkeeperPurchase", 2];
+    },
+    [],
+    1.5,
+    true,
+    true,
+    "",
+    "[_originalTarget] call SHZ_fnc_getRecentShopkeeperPurchase isNotEqualTo []",
+    3
+];
+
 private _catalog = [] call SHZ_fnc_lookupShopkeeperCatalog;
 
 private _selectedItems = keys _catalog;
