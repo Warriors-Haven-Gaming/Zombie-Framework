@@ -1276,6 +1276,7 @@ class CustomAttributes
 };
 class Mission
 {
+	assetType="Free";
 	class Intel
 	{
 		briefingName="Zombie Framework v0.12.5";
