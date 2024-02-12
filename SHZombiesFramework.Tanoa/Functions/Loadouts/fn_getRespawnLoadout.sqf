@@ -25,7 +25,7 @@ Author:
 params ["_unit"];
 if (side _unit isEqualTo blufor) exitWith {
     selectRandom [
-        [["rhs_weap_mk18_d","rhsusf_acc_nt4_tan","acc_flashlight","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],"rhsusf_acc_rvg_de"],[],[],["rhs_uniform_FROG01_wd",[["FirstAidKit",5]]],["rhsusf_spc_corpsman",[["FirstAidKit",2],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",11,30]]],["rhsusf_falconii_coy",[["FirstAidKit",2],["Chemlight_yellow",2,1],["HandGrenade",3,1],["Chemlight_red",2,1],["B_IR_Grenade",2,1]]],"rhsusf_mich_helmet_marpatwd_headset","rhs_googles_black",[],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]]
+        [["arifle_MX_SW_khk_F","muzzle_snds_H_khk_F","acc_flashlight","optic_Holosight_smg_khk_F",["100Rnd_65x39_caseless_khaki_mag",100],[],"bipod_01_F_khk"],[],["hgun_Pistol_heavy_01_green_F","","","",["11Rnd_45ACP_Mag",11],[],""],["U_B_T_Soldier_F",[["FirstAidKit",5]]],["V_PlateCarrier1_tna_F",[["100Rnd_65x39_caseless_khaki_mag",3,100],["11Rnd_45ACP_Mag",3,11],["HandGrenade",4,1],["Chemlight_blue",2,1]]],["B_AssaultPack_tna_F",[["FirstAidKit",3],["100Rnd_65x39_caseless_khaki_mag",2,100]]],"H_HelmetB_Light_tna_F","G_Lowprofile",[],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles_tna_F"]]
     ]
 };
 []
