@@ -71,12 +71,14 @@ if (_quantity < 1) exitWith {
 private _units = [];
 private _group = createGroup blufor;
 private _unitTypes = [
-    "rhsusf_usmc_marpat_wd_squadleader",
-    "rhsusf_usmc_marpat_wd_teamleader",
-    "rhsusf_usmc_marpat_wd_autorifleman",
-    "rhsusf_usmc_marpat_wd_rifleman_m4",
-    "rhsusf_usmc_marpat_wd_riflemanat",
-    "rhsusf_usmc_marpat_wd_marksman"
+    "B_T_Soldier_SL_F",
+    "B_T_Soldier_TL_F",
+    "B_T_Soldier_AR_F",
+    "B_T_Soldier_F",
+    "B_T_Soldier_LAT_F",
+    "B_T_soldier_M_F",
+    "B_T_Soldier_A_F",
+    "B_T_Medic_F"
 ];
 for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, [0,0,0], [], 50, "NONE"];
