@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6923.8574,9.2965288,7438.0815};
-		dir[]={-0.78441525,-0.29271808,-0.54684573};
-		up[]={-0.24014078,0.95618933,-0.16741076};
-		aside[]={-0.57189292,5.5762939e-008,0.82034421};
+		pos[]={6989.8223,18.310802,7379.4634};
+		dir[]={-0.021929389,-0.72964489,0.68347609};
+		up[]={-0.023398848,0.68382525,0.72926927};
+		aside[]={0.99948627,4.2986358e-008,0.032068688};
 	};
 };
 binarizationWanted=0;
@@ -119972,7 +119972,7 @@ class Mission
 					};
 					id=13563;
 					type="B_UAV_AI";
-					atlOffset=5.7220459e-006;
+					atlOffset=0.014708519;
 				};
 				class Item1
 				{
@@ -119988,7 +119988,7 @@ class Mission
 					};
 					id=13564;
 					type="B_UAV_AI";
-					atlOffset=0.15047359;
+					atlOffset=0.014708519;
 				};
 			};
 			class Attributes
@@ -120027,26 +120027,26 @@ class Mission
 				};
 			};
 			id=13561;
-			atlOffset=0.014222145;
+			atlOffset=0.014708519;
 		};
 		class Item1788
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6988.0112,10.992981,7388.9937};
+				position[]={6988.0112,10.993467,7388.9937};
 			};
 			side="West";
 			flags=6;
 			class Attributes
 			{
-				init="this action [""nvGoggles"", this];";
+				init="if (isServer) then {this action [""NVGoggles"", this]};";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
 			};
 			id=13562;
 			type="B_UAV_01_F";
-			atlOffset=0.014222145;
+			atlOffset=0.014708519;
 		};
 		class Item1789
 		{
@@ -120081,7 +120081,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="this action [""nvGoggles"", this];";
+							value="params [""_vehicle""]; _vehicle action [""NVGoggles"", _vehicle];";
 						};
 					};
 				};
