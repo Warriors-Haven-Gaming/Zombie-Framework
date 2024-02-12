@@ -25,3 +25,4 @@ hint format [
     _money call SHZ_fnc_formatMoney,
     _current call SHZ_fnc_formatMoney
 ];
+playSoundUI ["a3\3den\data\sound\cfgsound\notificationdefault.wss"];
