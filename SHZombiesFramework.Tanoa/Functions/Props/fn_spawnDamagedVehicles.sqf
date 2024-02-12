@@ -23,14 +23,14 @@ params ["_center", "_radius"];
 
 private _vehicleCount = floor (_radius / 500 * (1 + random 1));
 private _vehicleTypes = [
-    "RHS_AH1Z_wd",
-    "RHS_MELB_AH6M",
-    "RHS_UH1Y_FFAR",
-    "rhsusf_CH53E_USMC_GAU21",
-    "rhsusf_m1151_m2crows_usmc_wd",
-    "rhsusf_m1240a1_mk19crows_usmc_wd",
-    "rhsusf_m1a1fep_wd",
-    "rhsusf_stryker_m1126_m2_wd"
+    "B_Heli_Light_01_dynamicLoadout_F",
+    "B_Heli_Attack_01_dynamicLoadout_F",
+    "B_CTRG_Heli_Transport_01_tropic_F",
+    "B_Heli_Transport_03_F",
+    "B_T_MRAP_01_gmg_F",
+    "B_T_MRAP_01_hmg_F",
+    "B_T_MBT_01_TUSK_F",
+    "B_T_APC_Wheeled_01_cannon_F"
 ];
 
 private _vehicles = [];
