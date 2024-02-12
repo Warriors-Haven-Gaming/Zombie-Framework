@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=13572;
+		nextID=13573;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7044.3232,16.374298,7400.9658};
-		dir[]={0.31726503,-0.25572103,-0.91324335};
-		up[]={0.083933286,0.96673882,-0.24159598};
-		aside[]={-0.94464481,1.0295771e-006,-0.3281776};
+		pos[]={6863.377,9.0354471,7285.7974};
+		dir[]={-0.5997889,-0.24997416,-0.76016659};
+		up[]={-0.15486887,0.9682377,-0.19628181};
+		aside[]={-0.78508383,9.8301098e-007,0.61944717};
 	};
 };
 binarizationWanted=0;
@@ -211,8 +211,8 @@ addons[]=
 	"A3_Armor_F_Exp_MBT_01",
 	"A3_Air_F_Heli_Light_02",
 	"A3_Air_F_Exp_Heli_Transport_01",
-	"A3_Air_F_Jets_Plane_Fighter_01",
 	"A3_Armor_F_Exp_APC_Tracked_01",
+	"A3_Air_F_EPC_Plane_CAS_01",
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Weapons_F_Enoch_Machineguns_M200",
 	"A3_Weapons_F_Mark_Acc",
@@ -680,8 +680,8 @@ class AddonsMetaData
 		};
 		class Item64
 		{
-			className="A3_Air_F_Jets";
-			name="Arma 3 Jets - Aircraft";
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -110649,24 +110649,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6847.8682,5.1550512,7267.5713};
-						angles[]={0,0.67306745,6.2826972};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						lock="UNLOCKED";
-					};
-					id=13461;
-					type="B_Plane_Fighter_01_F";
-					atlOffset=2.3841858e-007;
-				};
-				class Item20
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6912.4795,5.2892423,7435.0474};
 						angles[]={0,1.3612522,0};
 					};
@@ -110680,7 +110662,7 @@ class Mission
 					id=13462;
 					type="B_T_APC_Tracked_01_CRV_F";
 				};
-				class Item21
+				class Item20
 				{
 					dataType="Object";
 					class PositionInfo
@@ -110757,7 +110739,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item22
+				class Item21
 				{
 					dataType="Object";
 					class PositionInfo
@@ -110835,7 +110817,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item23
+				class Item22
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111032,7 +111014,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item24
+				class Item23
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111229,7 +111211,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item25
+				class Item24
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111338,7 +111320,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item26
+				class Item25
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111357,7 +111339,7 @@ class Mission
 					id=13468;
 					type="B_T_APC_Tracked_01_rcws_F";
 				};
-				class Item27
+				class Item26
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111434,7 +111416,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item28
+				class Item27
 				{
 					dataType="Object";
 					class PositionInfo
@@ -111511,9 +111493,26 @@ class Mission
 						nAttributes=4;
 					};
 				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6847.6841,5.0404549,7266.2866};
+						angles[]={-0,0.67306876,6.2826972};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						lock="UNLOCKED";
+					};
+					id=13572;
+					type="B_Plane_CAS_01_dynamicLoadout_F";
+				};
 			};
 			id=13440;
-			atlOffset=0.029221773;
+			atlOffset=0.014611006;
 		};
 		class Item1771
 		{
