@@ -21,7 +21,7 @@ if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_type", "_money", "_current"];
 hint format [
     localize "$STR_SHZ_showShopkeeperPurchaseRefund",
-    getText (configFile >> "CfgVehicles" >> _type >> "displayName"),
+    [configFile >> "CfgVehicles" >> _type] call BIS_fnc_displayName,
     _money call SHZ_fnc_formatMoney,
     _current call SHZ_fnc_formatMoney
 ];

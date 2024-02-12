@@ -24,11 +24,11 @@ params [["_itemID", ""]];
 
 private _getVehicleName = {
     params ["_cls"];
-    getText (configFile >> "CfgVehicles" >> _cls >> "displayName")
+    [configFile >> "CfgVehicles" >> _cls] call BIS_fnc_displayName
 };
 private _getWeaponName = {
     params ["_cls"];
-    getText (configFile >> "CfgWeapons" >> _cls >> "displayName")
+    [configFile >> "CfgWeapons" >> _cls] call BIS_fnc_displayName
 };
 
 private _index = localNamespace getVariable "SHZ_shopkeeper_catalog";

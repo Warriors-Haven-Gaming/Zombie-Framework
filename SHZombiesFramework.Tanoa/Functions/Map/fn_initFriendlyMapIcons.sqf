@@ -127,7 +127,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
             private _crew = crew _x;
             format [
                 "%1 (%2)",
-                getText (_config >> "displayName"),
+                [_config] call BIS_fnc_displayName,
                 // _crew apply {
                 //     if (isPlayer _x) then {name _x} else {
                 //         format ["%1 [AI]", name _x]
