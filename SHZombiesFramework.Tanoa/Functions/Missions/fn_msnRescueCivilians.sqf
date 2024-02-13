@@ -41,7 +41,7 @@ if (_building isEqualType [] && {count _building >= 2}) then {
 if (isNull _building || {_building isEqualTo []}) then {
     private _location = selectRandom nearestLocations [
         [worldSize / 2, worldSize / 2],
-        ["NameVillage", "NameCity"],
+        ["NameVillage", "NameCity", "NameCityCapital"],
         sqrt 2 / 2 * worldSize
     ];
     private _randomPosArgs = [[[locationPosition _location, size _location + [0, false]]]];

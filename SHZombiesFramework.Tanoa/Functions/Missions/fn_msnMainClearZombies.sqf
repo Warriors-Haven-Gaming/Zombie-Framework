@@ -21,7 +21,7 @@ if (_area isEqualTo []) then {
     for "_i" from 1 to 30 do {
         private _location = selectRandom nearestLocations [
             [worldSize / 2, worldSize / 2],
-            ["NameVillage", "NameCity"],
+            ["NameVillage", "NameCity", "NameCityCapital"],
             sqrt 2 / 2 * worldSize
         ];
 
