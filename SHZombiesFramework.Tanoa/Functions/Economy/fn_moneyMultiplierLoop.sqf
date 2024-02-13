@@ -48,7 +48,7 @@ while {true} do {
         private _multiplier =
             1
             + _moneyEarned_raw * SHZ_moneyMultipliers_rate
-            + linearConversion [10, 2, getLighting # 1, 0, 0.5, true];
+            + linearConversion [20, 3, getLighting # 1, 0, 0.5, true];
         SHZ_moneyMultipliers_current set [_uid, _multiplier];
 
         sleep random 0.1;
