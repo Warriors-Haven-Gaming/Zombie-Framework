@@ -18,14 +18,20 @@ Author:
 params [["_area", []]];
 
 if (_area isEqualTo []) then {
-    private _location = selectRandom nearestLocations [
-        [worldSize / 2, worldSize / 2],
-        ["NameVillage", "NameCity"],
-        sqrt 2 / 2 * worldSize
-    ];
-    private _radius = selectMax size _location * 2;
-    private _center = locationPosition _location vectorMultiply [1, 1, 0];
-    _area = [_center, _radius, _radius, 0, false];
+    for "_i" from 1 to 30 do {
+        private _location = selectRandom nearestLocations [
+            [worldSize / 2, worldSize / 2],
+            ["NameVillage", "NameCity"],
+            sqrt 2 / 2 * worldSize
+        ];
+
+        private _center = locationPosition _location vectorMultiply [1, 1, 0];
+        if ([_center] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
+
+        private _radius = selectMax size _location * 2;
+        _area = [_center, _radius, _radius, 0, false];
+        break;
+    };
 };
 if (_area isEqualTo []) exitWith {
     diag_log text format ["%1: No area found", _fnc_scriptName];
