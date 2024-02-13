@@ -138,7 +138,7 @@ private _succeeded = false;
 while {true} do {
     sleep 10;
 
-    private _nearbyPlayers = allPlayers inAreaArray [_building, 50, 50, 0, false, 50];
+    private _nearbyPlayers = allPlayers inAreaArray [_building, 100, 100, 0, false, 50];
     {_participants pushBackUnique getPlayerUID _x} forEach _nearbyPlayers;
 
     {
