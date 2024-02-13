@@ -15,7 +15,7 @@ Author:
 */
 params ["_newUnit"];
 
-private _loadout = missionNamespace getVariable ["SHZ_lastLoadout", []];
+private _loadout = missionProfileNamespace getVariable ["SHZ_lastLoadout", []];
 if (_loadout isEqualTo []) then {
     _loadout = [_newUnit] call SHZ_fnc_getRespawnLoadout;
 };

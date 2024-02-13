@@ -14,5 +14,6 @@ Author:
 
 */
 params ["_oldUnit"];
-SHZ_lastLoadout = getUnitLoadout _oldUnit;
 remoteExec ["", (_oldUnit call BIS_fnc_netId) + ":SHZ_moneyShare"];
+missionProfileNamespace setVariable ["SHZ_lastLoadout", getUnitLoadout _oldUnit];
+saveMissionProfileNamespace; // NOTE: ~15ms, maybe too costly?
