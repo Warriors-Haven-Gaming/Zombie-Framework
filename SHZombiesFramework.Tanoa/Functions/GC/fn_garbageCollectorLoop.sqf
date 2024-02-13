@@ -35,6 +35,8 @@ while {true} do {
 
     {
         private _units = units _x;
+        if (count _units < 1) then {continue};
+
         private _recruitsAreAbandoned = {
             if (isNil {_x getVariable "SHZ_recruitOwnedBy"}) exitWith {false};
             if (isPlayer _x) exitWith {false};
