@@ -161,3 +161,14 @@ deleteMarker _killCountMarker;
 [_supportUnits] call SHZ_fnc_queueGCDeletion;
 private _money = 1000 + 250 * (floor random 5);
 [_fnc_scriptName, keys _kills, _money] call SHZ_fnc_addCompletedMission;
+
+private _safezone = [_area, true] call SHZ_fnc_createSafezone;
+_safezone setMarkerBrushLocal "SolidBorder";
+_safezone setMarkerColorLocal "ColorBlue";
+_safezone setMarkerAlpha 0.2;
+_safezone spawn {
+    scriptName "SHZ_fnc_msnMainClearZombies_tempSafezone";
+    sleep 1800;
+    // TODO: announce safezone disappearing
+    deleteMarker _this;
+};
