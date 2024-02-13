@@ -223,6 +223,21 @@ if (isNil "_index") then {
             ["_vehicleRandomDir", false],
             ["_cost", 25000]
         ]],
+        ["cas_plane_xian_infantry", createHashMapFromArray [
+            ["_displayName", "O_T_VTOL_02_infantry_dynamicLoadout_F" call _getVehicleName],
+            ["_vehicleType", "O_T_VTOL_02_infantry_dynamicLoadout_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", [
+                ["PylonRack_19Rnd_Rocket_Skyfire", false, [-1]],
+                ["PylonMissile_1Rnd_Bomb_03_F",    false, [-1]],
+                ["PylonMissile_1Rnd_Bomb_03_F",    false, [-1]],
+                ["PylonRack_19Rnd_Rocket_Skyfire", false, [-1]]
+            ]],
+            ["_vehicleRandomDir", false],
+            ["_category", "cas_plane"],
+            ["_cost", 30000]
+        ]],
         ["heli_ghosthawk", createHashMapFromArray [
             ["_displayName", "B_CTRG_Heli_Transport_01_tropic_F" call _getVehicleName],
             ["_vehicleType", "B_CTRG_Heli_Transport_01_tropic_F"],

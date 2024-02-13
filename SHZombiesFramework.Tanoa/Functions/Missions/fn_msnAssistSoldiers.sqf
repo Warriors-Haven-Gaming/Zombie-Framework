@@ -26,7 +26,7 @@ private _buildings = [];
 if (_center isEqualTo []) then {
     private _location = selectRandom nearestLocations [
         [worldSize / 2, worldSize / 2],
-        ["NameVillage", "NameCity"],
+        ["NameVillage", "NameCity", "NameCityCapital"],
         sqrt 2 / 2 * worldSize
     ];
     private _randomPosArgs = [[[locationPosition _location, size _location + [0, false]]]];

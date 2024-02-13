@@ -18,14 +18,20 @@ Author:
 params [["_area", []]];
 
 if (_area isEqualTo []) then {
-    private _location = selectRandom nearestLocations [
-        [worldSize / 2, worldSize / 2],
-        ["NameVillage", "NameCity"],
-        sqrt 2 / 2 * worldSize
-    ];
-    private _radius = selectMax size _location * 2;
-    private _center = locationPosition _location vectorMultiply [1, 1, 0];
-    _area = [_center, _radius, _radius, 0, false];
+    for "_i" from 1 to 30 do {
+        private _location = selectRandom nearestLocations [
+            [worldSize / 2, worldSize / 2],
+            ["NameVillage", "NameCity", "NameCityCapital"],
+            sqrt 2 / 2 * worldSize
+        ];
+
+        private _center = locationPosition _location vectorMultiply [1, 1, 0];
+        if ([_center] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
+
+        private _radius = selectMax size _location * 2;
+        _area = [_center, _radius, _radius, 0, false];
+        break;
+    };
 };
 if (_area isEqualTo []) exitWith {
     diag_log text format ["%1: No area found", _fnc_scriptName];
@@ -161,3 +167,14 @@ deleteMarker _killCountMarker;
 [_supportUnits] call SHZ_fnc_queueGCDeletion;
 private _money = 1000 + 250 * (floor random 5);
 [_fnc_scriptName, keys _kills, _money] call SHZ_fnc_addCompletedMission;
+
+private _safezone = [_area, true] call SHZ_fnc_createSafezone;
+_safezone setMarkerBrushLocal "SolidBorder";
+_safezone setMarkerColorLocal "ColorBlue";
+_safezone setMarkerAlpha 0.2;
+_safezone spawn {
+    scriptName "SHZ_fnc_msnMainClearZombies_tempSafezone";
+    sleep 1800;
+    // TODO: announce safezone disappearing
+    deleteMarker _this;
+};

@@ -32,6 +32,20 @@ private _lootLifetime = 300;
 
 while {true} do {
     sleep (10 + random 10);
+
+    {
+        private _units = units _x;
+        private _recruitsAreAbandoned = {
+            if (isNil {_x getVariable "SHZ_recruitOwnedBy"}) exitWith {false};
+            if (isPlayer _x) exitWith {false};
+            true
+        } forEach _units;
+
+        if (_recruitsAreAbandoned) then {
+            {deleteVehicle _x} forEach _units;
+        };
+    } forEach groups blufor;
+
     private _remoteControlledUnits = allPlayers apply {remoteControlled _x} select {!isNull _x};
     private _units = units blufor select {
         isPlayer _x
