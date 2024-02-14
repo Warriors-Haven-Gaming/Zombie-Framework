@@ -53,14 +53,15 @@ while {true} do {
         private _uid = getPlayerUID _x;
         if (_uid isEqualTo "") then {continue};
         if ([_x] call SHZ_fnc_inAreaTeamSafezone isNotEqualTo []) then {
-            private _moneyEarned = SHZ_moneyEarned deleteAt _uid;
-            if (isNil "_moneyEarned") exitWith {};
+            private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
 
-            private _money = _moneyEarned getOrDefault ["NORMAL", 0];
-            if (_money < 1000) exitWith {};
+            private _normal = _moneyEarned getOrDefault ["NORMAL", 0];
+            {_moneyEarned deleteAt _x} forEach SHZ_moneyMultipliers_rates;
 
-            private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
-            [_money, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
+            if (_normal >= 1000) then {
+                private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
+                [_normal, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
+            };
         };
 
         private _multiplier = [_uid] call _getCurrentMultiplier;
