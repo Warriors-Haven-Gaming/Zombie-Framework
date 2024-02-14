@@ -19,5 +19,5 @@ params ["_player", "_target"];
 if !([_player] call SHZ_fnc_isPlayerRemoteExecuted) exitWith {};
 
 private _uid = getPlayerUID _player;
-private _current = ["playerMoney"] call SHZ_fnc_getSaveVariable getOrDefault [_uid, 0];
+private _current = [_uid] call SHZ_fnc_getMoney;
 [_target, _current] remoteExec ["SHZ_fnc_showShareMoneyGUIClient", _player];

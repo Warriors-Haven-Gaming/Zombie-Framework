@@ -34,7 +34,7 @@ params [
 ];
 
 private _uid = getPlayerUID _player;
-private _money = ["playerMoney"] call SHZ_fnc_getSaveVariable getOrDefault [_uid, 0];
+private _money = [_uid] call SHZ_fnc_getMoney;
 
 if (_money >= _required) then {_money} else {
     [_money, _required, _item] remoteExec ["SHZ_fnc_showInsufficientFunds", _player];

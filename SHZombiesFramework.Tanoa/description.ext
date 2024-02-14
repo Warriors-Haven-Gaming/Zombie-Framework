@@ -30,6 +30,7 @@ class CfgFunctions {
             class buyPills {};
             class buyVehicle {};
             class checkMoney {};
+            class getMoney {};
             class getRecentShopkeeperPurchase {};
             class getVehicleRefundRate {};
             class initMoneyShareActions {};

@@ -60,9 +60,7 @@ while {true} do {
             private _moneyStarted = SHZ_startOfTripMoney deleteAt _uid;
             if (isNil "_moneyStarted") exitWith {};
 
-            private _moneyEnded =
-                ["playerMoney"] call SHZ_fnc_getSaveVariable
-                getOrDefault [_uid, 0];
+            private _moneyEnded = [_uid] call SHZ_fnc_getMoney;
             private _diff = _moneyEnded - _moneyStarted;
 
             if (_diff >= 1000) then {
@@ -70,11 +68,7 @@ while {true} do {
                 [_diff, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
             };
         } else {
-            SHZ_startOfTripMoney set [
-                _uid,
-                ["playerMoney"] call SHZ_fnc_getSaveVariable getOrDefault [_uid, 0],
-                true
-            ];
+            SHZ_startOfTripMoney set [_uid, [_uid] call SHZ_fnc_getMoney, true];
         };
 
         private _multiplier = [_uid] call _getCurrentMultiplier;

@@ -7,9 +7,8 @@ in [fn_formatMoney.sqf] and [stringtable.xml].
 ## Basics
 
 The fundamental function to this economy system is [fn_addMoney.sqf],
-which adds (or subtracts) money from a player. As of now, there is no
-equivalent getter function; money must be retrieved by looking up the
-`playerMoney` save variable.
+which adds (or subtracts) money from a player, and [fn_getMoney.sqf]
+which looks up the `playerMoney` save variable for the player's money.
 
 For security/reliability, money is tracked entirely on the server using
 our [Saves] system. Clients cannot know how much money they have unless it
@@ -78,6 +77,7 @@ These keys are conventionally defined by shopkeeper contexts:
 [fn_formatMoney.sqf]: ../Helpers/fn_formatMoney.sqf
 [stringtable.xml]: ../../stringtable.xml
 [fn_addMoney.sqf]: fn_addMoney.sqf
+[fn_getMoney.sqf]: fn_addMoney.sqf
 [Saves]: ../Saves/
 [fn_viewMoney.sqf]: fn_viewMoney.sqf
 [fn_playerMoneyMarkerLoop.sqf]: ../Map/fn_playerMoneyMarkerLoop.sqf
