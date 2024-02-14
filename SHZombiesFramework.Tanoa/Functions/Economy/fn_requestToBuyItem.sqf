@@ -47,7 +47,7 @@ private _function = missionNamespace getVariable _functionName;
 private _success = [_context] call _function;
 
 if (!isNil "_success" && {_success isEqualTo true}) exitWith {
-    private _moneyNew = [getPlayerUID _player, (-_cost)] call SHZ_fnc_addMoney;
+    private _moneyNew = [getPlayerUID _player, (-_cost), ["PURCHASE"]] call SHZ_fnc_addMoney;
     _context set ["_money", _moneyNew];
     [_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
 };

@@ -39,7 +39,7 @@ private _refundHandler = {
     if (_rate <= 0) exitWith {};
     _money = ceil (_money * _rate);
 
-    [_uid, _money] call SHZ_fnc_addMoney;
+    [_uid, _money, ["REFUND"]] call SHZ_fnc_addMoney;
     [_vehicle, _money, _rate] remoteExec ["SHZ_fnc_showVehicleRefund", _player];
 };
 

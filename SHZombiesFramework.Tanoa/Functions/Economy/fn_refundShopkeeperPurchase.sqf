@@ -24,5 +24,5 @@ if (isNil "_money") exitWith {};
 private _type = typeOf _vehicle;
 deleteVehicle _vehicle;
 
-private _current = [getPlayerUID _player, _money] call SHZ_fnc_addMoney;
+private _current = [getPlayerUID _player, _money, ["REFUND"]] call SHZ_fnc_addMoney;
 [_type, _money, _current] remoteExec ["SHZ_fnc_showShopkeeperPurchaseRefund", _player];

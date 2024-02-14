@@ -40,7 +40,7 @@ private _missionsCompleted = ["missionsCompleted"] call SHZ_fnc_getSaveVariable;
 
     if (_uid isEqualTo "") then {continue};
     _missionsCompleted set [_uid, (_missionsCompleted getOrDefault [_uid, 0]) + 1];
-    [_uid, _money] call SHZ_fnc_addMoney;
+    [_uid, _money, ["MISSION"]] call SHZ_fnc_addMoney;
 
     if (!isNull _player) then {
         [_name, _money] remoteExec ["SHZ_fnc_showCompletedMission", _player];
