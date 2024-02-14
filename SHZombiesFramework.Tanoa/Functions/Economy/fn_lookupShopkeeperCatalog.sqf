@@ -107,6 +107,13 @@ if (isNil "_index") then {
             ["_category", "cargo"],
             ["_cost", 1000]
         ]],
+        ["cargo_rhsusf_ammo", createHashMapFromArray [
+            ["_displayName", "rhsusf_mags_crate" call _getVehicleName],
+            ["_cargoType", "rhsusf_mags_crate"],
+            ["_functionName", "SHZ_fnc_buyCargoBox"],
+            ["_category", "cargo"],
+            ["_cost", 2000]
+        ]],
         ["cargo_rhsusf_equipment", createHashMapFromArray [
             ["_displayName", "rhsusf_gear_crate" call _getVehicleName],
             ["_cargoType", "rhsusf_gear_crate"],
