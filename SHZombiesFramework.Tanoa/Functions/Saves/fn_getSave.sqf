@@ -26,4 +26,4 @@ if (isNil "_saves") then {
     missionProfileNamespace setVariable ["SHZ_saves", _saves];
 };
 
-_saves getOrDefaultCall [_saveName, {createHashMap}, true]
+_saves getOrDefault [_saveName, createHashMap, true]

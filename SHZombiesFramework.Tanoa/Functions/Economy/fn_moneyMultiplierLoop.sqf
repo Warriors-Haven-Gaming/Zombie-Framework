@@ -44,7 +44,7 @@ while {true} do {
             [_money, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
         };
 
-        private _moneyEarned = SHZ_moneyEarned getOrDefaultCall [_uid, {createHashMap}];
+        private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
         private _multiplier =
             1
             + (_moneyEarned getOrDefault ["NORMAL", 0]) * SHZ_moneyMultipliers_rate_normal

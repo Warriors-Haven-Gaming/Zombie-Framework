@@ -38,7 +38,7 @@ if (_uid isEqualTo "") exitWith {
 if !(_tags isEqualType []) then {_tags = [_tags]};
 _tags = _tags arrayIntersect _tags;
 
-private _moneyEarned = SHZ_moneyEarned getOrDefaultCall [_uid, {createHashMap}, true];
+private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap, true];
 {
     _moneyEarned set [_x, (_moneyEarned getOrDefault [_x, 0]) + _money];
 } forEach _tags;
