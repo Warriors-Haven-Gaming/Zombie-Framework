@@ -18,7 +18,7 @@ private _processDiscreetQueue = {
             _queueProcessed pushBack _forEachIndex;
             continue;
         };
-        _queue set [_forEachIndex, _objects];
+        _x set [0, _objects];
 
         private _center = _objects # 0;
         private _area = [getPosATL _center, _minDistance, _minDistance, 0, false];
