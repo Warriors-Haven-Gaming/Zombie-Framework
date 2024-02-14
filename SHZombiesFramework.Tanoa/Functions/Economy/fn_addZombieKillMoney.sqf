@@ -11,7 +11,6 @@ Parameters:
     Object zombie:
         The zombie that was killed.
     Array | String tags:
-        (Optional, default "NORMAL")
         A string or array of strings to label the money that is added.
         See SHZ_fnc_addMoney for more details.
 
@@ -20,7 +19,7 @@ Author:
 
 */
 if (!isServer) exitWith {};
-params ["_uid", "_zombie", ["_tags", "NORMAL"]];
+params ["_uid", "_zombie", "_tags"];
 
 if (_uid isEqualTo "") exitWith {
     diag_log text format ["%1: Passed invalid UID", _fnc_scriptName];
