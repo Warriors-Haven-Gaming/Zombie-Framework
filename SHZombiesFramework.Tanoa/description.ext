@@ -207,6 +207,41 @@ class CfgHints {
     };
 };
 
+// https://steamcommunity.com/sharedfiles/filedetails/?id=1867660876
+class CfgPylonManager {
+    blacklistedMagazines[] = {
+        // AGMs
+        "PylonRack_3Rnd_LG_scalpel",
+        "PylonRack_4Rnd_LG_scalpel",
+        "PylonRack_3Rnd_Missile_AGM_02_F",
+        // Bombs
+        "PylonRack_Bomb_SDB_x4",
+        // Clusters
+        "PylonMissile_1Rnd_BombCluster_01_F",
+        "PylonMissile_1Rnd_BombCluster_02_F",
+        "PylonMissile_1Rnd_BombCluster_02_cap_F",
+        "PylonMissile_1Rnd_BombCluster_03_F",
+        "PylonRack_2Rnd_BombCluster_01_F",
+        "PylonRack_2Rnd_BombCluster_03_F",
+        "rhs_mag_cbu100",
+        "rhs_mag_cbu100_3",
+        "rhs_mag_cbu87",
+        "rhs_mag_cbu89",
+        // HARMs
+        "PylonMissile_Missile_KH58_INT_x1",
+        "PylonMissile_Missile_KH58_x1",
+        "PylonRack_Missile_HARM_x1",
+    };
+    rearmObjects[] = {
+        "B_Slingload_01_Ammo_F", // Huron Ammo Container
+        "Land_Pod_Heli_Transport_04_ammo_F", // Taru Ammo Pod
+        "Truck_01_base_F",
+        "Truck_02_base_F",
+        "Truck_03_base_F",
+    };
+    rearmRange = 20;
+};
+
 // https://community.bistudio.com/wiki/Description.ext#CfgRadio
 class CfgRadio {
     class DeconVehicleStart {
