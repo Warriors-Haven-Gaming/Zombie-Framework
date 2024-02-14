@@ -38,6 +38,7 @@ SHZ_sideMissionLoop_script = [
 ] spawn SHZ_fnc_missionLoop;
 
 SHZ_moneyEarned = createHashMap;
+SHZ_startOfTripMoney = createHashMap;
 SHZ_moneyMultipliers_rates = createHashMapFromArray [
     ["NORMAL", 1 / 5000],
     ["ON_FOOT", 1 / 5000]
