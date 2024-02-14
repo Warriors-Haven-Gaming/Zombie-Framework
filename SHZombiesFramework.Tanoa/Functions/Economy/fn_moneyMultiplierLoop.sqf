@@ -19,7 +19,7 @@ private _killedEH = addMissionEventHandler [
         if (_uid isEqualTo "") exitWith {};
 
         private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
-        {_moneyEarned deleteAt _x} forEach ["NORMAL", "ON_FOOT"];
+        {_moneyEarned deleteAt _x} forEach SHZ_moneyMultipliers_rates;
     }
 ];
 private _disconnectEH = addMissionEventHandler [
@@ -30,6 +30,23 @@ private _disconnectEH = addMissionEventHandler [
         SHZ_moneyMultipliers_current deleteAt _uid;
     }
 ];
+
+private _getCurrentMultiplier = {
+    params ["_uid"];
+    private _multiplier =
+        1
+        + linearConversion [20, 3, getLighting # 1, 0, 0.5, true];
+
+    private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
+    {
+        private _tag = _x;
+        private _rate = _y;
+        private _money = _moneyEarned getOrDefault [_tag, 0];
+        _multiplier = _multiplier + _money * _rate;
+    } forEach SHZ_moneyMultipliers_rates;
+
+    _multiplier
+};
 
 while {true} do {
     {
@@ -46,12 +63,7 @@ while {true} do {
             [_money, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
         };
 
-        private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
-        private _multiplier =
-            1
-            + (_moneyEarned getOrDefault ["NORMAL", 0]) * SHZ_moneyMultipliers_rate_normal
-            + (_moneyEarned getOrDefault ["ON_FOOT", 0]) * SHZ_moneyMultipliers_rate_onFoot
-            + linearConversion [20, 3, getLighting # 1, 0, 0.5, true];
+        private _multiplier = [_uid] call _getCurrentMultiplier;
         SHZ_moneyMultipliers_current set [_uid, _multiplier];
 
         sleep random 0.1;
