@@ -37,11 +37,11 @@ while {true} do {
             private _moneyEarned = SHZ_moneyEarned deleteAt _uid;
             if (isNil "_moneyEarned") exitWith {};
 
-            private _total = _moneyEarned getOrDefault ["TOTAL", 0];
-            if (_total < 1000) exitWith {};
+            private _money = _moneyEarned getOrDefault ["NORMAL", 0];
+            if (_money < 1000) exitWith {};
 
             private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
-            [_total, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
+            [_money, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
         };
 
         private _moneyEarned = SHZ_moneyEarned getOrDefaultCall [_uid, {createHashMap}];
