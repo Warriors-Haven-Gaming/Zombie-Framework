@@ -125,6 +125,7 @@ private _spawnSupportUnits = {
             _waypoint setWaypointType "SAD";
             _waypoint setWaypointCompletionRadius 20;
             _supportUnits append units _group;
+            [units _group, _area # 1] call SHZ_fnc_queueGCDeletion;
         };
         default {throw format ["Unknown support type %1", _supportType]};
     };
