@@ -33,6 +33,7 @@ addMissionEventHandler ["EntityKilled", {
     if (_uid isEqualTo "") exitWith {};
 
     private _tags = ["NORMAL"];
+    if (isNull objectParent _instigator) then {_tags pushBack "ON_FOOT"};
 
     if ([_killed] call SHZ_fnc_isZombie) exitWith {
         private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
