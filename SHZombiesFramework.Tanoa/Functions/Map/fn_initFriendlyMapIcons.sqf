@@ -70,11 +70,14 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
         private _side = side group _x;
+        private _color = if (
+            lifeState _x in ["HEALTHY", "INJURED"]
+        ) then {[_side] call _getVibrantSideColor} else {[1, 0.5, 0, 1]};
         private _textScale = 0.03;
         private _text = if (_mapScale <= _textMinMapScale) then {name _x} else {""};
         _display drawIcon [
             getText (_config >> "icon"),
-            [_side] call _getVibrantSideColor,
+            _color,
             getPosWorldVisual _x,
             _iconScale,
             _iconScale,
@@ -115,6 +118,9 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
     {
         private _config = configFile >> "CfgVehicles" >> typeOf _x;
         private _side = side group effectiveCommander _x;
+        private _color = if (
+            crew _x findIf {lifeState _x isEqualTo "INCAPACITATED"} < 0
+        ) then {[_side] call _getVibrantSideColor} else {[1, 0.5, 0, 1]};
         private _pos = getPosWorldVisual _x;
         private _iconScale = _iconScale;
         private _textScale = 0.03;
@@ -140,7 +146,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
         };
         _display drawIcon [
             getText (_config >> "icon"),
-            [_side] call _getVibrantSideColor,
+            _color,
             _pos,
             _iconScale,
             _iconScale,
