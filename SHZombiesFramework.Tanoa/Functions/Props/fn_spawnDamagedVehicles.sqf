@@ -21,7 +21,7 @@ Author:
 */
 params ["_center", "_radius"];
 
-private _vehicleCount = floor (_radius / 500 * (1 + random 1));
+private _vehicleCount = floor (_radius / 1000 * (1 + random 1));
 private _vehicleTypes = [
     "RHS_AH1Z_wd",
     "RHS_MELB_AH6M",
