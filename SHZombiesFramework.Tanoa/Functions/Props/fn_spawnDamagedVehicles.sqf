@@ -48,6 +48,7 @@ for "_i" from 1 to _vehicleCount * 5 do {
     _veh setDamage (0.1 + random 0.2);
     _veh setDir random 360;
     _veh setFuel random 0.05;
+    _veh setVehicleAmmo random 0.5;
 
     private _selections = getAllHitPointsDamage _veh select 1;
     {_veh setHitIndex [_forEachIndex, random 0.9]} forEach _selections;
