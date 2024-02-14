@@ -32,14 +32,16 @@ addMissionEventHandler ["EntityKilled", {
     };
     if (_uid isEqualTo "") exitWith {};
 
+    private _tags = ["NORMAL"];
+
     if ([_killed] call SHZ_fnc_isZombie) exitWith {
         private _kills = ["zombieKills"] call SHZ_fnc_getSaveVariable;
         _kills set [_uid, (_kills getOrDefault [_uid, 0]) + 1];
-        [_uid, _killed] call SHZ_fnc_addZombieKillMoney;
+        [_uid, _killed, _tags] call SHZ_fnc_addZombieKillMoney;
     };
 
     if ([side group _instigator, side group _killed] call BIS_fnc_sideIsEnemy) exitWith {
-        [_uid, 10, true, true] call SHZ_fnc_addMoney;
+        [_uid, 10, _tags, true] call SHZ_fnc_addMoney;
     };
 }];
 

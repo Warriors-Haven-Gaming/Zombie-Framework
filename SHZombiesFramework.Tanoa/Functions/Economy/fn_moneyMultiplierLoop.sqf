@@ -18,7 +18,6 @@ private _killedEH = addMissionEventHandler [
         private _uid = getPlayerUID _unit;
         if (_uid isEqualTo "") exitWith {};
         SHZ_moneyEarned deleteAt _uid;
-        SHZ_moneyEarned_raw deleteAt _uid;
     }
 ];
 private _disconnectEH = addMissionEventHandler [
@@ -26,7 +25,6 @@ private _disconnectEH = addMissionEventHandler [
     {
         params ["", "_uid"];
         SHZ_moneyEarned deleteAt _uid;
-        SHZ_moneyEarned_raw deleteAt _uid;
         SHZ_moneyMultipliers_current deleteAt _uid;
     }
 ];
@@ -36,18 +34,20 @@ while {true} do {
         private _uid = getPlayerUID _x;
         if (_uid isEqualTo "") then {continue};
         if ([_x] call SHZ_fnc_inAreaTeamSafezone isNotEqualTo []) then {
-            SHZ_moneyEarned_raw deleteAt _uid;
             private _moneyEarned = SHZ_moneyEarned deleteAt _uid;
-            if (!isNil "_moneyEarned" && {_moneyEarned >= 1000}) then {
-                private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
-                [_moneyEarned, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
-            };
+            if (isNil "_moneyEarned") exitWith {};
+
+            private _total = _moneyEarned getOrDefault ["TOTAL", 0];
+            if (_total < 1000) exitWith {};
+
+            private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
+            [_total, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
         };
 
-        private _moneyEarned_raw = SHZ_moneyEarned_raw getOrDefault [_uid, 0];
+        private _moneyEarned = SHZ_moneyEarned getOrDefaultCall [_uid, {createHashMap}];
         private _multiplier =
             1
-            + _moneyEarned_raw * SHZ_moneyMultipliers_rate
+            + (_moneyEarned getOrDefault ["NORMAL", 0]) * SHZ_moneyMultipliers_rate_normal
             + linearConversion [20, 3, getLighting # 1, 0, 0.5, true];
         SHZ_moneyMultipliers_current set [_uid, _multiplier];
 
