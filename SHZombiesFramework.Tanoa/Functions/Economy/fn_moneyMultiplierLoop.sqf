@@ -17,7 +17,9 @@ private _killedEH = addMissionEventHandler [
         params ["_unit"];
         private _uid = getPlayerUID _unit;
         if (_uid isEqualTo "") exitWith {};
-        SHZ_moneyEarned deleteAt _uid;
+
+        private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
+        {_moneyEarned deleteAt _x} forEach ["NORMAL", "ON_FOOT"];
     }
 ];
 private _disconnectEH = addMissionEventHandler [
