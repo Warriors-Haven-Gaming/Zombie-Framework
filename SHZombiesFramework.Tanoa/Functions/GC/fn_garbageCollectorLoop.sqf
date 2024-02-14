@@ -9,10 +9,11 @@ Author:
 
 */
 private _processDiscreetQueue = {
-    params ["_queue", "_units", "_minDistance", "_callback"];
+    params ["_queue", "_units", "_callback"];
     private _queueProcessed = [];
     {
-        private _objects = _x select {!isNull _x};
+        _x params ["_objects", "_minDistance"];
+        _objects = _objects select {!isNull _x};
         if (count _objects < 1) then {
             _queueProcessed pushBack _forEachIndex;
             continue;
@@ -83,6 +84,6 @@ while {true} do {
         deleteVehicle _x;
     } forEach ("GroundWeaponHolder" allObjects 0);
 
-    [SHZ_gcDeletionQueue, _units, SHZ_gcDeletionDistance, {deleteVehicle _x}] call _processDiscreetQueue;
-    [SHZ_gcUnhideQueue, _units, SHZ_gcUnhideDistance, {_x hideObjectGlobal false}] call _processDiscreetQueue;
+    [SHZ_gcDeletionQueue, _units, {deleteVehicle _x}] call _processDiscreetQueue;
+    [SHZ_gcUnhideQueue, _units, {_x hideObjectGlobal false}] call _processDiscreetQueue;
 };
