@@ -45,7 +45,7 @@ for "_i" from 1 to _vehicleCount * 5 do {
     if ([_pos] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
     private _veh = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
-    _veh setDamage (0.1 + random 0.2);
+    _veh setDamage (0.7 + random 0.2);
     _veh setDir random 360;
     _veh setFuel random 0.05;
     _veh setVehicleAmmo random 0.5;
