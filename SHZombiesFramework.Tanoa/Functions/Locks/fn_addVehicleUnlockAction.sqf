@@ -6,6 +6,8 @@ Description:
     Function must be remote executed on client from the server.
 
 Parameters:
+    String uid:
+        The player UID that this action is assigned to.
     Object vehicle:
         The vehicle that was locked to the player.
 
@@ -14,7 +16,8 @@ Author:
 
 */
 if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
-params ["_vehicle"];
+params ["_uid", "_vehicle"];
+if (getPlayerUID player isNotEqualTo _uid) exitWith {};
 _vehicle addAction [
     localize "$STR_SHZ_addVehicleUnlockAction_title",
     {
