@@ -66,7 +66,7 @@ addMissionEventHandler ["EntityKilled", {
 
         private _magazines = getArray (_config >> "magazines");
         if (count _magazines > 0) then {
-            _magazines # 0 call _addItem;
+            [_magazines # 0, 1 + floor random 4] call _addItem;
         };
 
         _weapon call _addItem;
