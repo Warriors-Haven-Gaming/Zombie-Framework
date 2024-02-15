@@ -36,7 +36,7 @@ addMissionEventHandler ["EntityKilled", {
         "RyanZombiesAntiVirusTemporary_Item" call _addItem;
     };
 
-    if (random 1 < 0.25) then {
+    if (random 1 < [0.25, 0.5] select _isSoldier) then {
         private _magazines = magazines _instigator;
         _magazines append (
             // Include magazines in unit's guns
