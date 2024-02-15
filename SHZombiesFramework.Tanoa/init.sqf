@@ -29,3 +29,5 @@ SHZ_gcUnhideQueue = [];
 if (!isMultiplayer) then {
     units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
 };
+
+call SHZ_fnc_initZombieLootHandlers;

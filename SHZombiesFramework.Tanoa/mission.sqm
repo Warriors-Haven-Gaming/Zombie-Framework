@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2000;
+		nextID=2032;
 	};
 	class Camera
 	{
-		pos[]={7747.8477,80.742104,8963.3369};
-		dir[]={-0.20003574,-0.12243808,0.97211593};
-		up[]={-0.024678178,0.99247366,0.11992865};
-		aside[]={0.97948456,1.0966323e-007,0.20155247};
+		pos[]={7747.8477,48.510227,8963.3369};
+		dir[]={-0.17790332,-0.87004626,0.45976704};
+		up[]={-0.3139708,0.49297649,0.81141371};
+		aside[]={0.93262297,-3.1571835e-007,0.36087167};
 	};
 };
 binarizationWanted=0;
@@ -32265,7 +32265,7 @@ class Mission
 			name="Zombies";
 			class Entities
 			{
-				items=9;
+				items=8;
 				class Item0
 				{
 					dataType="Logic";
@@ -32615,333 +32615,6 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={7304.4956,3.8705177,6290.2021};
-					};
-					id=9582;
-					type="RyanZM_ModuleLootSettings";
-					atlOffset=24.839808;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleLootSettings_Itemsamountmin";
-							expression="_this setVariable ['Itemsamountmin',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleLootSettings_WeaponsamountmaxSoldier";
-							expression="_this setVariable ['WeaponsamountmaxSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleLootSettings_Magazines";
-							expression="_this setVariable ['Magazines',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""rhsusf_mag_17Rnd_9x19_JHP""]";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleLootSettings_Itemschance";
-							expression="_this setVariable ['Itemschance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=25;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleLootSettings_MagazinesamountmaxSoldier";
-							expression="_this setVariable ['MagazinesamountmaxSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleLootSettings_WeaponschanceSoldier";
-							expression="_this setVariable ['WeaponschanceSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=25;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleLootSettings_ItemsamountmaxSoldier";
-							expression="_this setVariable ['ItemsamountmaxSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RyanZM_ModuleLootSettings_ItemschanceSoldier";
-							expression="_this setVariable ['ItemschanceSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=80;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="RyanZM_ModuleLootSettings_Magazineschance";
-							expression="_this setVariable ['Magazineschance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=25;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="RyanZM_ModuleLootSettings_Weaponsamountmax";
-							expression="_this setVariable ['Weaponsamountmax',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="RyanZM_ModuleLootSettings_Weaponsamountmin";
-							expression="_this setVariable ['Weaponsamountmin',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="RyanZM_ModuleLootSettings_Weapons";
-							expression="_this setVariable ['Weapons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="RyanZM_ModuleLootSettings_WeaponsamountminSoldier";
-							expression="_this setVariable ['WeaponsamountminSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute13
-						{
-							property="RyanZM_ModuleLootSettings_WeaponsSoldier";
-							expression="_this setVariable ['WeaponsSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""rhs_weap_m4_carryhandle_m203"",""rhs_weap_m27iar_grip"",""rhs_weap_m4_carryhandle"",""rhsusf_acc_ACOG2_USMC"",""rhs_weap_m240B"",""rhsusf_acc_kac_grip""]";
-								};
-							};
-						};
-						class Attribute14
-						{
-							property="RyanZM_ModuleLootSettings_Magazinesamountmax";
-							expression="_this setVariable ['Magazinesamountmax',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute15
-						{
-							property="RyanZM_ModuleLootSettings_Items";
-							expression="_this setVariable ['Items',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""FirstAidKit""]";
-								};
-							};
-						};
-						class Attribute16
-						{
-							property="RyanZM_ModuleLootSettings_ItemsamountminSoldier";
-							expression="_this setVariable ['ItemsamountminSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute17
-						{
-							property="RyanZM_ModuleLootSettings_MagazinesSoldier";
-							expression="_this setVariable ['MagazinesSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""rhs_mag_30Rnd_556x45_M855_Stanag"",""rhsusf_mag_17Rnd_9x19_JHP"",""rhsusf_50Rnd_762x51""]";
-								};
-							};
-						};
-						class Attribute18
-						{
-							property="RyanZM_ModuleLootSettings_MagazinesamountminSoldier";
-							expression="_this setVariable ['MagazinesamountminSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute19
-						{
-							property="RyanZM_ModuleLootSettings_ItemsSoldier";
-							expression="_this setVariable ['ItemsSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""FirstAidKit"",""rhs_mag_m67"",""rhs_mag_M433_HEDP"",""rhs_mag_M583A1_white""]";
-								};
-							};
-						};
-						class Attribute20
-						{
-							property="RyanZM_ModuleLootSettings_Itemsamountmax";
-							expression="_this setVariable ['Itemsamountmax',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute21
-						{
-							property="RyanZM_ModuleLootSettings_Magazinesamountmin";
-							expression="_this setVariable ['Magazinesamountmin',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute22
-						{
-							property="RyanZM_ModuleLootSettings_MagazineschanceSoldier";
-							expression="_this setVariable ['MagazineschanceSoldier',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=80;
-								};
-							};
-						};
-						class Attribute23
-						{
-							property="RyanZM_ModuleLootSettings_Weaponschance";
-							expression="_this setVariable ['Weaponschance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						nAttributes=24;
-					};
-				};
-				class Item4
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
 						position[]={7401.6558,12.820869,6286.7349};
 					};
 					id=9583;
@@ -32978,7 +32651,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -33097,7 +32770,7 @@ class Mission
 						nAttributes=8;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -33151,7 +32824,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -33335,7 +33008,7 @@ class Mission
 						nAttributes=13;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -120492,14 +120165,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -120629,14 +120302,14 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -130397,8 +130070,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -130560,19 +130233,6 @@ class Mission
 						};
 						class Attribute9
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute10
-						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -130581,6 +130241,19 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
 								};
 							};
 						};

@@ -15,6 +15,10 @@ Author:
 */
 params ["_player"];
 
+// In case the Loot module is present, disable it (duplicated in initServer.sqf)
+// (not placed in init.sqf due to initialization order in singleplayer)
+ryanzombiesAllLoot = nil;
+
 if (!hasInterface) exitWith {};
 
 // Set a random loadout before it gets saved by onPlayerKilled.sqf
