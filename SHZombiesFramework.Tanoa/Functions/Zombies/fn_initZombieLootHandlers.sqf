@@ -32,6 +32,10 @@ addMissionEventHandler ["EntityKilled", {
         "FirstAidKit" call _addItem;
     };
 
+    if (random 1 < 0.02) then {
+        "RyanZombiesAntiVirusTemporary_Item" call _addItem;
+    };
+
     if (random 1 < 0.25) then {
         private _magazines = magazines _instigator;
         _magazines append (
