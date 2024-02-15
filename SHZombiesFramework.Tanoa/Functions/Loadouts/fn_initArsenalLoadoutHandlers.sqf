@@ -10,5 +10,5 @@ Author:
 */
 [missionNamespace, "arsenalClosed", {
     missionProfileNamespace setVariable ["SHZ_lastLoadout", getUnitLoadout player];
-    saveMissionProfileNamespace;
+    if (!isServer) then {saveMissionProfileNamespace};
 }] call BIS_fnc_addScriptedEventHandler;
