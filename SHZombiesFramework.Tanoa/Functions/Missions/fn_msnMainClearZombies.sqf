@@ -26,6 +26,7 @@ if (_area isEqualTo []) then {
         ];
 
         private _center = locationPosition _location vectorMultiply [1, 1, 0];
+        _center = _center vectorAdd [50 - random 100, 50 - random 100];
         if ([_center] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
         private _radius = selectMax size _location * 2;
