@@ -14,6 +14,12 @@ Author:
 */
 params ["_obj"];
 
+if (local _obj && {_obj isKindOf "Man"}) then {
+    _obj setCaptive true;
+    _obj spawn SHZ_fnc_zombieImmunityLoop;
+};
+if (!hasInterface) exitWith {};
+
 private _condition = "isServer || {call BIS_fnc_admin > 0}";
 
 _obj addAction [

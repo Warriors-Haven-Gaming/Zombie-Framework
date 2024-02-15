@@ -18,6 +18,12 @@ Author:
 */
 params ["_obj", ["_categories", []]];
 
+if (local _obj && {_obj isKindOf "Man"}) then {
+    _obj setCaptive true;
+    _obj spawn SHZ_fnc_zombieImmunityLoop;
+};
+if (!hasInterface) exitWith {};
+
 _obj addAction [
     localize "$STR_SHZ_initShopkeeper_viewMoney",
     {

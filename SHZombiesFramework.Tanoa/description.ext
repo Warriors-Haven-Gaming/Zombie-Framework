@@ -193,6 +193,7 @@ class CfgFunctions {
             class initZombieLootHandlers {};
             class isZombie {};
             class loiterThresholdLoop {};
+            class zombieImmunityLoop {};
             class zombieInit {};
         };
     };
