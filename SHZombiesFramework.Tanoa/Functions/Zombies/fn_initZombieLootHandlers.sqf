@@ -87,6 +87,8 @@ addMissionEventHandler ["EntityKilled", {
         };
 
         private _pos = getPosATL _killed vectorMultiply [1, 1, 0];
+        if (surfaceIsWater _pos) exitWith {};
+
         private _holder = createVehicle ["GroundWeaponHolder", _pos, [], 0, "CAN_COLLIDE"];
         {_holder addItemCargoGlobal _x} forEach _items;
     };
