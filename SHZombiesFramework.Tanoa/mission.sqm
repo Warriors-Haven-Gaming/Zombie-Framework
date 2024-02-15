@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2032;
+		nextID=2064;
 	};
 	class Camera
 	{
@@ -33013,11 +33013,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={7744.5986,78.241432,6282.2568};
+						position[]={7744.5991,78.241608,6282.2568};
 					};
 					id=9587;
 					type="RyanZM_ModuleSettings";
-					atlOffset=95.444763;
+					atlOffset=95.444992;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33172,7 +33172,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=2;
+									value=1;
 								};
 							};
 						};
@@ -33181,7 +33181,7 @@ class Mission
 				};
 			};
 			id=9578;
-			atlOffset=77.037178;
+			atlOffset=76.934784;
 		};
 		class Item522
 		{
@@ -120165,8 +120165,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -120289,19 +120289,6 @@ class Mission
 						};
 						class Attribute6
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute7
-						{
 							property="ENH_disableAI_path";
 							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
@@ -120310,6 +120297,19 @@ class Mission
 								{
 									singleType="BOOL";
 									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
 								};
 							};
 						};
@@ -130070,8 +130070,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -130246,8 +130246,8 @@ class Mission
 						};
 						class Attribute10
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
