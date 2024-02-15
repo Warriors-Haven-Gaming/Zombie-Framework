@@ -24,6 +24,7 @@ if (_loadout isNotEqualTo []) then {_player setUnitLoadout _loadout};
 SHZ_shopkeeperPurchases = createHashMap;
 
 call SHZ_fnc_initDiary;
+call SHZ_fnc_initArsenalLoadoutHandlers;
 call SHZ_fnc_initFriendlyFireHandlers;
 call SHZ_fnc_initTeamSafezoneHandlers;
 call SHZ_fnc_initIncapacitatedHandlers;
