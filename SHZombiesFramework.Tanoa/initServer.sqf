@@ -14,9 +14,7 @@ enableSaving [false, false];
 call SHZ_fnc_setPlayableAILoadouts;
 call SHZ_fnc_initChannels;
 
-// In case the Loot module is present, disable it (duplicated in initPlayerLocal.sqf)
-// (not placed in init.sqf due to initialization order in singleplayer)
-ryanzombiesAllLoot = nil;
+call SHZ_fnc_initZombieSettings;
 
 SHZ_globalPlayerTarget = [0, -2] select isDedicated;
 publicVariable "SHZ_globalPlayerTarget";

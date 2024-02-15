@@ -191,6 +191,7 @@ class CfgFunctions {
             class hordeType {};
             class hordeTypeList {};
             class initZombieLootHandlers {};
+            class initZombieSettings {};
             class isZombie {};
             class loiterThresholdLoop {};
             class zombieImmunityLoop {};

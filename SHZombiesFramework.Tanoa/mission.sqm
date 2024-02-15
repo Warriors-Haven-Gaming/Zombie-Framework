@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2064;
+		nextID=2096;
 	};
 	class Camera
 	{
@@ -124,7 +124,6 @@ addons[]=
 	"A3_Structures_F_Civ_Market",
 	"A3_Structures_F_Heli_Items_Electronics",
 	"A3_Structures_F_Mil_Fortification",
-	"ryanzombiesfunctions",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Ui_F",
 	"A3_Weapons_F_Enoch_Acc",
@@ -234,7 +233,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=80;
+		items=79;
 		class Item0
 		{
 			className="A3_Props_F_Enoch";
@@ -515,276 +514,270 @@ class AddonsMetaData
 		};
 		class Item40
 		{
-			className="ryanzombiesfunctions";
-			name="ryanzombiesfunctions";
-			author="Ryan";
-		};
-		class Item41
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item42
+		class Item41
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item43
+		class Item42
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
+		class Item43
 		{
 			className="A3_Weapons_F_Tank";
 			name="Arma 3 Tank - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item45
+		class Item44
 		{
 			className="A3_Ui_F_Orange";
 			name="Arma 3 Orange - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item45
 		{
 			className="A3_Static_F_Exp";
 			name="Arma 3 Apex - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item46
 		{
 			className="rhsusf_main";
 			name="rhsusf_main";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item48
+		class Item47
 		{
 			className="rhsusf_c_props";
 			name="RHSUSF Editor Props";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item49
+		class Item48
 		{
 			className="A3_Air_F_Orange";
 			name="Arma 3 Orange - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item50
+		class Item49
 		{
 			className="A3_Supplies_F_Orange";
 			name="Arma 3 Orange - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
+		class Item50
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item52
+		class Item51
 		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item53
+		class Item52
 		{
 			className="A3_Props_F_Decade";
 			name="CFGPATCHES_A3_Props_F_Decade";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item54
+		class Item53
 		{
 			className="A3_Structures_F_Exp_Commercial";
 			name="Arma 3 Apex - Commercial Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item55
+		class Item54
 		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item56
+		class Item55
 		{
 			className="A3_Structures_F_Mark";
 			name="Arma 3 Marksmen - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item56
 		{
 			className="A3_Props_F_Tank";
 			name="Arma 3 Tank - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item58
+		class Item57
 		{
 			className="A3_Props_F_Oldman";
 			name="Arma 3 Oldman - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item58
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item59
 		{
 			className="A3_Soft_F_Enoch";
 			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item60
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item62
+		class Item61
 		{
 			className="rhsusf_c_statics";
 			name="RHSUSF Static Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item63
+		class Item62
 		{
 			className="rhsusf_c_fmtv";
 			name="FMTV Trucks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item64
+		class Item63
 		{
 			className="rhsusf_c_m109";
 			name="M109A6 SPH";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item65
+		class Item64
 		{
 			className="rhsusf_c_m11xx";
 			name="M1151/M1152/M1165";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item66
+		class Item65
 		{
 			className="rhsusf_c_Caiman";
 			name="Caiman MRAP";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item67
+		class Item66
 		{
 			className="rhsusf_c_HEMTT_A4";
 			name="HEMMTT A4 Trucks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item68
+		class Item67
 		{
 			className="Ryanzombies";
 			name="Ryanzombies";
 			author="Ryan";
 		};
-		class Item69
+		class Item68
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item70
+		class Item69
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item71
+		class Item70
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item72
+		class Item71
 		{
 			className="rhsusf_sounds";
 			name="USF Sounds";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item73
+		class Item72
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
 			name="Arma 3 Contact Platform - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item74
+		class Item73
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item75
+		class Item74
 		{
 			className="A3_Missions_F_Oldman";
 			name="Arma 3 Old Man - Playable Content";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item76
+		class Item75
 		{
 			className="rhsusf_c_m113";
 			name="M113A3 APC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item77
+		class Item76
 		{
 			className="rhsusf_c_stryker";
 			name="IAV Stryker vehicles";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item78
+		class Item77
 		{
 			className="rhsusf_c_m1117";
 			name="M1117 Car";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item79
+		class Item78
 		{
 			className="rhsusf_c_m1a1";
 			name="M1A1 Tanks";
@@ -32263,923 +32256,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Zombies";
-			class Entities
-			{
-				items=8;
-				class Item0
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7044.25,2.0389767,6292.5171};
-					};
-					id=9579;
-					type="RyanZM_ModuleZombieDeletion";
-					atlOffset=17.676001;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleZombieDeletion_DeletionDemons2";
-							expression="_this setVariable ['DeletionDemons2',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleZombieDeletion_DeletionCheckTime";
-							expression="_this setVariable ['DeletionCheckTime',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=30;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleZombieDeletion_DeletionDemons";
-							expression="_this setVariable ['DeletionDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleZombieDeletion_DeletionRadiusDemons";
-							expression="_this setVariable ['DeletionRadiusDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1000;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleZombieDeletion_DeletionRadius";
-							expression="_this setVariable ['DeletionRadius',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1000;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleZombieDeletion_Deletion";
-							expression="_this setVariable ['Deletion',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleZombieDeletion_Deletion2";
-							expression="_this setVariable ['Deletion2',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item1
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7124.0581,-1.2806797,6295.9868};
-					};
-					id=9580;
-					type="RyanZM_ModuleCustomDifficulty";
-					atlOffset=17.676003;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleCustomDifficulty_KnockbackTank";
-							expression="_this setVariable ['KnockbackTank',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleCustomDifficulty_DamageCar";
-							expression="_this setVariable ['DamageCar',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.0099999998;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleCustomDifficulty_Knockback";
-							expression="_this setVariable ['Knockback',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.0020000001;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleCustomDifficulty_KnockbackCar";
-							expression="_this setVariable ['KnockbackCar',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleCustomDifficulty_AttackSpeed";
-							expression="_this setVariable ['AttackSpeed',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2.3;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleCustomDifficulty_DamageAir";
-							expression="_this setVariable ['DamageAir',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.0099999998;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleCustomDifficulty_AttackDistance";
-							expression="_this setVariable ['AttackDistance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RyanZM_ModuleCustomDifficulty_DamageTank";
-							expression="_this setVariable ['DamageTank',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.0049999999;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="RyanZM_ModuleCustomDifficulty_KnockbackAir";
-							expression="_this setVariable ['KnockbackAir',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="RyanZM_ModuleCustomDifficulty_Damage";
-							expression="_this setVariable ['Damage',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.1;
-								};
-							};
-						};
-						nAttributes=10;
-					};
-				};
-				class Item2
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7215.4351,-6.211874,6293.6748};
-					};
-					id=9581;
-					type="RyanZM_ModuleInfected";
-					atlOffset=17.785;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleInfected_Antivirus";
-							expression="_this setVariable ['Antivirus',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=300;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleInfected_InfectedDeath";
-							expression="_this setVariable ['InfectedDeath',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleInfected_Immunity";
-							expression="_this setVariable ['Immunity',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleInfected_InfectedChance";
-							expression="_this setVariable ['InfectedChance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=10;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleInfected_InfectedRate";
-							expression="_this setVariable ['InfectedRate',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.050000001;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleInfected_InfectedSymptoms";
-							expression="_this setVariable ['InfectedSymptoms',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=6;
-					};
-				};
-				class Item3
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7401.6558,12.820869,6286.7349};
-					};
-					id=9583;
-					type="RyanZM_ModuleZombieHealth";
-					atlOffset=33.723;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleZombieHealth_DemonMaxHealth";
-							expression="_this setVariable ['DemonMaxHealth',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleZombieHealth_ZombieMaxHealth";
-							expression="_this setVariable ['ZombieMaxHealth',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item4
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7489.562,46.744453,6280.9521};
-					};
-					id=9584;
-					type="RyanZM_ModuleMovementSpeed";
-					atlOffset=63.236;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleMovementSpeed_CrawlerZombies";
-							expression="_this setVariable ['CrawlerZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleMovementSpeed_FastZombies";
-							expression="_this setVariable ['FastZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.69999999;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleMovementSpeed_PlayerZombies";
-							expression="_this setVariable ['PlayerZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.5;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleMovementSpeed_WalkerZombies";
-							expression="_this setVariable ['WalkerZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleMovementSpeed_DemonZombies";
-							expression="_this setVariable ['DemonZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleMovementSpeed_SpiderZombies";
-							expression="_this setVariable ['SpiderZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.5;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleMovementSpeed_SlowZombies";
-							expression="_this setVariable ['SlowZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RyanZM_ModuleMovementSpeed_MediumZombies";
-							expression="_this setVariable ['MediumZombies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						nAttributes=8;
-					};
-				};
-				class Item5
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7571.6851,54.861557,6284.4229};
-					};
-					id=9585;
-					type="RyanZM_ModuleInfection";
-					atlOffset=73.639;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleInfection_Uniform";
-							expression="_this setVariable ['Uniform',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleInfection_InfectionTimer";
-							expression="_this setVariable ['InfectionTimer',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=30;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleInfection_Infection";
-							expression="_this setVariable ['Infection',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item6
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7661.9019,44.40593,6283.2651};
-					};
-					id=9586;
-					type="RyanZM_ModuleAbilities";
-					atlOffset=61.032997;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleAbilities_Throwing";
-							expression="_this setVariable ['Throwing',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleAbilities_ThrowingTankDistance";
-							expression="_this setVariable ['ThrowingTankDistance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleAbilities_ThrowingTankDistanceDemons";
-							expression="_this setVariable ['ThrowingTankDistanceDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=10;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleAbilities_Roaming";
-							expression="_this setVariable ['Roaming',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleAbilities_Jumping";
-							expression="_this setVariable ['Jumping',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleAbilities_Feeding";
-							expression="_this setVariable ['Feeding',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleAbilities_ThrowingCarAlarms";
-							expression="_this setVariable ['ThrowingCarAlarms',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RyanZM_ModuleAbilities_JumpingDemons";
-							expression="_this setVariable ['JumpingDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="RyanZM_ModuleAbilities_ThrowingTank";
-							expression="_this setVariable ['ThrowingTank',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="RyanZM_ModuleAbilities_ThrowingDistance";
-							expression="_this setVariable ['ThrowingDistance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="RyanZM_ModuleAbilities_ThrowingDemons";
-							expression="_this setVariable ['ThrowingDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="RyanZM_ModuleAbilities_ThrowingDistanceDemons";
-							expression="_this setVariable ['ThrowingDistanceDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=10;
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="RyanZM_ModuleAbilities_ThrowingTankDemons";
-							expression="_this setVariable ['ThrowingTankDemons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=5;
-								};
-							};
-						};
-						nAttributes=13;
-					};
-				};
-				class Item7
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7744.5991,78.241608,6282.2568};
-					};
-					id=9587;
-					type="RyanZM_ModuleSettings";
-					atlOffset=95.444992;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RyanZM_ModuleSettings_GlowingEyes";
-							expression="_this setVariable ['GlowingEyes',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RyanZM_ModuleSettings_Headshots";
-							expression="_this setVariable ['Headshots',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RyanZM_ModuleSettings_ExplodingHeads";
-							expression="_this setVariable ['ExplodingHeads',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=4;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RyanZM_ModuleSettings_Invincibility";
-							expression="_this setVariable ['Invincibility',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RyanZM_ModuleSettings_DetectionDistance";
-							expression="_this setVariable ['DetectionDistance',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=500;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RyanZM_ModuleSettings_ZombieScript";
-							expression="_this setVariable ['ZombieScript',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RyanZM_ModuleSettings_DeleteBodies";
-							expression="_this setVariable ['DeleteBodies',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RyanZM_ModuleSettings_JumpingSounds";
-							expression="_this setVariable ['JumpingSounds',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="RyanZM_ModuleSettings_Sounds";
-							expression="_this setVariable ['Sounds',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="RyanZM_ModuleSettings_Bleeding";
-							expression="_this setVariable ['Bleeding',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="RyanZM_ModuleSettings_StartingAnim";
-							expression="_this setVariable ['StartingAnim',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="RyanZM_ModuleSettings_CivilianAttacks";
-							expression="_this setVariable ['CivilianAttacks',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-			};
 			id=9578;
 			atlOffset=76.934784;
 		};
@@ -120165,8 +119241,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
@@ -120302,8 +119378,8 @@ class Mission
 						};
 						class Attribute7
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -130070,14 +129146,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="[_this, _value] remoteExec ['allowSprint', _this]";
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -130233,21 +129309,21 @@ class Mission
 						};
 						class Attribute9
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
 						class Attribute10
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="ENH_allowSprint";
+							expression="[_this, _value] remoteExec ['allowSprint', _this]";
 							class Value
 							{
 								class data
