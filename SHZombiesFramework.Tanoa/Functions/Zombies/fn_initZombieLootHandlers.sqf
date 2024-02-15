@@ -32,7 +32,7 @@ addMissionEventHandler ["EntityKilled", {
         "FirstAidKit" call _addItem;
     };
 
-    if (random 1 < [0.05, 0.25] select _isSoldier) then {
+    if (random 1 < 0.25) then {
         private _magazines = magazines _instigator;
         _magazines append (
             // Include magazines in unit's guns
@@ -45,7 +45,8 @@ addMissionEventHandler ["EntityKilled", {
         _magazines = _magazines arrayIntersect _magazines;
         if (count _magazines < 1) exitWith {};
 
-        for "_i" from 0 to floor random 5 do {
+        private _maxCount = [1, 5] select _isSoldier;
+        for "_i" from 1 to floor random (_maxCount + 1) do {
             selectRandom _magazines call _addItem;
         };
     };
