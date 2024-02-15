@@ -17,7 +17,6 @@ _laptop addAction [
     localize "$STR_SHZ_downloadIntelLaptop_action",
     {
         params ["_target", "_caller"];
-        _target setVariable ["downloadStarted", true, true];
         _caller sideChat localize "$STR_SHZ_downloadIntelLaptop_start";
         [_target] remoteExec ["SHZ_fnc_msnDownloadIntelLaptopTimer"];
     },
