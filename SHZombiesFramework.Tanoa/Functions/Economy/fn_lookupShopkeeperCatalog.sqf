@@ -143,6 +143,16 @@ if (isNil "_index") then {
             ["_cost", 2000]
         ]],
         ["car_humvee", createHashMapFromArray [
+            ["_displayName", "M1151 Humvee"],
+            ["_vehicleType", "rhsusf_m1151_usmc_wd"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "car"],
+            ["_cost", 2000]
+        ]],
+        ["car_humvee_m2", createHashMapFromArray [
             ["_displayName", "M1151 Humvee (CROWS/M2)"],
             ["_vehicleType", "rhsusf_m1151_m2crows_usmc_wd"],
             ["_functionName", "SHZ_fnc_buyVehicle"],
