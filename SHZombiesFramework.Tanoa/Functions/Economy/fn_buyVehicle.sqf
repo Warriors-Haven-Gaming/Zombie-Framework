@@ -55,7 +55,10 @@ if (_vehicleType isEqualType {}) then {_vehicleType = call _vehicleType};
 
 private _maxRadius = _context getOrDefault ["_vehicleSpawnRadius", 50];
 private _pos = _vehicleSpawn findEmptyPosition [10, _maxRadius, _vehicleType];
-if (_pos isEqualTo []) exitWith {false};
+if (_pos isEqualTo []) exitWith {[
+    [],
+    "SHZ_fnc_showBuyVehicleObstruction"
+]};
 
 private _vehicle = createVehicle [_vehicleType, _pos];
 

@@ -43,6 +43,7 @@ class CfgFunctions {
             class requestToBuyItem {};
             class shareMoney {};
             class showBuyAIRecruitLimit {};
+            class showBuyVehicleObstruction {};
             class showGenericPurchaseError {};
             class showInsufficientFunds {};
             class showInsufficientFundsToShare {};
