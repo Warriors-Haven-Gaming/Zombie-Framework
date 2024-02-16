@@ -33,10 +33,10 @@ Ryanzombiesfeeddemon = nil;
 Ryanzombiesjump = 1;
 Ryanzombiesjumpdemon = 1;
 // Jumping Strength:
-//   nil      2      3           4       5
-//   Off Normal Weaker Even Weaker Weakest
-Ryanzombiesjumpstrength = 2;
-Ryanzombiesjumpdemonstrength = 2;
+//      nil      1           2       3
+//   Normal Weaker Even Weaker Weakest
+Ryanzombiesjumpstrength = nil;
+Ryanzombiesjumpdemonstrength = nil;
 // Vehicle Throwing:
 //   Allows zombies to throw cars at their targets (empty or occupied).
 //   nil  1
