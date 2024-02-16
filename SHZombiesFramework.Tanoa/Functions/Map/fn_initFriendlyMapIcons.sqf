@@ -68,7 +68,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
 
     // Draw unit icons
     {
-        private _config = configFile >> "CfgVehicles" >> typeOf _x;
+        private _config = configOf _x;
         private _side = side group _x;
         private _color = if (
             lifeState _x in ["HEALTHY", "INJURED"]
@@ -116,7 +116,7 @@ findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {
 
     // Draw vehicle icons
     {
-        private _config = configFile >> "CfgVehicles" >> typeOf _x;
+        private _config = configOf _x;
         private _side = side group effectiveCommander _x;
         private _color = if (
             crew _x findIf {lifeState _x isEqualTo "INCAPACITATED"} < 0

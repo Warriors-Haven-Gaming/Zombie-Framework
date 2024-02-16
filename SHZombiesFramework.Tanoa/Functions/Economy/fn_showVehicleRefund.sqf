@@ -21,7 +21,7 @@ if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 params ["_vehicle", "_money", "_rate"];
 hint format [
     localize "$STR_SHZ_showVehicleRefund",
-    [configFile >> "CfgVehicles" >> typeOf _vehicle] call BIS_fnc_displayName,
+    [configOf _vehicle] call BIS_fnc_displayName,
     _rate call SHZ_fnc_formatPercent,
     _money call SHZ_fnc_formatMoney
 ];
