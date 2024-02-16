@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=15727;
+		nextID=15745;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2601;
+		nextID=2606;
 	};
 	class Camera
 	{
-		pos[]={6901.0938,166.67995,7373.752};
-		dir[]={0.3739166,-0.19765875,0.90615672};
-		up[]={0.07539548,0.98027158,0.18271503};
-		aside[]={0.92439497,4.3073669e-009,-0.38144231};
+		pos[]={6936.1738,38.153793,6908.8955};
+		dir[]={-0.37302878,-0.8804087,0.29279798};
+		up[]={-0.69255072,0.47420949,0.54359728};
+		aside[]={0.61743534,7.6484866e-008,0.78662205};
 	};
 };
 binarizationWanted=0;
@@ -175,13 +175,14 @@ addons[]=
 	"A3_Structures_F_Exp_Walls_Net",
 	"A3_Structures_F_Tank_Military_RepairDepot",
 	"A3_Structures_F_Exp_Walls_Tin",
-	"A3_Structures_F_Exp_Walls_Slum"
+	"A3_Structures_F_Exp_Walls_Slum",
+	"A3_Characters_F_Orange"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=59;
+		items=60;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -587,6 +588,13 @@ class AddonsMetaData
 		{
 			className="A3_Props_F_AoW";
 			name="Arma 3 Art of War - Decorative and Mission ";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item59
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -1098,8 +1106,8 @@ class Mission
 		year=2035;
 		month=6;
 		day=6;
-		hour=12;
-		minute=-10;
+		hour=3;
+		minute=23;
 		startFogBase=40;
 		forecastFogBase=40;
 		startFogDecay=0.079999998;
@@ -1151,7 +1159,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			dataType="Layer";
@@ -31786,19 +31794,6 @@ class Mission
 										};
 										class Attribute9
 										{
-											property="ENH_disableAI_path";
-											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute10
-										{
 											property="enableStamina";
 											expression="_this enablestamina _value;";
 											class Value
@@ -31807,6 +31802,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=0;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_disableAI_path";
+											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -99106,13 +99114,13 @@ class Mission
 								angles[]={0,0.62182432,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=11547;
 							type="Box_NATO_Wps_F";
+							atlOffset=0.95636559;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -106599,6 +106607,409 @@ class Mission
 			};
 			id=15719;
 			atlOffset=0.23787642;
+		};
+		class Item19
+		{
+			dataType="Layer";
+			name="Aeroport Docks";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Layer";
+					name="Props";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6913.979,-16.560766,6926.875};
+								angles[]={0,5.5183992,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								dynamicSimulation=1;
+							};
+							id=15727;
+							type="Land_PierWooden_01_dock_F";
+							atlOffset=-0.78599954;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6914.9766,5.0807915,6921.0063};
+								angles[]={0,2.4521463,-0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=15736;
+							type="Land_LampShabby_F";
+							atlOffset=0.00012183189;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6911.8032,4.7832899,6933.8804};
+								angles[]={0,0.050315831,-0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=15735;
+							type="Land_LampShabby_F";
+							atlOffset=-0.044525146;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					id=15730;
+					atlOffset=0.52219254;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="Terrain Modules";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={6918.2769,3.368536,6924.9785};
+							};
+							areaSize[]={15,0,15};
+							flags=1;
+							id=15728;
+							type="ModuleHideTerrainObjects_F";
+							atlOffset=4.0670991;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="#filter";
+									expression="_this setVariable [""#filter"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=15;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="#hideLocally";
+									expression="_this setVariable [""#hideLocally"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					id=15731;
+					atlOffset=4.0670991;
+				};
+				class Item2
+				{
+					dataType="Layer";
+					name="Markers";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Marker";
+							position[]={6914.2441,0,6927.0928};
+							name="SHZ_safezone_team_aeroport_docks";
+							markerType="ELLIPSE";
+							type="";
+							colorName="ColorWEST";
+							alpha=0.30000001;
+							a=125;
+							b=125;
+							id=15737;
+							atlOffset=0.33148193;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ENH_markerHideOnStart";
+									expression="        if (!isServer || is3DEN || !_value) exitWith {};        missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];        _this setMarkerAlpha 0";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Marker";
+							position[]={6919.6982,0,6914.7168};
+							name="marker_49";
+							text="Boat Shopkeeper";
+							type="mil_box";
+							colorName="ColorWEST";
+							alpha=0.60000002;
+							id=15738;
+							atlOffset=0.72000003;
+						};
+					};
+					id=15733;
+					atlOffset=0.71051514;
+				};
+				class Item3
+				{
+					dataType="Layer";
+					name="Shopkeepers";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6919.8711,1.3104389,6925.5708};
+										angles[]={0,2.4006307,0};
+									};
+									side="Civilian";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", [6933.472, 6912.619]]," \n "  [""_vehicleSpawnDir"", 136]" \n "]];" \n "_categories = [""boat""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
+										ignoreByDynSimulGrid=1;
+									};
+									id=15740;
+									type="C_Man_Fisherman_01_F";
+									atlOffset=0.00036048889;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="ENH_AmbientAnimations";
+											expression="      if !(_value # 0 isEqualTo '') then      {        _value params ['_animSet', '_anims', '_canExit', '_attach'];                _this setVariable ['ENH_ambientAnimations_anims', _anims];        _this disableAI 'ANIM';        if (_attach && !is3DEN) then        {          private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];          _this setVariable ['ENH_ambientAnimations_logic', _logic];          [_this, _logic] call BIS_fnc_attachToRelative;        };                ENH_fnc_ambientAnimations_play =        {          params ['_unit'];          private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);          [_unit, _anim] remoteExec ['switchMove', 0];        };                ENH_fnc_ambientAnimations_exit =        {          params ['_unit'];          if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};          _unit setVariable ['ENH_ambientAnimations_exit', true];          detach _unit;          deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);          if (alive _unit) then          {            [_unit, ''] remoteExec ['switchMove', 0];            _unit enableAI 'ANIM';          };          _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];          _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];          _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];        };                private _EHAnimDone = _this addEventHandler ['AnimDone',          {            params ['_unit'];            if (alive _unit) then            {              _unit call ENH_fnc_ambientAnimations_play;            }            else            {              _unit call ENH_fnc_ambientAnimations_exit;            };          }        ];        _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                if (_canExit && !is3DEN) then        {          private _EHKilled = _this addEventHandler ['Killed',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHKilled', _EHKilled];          private _EHDammaged = _this addEventHandler ['Dammaged',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHDammaged', _EHDammaged];          _this spawn          {            scriptName 'ENH_Attribute_AmbientAnimations';            params ['_unit'];            waitUntil            {              sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}            };            _unit call ENH_fnc_ambientAnimations_exit;          };        };        _this call ENH_fnc_ambientAnimations_play;      };";
+											class Value
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=4;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SIT_LOW_U";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="ARRAY";
+																class value
+																{
+																	items=2;
+																	class Item0
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="aidlpsitmstpsnonwnondnon_ground00";
+																		};
+																	};
+																	class Item1
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="amovpsitmstpsnonwnondnon_ground";
+																		};
+																	};
+																};
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="BOOL";
+																value=0;
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="BOOL";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="ENH_setCaptive";
+											expression="[_this, _value] remoteExec ['setCaptive', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.99000001;
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										nAttributes=5;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=15739;
+							atlOffset=0.00036048889;
+						};
+					};
+					id=15743;
+					atlOffset=0.00036048889;
+				};
+			};
+			id=15729;
+			atlOffset=1.8359728;
 		};
 	};
 	class Connections
