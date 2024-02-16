@@ -50,6 +50,15 @@ if (!isNil "_success" && {_success isEqualTo true}) exitWith {
     private _moneyNew = [getPlayerUID _player, (-_cost), ["PURCHASE"]] call SHZ_fnc_addMoney;
     _context set ["_money", _moneyNew];
     [_context] remoteExec ["SHZ_fnc_showSuccessfulPurchase", _player];
+
+    diag_log text format [
+        "%1: %2 successfully purchased %3 for %4 (new balance: %5)",
+        _fnc_scriptName,
+        name _player,
+        _itemID,
+        _cost call SHZ_fnc_formatMoney,
+        _moneyNew call SHZ_fnc_formatMoney
+    ];
 };
 if (!isNil "_success" && {_success isEqualType []}) exitWith {
     _success params ["_params", "_function"];

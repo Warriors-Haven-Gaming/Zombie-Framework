@@ -40,5 +40,15 @@ _toMoney = _toMoney + _money;
 _playerMoney set [_fromUID, _fromMoney];
 _playerMoney set [_toUID, _toMoney];
 
+diag_log text format [
+    "%1: %2 shared %3 with %4 (new balances: %5 / %6)",
+    _fnc_scriptName,
+    name _from,
+    _money call SHZ_fnc_formatMoney,
+    name _to,
+    _fromMoney call SHZ_fnc_formatMoney,
+    _toMoney call SHZ_fnc_formatMoney
+];
+
 [_money, _to, _fromMoney] remoteExec ["SHZ_fnc_showSharedMoneyFrom", _from];
 [_money, _from, _toMoney] remoteExec ["SHZ_fnc_showSharedMoneyTo", _to];
