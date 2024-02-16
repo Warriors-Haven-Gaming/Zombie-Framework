@@ -253,8 +253,8 @@
         </Key>
         <Key ID="STR_SHZ_addRecordGuide_safezones_description">
             <Original>
-                Safezones will appear on map in solid blue, indicating areas
-                where zombies will not appear. Some missions produce safezones
+                Safezones are marked on map in solid blue, indicating areas
+                where zombies will not spawn in. Some missions produce safezones
                 upon completion, but may only last for a certain period of time
                 before disappearing. Note that safezones do not prevent zombies
                 from entering them.
