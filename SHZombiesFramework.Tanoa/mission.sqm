@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=15723;
+		nextID=15727;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2458;
+		nextID=2459;
 	};
 	class Camera
 	{
-		pos[]={10079.664,445.93546,11760.594};
-		dir[]={-0.62487686,-0.7734971,0.10600636};
-		up[]={-0.76260811,0.63378811,0.1293714};
-		aside[]={0.16725436,-1.2427336e-008,0.98591536};
+		pos[]={6901.0938,34.544792,7373.752};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -93168,7 +93168,7 @@ class Mission
 			name="Aeroport de Tanoa";
 			class Entities
 			{
-				items=4;
+				items=5;
 				class Item0
 				{
 					dataType="Layer";
@@ -94113,7 +94113,7 @@ class Mission
 					name="Markers";
 					class Entities
 					{
-						items=2;
+						items=3;
 						class Item0
 						{
 							dataType="Marker";
@@ -94154,9 +94154,21 @@ class Mission
 							type="loc_Tourism";
 							id=9625;
 						};
+						class Item2
+						{
+							dataType="Marker";
+							position[]={6910.9102,6.8850002,7399.5625};
+							name="marker_48";
+							text="Plane Shopkeeper";
+							type="mil_box";
+							colorName="ColorWEST";
+							alpha=0.60000002;
+							id=15726;
+							atlOffset=0.00021266937;
+						};
 					};
 					id=15707;
-					atlOffset=0.24798512;
+					atlOffset=2.1818705;
 				};
 				class Item2
 				{
@@ -98610,9 +98622,468 @@ class Mission
 					id=15709;
 					atlOffset=0.45850635;
 				};
+				class Item4
+				{
+					dataType="Layer";
+					name="Shopkeepers";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6910.9248,2.759439,7399.606};
+										angles[]={0,4.5086045,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										skill=1;
+										rank="COLONEL";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", [6936.157, 7402.688]]," \n "  [""_vehicleSpawnDir"", 80]" \n "]];" \n "_categories = [""cas_plane"", ""plane"", ""uav""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
+										stance="Up";
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MX_khk_F";
+												optics="optic_Holosight_smg_khk_F";
+												muzzle="muzzle_snds_H_khk_F";
+												flashlight="acc_pointer_IR";
+												underBarrel="bipod_01_F_khk";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_khaki_mag";
+													ammoLeft=30;
+												};
+											};
+											class handgun
+											{
+												name="rhsusf_weap_m9";
+												class primaryMuzzleMag
+												{
+													name="rhsusf_mag_15Rnd_9x19_FMJ";
+													ammoLeft=15;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_HeliPilotCoveralls";
+												isBackpack=0;
+												class MagazineCargo
+												{
+													items=1;
+													class Item0
+													{
+														name="30Rnd_65x39_caseless_khaki_mag";
+														count=1;
+														ammoLeft=30;
+													};
+												};
+												class ItemCargo
+												{
+													items=2;
+													class Item0
+													{
+														name="FirstAidKit";
+														count=1;
+													};
+													class Item1
+													{
+														name="rhsusf_ANPVS_14";
+														count=1;
+													};
+												};
+											};
+											class vest
+											{
+												typeName="V_CarrierRigKBT_01_light_Olive_F";
+												isBackpack=0;
+												class MagazineCargo
+												{
+													items=5;
+													class Item0
+													{
+														name="rhsusf_mag_15Rnd_9x19_FMJ";
+														count=4;
+														ammoLeft=15;
+													};
+													class Item1
+													{
+														name="rhs_mag_an_m8hc";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item2
+													{
+														name="rhs_mag_m18_red";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item3
+													{
+														name="rhs_mag_m18_green";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item4
+													{
+														name="30Rnd_65x39_caseless_khaki_mag";
+														count=2;
+														ammoLeft=30;
+													};
+												};
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											radio="ItemRadio";
+											goggles="G_Tactical_Clear";
+											headgear="H_HelmetCrew_I_E";
+										};
+									};
+									id=15724;
+									type="rhsusf_usmc_marpat_wd_officer";
+									atlOffset=0.09800005;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="ENH_addGunLight";
+											expression="    if (!is3DEN && _value) then    {      if (primaryWeaponItems _this select 1 isEqualTo '') then      {        [_this, 'acc_flashlight'] remoteExec ['addPrimaryWeaponItem', _this];      };      [_this, 'forceOn'] remoteExec ['enableGunLights', _this];    }";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="ENH_spotDistance";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['spotDistance', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="ENH_reloadingSpeed";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['reloadSpeed', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.77999997;
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="ENH_aimingSpeed";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['aimingSpeed', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.81;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="ENH_aimingAccuracy";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['aimingAccuracy', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute6
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										class Attribute7
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male01ENG";
+												};
+											};
+										};
+										class Attribute8
+										{
+											property="ENH_commanding";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['commanding', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute9
+										{
+											property="ENH_disableAI_path";
+											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_courage";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['courage', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute11
+										{
+											property="unitName";
+											expression="_this setname _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Shopkeeper";
+												};
+											};
+										};
+										class Attribute12
+										{
+											property="ENH_AmbientAnimations";
+											expression="      if !(_value # 0 isEqualTo '') then      {        _value params ['_animSet', '_anims', '_canExit', '_attach'];                _this setVariable ['ENH_ambientAnimations_anims', _anims];        _this disableAI 'ANIM';        if (_attach && !is3DEN) then        {          private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];          _this setVariable ['ENH_ambientAnimations_logic', _logic];          [_this, _logic] call BIS_fnc_attachToRelative;        };                ENH_fnc_ambientAnimations_play =        {          params ['_unit'];          private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);          [_unit, _anim] remoteExec ['switchMove', 0];        };                ENH_fnc_ambientAnimations_exit =        {          params ['_unit'];          if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};          _unit setVariable ['ENH_ambientAnimations_exit', true];          detach _unit;          deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);          if (alive _unit) then          {            [_unit, ''] remoteExec ['switchMove', 0];            _unit enableAI 'ANIM';          };          _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];          _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];          _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];        };                private _EHAnimDone = _this addEventHandler ['AnimDone',          {            params ['_unit'];            if (alive _unit) then            {              _unit call ENH_fnc_ambientAnimations_play;            }            else            {              _unit call ENH_fnc_ambientAnimations_exit;            };          }        ];        _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                if (_canExit && !is3DEN) then        {          private _EHKilled = _this addEventHandler ['Killed',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHKilled', _EHKilled];          private _EHDammaged = _this addEventHandler ['Dammaged',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHDammaged', _EHDammaged];          _this spawn          {            scriptName 'ENH_Attribute_AmbientAnimations';            params ['_unit'];            waitUntil            {              sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}            };            _unit call ENH_fnc_ambientAnimations_exit;          };        };        _this call ENH_fnc_ambientAnimations_play;      };";
+											class Value
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=4;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="LISTENING_2";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="ARRAY";
+																class value
+																{
+																	items=1;
+																	class Item0
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="Acts_CivilListening_2";
+																		};
+																	};
+																};
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="BOOL";
+																value=0;
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="BOOL";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+										};
+										class Attribute13
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.99000001;
+												};
+											};
+										};
+										class Attribute14
+										{
+											property="ENH_allowFleeing";
+											expression="if (_value == 0.5) exitWith {}; [_this, _value] remoteExec ['allowFleeing', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+										};
+										class Attribute15
+										{
+											property="ENH_spotTime";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['spotTime', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute16
+										{
+											property="ENH_disableAI_radioProtocol";
+											expression="if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute17
+										{
+											property="enh_general";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['general', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute18
+										{
+											property="ENH_aimingShake";
+											expression="if (_value == 0.5) exitWith {}; [_this, ['aimingShake', _value]] remoteExec ['setSkill', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+										class Attribute19
+										{
+											property="unitInsignia";
+											expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CombatPatrol";
+												};
+											};
+										};
+										nAttributes=20;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=15723;
+							atlOffset=0.09800005;
+						};
+					};
+					id=15725;
+					atlOffset=0.09800005;
+				};
 			};
 			id=15705;
-			atlOffset=0.17831993;
+			atlOffset=0.20440555;
 		};
 		class Item16
 		{
