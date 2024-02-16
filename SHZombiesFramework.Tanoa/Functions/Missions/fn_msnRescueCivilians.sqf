@@ -68,34 +68,7 @@ if (_quantity < 1) exitWith {
 
 private _units = [];
 private _group = createGroup civilian;
-private _unitTypes = [
-    "C_man_1",
-    "C_Man_casual_1_F",
-    "C_Man_casual_2_F",
-    "C_Man_casual_3_F",
-    "C_man_sport_1_F",
-    "C_man_sport_2_F",
-    "C_man_sport_3_F",
-    "C_Man_casual_4_F",
-    "C_Man_casual_5_F",
-    "C_Man_casual_6_F",
-    "C_man_polo_1_F",
-    "C_man_polo_2_F",
-    "C_man_polo_3_F",
-    "C_man_polo_4_F",
-    "C_man_polo_5_F",
-    "C_man_polo_6_F",
-    "C_Man_ConstructionWorker_01_Black_F",
-    "C_Man_ConstructionWorker_01_Blue_F",
-    "C_Man_ConstructionWorker_01_Red_F",
-    "C_Man_ConstructionWorker_01_Vrana_F",
-    "C_Man_Fisherman_01_F",
-    "C_man_hunter_1_F",
-    "C_Man_Paramedic_01_F",
-    "C_scientist_F",
-    "C_Man_UtilityWorker_01_F",
-    "C_man_w_worker_F"
-];
+private _unitTypes = ["civilians"] call SHZ_fnc_lookupUnitTypes;
 for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, [0,0,0], [], 50, "NONE"];
     _units pushBack _unit;
