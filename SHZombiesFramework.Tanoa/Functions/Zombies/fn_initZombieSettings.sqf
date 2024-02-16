@@ -181,7 +181,7 @@ ryanzombiescivilianattacks = nil;
 //   Allows zombie bodies to be deleted after death.
 //   nil  1
 //   Off On
-ryanzombiesdelete = 1;
+ryanzombiesdelete = nil;
 // Detection Distance:
 //   The max distance at which zombies will chase targets.
 //   Despite the name, this doesn't actually affect the zombie's "detection"
