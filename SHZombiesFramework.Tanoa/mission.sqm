@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1546;
+	toggles=1674;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2701;
+		nextID=2785;
 	};
 	class Camera
 	{
@@ -31631,8 +31631,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
 											class Value
 											{
 												class data
@@ -31807,8 +31807,8 @@ class Mission
 										};
 										class Attribute10
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
@@ -66919,7 +66919,7 @@ class Mission
 						};
 					};
 					id=15665;
-					atlOffset=0.19233179;
+					atlOffset=0.33379936;
 				};
 				class Item1
 				{
@@ -68200,12 +68200,13 @@ class Mission
 									class PositionInfo
 									{
 										position[]={11711.815,6.9514389,13096.728};
-										angles[]={0,4.9069529,0};
+										angles[]={0,4.9069586,0};
 									};
 									side="West";
 									flags=5;
 									class Attributes
 									{
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										class Inventory
 										{
 											class primaryWeapon
@@ -68965,7 +68966,7 @@ class Mission
 				};
 			};
 			id=15664;
-			atlOffset=1.5890436;
+			atlOffset=1.6010637;
 		};
 		class Item5
 		{
@@ -89524,6 +89525,7 @@ class Mission
 									class Attributes
 									{
 										rank="SERGEANT";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										class Inventory
 										{
 											class primaryWeapon
@@ -89718,6 +89720,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 									};
 									id=14639;
 									type="rhsusf_usmc_marpat_wd_javelin_assistant";
@@ -89765,6 +89768,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 									};
 									id=14635;
 									type="rhsusf_usmc_marpat_wd_javelin_assistant";
@@ -89812,6 +89816,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 									};
 									id=14637;
 									type="rhsusf_usmc_marpat_wd_javelin_assistant";
@@ -100521,13 +100526,13 @@ class Mission
 								angles[]={0,0.62182432,0};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=11547;
 							type="Box_NATO_Wps_F";
-							atlOffset=0.95636559;
 							class CustomAttributes
 							{
 								class Attribute0
