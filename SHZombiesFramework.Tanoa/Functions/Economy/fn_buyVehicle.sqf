@@ -53,8 +53,17 @@ private _vehicleRandomDir = _item getOrDefault ["_vehicleRandomDir", true];
 if (_vehicleType isEqualTo "") exitWith {false};
 if (_vehicleType isEqualType {}) then {_vehicleType = call _vehicleType};
 
-private _maxRadius = _context getOrDefault ["_vehicleSpawnRadius", 50];
-private _pos = _vehicleSpawn findEmptyPosition [10, _maxRadius, _vehicleType];
+private _minRadius = 10;
+private _maxRadius = 50;
+private _vehicleSpawnRadius = _context getOrDefault ["_vehicleSpawnRadius", []];
+if (_vehicleSpawnRadius isEqualType 0) then {_maxRadius = _vehicleSpawnRadius};
+if (_vehicleSpawnRadius isEqualType []) then {
+    _vehicleSpawnRadius params [["_min", _minRadius], ["_max", _maxRadius]];
+    _minRadius = _min;
+    _maxRadius = _max;
+};
+
+private _pos = _vehicleSpawn findEmptyPosition [_minRadius, _maxRadius, _vehicleType];
 if (_pos isEqualTo []) exitWith {[
     [],
     "SHZ_fnc_showBuyVehicleObstruction"

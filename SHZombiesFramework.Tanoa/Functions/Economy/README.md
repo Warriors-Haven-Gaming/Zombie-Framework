@@ -60,6 +60,7 @@ These keys are conventionally defined by shopkeeper contexts:
     The bearing at which vehicle spawns should be facing.
 - `_vehicleSpawnRadius`:
     The maximum radius allowed for vehicle spawns.
+    This can also be an array specifying the minimum and maximum radius.
 
 [fn_requestToBuyItem.sqf] will also include the following keys in the context:
 

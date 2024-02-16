@@ -32,8 +32,17 @@ private _cargoType = _item get "_cargoType";
 if (isNil "_cargoType") exitWith {false};
 if (isNil "_vehicleSpawn") exitWith {false};
 
-private _maxRadius = _context getOrDefault ["_vehicleSpawnRadius", 50];
-private _pos = _vehicleSpawn findEmptyPosition [2, _maxRadius, _cargoType];
+private _minRadius = 2;
+private _maxRadius = 50;
+private _vehicleSpawnRadius = _context getOrDefault ["_vehicleSpawnRadius", []];
+if (_vehicleSpawnRadius isEqualType 0) then {_maxRadius = _vehicleSpawnRadius};
+if (_vehicleSpawnRadius isEqualType []) then {
+    _vehicleSpawnRadius params [["_min", _minRadius], ["_max", _maxRadius]];
+    _minRadius = _min;
+    _maxRadius = _max;
+};
+
+private _pos = _vehicleSpawn findEmptyPosition [_minRadius, _maxRadius, _cargoType];
 if (_pos isEqualTo []) exitWith {false};
 private _box = createVehicle [_cargoType, _pos];
 _box setDir random 360;
