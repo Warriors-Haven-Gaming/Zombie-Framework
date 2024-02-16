@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2459;
+		nextID=2530;
 	};
 	class Camera
 	{
-		pos[]={6901.0938,34.544792,7373.752};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={6901.0938,166.67995,7373.752};
+		dir[]={0.3739166,-0.19765875,0.90615672};
+		up[]={0.07539548,0.98027158,0.18271503};
+		aside[]={0.92439497,4.3073669e-009,-0.38144231};
 	};
 };
 binarizationWanted=0;
@@ -1118,7 +1118,7 @@ class Mission
 					class data
 					{
 						singleType="SCALAR";
-						value=1000;
+						value=2000;
 					};
 				};
 			};
@@ -1131,7 +1131,7 @@ class Mission
 					class data
 					{
 						singleType="SCALAR";
-						value=1000;
+						value=2000;
 					};
 				};
 			};
@@ -31625,8 +31625,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
@@ -31788,19 +31788,6 @@ class Mission
 										};
 										class Attribute9
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute10
-										{
 											property="ENH_disableAI_path";
 											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 											class Value
@@ -31809,6 +31796,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
