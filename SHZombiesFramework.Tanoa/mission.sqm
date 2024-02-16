@@ -1090,7 +1090,7 @@ class Mission
 		startFog=0.49723303;
 		startWind=0;
 		startWaves=0.1;
-		forecastFog=0.49999964;
+		forecastFog=0.5;
 		forecastWind=0;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
@@ -1100,10 +1100,10 @@ class Mission
 		day=6;
 		hour=12;
 		minute=-10;
-		startFogBase=30;
-		forecastFogBase=30;
-		startFogDecay=0.1;
-		forecastFogDecay=0.1;
+		startFogBase=40;
+		forecastFogBase=40;
+		startFogDecay=0.079999998;
+		forecastFogDecay=0.079999998;
 		class CustomAttributes
 		{
 			name="Intel";
