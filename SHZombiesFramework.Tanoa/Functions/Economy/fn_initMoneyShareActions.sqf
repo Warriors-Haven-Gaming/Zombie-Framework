@@ -23,9 +23,10 @@ if (!hasInterface) exitWith {};
 params ["_unit"];
 if (isNull _unit) exitWith {};
 if (_unit isEqualTo player) exitWith {};
-if (_unit getVariable ["SHZ_initMoneyShareActions", false] isEqualTo true) exitWith {};
 
 if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
+    if (!isNil {_unit getVariable "SHZ_initMoneyShareActions_ace"}) exitWith {};
+
     private _moneyShare = [
         "SHZ_MoneyShare",
         localize "$STR_SHZ_initMoneyShareActions",
@@ -62,6 +63,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
     {
         [_unit, 0, ["ACE_MainActions", "SHZ_MoneyShare"], _x] call ace_interact_menu_fnc_addActionToObject;
     } forEach _moneyShareAmounts;
+
+    _unit setVariable ["SHZ_initMoneyShareActions_ace", true];
 } else {
     _unit addAction [
         localize "$STR_SHZ_initMoneyShareActions",
@@ -81,5 +84,3 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         3
     ];
 };
-
-_unit setVariable ["SHZ_initMoneyShareActions", true];
