@@ -58,6 +58,66 @@ if (isNil "_index") then {
             ["_category", "apc"],
             ["_cost", 5000]
         ]],
+        ["boat_assault", createHashMapFromArray [
+            ["_displayName", "B_Boat_Transport_01_F" call _getVehicleName],
+            ["_vehicleType", "B_Boat_Transport_01_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 1000]
+        ]],
+        ["boat_mkvsoc", createHashMapFromArray [
+            ["_displayName", "rhsusf_mkvsoc" call _getVehicleName],
+            ["_vehicleType", "rhsusf_mkvsoc"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 8750]
+        ]],
+        ["boat_motorboat", createHashMapFromArray [
+            ["_displayName", "C_Boat_Civil_01_F" call _getVehicleName],
+            ["_vehicleType", "C_Boat_Civil_01_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 1250]
+        ]],
+        ["boat_rhib", createHashMapFromArray [
+            ["_displayName", "C_Boat_Transport_02_F" call _getVehicleName],
+            ["_vehicleType", "C_Boat_Transport_02_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 1500]
+        ]],
+        ["boat_scooter", createHashMapFromArray [
+            ["_displayName", "C_Scooter_Transport_01_F" call _getVehicleName],
+            ["_vehicleType", "C_Scooter_Transport_01_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 1000]
+        ]],
+        ["boat_speedboat_minigun", createHashMapFromArray [
+            ["_displayName", "B_Boat_Armed_01_minigun_F" call _getVehicleName],
+            ["_vehicleType", "B_Boat_Armed_01_minigun_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", false],
+            ["_category", "boat"],
+            ["_cost", 8750]
+        ]],
         ["cargo_fuel", createHashMapFromArray [
             ["_displayName", "FlexibleTank_01_forest_F" call _getVehicleName],
             ["_cargoType", "FlexibleTank_01_forest_F"],
