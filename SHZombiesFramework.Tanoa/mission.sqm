@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2530;
+		nextID=2601;
 	};
 	class Camera
 	{
@@ -1087,11 +1087,9 @@ class Mission
 		briefingName="Zombie Framework v0.12.6";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
-		startWeather=1;
 		startFog=0.49723303;
 		startWind=0;
 		startWaves=0.1;
-		forecastWeather=1;
 		forecastFog=0.49999964;
 		forecastWind=0;
 		forecastWaves=0.1;
@@ -31625,8 +31623,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
 											class Value
 											{
 												class data
@@ -31801,8 +31799,8 @@ class Mission
 										};
 										class Attribute10
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
