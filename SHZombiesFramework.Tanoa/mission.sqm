@@ -20,11 +20,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2388;
+		nextID=2458;
 	};
 	class Camera
 	{
-		pos[]={10072.521,445.93546,11761.805};
+		pos[]={10079.664,445.93546,11760.594};
 		dir[]={-0.62487686,-0.7734971,0.10600636};
 		up[]={-0.76260811,0.63378811,0.1293714};
 		aside[]={0.16725436,-1.2427336e-008,0.98591536};
@@ -31625,14 +31625,14 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="ENH_disableAI_path";
-											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
 											class Value
 											{
 												class data
 												{
 													singleType="BOOL";
-													value=1;
+													value=0;
 												};
 											};
 										};
@@ -31801,14 +31801,14 @@ class Mission
 										};
 										class Attribute10
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="ENH_disableAI_path";
+											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 											class Value
 											{
 												class data
 												{
 													singleType="BOOL";
-													value=0;
+													value=1;
 												};
 											};
 										};
@@ -31829,7 +31829,7 @@ class Mission
 									{
 										skill=1;
 										rank="COLONEL";
-										init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_cop_freedom""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_cop_freedom""]," \n "  [""_vehicleSpawnRadius"", [5, 15]]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""heli"", ""mrap"", ""tank"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];" \n "this setVariable [""SHZ_shopkeeper_context"", createHashMapFromArray [" \n "  [""_vehicleSpawn"", markerPos ""vehicle_shop_cop_freedom""]," \n "  [""_vehicleSpawnDir"", markerDir ""vehicle_shop_cop_freedom""]," \n "  [""_vehicleSpawnRadius"", [5, 15]]" \n "]];" \n "_categories = [""apc"", ""car"", ""cas_heli"", ""heli"", ""mrap"", ""tank"", ""truck"", ""ugv""];" \n "[this, _categories] call SHZ_fnc_initShopkeeper;";
 										stance="Up";
 										class Inventory
 										{
@@ -98637,13 +98637,13 @@ class Mission
 								angles[]={0,0.62182432,0};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=11547;
 							type="Box_NATO_Wps_F";
-							atlOffset=0.95636559;
 							class CustomAttributes
 							{
 								class Attribute0

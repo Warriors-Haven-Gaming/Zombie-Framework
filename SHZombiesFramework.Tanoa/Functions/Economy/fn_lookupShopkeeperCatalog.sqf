@@ -475,6 +475,36 @@ if (isNil "_index") then {
             ["_category", "tank"],
             ["_cost", 10000]
         ]],
+        ["truck_vehicle_ammo", createHashMapFromArray [
+            ["_displayName", "rhsusf_M977A4_AMMO_BKIT_usarmy_wd" call _getVehicleName],
+            ["_vehicleType", "rhsusf_M977A4_AMMO_BKIT_usarmy_wd"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "truck"],
+            ["_cost", 5000]
+        ]],
+        ["truck_vehicle_fuel", createHashMapFromArray [
+            ["_displayName", "M978A4-B (Fuel)"],
+            ["_vehicleType", "rhsusf_M978A4_BKIT_usarmy_wd"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "truck"],
+            ["_cost", 5000]
+        ]],
+        ["truck_vehicle_repair", createHashMapFromArray [
+            ["_displayName", "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd" call _getVehicleName],
+            ["_vehicleType", "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", []],
+            ["_vehicleRandomDir", true],
+            ["_category", "truck"],
+            ["_cost", 5000]
+        ]],
         ["uav_sentinel", createHashMapFromArray [
             ["_displayName", "B_UAV_05_F" call _getVehicleName],
             ["_vehicleType", "B_UAV_05_F"],
