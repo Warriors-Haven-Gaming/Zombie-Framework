@@ -28,6 +28,7 @@ _newUnit setUnitTrait ["engineer", true];
 _newUnit setUnitTrait ["explosiveSpecialist", true];
 _newUnit setUnitTrait ["medic", true];
 
+call SHZ_fnc_initUnflipAction;
 [_newUnit] remoteExec [
     "SHZ_fnc_initMoneyShareActions",
     SHZ_globalPlayerTarget,
