@@ -69,7 +69,7 @@ if (_pos isEqualTo []) exitWith {[
     "SHZ_fnc_showBuyVehicleObstruction"
 ]};
 
-private _vehicle = createVehicle [_vehicleType, _pos];
+private _vehicle = createVehicle [_vehicleType, _pos, [], 0, "CAN_COLLIDE"];
 
 if (_vehicleRandomDir || {isNil "_vehicleSpawnDir"}) then {
     _vehicle setDir random 360;
