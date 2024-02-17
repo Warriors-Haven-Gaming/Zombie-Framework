@@ -29,11 +29,7 @@ private _unitTypes = ["raiders"] call SHZ_fnc_lookupUnitTypes;
 for "_i" from 1 to _quantity do {
     private _unit = _group createUnit [selectRandom _unitTypes, _center, [], _radius, "NONE"];
     [_unit] joinSilent _group;
-    _unit setSkill ["aimingAccuracy", 0.1];
-    _unit setSkill ["aimingShake", 0.1];
-    _unit setSkill ["aimingSpeed", 0.1];
-    _unit setSkill ["spotDistance", 0.1];
-    _unit setSkill ["spotTime", 0.1];
+    _unit setSkill 0.2;
     _unit triggerDynamicSimulation false;
     if (_flashlights) then {
         _unit addPrimaryWeaponItem "acc_flashlight";
