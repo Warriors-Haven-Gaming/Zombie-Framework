@@ -19,8 +19,11 @@ if (!isServer) then {call SHZ_fnc_initZombieSettings};
 
 if (!hasInterface) exitWith {};
 
-// Set a random loadout before it gets saved by onPlayerKilled.sqf
-private _loadout = [_player] call SHZ_fnc_getRespawnLoadout;
+// Set the player's loadout before they respawn and onPlayerKilled.sqf saves it
+private _loadout = missionProfileNamespace getVariable ["SHZ_lastLoadout", []];
+if (_loadout isEqualTo []) then {
+    _loadout = [_player] call SHZ_fnc_getRespawnLoadout;
+};
 if (_loadout isNotEqualTo []) then {_player setUnitLoadout _loadout};
 
 SHZ_shopkeeperPurchases = createHashMap;
