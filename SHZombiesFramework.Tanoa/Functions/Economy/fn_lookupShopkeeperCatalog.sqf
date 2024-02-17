@@ -277,6 +277,21 @@ if (isNil "_index") then {
             ["_category", "cas_heli"],
             ["_cost", 10000]
         ]],
+        ["cas_heli_kajman", createHashMapFromArray [
+            ["_displayName", "O_Heli_Attack_02_dynamicLoadout_F" call _getVehicleName],
+            ["_vehicleType", "O_Heli_Attack_02_dynamicLoadout_F"],
+            ["_functionName", "SHZ_fnc_buyVehicle"],
+            ["_vehicleLock", true],
+            ["_vehiclePylons", [
+                ["PylonRack_20Rnd_Rocket_03_HE_F", false, [-1]],
+                ["PylonWeapon_300Rnd_20mm_shells", false, [ 0]],
+                ["PylonWeapon_300Rnd_20mm_shells", false, [ 0]],
+                ["PylonRack_20Rnd_Rocket_03_HE_F", false, [-1]]
+            ]],
+            ["_vehicleRandomDir", true],
+            ["_category", "cas_heli"],
+            ["_cost", 20000]
+        ]],
         ["cas_heli_littlebird_armed", createHashMapFromArray [
             ["_displayName", "RHS_MELB_AH6M" call _getVehicleName],
             ["_vehicleType", "RHS_MELB_AH6M"],
