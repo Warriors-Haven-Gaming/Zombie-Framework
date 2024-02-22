@@ -11,3 +11,4 @@ Author:
 */
 if (remoteExecutedOwner isNotEqualTo 2 && {isMultiplayer}) exitWith {};
 hint localize "$STR_SHZ_showGenericPurchaseError";
+playSoundUI ["a3\missions_f_beta\data\sounds\firing_drills\checkpoint_not_clear.wss"];
