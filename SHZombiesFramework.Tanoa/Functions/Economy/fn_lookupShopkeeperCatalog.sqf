@@ -360,7 +360,7 @@ if (isNil "_index") then {
             ["_functionName", "SHZ_fnc_buyVehicle"],
             ["_vehicleLock", true],
             ["_vehiclePylons", []],
-            ["_vehicleRandomDir", true],
+            ["_vehicleRandomDir", false],
             ["_category", "heli"],
             ["_cost", 7000]
         ]],
