@@ -40,7 +40,9 @@ if (_playerAICount >= _groupLimit) exitWith {[
 ]};
 
 private _group = group _player;
-private _unit = _group createUnit [_recruitType, _vehicleSpawn, [], 0, "NONE"];
+private _serverGroup = createGroup side _group;
+private _unit = _serverGroup createUnit [_recruitType, _vehicleSpawn, [], 0, "NONE"];
+_serverGroup setGroupOwner groupOwner _group;
 [_unit] joinSilent _group;
 _unit setDir (_vehicleSpawn getDir _player);
 _unit setVariable ["SHZ_recruitOwnedBy", getPlayerUID _player, true];
