@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=1665;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2953;
+		nextID=3121;
 	};
 	class Camera
 	{
-		pos[]={10077.019,449.98175,11720.39};
-		dir[]={-0.40334189,-0.42996094,0.80774868};
-		up[]={-0.19208796,0.90284073,0.38468313};
-		aside[]={0.89466566,3.8580038e-007,0.44674376};
+		pos[]={10049.323,432.53079,11747.441};
+		dir[]={-0.07673993,-0.80729789,0.58513808};
+		up[]={-0.1049803,0.59010798,0.80046821};
+		aside[]={0.99150938,3.783498e-010,0.13003506};
 	};
 };
 binarizationWanted=0;
@@ -14154,7 +14154,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10050.199,409.87,11764.931};
+								position[]={10047.147,409.87,11764.963};
 								angles[]={0,4.7617316,0};
 							};
 							side="Empty";
@@ -29768,13 +29768,13 @@ class Mission
 						class Item5
 						{
 							dataType="Marker";
-							position[]={10050.164,409.87,11764.93};
+							position[]={10047.131,409.87,11764.949};
 							name="vehicle_shop_cop_freedom";
 							text="Purchased Vehicles";
 							type="mil_dot";
 							colorName="ColorWEST";
 							alpha=0.13988291;
-							angle=271.83035;
+							angle=270;
 							id=10319;
 						};
 						class Item6
@@ -32343,19 +32343,6 @@ class Mission
 										};
 										class Attribute9
 										{
-											property="ENH_disableAI_path";
-											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute10
-										{
 											property="enableStamina";
 											expression="_this enablestamina _value;";
 											class Value
@@ -32364,6 +32351,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=0;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_disableAI_path";
+											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
