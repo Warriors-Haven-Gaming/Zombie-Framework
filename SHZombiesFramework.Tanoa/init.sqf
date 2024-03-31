@@ -27,7 +27,11 @@ SHZ_gcDeletionQueue = [];
 SHZ_gcUnhideQueue = [];
 
 if (!isMultiplayer) then {
-    units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
+    private _units = units player select {!isPlayer _x};
+    {
+        if (_forEachIndex >= 7) then {deleteVehicle _x; continue};
+        _x setVariable ["SHZ_recruitOwnedBy", getPlayerUID player, true];
+    } forEach _units;
 };
 
 call SHZ_fnc_initZombieLootHandlers;
