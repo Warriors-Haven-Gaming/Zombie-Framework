@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3243;
+		nextID=3275;
 	};
 	class Camera
 	{
@@ -2959,7 +2959,7 @@ class Mission
 							text="COP Freedom";
 							type="b_hq";
 							alpha=0.72225988;
-							angle=359.03592;
+							angle=359.03589;
 							id=9910;
 						};
 						class Item2
@@ -6098,8 +6098,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
@@ -6261,19 +6261,6 @@ class Mission
 										};
 										class Attribute9
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute10
-										{
 											property="ENH_disableAI_path";
 											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 											class Value
@@ -6282,6 +6269,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
@@ -27594,7 +27594,7 @@ class Mission
 				class Item0
 				{
 					dataType="Marker";
-					position[]={11286.269,189.00658,12253.568};
+					position[]={11123.978,211.40353,12326.172};
 					name="marker_104";
 					markerType="ELLIPSE";
 					type="";
@@ -27604,7 +27604,7 @@ class Mission
 					a=397.7514;
 					b=404.38715;
 					id=12817;
-					atlOffset=1.5258789e-05;
+					atlOffset=-1.5258789e-05;
 				};
 				class Item1
 				{
@@ -29550,7 +29550,7 @@ class Mission
 							alpha=0.30000001;
 							a=125;
 							b=125;
-							angle=184.72997;
+							angle=184.72995;
 							id=15767;
 							atlOffset=-4.4024391;
 							class CustomAttributes
@@ -29580,7 +29580,7 @@ class Mission
 							type="mil_box";
 							colorName="ColorWEST";
 							alpha=0.60000002;
-							angle=184.74326;
+							angle=184.74324;
 							id=15768;
 							atlOffset=-0.36371827;
 						};
