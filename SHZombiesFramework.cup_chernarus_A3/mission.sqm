@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3275;
+		nextID=3307;
 	};
 	class Camera
 	{
-		pos[]={6885.4438,419.79468,11365.137};
-		dir[]={0.027855217,-0.68700564,0.72612035};
-		up[]={0.026335264,0.726632,0.68650872};
-		aside[]={0.99926603,-8.2007318e-08,-0.038333859};
+		pos[]={6872.668,455.76581,11361.311};
+		dir[]={0.38126454,-0.70309025,0.60025227};
+		up[]={0.37697265,0.71107876,0.59349614};
+		aside[]={0.84411639,-1.5087426e-07,-0.53616089};
 	};
 };
 binarizationWanted=0;
@@ -2898,7 +2898,7 @@ class Mission
 							text="COP Freedom";
 							type="b_hq";
 							alpha=0.72225988;
-							angle=359.03586;
+							angle=359.03583;
 							id=9910;
 						};
 						class Item2
@@ -4771,6 +4771,7 @@ class Mission
 									{
 										skill=1;
 										rank="SERGEANT";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15891;
@@ -4807,6 +4808,7 @@ class Mission
 									{
 										skill=1;
 										rank="CORPORAL";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15892;
@@ -4843,6 +4845,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15893;
@@ -4879,6 +4882,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15894;
@@ -5010,6 +5014,7 @@ class Mission
 									{
 										skill=1;
 										rank="SERGEANT";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15897;
@@ -5046,6 +5051,7 @@ class Mission
 									{
 										skill=1;
 										rank="CORPORAL";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15898;
@@ -5082,6 +5088,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15899;
@@ -5118,6 +5125,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15900;
@@ -5250,6 +5258,7 @@ class Mission
 									{
 										skill=1;
 										rank="SERGEANT";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15922;
@@ -5286,6 +5295,7 @@ class Mission
 									{
 										skill=1;
 										rank="CORPORAL";
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15923;
@@ -5322,6 +5332,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15924;
@@ -5358,6 +5369,7 @@ class Mission
 									class Attributes
 									{
 										skill=1;
+										init="this setVariable [""SHZ_hiddenFromMap"", true];";
 										ignoreByDynSimulGrid=1;
 									};
 									id=15925;
@@ -6037,14 +6049,14 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="ENH_disableAI_path";
-											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
 											class Value
 											{
 												class data
 												{
 													singleType="BOOL";
-													value=1;
+													value=0;
 												};
 											};
 										};
@@ -6213,14 +6225,14 @@ class Mission
 										};
 										class Attribute10
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="ENH_disableAI_path";
+											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 											class Value
 											{
 												class data
 												{
 													singleType="BOOL";
-													value=0;
+													value=1;
 												};
 											};
 										};
