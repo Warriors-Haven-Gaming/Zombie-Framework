@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=15946;
+		nextID=15947;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3307;
+		nextID=3339;
 	};
 	class Camera
 	{
-		pos[]={6872.668,455.76581,11361.311};
-		dir[]={0.38126454,-0.70309025,0.60025227};
-		up[]={0.37697265,0.71107876,0.59349614};
-		aside[]={0.84411639,-1.5087426e-07,-0.53616089};
+		pos[]={6978.8857,424.40085,11460.278};
+		dir[]={-0.65165931,-0.41493341,-0.6349566};
+		up[]={-0.2971966,0.9098255,-0.28958002};
+		aside[]={-0.69787008,-4.6566129e-08,0.71622705};
 	};
 };
 binarizationWanted=0;
@@ -6049,8 +6049,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
@@ -6212,19 +6212,6 @@ class Mission
 										};
 										class Attribute9
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute10
-										{
 											property="ENH_disableAI_path";
 											expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 											class Value
@@ -6233,6 +6220,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute10
+										{
+											property="ENH_allowSprint";
+											expression="[_this, _value] remoteExec ['allowSprint', _this]";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
@@ -25376,7 +25376,7 @@ class Mission
 			state=2;
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Logic";
@@ -25832,9 +25832,24 @@ class Mission
 						nAttributes=7;
 					};
 				};
+				class Item6
+				{
+					dataType="Trigger";
+					position[]={6949.5942,389.06638,11443.237};
+					class Attributes
+					{
+						text="Color Correction";
+						condition="true";
+						onActivation="PPeffect_colorC = ppEffectCreate [""ColorCorrections"",1500];" \n "PPeffect_colorC ppEffectAdjust [1,0.97,0.02,[0.5,0.25,0,-0.1],[1,1,1,1.2],[0.75,0.5,0.25,0]];" \n "PPeffect_colorC ppEffectEnable true;" \n "PPeffect_colorC ppEffectCommit 0;";
+						sizeA=0;
+						sizeB=0;
+					};
+					id=15946;
+					type="EmptyDetector";
+				};
 			};
 			id=15496;
-			atlOffset=144.44315;
+			atlOffset=179.60796;
 		};
 		class Item3
 		{
