@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Obstructed cargo purchases showing a generic error message
+- Ensure minimum radius of 500m for main mission
+- Allow starting AI in singleplayer to earn points for the player
+
 ## [0.13.1] - 2024-02-22
 
 ### Added
