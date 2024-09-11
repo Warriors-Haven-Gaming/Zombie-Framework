@@ -1,5 +1,7 @@
 # Zombie-Framework
 
+![](docs/images/banner_2.jpg)
+
 An open world multiplayer mission inspired by Quiksilver's Invade & Annex
 [Apex-Framework], created with the use of [RHSUSAF] and RyanD's
 [Zombies and Demons] mod.
@@ -20,7 +22,6 @@ for it (see [cba_settings.sqf]), and they can be overwritten by the server as us
 > alongside it.
 
 ![](docs/images/banner_1.jpg)
-![](docs/images/banner_2.jpg)
 
 [Zombies and Demons]: https://steamcommunity.com/sharedfiles/filedetails/?id=501966277
 [RHSUSAF]: https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
