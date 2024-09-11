@@ -11,6 +11,14 @@ and complete objectives across the islands of Tanoa.
 We are currently in Alpha development. For developers interested in helping,
 please see the [contributing guide]!
 
+## Features
+
+- Procedurally generated main and side missions based on map terrain
+- Loitering zombies, hordes, and vehicle wrecks
+- *Blood Points* economy for purchasing AI, vehicles, and supplies
+- Native self-revive and vehicle unflip actions
+- Zombie loot drops based on player equipment
+
 ## ACE Compatibility
 
 [ACE] is not required by this mission but there are various settings configured
