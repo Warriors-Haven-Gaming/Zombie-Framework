@@ -19,6 +19,20 @@ please see the [contributing guide]!
 - Native self-revive and vehicle unflip actions
 - Zombie loot drops based on player equipment
 
+## How do I play?
+
+You can find this mission published on the Steam Workshop:
+
+- [Zombie Framework (Tanoa)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329328254)
+- [Zombie Framework (Chernaurus 2020)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329329231)
+
+Once subscribed, you can host the mission by going to Server Browser > Host Server,
+and then select Zombie Framework from the appropriate map.
+You may choose to host LAN if you want to play alone.
+
+For dedicated server hosters, the mission file will be named `SHZombiesFramework.terrain`,
+where terrain is the name of the map (`Tanoa` or `cup_chernaurus_A3`).
+
 ## ACE Compatibility
 
 [ACE] is not required by this mission but there are various settings configured
