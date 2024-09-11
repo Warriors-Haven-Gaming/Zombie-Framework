@@ -577,7 +577,7 @@ For more details, see the [0.12.6] full changelog.
 
 - Use glocks and flashlights for unit loadouts
 
-## [0.1.0] - 2023-11-04
+## [0.1.1] - 2023-11-04
 
 ### Added
 
