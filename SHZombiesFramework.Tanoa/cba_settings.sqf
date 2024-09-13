@@ -13,6 +13,9 @@ ace_gforces_enabledFor = 2;
 // ACE Hearing
 force ace_hearing_enableCombatDeafness = false;
 
+// ACE Map
+force ace_map_BFT_Enabled = false;
+
 // ACE Pointing
 ace_finger_enabled = true;
 
