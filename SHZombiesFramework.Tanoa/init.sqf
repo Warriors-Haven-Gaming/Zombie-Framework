@@ -18,9 +18,6 @@ if (!isMultiplayer || {!isServer && {!isClass (configFile >> "CfgPatches" >> "cb
 
 SHZ_zombieSide = independent;
 
-SHZ_gcDeletionQueue = [];
-SHZ_gcUnhideQueue = [];
-
 if (!isMultiplayer) then {
     private _units = units player select {!isPlayer _x};
     {

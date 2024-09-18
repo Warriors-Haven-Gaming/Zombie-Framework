@@ -59,6 +59,8 @@ SHZ_vehicleRefund_handlers = [];
 SHZ_vehicleRefund_script = 0 spawn SHZ_fnc_vehicleRefundLoop;
 
 SHZ_loiteringHordeThreshold = 30; // Temporary value
+SHZ_gcDeletionQueue = [];
+SHZ_gcUnhideQueue = [];
 
 SHZ_ambientHorde_script = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector_script = 0 spawn SHZ_fnc_garbageCollectorLoop;
