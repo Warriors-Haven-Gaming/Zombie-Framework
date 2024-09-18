@@ -27,7 +27,7 @@ if (isClass (configFile >> "CfgPatches" >> "cba_settings")) exitWith {
     _this call CBA_fnc_addSetting
 };
 
-params ["_setting", "_settingType", "", "", "_valueInfo"];
+params ["_setting", "_settingType", "", "", "_valueInfo", "", ["_script", {}]];
 
 // Derived from:
 // https://github.com/CBATeam/CBA_A3/blob/master/addons/settings/fnc_init.sqf
@@ -60,4 +60,5 @@ switch (toUpper _settingType) do {
 
 if (isNil "_defaultValue") exitWith {1};
 missionNamespace setVariable [_setting, _defaultValue];
+_defaultValue call _script;
 0

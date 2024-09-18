@@ -419,6 +419,27 @@
         <Key ID="STR_SHZ_settings">
             <Original>Zombie Framework</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_economy">
+            <Original>Economy</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark">
+            <Original>Multiplier Bonus (Dark)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark_tooltip">
+            <Original>The amount your BP multiplier will increase as the map becomes dark, especially at night.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_normal">
+            <Original>Multiplier Increase (Normal)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_normal_tooltip">
+            <Original>The amount your BP multiplier will increase per BP earned.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot">
+            <Original>Multiplier Increase (On Foot)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot_tooltip">
+            <Original>The amount your BP multiplier will increase per BP earned while outside of vehicles.\nThis stacks on top of the normal multiplier increase.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_gc">
             <Original>Garbage Collection</Original>
         </Key>

@@ -23,6 +23,48 @@ Author:
 //     _script      - Script to execute when setting is changed. (optional) <CODE>
 //     _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 
+// Economy
+[
+    "SHZ_moneyMultipliers_rates_dark",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_moneyMultipliers_rates_dark", "STR_SHZ_settings_economy_moneyMultipliers_rates_dark_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 10, 0.5, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_moneyMultipliers_rates_normal",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_moneyMultipliers_rates_normal", "STR_SHZ_settings_economy_moneyMultipliers_rates_normal_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 1000, 20, 0, false],
+    true,
+    {
+        if (isNil "SHZ_moneyMultipliers_rates") then {
+            SHZ_moneyMultipliers_rates = createHashMap;
+        };
+        SHZ_moneyMultipliers_rates set ["NORMAL", _this / 100000];
+    },
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_moneyMultipliers_rates_onFoot",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot", "STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 1000, 20, 0, false],
+    true,
+    {
+        if (isNil "SHZ_moneyMultipliers_rates") then {
+            SHZ_moneyMultipliers_rates = createHashMap;
+        };
+        SHZ_moneyMultipliers_rates set ["ON_FOOT", _this / 100000];
+    },
+    false
+] call SHZ_fnc_addSetting;
+
 // Garbage Collection
 [
     "SHZ_gcDeletionDistance",
