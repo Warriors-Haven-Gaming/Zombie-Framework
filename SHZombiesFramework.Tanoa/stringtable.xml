@@ -518,6 +518,69 @@
         <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip">
             <Original>A random number of zombies to add to the threshold every time it is updated.\nThis can make hordes randomly appear more or less frequently.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot">
+            <Original>Zombie Loot</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_FAK">
+            <Original>First Aid Kit Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_FAK_tooltip">
+            <Original>The chance that a zombie will drop a First Aid Kit.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_pills">
+            <Original>Pills Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_pills_tooltip">
+            <Original>The chance that a zombie will drop Antivirus Pills.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines">
+            <Original>Magazine Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_tooltip">
+            <Original>The chance that a non-soldier zombie will drop magazines.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_soldier">
+            <Original>Magazine Chance (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_soldier_tooltip">
+            <Original>The chance that a soldier zombie will drop magazines.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count">
+            <Original>Max Magazine Count</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_tooltip">
+            <Original>The maximum number of magazines that a non-soldier zombie can drop.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_soldier">
+            <Original>Max Magazine Count (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_soldier_tooltip">
+            <Original>The maximum number of magazines that a soldier zombie can drop.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon">
+            <Original>Weapon Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_tooltip">
+            <Original>The chance that a non-soldier zombie will drop a weapon.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_soldier">
+            <Original>Weapon Chance (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_soldier_tooltip">
+            <Original>The chance that a soldier zombie will drop a weapon.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_types">
+            <Original>Weapon Classnames</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_types_tooltip">
+            <Original>An array of weapon classnames to randomly select from.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_magazines">
+            <Original>Weapon Magazine Count</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_magazines_tooltip">
+            <Original>The maximum number of magazines to drop alongside the weapon.</Original>
+        </Key>
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">

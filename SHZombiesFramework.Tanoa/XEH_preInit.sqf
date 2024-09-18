@@ -198,3 +198,105 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_FAK",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_FAK", "STR_SHZ_settings_zombies_loot_FAK_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0.1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_pills",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_pills", "STR_SHZ_settings_zombies_loot_pills_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0.02, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_magazines",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_magazines", "STR_SHZ_settings_zombies_loot_magazines_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0.25, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_magazines_soldier",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_magazines_soldier", "STR_SHZ_settings_zombies_loot_magazines_soldier_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0.5, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_magazines_count",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_magazines_count", "STR_SHZ_settings_zombies_loot_magazines_count_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [1, 10, 1, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_magazines_count_soldier",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_magazines_count_soldier", "STR_SHZ_settings_zombies_loot_magazines_count_soldier_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [1, 10, 5, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_weapon",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_weapon", "STR_SHZ_settings_zombies_loot_weapon_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_weapon_soldier",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_weapon_soldier", "STR_SHZ_settings_zombies_loot_weapon_soldier_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [0, 1, 0.05, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_weapon_types",
+    "EDITBOX",
+    ["STR_SHZ_settings_zombies_loot_weapon_types", "STR_SHZ_settings_zombies_loot_weapon_types_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    '["rhs_weap_m4_carryhandle_m203", "rhs_weap_m27iar_grip", "rhs_weap_m4_carryhandle", "rhs_weap_m240B"]',
+    true,
+    {
+        SHZ_zombies_loot_weapon_types = parseSimpleArray _this;
+    },
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombies_loot_weapon_magazines",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loot_weapon_magazines", "STR_SHZ_settings_zombies_loot_weapon_magazines_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
+    [1, 10, 4, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
