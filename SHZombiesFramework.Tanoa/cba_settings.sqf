@@ -1,5 +1,6 @@
 // ACE Advanced Fatigue
-ace_advanced_fatigue_recoveryFactor = 2;
+force ace_advanced_fatigue_performanceFactor = 1;
+force ace_advanced_fatigue_recoveryFactor = 2;
 
 // ACE AI
 force ace_ai_assignNVG = true;
