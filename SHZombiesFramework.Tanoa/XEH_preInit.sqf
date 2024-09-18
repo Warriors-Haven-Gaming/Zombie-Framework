@@ -97,6 +97,29 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Music
+[
+    "SHZ_musicEnabled",
+    "CHECKBOX",
+    ["STR_SHZ_settings_music_musicEnabled", "STR_SHZ_settings_music_musicEnabled_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_music"],
+    false,
+    true,
+    {
+        if (!hasInterface) exitWith {};
+        if (_this) exitWith {call SHZ_fnc_musicStartPlaylist};
+
+        if (!isNil "SHZ_musicPlaylistEH") then {
+            removeMusicEventHandler SHZ_musicPlaylistEH;
+            SHZ_musicPlaylist = nil;
+            SHZ_musicPlaylistEH = nil;
+        };
+        // NOTE: this can interrupt music from any source.
+        playMusic "";
+    },
+    false
+] call SHZ_fnc_addSetting;
+
 // Saves
 [
     "SHZ_saveName",

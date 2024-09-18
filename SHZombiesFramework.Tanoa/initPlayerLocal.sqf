@@ -33,7 +33,6 @@ call SHZ_fnc_initArsenalLoadoutHandlers;
 call SHZ_fnc_initFriendlyFireHandlers;
 call SHZ_fnc_initTeamSafezoneHandlers;
 call SHZ_fnc_initIncapacitatedHandlers;
-call SHZ_fnc_musicStartPlaylist;
 0 spawn SHZ_fnc_initFriendlyMapIcons;
 0 spawn SHZ_fnc_updateChannelLoop;
 0 spawn SHZ_fnc_selfReviveLoop;
