@@ -449,6 +449,39 @@
         <Key ID="STR_SHZ_settings_saves_saveName_tooltip">
             <Original>The name of the save to use. This can be used for storing multiple saves.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_zombies">
+            <Original>Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_delay">
+            <Original>Loitering Delay</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_delay_tooltip">
+            <Original>The frequency in seconds at which the loitering zombie threshold is updated.\nWhen there are more zombies than the current threshold, ambient zombies will stop spawning to save performance.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_min">
+            <Original>Loitering Minimum</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_min_tooltip">
+            <Original>The minimum threshold allowed for loitering zombies.\nIncrease this for more ambient zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_max">
+            <Original>Loitering Maximum</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_max_tooltip">
+            <Original>The maximum threshold allowed for loitering zombies. Takes priority over minimum.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale">
+            <Original>Loitering Player Scale</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale_tooltip">
+            <Original>The number of zombies to add to the threshold for each connected player.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random">
+            <Original>Loitering Random</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip">
+            <Original>A random number of zombies to add to the threshold every time it is updated.\nThis can make hordes randomly appear more or less frequently.</Original>
+        </Key>
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">

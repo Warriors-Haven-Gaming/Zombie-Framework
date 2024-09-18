@@ -63,3 +63,55 @@ Author:
     {},
     false
 ] call CBA_fnc_addSetting;
+
+// Zombies
+[
+    "SHZ_loiteringHordeThreshold_delay",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loiteringHordeThreshold_delay", "STR_SHZ_settings_zombies_loiteringHordeThreshold_delay_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [1, 600, 120, 0, false],
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
+[
+    "SHZ_loiteringHordeThreshold_min",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loiteringHordeThreshold_min", "STR_SHZ_settings_zombies_loiteringHordeThreshold_min_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 500, 40, 0, false],
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
+[
+    "SHZ_loiteringHordeThreshold_max",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loiteringHordeThreshold_max", "STR_SHZ_settings_zombies_loiteringHordeThreshold_max_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 500, 200, 0, false],
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
+[
+    "SHZ_loiteringHordeThreshold_playerScale",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale", "STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 50, 1, 0, false],
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
+[
+    "SHZ_loiteringHordeThreshold_random",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_loiteringHordeThreshold_random", "STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 100, 20, 0, false],
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
