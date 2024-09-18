@@ -17,10 +17,6 @@ if (!isMultiplayer || {!isServer && {!isClass (configFile >> "CfgPatches" >> "cb
 };
 
 SHZ_zombieSide = independent;
-// Defines the max zombie threshold before loitering hordes don't spawn
-// (actual value is calculated in SHZ_fnc_loiterThresholdLoop)
-SHZ_loiteringHordeThreshold = 30;
-SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
 
 SHZ_gcDeletionQueue = [];
 SHZ_gcUnhideQueue = [];
