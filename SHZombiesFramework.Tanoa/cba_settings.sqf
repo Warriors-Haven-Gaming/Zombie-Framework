@@ -32,3 +32,13 @@ force ace_vehicles_keepEngineRunning = true;
 
 // ACE View Distance Limiter
 force ace_viewdistance_enabled = false;
+
+// Improved Melee System (Client Settings)
+force IMS_ShowHealthHud = false;
+
+// Improved Melee System (Server Settings)
+force IMS_isImsCanHitAllies = false;
+
+// WebKnight's Zombies
+force WBK_ZombiesIsUseBitingAnimation = false;
+force WBK_ZombiesIsUseStatDeathControl = true;
