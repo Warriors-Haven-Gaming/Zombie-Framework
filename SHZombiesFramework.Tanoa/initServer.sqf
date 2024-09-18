@@ -19,6 +19,10 @@ call SHZ_fnc_initZombieSettings;
 SHZ_globalPlayerTarget = [0, -2] select isDedicated;
 publicVariable "SHZ_globalPlayerTarget";
 
+if (!isClass (configFile >> "CfgPatches" >> "cba_settings")) then {
+    SHZ_saveName = "default";
+};
+
 SHZ_mainMissionLoop_script = [
     [
         "SHZ_fnc_msnMainClearZombies"
@@ -58,7 +62,6 @@ SHZ_playerMoneyMarker_script = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnDamagedVehicles;
 
-SHZ_saveName = "default";
 SHZ_saveScript = scriptNull;
 if (["autosave"] call SHZ_fnc_getSaveVariable) then {
     SHZ_saveScript = 0 spawn SHZ_fnc_saveLoop;

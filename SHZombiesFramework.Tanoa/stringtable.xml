@@ -415,6 +415,41 @@
             <Original>Saved mission profile namespace</Original>
         </Key>
     </Container>
+    <Container name="Settings">
+        <Key ID="STR_SHZ_settings">
+            <Original>Zombie Framework</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc">
+            <Original>Garbage Collection</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcDeletionDistance">
+            <Original>Object GC Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcDeletionDistance_tooltip">
+            <Original>The max distance from any player before mission objects can be deleted.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcUnhideDistance">
+            <Original>Object Unhide Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcUnhideDistance_tooltip">
+            <Original>The max distance from any player before hidden objects (usually terrain) can be revealed.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcZombieDistance">
+            <Original>Zombie GC Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcZombieDistance_tooltip">
+            <Original>The max distance from any player before a zombie can be garbage collected.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves">
+            <Original>Saves</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveName">
+            <Original>Save Name</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveName_tooltip">
+            <Original>The name of the save to use. This can be used for storing multiple saves.</Original>
+        </Key>
+    </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">
             <Original>Mission reward: %1</Original>
