@@ -171,6 +171,9 @@ class CfgFunctions {
             class saveLoop {};
             class setSaveVariable {};
         };
+        class Settings {
+            class addSetting {};
+        };
         class Stats {
             class addCompletedMission {};
             class initStatsTracking {};

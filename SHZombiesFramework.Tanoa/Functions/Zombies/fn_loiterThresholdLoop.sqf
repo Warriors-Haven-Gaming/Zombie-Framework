@@ -14,14 +14,6 @@ Author:
     thegamecracks
 
 */
-if (!isClass (configFile >> "CfgPatches" >> "cba_settings")) then {
-    SHZ_loiteringHordeThreshold_delay = 120;
-    SHZ_loiteringHordeThreshold_min = 40;
-    SHZ_loiteringHordeThreshold_max = 200;
-    SHZ_loiteringHordeThreshold_playerScale = 1;
-    SHZ_loiteringHordeThreshold_random = 20;
-};
-
 while {true} do {
     SHZ_loiteringHordeThreshold = floor (
         SHZ_loiteringHordeThreshold_max min (

@@ -2,8 +2,11 @@
 Script: XEH_preInit.sqf
 
 Description:
-    Executed globally when CBA is loaded.
+    Executed globally When CBA is loaded.
     https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System
+
+    If CBA is not loaded, this is executed at mission start by init(Server).sqf.
+    This is to allow assigning default settings via SHZ_fnc_addSetting.
 
 Author:
     thegamecracks
@@ -30,7 +33,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_gcUnhideDistance",
     "SLIDER",
@@ -40,7 +43,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_gcZombieDistance",
     "SLIDER",
@@ -50,7 +53,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 
 // Saves
 [
@@ -62,7 +65,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 
 // Zombies
 [
@@ -74,7 +77,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_loiteringHordeThreshold_min",
     "SLIDER",
@@ -84,7 +87,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_loiteringHordeThreshold_max",
     "SLIDER",
@@ -94,7 +97,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_loiteringHordeThreshold_playerScale",
     "SLIDER",
@@ -104,7 +107,7 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;
 [
     "SHZ_loiteringHordeThreshold_random",
     "SLIDER",
@@ -114,4 +117,4 @@ Author:
     true,
     {},
     false
-] call CBA_fnc_addSetting;
+] call SHZ_fnc_addSetting;

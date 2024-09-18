@@ -11,17 +11,16 @@ Author:
 */
 diag_log text format ["Initializing %1", briefingName];
 
+if (!isMultiplayer || {!isServer && {!isClass (configFile >> "CfgPatches" >> "cba_xeh")}}) then {
+    // In singleplayer and multiplayer clients, this will run before initServer.sqf.
+    call compileScript ["XEH_preInit.sqf"];
+};
+
 SHZ_zombieSide = independent;
 // Defines the max zombie threshold before loitering hordes don't spawn
 // (actual value is calculated in SHZ_fnc_loiterThresholdLoop)
 SHZ_loiteringHordeThreshold = 30;
 SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
-
-if (!isClass (configFile >> "CfgPatches" >> "cba_settings")) then {
-    SHZ_gcDeletionDistance = 500;
-    SHZ_gcUnhideDistance = 500;
-    SHZ_gcZombieDistance = 200;
-};
 
 SHZ_gcDeletionQueue = [];
 SHZ_gcUnhideQueue = [];

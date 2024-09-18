@@ -11,6 +11,12 @@ Author:
 */
 skipTime random 24;
 enableSaving [false, false];
+
+if (isMultiplayer && {!isClass (configFile >> "CfgPatches" >> "cba_xeh")}) then {
+    // As a multiplayer server, this will run before init.sqf.
+    call compileScript ["XEH_preInit.sqf"];
+};
+
 call SHZ_fnc_setPlayableAILoadouts;
 call SHZ_fnc_initChannels;
 
@@ -18,10 +24,6 @@ call SHZ_fnc_initZombieSettings;
 
 SHZ_globalPlayerTarget = [0, -2] select isDedicated;
 publicVariable "SHZ_globalPlayerTarget";
-
-if (!isClass (configFile >> "CfgPatches" >> "cba_settings")) then {
-    SHZ_saveName = "default";
-};
 
 SHZ_mainMissionLoop_script = [
     [
