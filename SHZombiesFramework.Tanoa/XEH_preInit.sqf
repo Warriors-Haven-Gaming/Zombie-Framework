@@ -131,6 +131,21 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+[
+    "SHZ_saveDelay",
+    "SLIDER",
+    ["STR_SHZ_settings_saves_saveDelay", "STR_SHZ_settings_saves_saveDelay_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_saves"],
+    [60, 3600, 300, 0, false],
+    true,
+    {
+        if (!isServer) exitWith {};
+        if (isNil "SHZ_saveScript" || {scriptDone SHZ_saveScript}) exitWith {};
+        terminate SHZ_saveScript;
+        SHZ_saveScript = 0 spawn SHZ_fnc_saveLoop;
+    },
+    false
+] call SHZ_fnc_addSetting;
 
 // Zombies
 [

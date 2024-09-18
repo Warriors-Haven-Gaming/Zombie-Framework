@@ -479,6 +479,12 @@
         <Key ID="STR_SHZ_settings_saves_saveName_tooltip">
             <Original>The name of the save to use. This can be used for storing multiple saves.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_saves_saveDelay">
+            <Original>Autosave Frequency</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveDelay_tooltip">
+            <Original>The frequency at which the gamemode autosaves in seconds.\nAutosaving must be manually toggled using the physical, admin board prop.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_zombies">
             <Original>Zombies</Original>
         </Key>
