@@ -605,6 +605,12 @@
         <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip">
             <Original>A random number of zombies to add to the threshold every time it is updated.\nThis can make hordes randomly appear more or less frequently.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_zombies_zombieSide">
+            <Original>Zombie Faction</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_zombieSide_tooltip">
+            <Original>The faction that zombies will spawn as. Using OPFOR means zombies will not attack regular enemies.\nChanging this will not retroactively apply to existing zombies.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_zombies_loot">
             <Original>Zombie Loot</Original>
         </Key>

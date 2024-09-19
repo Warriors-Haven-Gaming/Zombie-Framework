@@ -328,6 +328,16 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+[
+    "SHZ_zombieSide",
+    "LIST",
+    ["STR_SHZ_settings_zombies_zombieSide", "STR_SHZ_settings_zombies_zombieSide_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [["independent", "opfor"], ["STR_guerrila", "STR_east"], 0],
+    true,
+    {SHZ_zombieSide = call compile _this},
+    false
+] call SHZ_fnc_addSetting;
 
 // Zombie Loot
 [
