@@ -542,6 +542,21 @@
         <Key ID="STR_SHZ_settings_selfRevive_FAKs_tooltip">
             <Original>The number of first aid kits required to self-revive.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_unflip">
+            <Original>Unflip</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_duration">
+            <Original>Action Duration</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_duration_tooltip">
+            <Original>The duration in seconds needed to unflip vehicles.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_angle">
+            <Original>Min Vehicle Angle</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_angle_tooltip">
+            <Original>The maximum vehicle angle allowed to be unflipped.\n100% is straight up (always allowed), 0% is at least perpendicular to terrain, and -100% is exactly straight down.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_zombies">
             <Original>Zombies</Original>
         </Key>

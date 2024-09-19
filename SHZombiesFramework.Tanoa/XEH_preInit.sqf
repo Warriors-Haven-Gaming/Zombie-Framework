@@ -233,6 +233,28 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Unflip
+[
+    "SHZ_unflip_duration",
+    "SLIDER",
+    ["STR_SHZ_settings_unflip_duration", "STR_SHZ_settings_unflip_duration_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_unflip"],
+    [0, 30, 10, 0, false],
+    true,
+    {call SHZ_fnc_initUnflipAction},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_unflip_angle",
+    "SLIDER",
+    ["STR_SHZ_settings_unflip_angle", "STR_SHZ_settings_unflip_angle_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_unflip"],
+    [-1, 1, 0.1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
 // Zombies
 [
     "SHZ_loiteringHordeThreshold_delay",
