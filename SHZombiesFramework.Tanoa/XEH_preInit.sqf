@@ -64,6 +64,56 @@ Author:
     },
     false
 ] call SHZ_fnc_addSetting;
+[
+    "SHZ_refundShopkeeperPurchase_maxTime",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime", "STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 3600, 120, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_vehicleRefund_minTime",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_vehicleRefund_minTime", "STR_SHZ_settings_economy_vehicleRefund_minTime_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 3600, 60, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_vehicleRefund_maxTime",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_vehicleRefund_maxTime", "STR_SHZ_settings_economy_vehicleRefund_maxTime_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 3600, 120, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_vehicleRefund_maxRate",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_vehicleRefund_maxRate", "STR_SHZ_settings_economy_vehicleRefund_maxRate_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 1, 1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_vehicleRefund_safezone",
+    "CHECKBOX",
+    ["STR_SHZ_settings_economy_vehicleRefund_safezone", "STR_SHZ_settings_economy_vehicleRefund_safezone_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    false,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
 
 // Friendly Fire
 [

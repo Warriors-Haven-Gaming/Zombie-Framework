@@ -440,6 +440,36 @@
         <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot_tooltip">
             <Original>The amount your BP multiplier will increase per BP earned while outside of vehicles.\nThis stacks on top of the normal multiplier increase.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime">
+            <Original>Max Refund Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime_tooltip">
+            <Original>The maximum time in seconds to refund a recent purchase.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_minTime">
+            <Original>Min Insurance Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_minTime_tooltip">
+            <Original>The minimum time in seconds for purchase protection.\nAfter this, insurance will decrease to 0% at the maximum time.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxTime">
+            <Original>Max Insurance Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxTime_tooltip">
+            <Original>The maximum time in seconds for purchase protection.\nAfter the minimum time, insurance will decrease to 0% at this time.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxRate">
+            <Original>Max Insurance Coverage</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxRate_tooltip">
+            <Original>The maximum percentage of the purchase's original value covered by purchase protection.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_safezone">
+            <Original>Insurance After Usage</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_safezone_tooltip">
+            <Original>Vehicles retain insurance after being brought outside their safezone.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_friendlyFire">
             <Original>Friendly Fire</Original>
         </Key>
