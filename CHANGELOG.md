@@ -616,7 +616,8 @@ types with five of each being randomly generated at the start.
 
 ![](https://raw.githubusercontent.com/Warriors-Haven-Gaming/Zombie-Framework/467565bcc53ef701fc7f89dac938033e806d8f1a/docs/images/banner.jpg)
 
-[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.1...main
+[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.3...main
+[0.13.3]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.12.6...v0.13.0
