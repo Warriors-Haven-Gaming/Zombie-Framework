@@ -522,20 +522,20 @@ Author:
 ] call SHZ_fnc_addSetting;
 [
     "SHZ_zombies_loot_magazines_count",
-    "SLIDER",
+    "LIST",
     ["STR_SHZ_settings_zombies_loot_magazines_count", "STR_SHZ_settings_zombies_loot_magazines_count_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
-    [1, 10, 1, 0, false],
+    [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [], 1 - 1],
     true,
     {},
     false
 ] call SHZ_fnc_addSetting;
 [
     "SHZ_zombies_loot_magazines_count_soldier",
-    "SLIDER",
+    "LIST",
     ["STR_SHZ_settings_zombies_loot_magazines_count_soldier", "STR_SHZ_settings_zombies_loot_magazines_count_soldier_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
-    [1, 10, 5, 0, false],
+    [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [], 5 - 1],
     true,
     {},
     false
@@ -574,10 +574,10 @@ Author:
 ] call SHZ_fnc_addSetting;
 [
     "SHZ_zombies_loot_weapon_magazines",
-    "SLIDER",
+    "LIST",
     ["STR_SHZ_settings_zombies_loot_weapon_magazines", "STR_SHZ_settings_zombies_loot_weapon_magazines_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_zombies_loot"],
-    [1, 10, 4, 0, false],
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [], 4],
     true,
     {},
     false
