@@ -482,6 +482,21 @@
         <Key ID="STR_SHZ_settings_gc_gcZombieDistance_tooltip">
             <Original>The max distance from any player before a zombie can be garbage collected.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_loadouts">
+            <Original>Loadouts</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnDeath">
+            <Original>Save On Death</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnDeath_tooltip">
+            <Original>Save your loadout on death.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnArsenal">
+            <Original>Save On Arsenal</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnArsenal_tooltip">
+            <Original>Save your loadout after closing the arsenal.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_locks">
             <Original>Locks</Original>
         </Key>

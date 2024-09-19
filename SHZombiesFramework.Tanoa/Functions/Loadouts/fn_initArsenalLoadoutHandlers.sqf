@@ -9,6 +9,7 @@ Author:
 
 */
 [missionNamespace, "arsenalClosed", {
+    if (!SHZ_loadouts_saveOnArsenal) exitWith {};
     missionProfileNamespace setVariable ["SHZ_lastLoadout", getUnitLoadout player];
     if (!isServer) then {saveMissionProfileNamespace};
 }] call BIS_fnc_addScriptedEventHandler;

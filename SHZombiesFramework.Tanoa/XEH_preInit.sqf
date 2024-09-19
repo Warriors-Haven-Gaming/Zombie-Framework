@@ -129,6 +129,28 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Loadouts
+[
+    "SHZ_loadouts_saveOnDeath",
+    "CHECKBOX",
+    ["STR_SHZ_settings_loadouts_saveOnDeath", "STR_SHZ_settings_loadouts_saveOnDeath_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_loadouts"],
+    true,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_loadouts_saveOnArsenal",
+    "CHECKBOX",
+    ["STR_SHZ_settings_loadouts_saveOnArsenal", "STR_SHZ_settings_loadouts_saveOnArsenal_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_loadouts"],
+    true,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
 // Locks
 [
     "SHZ_vehicleLock_enabled",
