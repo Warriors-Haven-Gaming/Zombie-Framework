@@ -21,7 +21,7 @@ private _connectEH = addMissionEventHandler [
         _thisArgs params ["_allStates"];
 
         private _currentMoney = [_uid] call SHZ_fnc_getMoney;
-        private _currentMultiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
+        private _currentMultiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, SHZ_moneyMultipliers_base];
 
         [_currentMoney, _currentMultiplier] remoteExec ["SHZ_fnc_playerMoneyMarkerCallback", _owner];
         _allStates set [_uid, [_currentMoney, _currentMultiplier]];
@@ -46,7 +46,7 @@ while {true} do {
 
         private _currentState = [
             _currentPlayerMoney getOrDefault [_uid, 0],
-            SHZ_moneyMultipliers_current getOrDefault [_uid, 1]
+            SHZ_moneyMultipliers_current getOrDefault [_uid, SHZ_moneyMultipliers_base]
         ];
         private _lastState = _allStates getOrDefault [_uid, []];
         if (_currentState isEqualTo _lastState) then {continue};

@@ -25,6 +25,16 @@ Author:
 
 // Economy
 [
+    "SHZ_moneyMultipliers_base",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_moneyMultipliers_base", "STR_SHZ_settings_economy_moneyMultipliers_base_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 10, 1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
     "SHZ_moneyMultipliers_rates_dark",
     "SLIDER",
     ["STR_SHZ_settings_economy_moneyMultipliers_rates_dark", "STR_SHZ_settings_economy_moneyMultipliers_rates_dark_tooltip"],
@@ -325,6 +335,90 @@ Author:
     true,
     {},
     false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_unflip_radius",
+    "SLIDER",
+    ["STR_SHZ_settings_unflip_radius", "STR_SHZ_settings_unflip_radius_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_unflip"],
+    [5, 50, 25, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
+// Vehicle Wrecks
+[
+    "SHZ_wrecks_enabled",
+    "CHECKBOX",
+    ["STR_SHZ_settings_wrecks_enabled", "STR_SHZ_settings_wrecks_enabled_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    true,
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_density",
+    "SLIDER",
+    ["STR_SHZ_settings_wrecks_density", "STR_SHZ_settings_wrecks_density_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    [10, 100, 50, 0, false],
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_townFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_wrecks_townFactor", "STR_SHZ_settings_wrecks_townFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    [1, 20, 5, 1, false],
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_townFactor_distance",
+    "SLIDER",
+    ["STR_SHZ_settings_wrecks_townFactor_distance", "STR_SHZ_settings_wrecks_townFactor_distance_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    [100, 2500, 1000, 0, false],
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_rightHandDrive",
+    "CHECKBOX",
+    ["STR_SHZ_settings_wrecks_rightHandDrive", "STR_SHZ_settings_wrecks_rightHandDrive_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    true,
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_safezones",
+    "CHECKBOX",
+    ["STR_SHZ_settings_wrecks_safezones", "STR_SHZ_settings_wrecks_safezones_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    false,
+    true,
+    {},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_wrecks_vehicleTypes",
+    "EDITBOX",
+    ["STR_SHZ_settings_wrecks_vehicleTypes", "STR_SHZ_settings_wrecks_vehicleTypes_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_wrecks"],
+    '["Land_Wreck_Car_F", "Land_Wreck_Car2_F", "Land_Wreck_Car3_F", "Land_Wreck_CarDismantled_F", "Land_Wreck_HMMWV_F", "Land_Wreck_Hunter_F", "Land_Wreck_Offroad_F", "Land_Wreck_Offroad2_F", "Land_Wreck_Skodovka_F", "Land_Wreck_Truck_dropside_F", "Land_Wreck_Truck_F", "Land_Wreck_Van_F"]',
+    true,
+    {
+        SHZ_wrecks_vehicleTypes = parseSimpleArray _this;
+    },
+    true
 ] call SHZ_fnc_addSetting;
 
 // Zombies

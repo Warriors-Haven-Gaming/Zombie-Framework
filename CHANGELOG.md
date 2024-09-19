@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.13.6] - 2024-09-19
+
+### Added
+
+- CBA settings for vehicle wrecks, base BP multiplier, and unflip search radius
+
+### Changed
+
+- Tweaked mission reward message
+
+### Fixed
+
+- Zombies not spawning under correct side when changed to OPFOR
+- Non-zombie units being included in loitering horde threshold
+
 ## [0.13.5] - 2024-09-19
 
 ### Fixed
@@ -633,7 +648,8 @@ types with five of each being randomly generated at the start.
 
 ![](https://raw.githubusercontent.com/Warriors-Haven-Gaming/Zombie-Framework/467565bcc53ef701fc7f89dac938033e806d8f1a/docs/images/banner.jpg)
 
-[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.5...main
+[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.6...main
+[0.13.6]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.5...v0.13.6
 [0.13.5]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.4...v0.13.5
 [0.13.4]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.3...v0.13.4
 [0.13.3]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.2...v0.13.3

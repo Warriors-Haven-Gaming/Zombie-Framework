@@ -64,7 +64,9 @@ SHZ_ambientHorde_script = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector_script = 0 spawn SHZ_fnc_garbageCollectorLoop;
 SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
 SHZ_playerMoneyMarker_script = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;
-[[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
+if (SHZ_wrecks_enabled) then {
+    [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
+};
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnDamagedVehicles;
 
 SHZ_saveScript = scriptNull;

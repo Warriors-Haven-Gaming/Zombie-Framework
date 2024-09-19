@@ -398,6 +398,12 @@
         <Key ID="STR_SHZ_settings_economy">
             <Original>Economy</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_base">
+            <Original>Base Multiplier</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_base_tooltip">
+            <Original>The base multiplier applied to BP earned.\nNote that some income sources are exempt from multipliers.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark">
             <Original>Multiplier Bonus (Dark)</Original>
         </Key>
@@ -577,6 +583,57 @@
         </Key>
         <Key ID="STR_SHZ_settings_unflip_angle_tooltip">
             <Original>The maximum vehicle angle allowed to be unflipped.\n100% is straight up (always allowed), 0% is at least perpendicular to terrain, and -100% is exactly straight down.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_radius">
+            <Original>Search Radius</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_radius_tooltip">
+            <Original>The distance in metres to search around the vehicle for an empty position.\nHigh values may worsen performance.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks">
+            <Original>Vehicle Wrecks</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_enabled">
+            <Original>Enabled</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_enabled_tooltip">
+            <Original>Spawn vehicle wrecks along roads as obstacles.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_density">
+            <Original>Density</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_density_tooltip">
+            <Original>The approximate distance in metres between vehicle wrecks.\nCAUTION: Lowering this can dramatically increase the number of wrecks spawned across the map.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_townFactor">
+            <Original>Town Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_townFactor_tooltip">
+            <Original>The density multiplier for wrecks near a town.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_townFactor_distance">
+            <Original>Town Factor Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_townFactor_distance_tooltip">
+            <Original>The maximum distance from a road to a town to apply the town factor.\nThe town factor is applied linearly based on the distance to the town's center.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_rightHandDrive">
+            <Original>Right Hand Drive</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_rightHandDrive_tooltip">
+            <Original>Vehicle wrecks will be oriented to roughly match their side of the road.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_safezones">
+            <Original>Spawn In Safezones</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_safezones_tooltip">
+            <Original>Allow vehicle wrecks to spawn in safezones.\nSince wrecks are spawned at the start of each game, this does not apply to dynamically generated safezones.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_vehicleTypes">
+            <Original>Wreck Classnames</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_wrecks_vehicleTypes_tooltip">
+            <Original>An array of wreck classnames to spawn as simple objects.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies">
             <Original>Zombies</Original>
@@ -1043,7 +1100,7 @@
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">
-            <Original>Mission reward: %1</Original>
+            <Original>Mission complete! %1 rewarded.</Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_playerMoney">
             <Original>Available currency: %1</Original>
