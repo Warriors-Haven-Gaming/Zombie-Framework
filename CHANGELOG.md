@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.13.4] - 2024-09-19
+
+### Added
+
+- CBA settings for customizing zombie stats
+  - Covers most, but not all Eden Editor module settings from Ryan's mod
+
+### Removed
+
+- Unused voice lines
+
 ## [0.13.3] - 2024-09-19
 
 ### Added
@@ -616,7 +627,8 @@ types with five of each being randomly generated at the start.
 
 ![](https://raw.githubusercontent.com/Warriors-Haven-Gaming/Zombie-Framework/467565bcc53ef701fc7f89dac938033e806d8f1a/docs/images/banner.jpg)
 
-[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.3...main
+[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.4...main
+[0.13.4]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.3...v0.13.4
 [0.13.3]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.0...v0.13.1
