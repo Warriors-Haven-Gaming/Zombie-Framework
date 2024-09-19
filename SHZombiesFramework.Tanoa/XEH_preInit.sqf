@@ -582,3 +582,349 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+
+// Zombie Framework (Ryan's Settings)
+
+// Zombie Abilities
+[
+    "Ryanzombiesjumpstrength",
+    "LIST",
+    ["STR_SHZ_ryansettings_abilities_Ryanzombiesjumpstrength", "STR_SHZ_ryansettings_abilities_Ryanzombiesjumpstrength_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_abilities"],
+    [[nil, 1, 2, 3, -1], ["STR_SHZ_ryansettings_strength_normal", "STR_SHZ_ryansettings_strength_weaker", "STR_SHZ_ryansettings_strength_evenWeaker", "STR_SHZ_ryansettings_strength_weakest", "STR_SHZ_ryansettings_disabled"], 0],
+    true,
+    {Ryanzombiesjump = [nil, 1] select (isNil "_this" || {_this isNotEqualTo -1})},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesjumpdemonstrength",
+    "LIST",
+    ["STR_SHZ_ryansettings_abilities_Ryanzombiesjumpdemonstrength", "STR_SHZ_ryansettings_abilities_Ryanzombiesjumpdemonstrength_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_abilities"],
+    [[nil, 1, 2, 3, -1], ["STR_SHZ_ryansettings_strength_normal", "STR_SHZ_ryansettings_strength_weaker", "STR_SHZ_ryansettings_strength_evenWeaker", "STR_SHZ_ryansettings_strength_weakest", "STR_SHZ_ryansettings_disabled"], 0],
+    true,
+    {Ryanzombiesjumpdemon = [nil, 1] select (isNil "_this" || {_this isNotEqualTo -1})},
+    false
+] call SHZ_fnc_addSetting;
+
+// Difficulty Settings
+[
+    "Ryanzombiesattackspeed",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesattackspeed", "STR_SHZ_ryansettings_difficulty_Ryanzombiesattackspeed_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [0.25, 5, 2.3, 1, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesattackdistance",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesattackdistance", "STR_SHZ_ryansettings_difficulty_Ryanzombiesattackdistance_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [1, 4, 2, 1, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesdamage",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesdamage", "STR_SHZ_ryansettings_difficulty_Ryanzombiesdamage_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [0.01, 1, 0.1, 1, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesdamagecar",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagecar", "STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagecar_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [0.001, 1, 0.01, 1, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesdamageair",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesdamageair", "STR_SHZ_ryansettings_difficulty_Ryanzombiesdamageair_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [0.001, 1, 0.01, 1, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "Ryanzombiesdamagetank",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagetank", "STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagetank_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_difficulty"],
+    [0.001, 1, 0.005, 1, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
+// Infection Settings
+[
+    "ryanzombiesinfectedchance",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance", "STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
+    [0, 1, 0.01, 0, true],
+    true,
+    {ryanzombiesinfectedchance = _this * 100},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesinfectedrate",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_infection_ryanzombiesinfectedrate", "STR_SHZ_ryansettings_infection_ryanzombiesinfectedrate_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
+    [0.001, 1, 0.05, 1, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesinfectedsymptoms",
+    "LIST",
+    ["STR_SHZ_ryansettings_infection_ryanzombiesinfectedsymptoms", "STR_SHZ_ryansettings_infection_ryanzombiesinfectedsymptoms_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
+    [[0.9, 0.7, 0.5], ["STR_SHZ_ryansettings_infection_symptoms_normal", "STR_SHZ_ryansettings_infection_symptoms_less", "STR_SHZ_ryansettings_infection_symptoms_none"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesinfecteddeath",
+    "LIST",
+    ["STR_SHZ_ryansettings_infection_ryanzombiesinfecteddeath", "STR_SHZ_ryansettings_infection_ryanzombiesinfecteddeath_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
+    [[0.9, 0.7], ["STR_SHZ_ryansettings_infectionDeath_scream", "STR_SHZ_ryansettings_infectionDeath_silent"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesantivirusduration",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_infection_ryanzombiesantivirusduration", "STR_SHZ_ryansettings_infection_ryanzombiesantivirusduration_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
+    [10, 3600, 300, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
+// Movement Speed Settings
+[
+    "ryanzombiesmovementspeedslow",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedslow", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedslow_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 1, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedslow = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedmedium",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedmedium", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedmedium_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 0.6, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedmedium = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedfast",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedfast", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedfast_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 0.7, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedfast = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeeddemon",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeeddemon", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeeddemon_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 0.6, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeeddemon = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedspider",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedspider", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedspider_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 0.5, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedspider = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedcrawler",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedcrawler", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedcrawler_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 1, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedcrawler = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedwalker",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedwalker", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedwalker_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 1, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedwalker = nil}},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesmovementspeedplayer",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedplayer", "STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedplayer_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_movement"],
+    [0.01, 10, 1.5, 0, true],
+    true,
+    {if (_this isEqualTo 1) then {ryanzombiesmovementspeedplayer = nil}},
+    false
+] call SHZ_fnc_addSetting;
+
+// Resurrection Settings
+[
+    "ryanzombiesinfection",
+    "LIST",
+    ["STR_SHZ_ryansettings_resurrection_ryanzombiesinfection", "STR_SHZ_ryansettings_resurrection_ryanzombiesinfection_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_resurrection"],
+    [[0.9, 0.7, 0.5, 0.4, 0.3, 0.1, 0.05], ["STR_SHZ_ryansettings_resurrection_fast", "STR_SHZ_ryansettings_resurrection_medium", "STR_SHZ_ryansettings_resurrection_slow", "STR_SHZ_ryansettings_resurrection_walker", "STR_SHZ_ryansettings_resurrection_demon", "STR_SHZ_ryansettings_resurrection_spider", "STR_SHZ_ryansettings_resurrection_brittle"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesinfectiontimer",
+    "SLIDER",
+    ["STR_SHZ_ryansettings_resurrection_ryanzombiesinfectiontimer", "STR_SHZ_ryansettings_resurrection_ryanzombiesinfectiontimer_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_resurrection"],
+    [0, 300, 30, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesuniform",
+    "LIST",
+    ["STR_SHZ_ryansettings_resurrection_ryanzombiesuniform", "STR_SHZ_ryansettings_resurrection_ryanzombiesuniform_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_resurrection"],
+    [[0.9, 0.7], ["str_lib_info_no", "str_lib_info_yes"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
+// Miscellaneous
+[
+    "Ryanzombiesdamagecaliberneeded",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_Ryanzombiesdamagecaliberneeded", "STR_SHZ_ryansettings_misc_Ryanzombiesdamagecaliberneeded_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[nil, 1.6, 0.9, 0.1, -1], ["STR_SHZ_ryansettings_misc_caliber_veryHeavy", "STR_SHZ_ryansettings_misc_caliber_heavy", "STR_SHZ_ryansettings_misc_caliber_medium", "STR_SHZ_ryansettings_misc_caliber_light", "STR_SHZ_ryansettings_misc_caliber_disabled"], 3],
+    true,
+    {Ryanzombiesdisableexplodingheads = [1, nil] select (isNil "_this" || {_this isNotEqualTo -1})},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesglow",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_ryanzombiesglow", "STR_SHZ_ryansettings_misc_ryanzombiesglow_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[nil, 1], ["str_lib_info_no", "str_lib_info_yes"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesglowdemondisable",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_ryanzombiesglowdemondisable", "STR_SHZ_ryansettings_misc_ryanzombiesglowdemondisable_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[1, nil], ["str_lib_info_no", "str_lib_info_yes"], 1],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "RZ_HeadshotsOnly",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_RZ_HeadshotsOnly", "STR_SHZ_ryansettings_misc_RZ_HeadshotsOnly_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[nil, 1], ["str_lib_info_no", "str_lib_info_yes"], 0],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesdisablebleeding",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_ryanzombiesdisablebleeding", "STR_SHZ_ryansettings_misc_ryanzombiesdisablebleeding_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[1, nil], ["str_lib_info_no", "str_lib_info_yes"], 1],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesdisablemoaning",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_ryanzombiesdisablemoaning", "STR_SHZ_ryansettings_misc_ryanzombiesdisablemoaning_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[1, nil], ["str_lib_info_no", "str_lib_info_yes"], 1],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombiesdisableaggressive",
+    "LIST",
+    ["STR_SHZ_ryansettings_misc_ryanzombiesdisableaggressive", "STR_SHZ_ryansettings_misc_ryanzombiesdisableaggressive_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_misc"],
+    [[1, nil], ["str_lib_info_no", "str_lib_info_yes"], 1],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
+// Max Health Settings
+[
+    "ryanzombieshealth",
+    "LIST",
+    ["STR_SHZ_ryansettings_health_ryanzombieshealth", "STR_SHZ_ryansettings_health_ryanzombieshealth_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_health"],
+    [[0.7, 0.5, 0.9, 0.97], ["str_disp_default", "STR_SHZ_ryansettings_strength_stronger", "STR_SHZ_ryansettings_strength_weaker", "STR_SHZ_ryansettings_strength_weakest"], 2],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "ryanzombieshealthdemon",
+    "LIST",
+    ["STR_SHZ_ryansettings_health_ryanzombieshealthdemon", "STR_SHZ_ryansettings_health_ryanzombieshealthdemon_tooltip"],
+    ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_health"],
+    [[0.7, 0.5, 0.9, 0.97], ["str_disp_default", "STR_SHZ_ryansettings_strength_stronger", "STR_SHZ_ryansettings_strength_weaker", "STR_SHZ_ryansettings_strength_weakest"], 2],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
