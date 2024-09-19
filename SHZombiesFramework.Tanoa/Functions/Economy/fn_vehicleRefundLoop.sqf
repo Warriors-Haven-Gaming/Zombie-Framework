@@ -14,7 +14,10 @@ private _shouldRemoveHandler = {
     params ["_time", "_vehicle"];
     if (isNull _vehicle) exitWith {true};
     if ([_now, _time] call SHZ_fnc_getVehicleRefundRate <= 0) exitWith {true};
-    if ([_vehicle] call SHZ_fnc_inAreaTeamSafezone isEqualTo []) exitWith {true};
+    if (
+        !SHZ_vehicleRefund_safezone
+        && {[_vehicle] call SHZ_fnc_inAreaTeamSafezone isEqualTo []}
+    ) exitWith {true};
     false
 };
 

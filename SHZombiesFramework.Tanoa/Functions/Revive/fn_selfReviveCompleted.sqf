@@ -10,8 +10,7 @@ Author:
     thegamecracks
 
 */
-params ["_target", "_caller", "_actionId", "_arguments"];
-_arguments params ["_firstAidKitsRequired"];
+params ["", "_caller"];
 
 // See \a3\functions_f_mp_mark\revive\_addAction_revive.inc
 // (unpacked from Mark\functions_f_mp_mark.pbo)
@@ -22,14 +21,14 @@ private _firstAidKits = items _caller select {
 };
 
 {
-    if (_forEachIndex + 1 > _firstAidKitsRequired) exitWith {};
+    if (_forEachIndex + 1 > SHZ_selfRevive_FAKs) exitWith {};
     _caller removeItem _x;
 } forEach _firstAidKits;
 
 50 cutText [
     format [
         localize "$STR_SHZ_selfReviveCompleted",
-        _firstAidKitsRequired min count _firstAidKits
+        SHZ_selfRevive_FAKs min count _firstAidKits
     ],
     "PLAIN DOWN",
     0.3

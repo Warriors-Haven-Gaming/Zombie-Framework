@@ -6,6 +6,12 @@ disableChannels[] = {
     {2, true, true},
 };
 
+class Extended_PreInit_EventHandlers {
+    class SHZombiesFramework {
+        init = "call compileScript ['XEH_preInit.sqf']";
+    };
+};
+
 // https://community.bistudio.com/wiki/Arma_3:_Functions_Library
 class CfgFunctions {
     class SHZ {
@@ -163,6 +169,9 @@ class CfgFunctions {
             class getSaveVariableDefault {};
             class saveLoop {};
             class setSaveVariable {};
+        };
+        class Settings {
+            class addSetting {};
         };
         class Stats {
             class addCompletedMission {};

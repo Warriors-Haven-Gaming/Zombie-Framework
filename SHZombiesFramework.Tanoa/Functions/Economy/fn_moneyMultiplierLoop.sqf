@@ -36,7 +36,7 @@ private _getCurrentMultiplier = {
     params ["_uid"];
     private _multiplier =
         1
-        + linearConversion [20, 3, getLighting # 1, 0, 0.5, true];
+        + linearConversion [20, 3, getLighting # 1, 0, SHZ_moneyMultipliers_rates_dark, true];
 
     private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
     {

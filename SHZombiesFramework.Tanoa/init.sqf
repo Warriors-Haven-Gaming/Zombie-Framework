@@ -11,23 +11,21 @@ Author:
 */
 diag_log text format ["Initializing %1", briefingName];
 
-SHZ_zombieSide = independent;
-// Defines the max zombie threshold before loitering hordes don't spawn
-// (actual value is calculated in SHZ_fnc_loiterThresholdLoop)
-SHZ_loiteringHordeThreshold = 30;
-SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
-// The max distance from any player before a zombie can be garbage collected
-SHZ_gcZombieDistance = 200;
-// The max distance from any player before queued objects can be deleted
-SHZ_gcDeletionDistance = 500;
-// The max distance from any player before queued objects can be unhidden
-SHZ_gcUnhideDistance = 500;
+if (!isMultiplayer) then {
+    // Will run before initPlayerLocal.sqf and initServer.sqf
+    if (!isClass (configFile >> "CfgPatches" >> "cba_xeh")) then {
+        call compileScript ["XEH_preInit.sqf"];
+    };
+};
 
-SHZ_gcDeletionQueue = [];
-SHZ_gcUnhideQueue = [];
+SHZ_zombieSide = independent;
 
 if (!isMultiplayer) then {
-    units player select {!isPlayer _x} select [7] apply {deleteVehicle _x};
+    private _units = units player select {!isPlayer _x};
+    {
+        if (_forEachIndex >= 7) then {deleteVehicle _x; continue};
+        _x setVariable ["SHZ_recruitOwnedBy", getPlayerUID player, true];
+    } forEach _units;
 };
 
 call SHZ_fnc_initZombieLootHandlers;

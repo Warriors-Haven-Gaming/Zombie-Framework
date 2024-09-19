@@ -15,8 +15,12 @@ Author:
 
 */
 while {true} do {
-    SHZ_loiteringHordeThreshold = 200 min (
-        40 + count allPlayers + floor random 20
+    SHZ_loiteringHordeThreshold = floor (
+        SHZ_loiteringHordeThreshold_max min (
+            SHZ_loiteringHordeThreshold_min
+            + count allPlayers * SHZ_loiteringHordeThreshold_playerScale
+            + random SHZ_loiteringHordeThreshold_random
+        )
     );
-    sleep 120;
+    sleep SHZ_loiteringHordeThreshold_delay;
 };

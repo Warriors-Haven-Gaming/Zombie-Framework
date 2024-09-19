@@ -29,7 +29,7 @@ if (_area isEqualTo []) then {
         _center = _center vectorAdd [50 - random 100, 50 - random 100];
         if ([_center] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
 
-        private _radius = selectMax size _location * 2;
+        private _radius = selectMax size _location * 2 max 500;
         _area = [_center, _radius, _radius, 0, false];
         break;
     };

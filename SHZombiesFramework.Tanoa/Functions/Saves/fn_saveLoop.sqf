@@ -12,7 +12,7 @@ Author:
 if (!isServer) exitWith {};
 
 while {true} do {
-    sleep 300;
+    sleep SHZ_saveDelay;
     // TODO: proper autosave message function for SHZ_fnc_saveLoop
     ["Autosaving mission..."] remoteExec ["systemChat", SHZ_globalPlayerTarget];
     saveMissionProfileNamespace;

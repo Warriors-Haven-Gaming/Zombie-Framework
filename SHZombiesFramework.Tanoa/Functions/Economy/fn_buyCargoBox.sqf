@@ -43,7 +43,10 @@ if (_vehicleSpawnRadius isEqualType []) then {
 };
 
 private _pos = _vehicleSpawn findEmptyPosition [_minRadius, _maxRadius, _cargoType];
-if (_pos isEqualTo []) exitWith {false};
+if (_pos isEqualTo []) exitWith {[
+    [],
+    "SHZ_fnc_showBuyVehicleObstruction"
+]};
 private _box = createVehicle [_cargoType, _pos];
 _box setDir random 360;
 

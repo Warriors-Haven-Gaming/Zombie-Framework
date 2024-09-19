@@ -415,6 +415,356 @@
             <Original>Saved mission profile namespace</Original>
         </Key>
     </Container>
+    <Container name="Settings">
+        <Key ID="STR_SHZ_settings">
+            <Original>Zombie Framework</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy">
+            <Original>Economy</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark">
+            <Original>Multiplier Bonus (Dark)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark_tooltip">
+            <Original>The amount your BP multiplier will increase as the map becomes dark, especially at night.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_normal">
+            <Original>Multiplier Increase (Normal)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_normal_tooltip">
+            <Original>The amount your BP multiplier will increase per BP earned.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot">
+            <Original>Multiplier Increase (On Foot)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot_tooltip">
+            <Original>The amount your BP multiplier will increase per BP earned while outside of vehicles.\nThis stacks on top of the normal multiplier increase.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime">
+            <Original>Max Refund Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_refundShopkeeperPurchase_maxTime_tooltip">
+            <Original>The maximum time in seconds to refund a recent purchase.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_minTime">
+            <Original>Min Insurance Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_minTime_tooltip">
+            <Original>The minimum time in seconds for purchase protection.\nAfter this, insurance will decrease to 0% at the maximum time.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxTime">
+            <Original>Max Insurance Time</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxTime_tooltip">
+            <Original>The maximum time in seconds for purchase protection.\nAfter the minimum time, insurance will decrease to 0% at this time.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxRate">
+            <Original>Max Insurance Coverage</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_maxRate_tooltip">
+            <Original>The maximum percentage of the purchase's original value covered by purchase protection.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_safezone">
+            <Original>Insurance After Usage</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_vehicleRefund_safezone_tooltip">
+            <Original>Vehicles retain insurance after being brought outside their safezone.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire">
+            <Original>Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_recruits">
+            <Original>Recruit Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_recruits_tooltip">
+            <Original>Allow friendly fire damage from purchased recruits.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_teamSafezone">
+            <Original>Base Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_teamSafezone_tooltip">
+            <Original>Allow friendly fire damage in base safezones.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc">
+            <Original>Garbage Collection</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcLootLifetime">
+            <Original>Loot Lifetime</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcLootLifetime_tooltip">
+            <Original>The time in seconds at which dropped loot will be deleted.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcDeletionDistance">
+            <Original>Object GC Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcDeletionDistance_tooltip">
+            <Original>The max distance from any player before mission objects can be deleted.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcUnhideDistance">
+            <Original>Object Unhide Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcUnhideDistance_tooltip">
+            <Original>The max distance from any player before hidden objects (usually terrain) can be revealed.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcZombieDistance">
+            <Original>Zombie GC Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_gc_gcZombieDistance_tooltip">
+            <Original>The max distance from any player before a zombie can be garbage collected.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts">
+            <Original>Loadouts</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnDeath">
+            <Original>Save On Death</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnDeath_tooltip">
+            <Original>Save your loadout on death.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnArsenal">
+            <Original>Save On Arsenal</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_loadouts_saveOnArsenal_tooltip">
+            <Original>Save your loadout after closing the arsenal.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks">
+            <Original>Locks</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_enabled">
+            <Original>Vehicle Locks Enabled</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_enabled_tooltip">
+            <Original>Temporarily lock purchased vehicles to the owner.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE">
+            <Original>Use ACE Vehicle Locks</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE_tooltip">
+            <Original>When ACE is loaded, replace the one-time unlock action with inventory keys.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_music">
+            <Original>Music</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_music_musicEnabled">
+            <Original>Enabled</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_music_musicEnabled_tooltip">
+            <Original>Play various music tracks in a loop indefinitely. Requires Music volume to be unmuted.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves">
+            <Original>Saves</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveName">
+            <Original>Save Name</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveName_tooltip">
+            <Original>The name of the save to use. This can be used for storing multiple saves.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveDelay">
+            <Original>Autosave Frequency</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_saves_saveDelay_tooltip">
+            <Original>The frequency at which the gamemode autosaves in seconds.\nAutosaving must be manually toggled using the physical, admin board prop.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive">
+            <Original>Self Revive</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_minTime">
+            <Original>Incapacitation Delay</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_minTime_tooltip">
+            <Original>The time in seconds to wait before able to self-revive.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_duration">
+            <Original>Action Duration</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_duration_tooltip">
+            <Original>The duration in seconds needed to hold the self-revive action.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_FAKs">
+            <Original>FAKs Required</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_FAKs_tooltip">
+            <Original>The number of first aid kits required to self-revive.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip">
+            <Original>Unflip</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_duration">
+            <Original>Action Duration</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_duration_tooltip">
+            <Original>The duration in seconds needed to unflip vehicles.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_angle">
+            <Original>Min Vehicle Angle</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_unflip_angle_tooltip">
+            <Original>The maximum vehicle angle allowed to be unflipped.\n100% is straight up (always allowed), 0% is at least perpendicular to terrain, and -100% is exactly straight down.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies">
+            <Original>Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_delay">
+            <Original>Loitering Delay</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_delay_tooltip">
+            <Original>The frequency in seconds at which the loitering zombie threshold is updated.\nWhen there are more zombies than the current threshold, ambient zombies will stop spawning to save performance.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_min">
+            <Original>Loitering Minimum</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_min_tooltip">
+            <Original>The minimum threshold allowed for loitering zombies.\nIncrease this for more ambient zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_max">
+            <Original>Loitering Maximum</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_max_tooltip">
+            <Original>The maximum threshold allowed for loitering zombies. Takes priority over minimum.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale">
+            <Original>Loitering Player Scale</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_playerScale_tooltip">
+            <Original>The number of zombies to add to the threshold for each connected player.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random">
+            <Original>Loitering Random</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip">
+            <Original>A random number of zombies to add to the threshold every time it is updated.\nThis can make hordes randomly appear more or less frequently.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude">
+            <Original>Max Altitude</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude_tooltip">
+            <Original>The maximum altitude in metres that players can trigger loitering zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone">
+            <Original>Ignore Safezone</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone_tooltip">
+            <Original>Allow loitering zombies to spawn inside safezones. Mission hordes can spawn regardless of this setting.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor">
+            <Original>Movement Speed Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor_tooltip">
+            <Original>The speed in km/h at which loitering zombies will always trigger.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor">
+            <Original>Engine Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in a vehicle with a running engine.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor">
+            <Original>Headlights Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in the dark with a vehicle's headlights on.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor">
+            <Original>Flashlight Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in the dark with a weapon flashlight on.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor">
+            <Original>Town Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_tooltip">
+            <Original>The chance increase of loitering zombies when near a town.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance">
+            <Original>Town Factor Max Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance_tooltip">
+            <Original>The maximum distance in metres from a town considered for loitering zombies. Lower values may improve performance.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance">
+            <Original>Town Factor Min Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance_tooltip">
+            <Original>The radius in metres from the center of a town where the town factor is highest.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_minChance">
+            <Original>Min Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_minChance_tooltip">
+            <Original>The minimum chance of loitering zombies spawning.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_zombieSide">
+            <Original>Zombie Faction</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_zombieSide_tooltip">
+            <Original>The faction that zombies will spawn as. Using OPFOR means zombies will not attack regular enemies.\nChanging this will not retroactively apply to existing zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot">
+            <Original>Zombies Loot</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_FAK">
+            <Original>First Aid Kit Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_FAK_tooltip">
+            <Original>The chance that a zombie will drop a First Aid Kit.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_pills">
+            <Original>Pills Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_pills_tooltip">
+            <Original>The chance that a zombie will drop Antivirus Pills.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines">
+            <Original>Magazine Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_tooltip">
+            <Original>The chance that a non-soldier zombie will drop magazines.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_soldier">
+            <Original>Magazine Chance (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_soldier_tooltip">
+            <Original>The chance that a soldier zombie will drop magazines.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count">
+            <Original>Max Magazine Count</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_tooltip">
+            <Original>The maximum number of magazines that a non-soldier zombie can drop.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_soldier">
+            <Original>Max Magazine Count (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_magazines_count_soldier_tooltip">
+            <Original>The maximum number of magazines that a soldier zombie can drop.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon">
+            <Original>Weapon Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_tooltip">
+            <Original>The chance that a non-soldier zombie will drop a weapon.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_soldier">
+            <Original>Weapon Chance (Soldier)</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_soldier_tooltip">
+            <Original>The chance that a soldier zombie will drop a weapon.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_types">
+            <Original>Weapon Classnames</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_types_tooltip">
+            <Original>An array of weapon classnames to randomly select from.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_magazines">
+            <Original>Weapon Magazine Count</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_loot_weapon_magazines_tooltip">
+            <Original>The maximum number of magazines to drop alongside the weapon.</Original>
+        </Key>
+    </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">
             <Original>Mission reward: %1</Original>

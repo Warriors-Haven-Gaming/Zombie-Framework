@@ -20,9 +20,9 @@ Author:
 
 */
 params ["_time", ["_now", time]];
-private _minTime = 60;
-private _maxTime = 120;
-private _maxRate = 1;
+private _minTime = SHZ_vehicleRefund_minTime;
+private _maxTime = SHZ_vehicleRefund_maxTime;
+private _maxRate = SHZ_vehicleRefund_maxRate;
 private _minRate = 0;
 private _elapsed = _now - _time;
 if (_elapsed > _maxTime) exitWith {0};

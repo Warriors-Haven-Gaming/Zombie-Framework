@@ -29,7 +29,6 @@ private _processDiscreetQueue = {
     } forEach _queue;
     {_queue deleteAt _x} forEachReversed _queueProcessed;
 };
-private _lootLifetime = 300;
 
 while {true} do {
     sleep (10 + random 10);
@@ -77,7 +76,7 @@ while {true} do {
         if (_x getVariable ["SHZ_disableGC", false] isEqualTo true) then {continue};
         private _collectAt = _x getVariable "garbageCollectAt";
         if (isNil "_collectAt") then {
-            _x setVariable ["garbageCollectAt", _time + _lootLifetime];
+            _x setVariable ["garbageCollectAt", _time + SHZ_gcLootLifetime];
             continue;
         };
         if (_time < _collectAt) then {continue};

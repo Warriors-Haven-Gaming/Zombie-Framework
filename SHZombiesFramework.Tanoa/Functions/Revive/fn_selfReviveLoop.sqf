@@ -11,9 +11,6 @@ Author:
 */
 if (!hasInterface) exitWith {};
 
-private _minTime = 30;
-private _firstAidKitsRequired = 4;
-
 private _timeIncapacitated = -1;
 private _reviveActionID = -1;
 
@@ -35,8 +32,8 @@ private _addReviveAction = {
         {},
         SHZ_fnc_selfReviveCompleted,
         {},
-        [_firstAidKitsRequired],
-        10,
+        [],
+        SHZ_selfRevive_duration,
         1001, // slightly higher priority than vanilla Force Respawn action
         false,
         true,
@@ -49,7 +46,7 @@ while {true} do {
     if (lifeState player isEqualTo "INCAPACITATED") then {
         private _now = time;
         if (_timeIncapacitated < 0) then {_timeIncapacitated = _now};
-        if (_reviveActionID < 0 && {_now - _timeIncapacitated > _minTime}) then {
+        if (_reviveActionID < 0 && {_now - _timeIncapacitated > SHZ_selfRevive_minTime}) then {
             call _addReviveAction;
         };
         private _vehicle = objectParent player;
