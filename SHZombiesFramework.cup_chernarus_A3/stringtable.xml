@@ -12,30 +12,6 @@
         </Key>
     </Container>
     <Container name="CfgRadio">
-        <Key ID="STR_SHZ_DeconVehicleStart_name">
-            <Original>Start Vehicle Decon</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconVehicleStart_title">
-            <Original>Drive through the shower slowly while we decontaminate your vehicle.</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconVehicleGate_name">
-            <Original>Park Vehicle at Gate</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconVehicleGate_title">
-            <Original>Alright, park up next to the gate and dismount.</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconTentStart_name">
-            <Original>Step Into Decon Tent</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconTentStart_title">
-            <Original>Please step into the tent for decontamination.</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconTentFinish_name">
-            <Original>Exit Decon Tent</Original>
-        </Key>
-        <Key ID="STR_SHZ_DeconTentFinish_title">
-            <Original>Okay, you're all clear.</Original>
-        </Key>
     </Container>
     <Container name="CfgTaskDescriptions">
         <Key ID="STR_SHZ_assistSoldiers_title">
@@ -763,6 +739,306 @@
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_weapon_magazines_tooltip">
             <Original>The maximum number of magazines to drop alongside the weapon.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings">
+            <Original>Zombie Framework (Ryan's Settings)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_normal">
+            <Original>Normal</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_weaker">
+            <Original>Weaker</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_evenWeaker">
+            <Original>Even Weaker</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_weakest">
+            <Original>Weakest</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_stronger">
+            <Original>Stronger</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_strength_ridiculouslyStrong">
+            <Original>Ridiculously Strong</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_disabled">
+            <Original>Off</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_abilities">
+            <Original>Zombie Abilities</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_abilities_Ryanzombiesjumpstrength">
+            <Original>Jumping Strength</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_abilities_Ryanzombiesjumpstrength_tooltip">
+            <Original>Determines how high zombies can jump.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_abilities_Ryanzombiesjumpdemonstrength">
+            <Original>Jumping Strength (Demons)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_abilities_Ryanzombiesjumpdemonstrength_tooltip">
+            <Original>Determines how high demons can jump.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty">
+            <Original>Difficulty Settings</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesattackspeed">
+            <Original>Attack Speed</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesattackspeed_tooltip">
+            <Original>The delay in seconds between zombie attacks. Does not apply to demons.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesattackdistance">
+            <Original>Attack Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesattackdistance_tooltip">
+            <Original>The distance in metres that zombie attacks can reach.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamage">
+            <Original>Attack Damage (Humans)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamage_tooltip">
+            <Original>The damage dealt to humans as a percentage.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagecar">
+            <Original>Attack Damage (Cars)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagecar_tooltip">
+            <Original>The damage dealt to cars as a percentage.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamageair">
+            <Original>Attack Damage (Aircraft)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamageair_tooltip">
+            <Original>The damage dealt to aircraft as a percentage.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagetank">
+            <Original>Attack Damage (Tanks)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_difficulty_Ryanzombiesdamagetank_tooltip">
+            <Original>The damage dealt to tanks as a percentage.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection">
+            <Original>Infection Settings</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance">
+            <Original>Infection Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance_tooltip">
+            <Original>The chance a victim will become infected if attacked by a zombie.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedrate">
+            <Original>Infection Rate</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedrate_tooltip">
+            <Original>The percentage of infection applied to the victim each minute.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedsymptoms">
+            <Original>Infection Symptoms</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfectedsymptoms_tooltip">
+            <Original>Infected units can show symptoms or be unknowingly infected.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_symptoms_normal">
+            <Original>Normal</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_symptoms_less">
+            <Original>Less</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_symptoms_none">
+            <Original>None</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfecteddeath">
+            <Original>Infection Death</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesinfecteddeath_tooltip">
+            <Original>The sound infected units will make if they die from infection.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infectionDeath_scream">
+            <Original>Scream</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infectionDeath_silent">
+            <Original>Silent</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesantivirusduration">
+            <Original>Antivirus Pills Duration</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_infection_ryanzombiesantivirusduration_tooltip">
+            <Original>Duration in seconds the consumer is immune to infection and its symptoms.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement">
+            <Original>Movement Speed Settings</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedslow">
+            <Original>Slow Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedslow_tooltip">
+            <Original>The speed multiplier for slow zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedmedium">
+            <Original>Medium Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedmedium_tooltip">
+            <Original>The speed multiplier for medium zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedfast">
+            <Original>Fast Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedfast_tooltip">
+            <Original>The speed multiplier for fast zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeeddemon">
+            <Original>Demons</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeeddemon_tooltip">
+            <Original>The speed multiplier for demons.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedspider">
+            <Original>Spider Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedspider_tooltip">
+            <Original>The speed multiplier for spider zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedcrawler">
+            <Original>Crawler Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedcrawler_tooltip">
+            <Original>The speed multiplier for crawler zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedwalker">
+            <Original>Walker Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedwalker_tooltip">
+            <Original>The speed multiplier for walker zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedplayer">
+            <Original>Player Zombies</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_movement_ryanzombiesmovementspeedplayer_tooltip">
+            <Original>The speed multiplier for player zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection">
+            <Original>Resurrection Settings</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_fast">
+            <Original>Fast</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_medium">
+            <Original>Medium</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_slow">
+            <Original>Slow</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_walker">
+            <Original>Walker</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_demon">
+            <Original>Demon</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_spider">
+            <Original>Spider</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_brittle">
+            <Original>Brittle</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesinfection">
+            <Original>Resurrect As</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesinfection_tooltip">
+            <Original>The zombie type that victims will resurrect into.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesinfectiontimer">
+            <Original>Resurrection Delay</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesinfectiontimer_tooltip">
+            <Original>The time it takes after the victim has died to resurrect.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesuniform">
+            <Original>Force Add Uniform</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_resurrection_ryanzombiesuniform_tooltip">
+            <Original>Forces the victims to resurrect with the victims uniform.\nThis stops the custom animations from working.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc">
+            <Original>Miscellaneous</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_Ryanzombiesdamagecaliberneeded">
+            <Original>Head Decapitation</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_Ryanzombiesdamagecaliberneeded_tooltip">
+            <Original>Defines what weapon type is required for decapitation.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_caliber_veryHeavy">
+            <Original>Very Heavy Weapons (.408 &amp; Beyond)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_caliber_heavy">
+            <Original>Heavy Weapons (7.62mm &amp; Beyond)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_caliber_medium">
+            <Original>Medium Weapons (6.5mm &amp; Beyond)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_caliber_light">
+            <Original>Light Weapons (9mm &amp; Beyond)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_caliber_disabled">
+            <Original>Off</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesglow">
+            <Original>Glowing Eyes</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesglow_tooltip">
+            <Original>Allows zombie eyes to glow red.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesglowdemondisable">
+            <Original>Glowing Eyes (Demons)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesglowdemondisable_tooltip">
+            <Original>Allows demon eyes to glow red.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_RZ_HeadshotsOnly">
+            <Original>Headshots Only</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_RZ_HeadshotsOnly_tooltip">
+            <Original>Defines if headshots are needed to kill zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablebleeding">
+            <Original>Bleeding</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablebleeding_tooltip">
+            <Original>Allows zombies and targets to bleed when hit, injured or infected.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablemoaning">
+            <Original>Zombie Sounds (Idle)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablemoaning_tooltip">
+            <Original>Allow idle zombies to make sounds.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisableaggressive">
+            <Original>Zombie Sounds (Aggressive)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisableaggressive_tooltip">
+            <Original>Allow attacking zombies to make sounds.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablejumping">
+            <Original>Zombie Sounds (Jumping)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_misc_ryanzombiesdisablejumping_tooltip">
+            <Original>Allow zombies to make sounds when jumping.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_health">
+            <Original>Max Health Settings</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_health_ryanzombieshealth">
+            <Original>Zombie Health</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_health_ryanzombieshealth_tooltip">
+            <Original>Defines how much damage zombies can take.</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_health_ryanzombieshealthdemon">
+            <Original>Zombie Health (Demons)</Original>
+        </Key>
+        <Key ID="STR_SHZ_ryansettings_health_ryanzombieshealthdemon_tooltip">
+            <Original>Defines how much damage demons can take.</Original>
         </Key>
     </Container>
     <Container name="Stats">

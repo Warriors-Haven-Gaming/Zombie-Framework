@@ -829,7 +829,7 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="Zombie Framework v0.13.3";
+		briefingName="Zombie Framework v0.13.4";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startFog=0.69999999;
