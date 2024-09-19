@@ -179,6 +179,38 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Self Revive
+[
+    "SHZ_selfRevive_minTime",
+    "SLIDER",
+    ["STR_SHZ_settings_selfRevive_minTime", "STR_SHZ_settings_selfRevive_minTime_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_selfRevive"],
+    [0, 180, 30, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_selfRevive_duration",
+    "SLIDER",
+    ["STR_SHZ_settings_selfRevive_duration", "STR_SHZ_settings_selfRevive_duration_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_selfRevive"],
+    [0.5, 30, 10, 1, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_selfRevive_FAKs",
+    "LIST",
+    ["STR_SHZ_settings_selfRevive_FAKs", "STR_SHZ_settings_selfRevive_FAKs_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_selfRevive"],
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [], 4],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
 // Zombies
 [
     "SHZ_loiteringHordeThreshold_delay",

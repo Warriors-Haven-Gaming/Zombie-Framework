@@ -506,6 +506,27 @@
         <Key ID="STR_SHZ_settings_saves_saveDelay_tooltip">
             <Original>The frequency at which the gamemode autosaves in seconds.\nAutosaving must be manually toggled using the physical, admin board prop.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_selfRevive">
+            <Original>Self Revive</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_minTime">
+            <Original>Incapacitation Delay</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_minTime_tooltip">
+            <Original>The time in seconds to wait before able to self-revive.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_duration">
+            <Original>Action Duration</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_duration_tooltip">
+            <Original>The duration in seconds needed to hold the self-revive action.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_FAKs">
+            <Original>FAKs Required</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_selfRevive_FAKs_tooltip">
+            <Original>The number of first aid kits required to self-revive.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_zombies">
             <Original>Zombies</Original>
         </Key>
