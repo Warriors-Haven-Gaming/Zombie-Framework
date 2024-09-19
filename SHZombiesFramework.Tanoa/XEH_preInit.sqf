@@ -67,6 +67,16 @@ Author:
 
 // Garbage Collection
 [
+    "SHZ_gcLootLifetime",
+    "SLIDER",
+    ["STR_SHZ_settings_gc_gcLootLifetime", "STR_SHZ_settings_gc_gcLootLifetime_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_gc"],
+    [30, 3600, 300, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
     "SHZ_gcDeletionDistance",
     "SLIDER",
     ["STR_SHZ_settings_gc_gcDeletionDistance", "STR_SHZ_settings_gc_gcDeletionDistance_tooltip"],
