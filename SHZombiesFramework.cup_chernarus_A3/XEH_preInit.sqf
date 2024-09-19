@@ -675,7 +675,7 @@ Author:
     "SLIDER",
     ["STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance", "STR_SHZ_ryansettings_infection_ryanzombiesinfectedchance_tooltip"],
     ["STR_SHZ_ryansettings", "STR_SHZ_ryansettings_infection"],
-    [0, 1, 0.01, 0, true],
+    [0, 1, 0.1, 0, true],
     true,
     {ryanzombiesinfectedchance = _this * 100},
     false
