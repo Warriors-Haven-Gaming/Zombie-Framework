@@ -15,6 +15,13 @@ Author:
 */
 params ["_player"];
 
+if (isMultiplayer && {!isServer}) then {
+    // Will run before init.sqf and on clients, unlike initServer.sqf
+    if (!isClass (configFile >> "CfgPatches" >> "cba_xeh")) then {
+        call compileScript ["XEH_preInit.sqf"];
+    };
+};
+
 if (!isServer) then {call SHZ_fnc_initZombieSettings};
 
 if (!hasInterface) exitWith {};

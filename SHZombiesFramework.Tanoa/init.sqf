@@ -11,9 +11,11 @@ Author:
 */
 diag_log text format ["Initializing %1", briefingName];
 
-if (!isMultiplayer || {!isServer && {!isClass (configFile >> "CfgPatches" >> "cba_xeh")}}) then {
-    // In singleplayer and multiplayer clients, this will run before initServer.sqf.
-    call compileScript ["XEH_preInit.sqf"];
+if (!isMultiplayer) then {
+    // Will run before initPlayerLocal.sqf and initServer.sqf
+    if (!isClass (configFile >> "CfgPatches" >> "cba_xeh")) then {
+        call compileScript ["XEH_preInit.sqf"];
+    };
 };
 
 SHZ_zombieSide = independent;

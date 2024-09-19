@@ -12,9 +12,11 @@ Author:
 skipTime random 24;
 enableSaving [false, false];
 
-if (isMultiplayer && {!isClass (configFile >> "CfgPatches" >> "cba_xeh")}) then {
-    // As a multiplayer server, this will run before init.sqf.
-    call compileScript ["XEH_preInit.sqf"];
+if (isMultiplayer) then {
+    // Will run before init.sqf and initPlayerLocal.sqf
+    if (!isClass (configFile >> "CfgPatches" >> "cba_xeh")) then {
+        call compileScript ["XEH_preInit.sqf"];
+    };
 };
 
 call SHZ_fnc_setPlayableAILoadouts;
