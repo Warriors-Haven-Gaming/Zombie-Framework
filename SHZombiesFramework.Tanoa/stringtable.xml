@@ -1088,7 +1088,7 @@
     </Container>
     <Container name="Stats">
         <Key ID="STR_SHZ_showCompletedMission_money">
-            <Original>Mission reward: %1</Original>
+            <Original>Mission complete! %1 rewarded.</Original>
         </Key>
         <Key ID="STR_SHZ_showPlayerStats_playerMoney">
             <Original>Available currency: %1</Original>
