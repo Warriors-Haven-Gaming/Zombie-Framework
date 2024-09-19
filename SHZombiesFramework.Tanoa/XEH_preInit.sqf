@@ -336,6 +336,16 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+[
+    "SHZ_unflip_radius",
+    "SLIDER",
+    ["STR_SHZ_settings_unflip_radius", "STR_SHZ_settings_unflip_radius_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_unflip"],
+    [5, 50, 25, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
 
 // Vehicle Wrecks
 [
