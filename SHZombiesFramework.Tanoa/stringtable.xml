@@ -398,6 +398,12 @@
         <Key ID="STR_SHZ_settings_economy">
             <Original>Economy</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_base">
+            <Original>Base Multiplier</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_economy_moneyMultipliers_base_tooltip">
+            <Original>The base multiplier applied to BP earned.\nNote that some income sources are exempt from multipliers.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_dark">
             <Original>Multiplier Bonus (Dark)</Original>
         </Key>

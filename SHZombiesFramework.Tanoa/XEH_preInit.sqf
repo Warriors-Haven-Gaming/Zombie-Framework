@@ -25,6 +25,16 @@ Author:
 
 // Economy
 [
+    "SHZ_moneyMultipliers_base",
+    "SLIDER",
+    ["STR_SHZ_settings_economy_moneyMultipliers_base", "STR_SHZ_settings_economy_moneyMultipliers_base_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_economy"],
+    [0, 10, 1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
     "SHZ_moneyMultipliers_rates_dark",
     "SLIDER",
     ["STR_SHZ_settings_economy_moneyMultipliers_rates_dark", "STR_SHZ_settings_economy_moneyMultipliers_rates_dark_tooltip"],

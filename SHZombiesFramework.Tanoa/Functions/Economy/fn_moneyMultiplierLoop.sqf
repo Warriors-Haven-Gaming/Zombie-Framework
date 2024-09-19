@@ -35,7 +35,7 @@ private _disconnectEH = addMissionEventHandler [
 private _getCurrentMultiplier = {
     params ["_uid"];
     private _multiplier =
-        1
+        SHZ_moneyMultipliers_base
         + linearConversion [20, 3, getLighting # 1, 0, SHZ_moneyMultipliers_rates_dark, true];
 
     private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap];
@@ -64,7 +64,7 @@ while {true} do {
             private _diff = _moneyEnded - _moneyStarted;
 
             if (_diff >= 1000) then {
-                private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
+                private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, SHZ_moneyMultipliers_base];
                 [_diff, _multiplier] remoteExec ["SHZ_fnc_showMoneyMultiplierReset", _x];
             };
         } else {
