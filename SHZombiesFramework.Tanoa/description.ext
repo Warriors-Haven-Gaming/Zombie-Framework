@@ -259,28 +259,7 @@ class CfgPylonManager {
 };
 
 // https://community.bistudio.com/wiki/Description.ext#CfgRadio
-class CfgRadio {
-    class DeconVehicleStart {
-        name    = "$STR_SHZ_DeconVehicleStart_name";
-        sound[]    = {"Radio\DeconVehicleStart.ogg", 1, 1};
-        title   = "$STR_SHZ_DeconVehicleStart_title";
-    };
-    class DeconVehicleGate {
-        name    = "$STR_SHZ_DeconVehicleGate_name";
-        sound[] = {"Radio\DeconVehicleGate.ogg", 1, 1};
-        title   = "$STR_SHZ_DeconVehicleGate_title";
-    };
-    class DeconTentStart {
-        name    = "$STR_SHZ_DeconTentStart_name";
-        sound[] = {"Radio\DeconTentStart.ogg", 1, 1};
-        title   = "$STR_SHZ_DeconTentStart_title";
-    };
-    class DeconTentFinish {
-        name    = "$STR_SHZ_DeconTentFinish_name";
-        sound[] = {"Radio\DeconTentFinish.ogg", 1, 1};
-        title   = "$STR_SHZ_DeconTentFinish_title";
-    };
-};
+class CfgRadio {};
 
 // https://community.bistudio.com/wiki/Description.ext#Tasks
 class CfgTaskDescriptions {
