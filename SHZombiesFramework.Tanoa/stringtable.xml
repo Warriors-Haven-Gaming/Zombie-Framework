@@ -467,6 +467,21 @@
         <Key ID="STR_SHZ_settings_gc_gcZombieDistance_tooltip">
             <Original>The max distance from any player before a zombie can be garbage collected.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_locks">
+            <Original>Locks</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_enabled">
+            <Original>Vehicle Locks Enabled</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_enabled_tooltip">
+            <Original>Temporarily lock purchased vehicles to the owner.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE">
+            <Original>Use ACE Vehicle Locks</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE_tooltip">
+            <Original>When ACE is loaded, replace the one-time unlock action with inventory keys.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_music">
             <Original>Music</Original>
         </Key>

@@ -83,7 +83,7 @@ if (_isUAV) then {
     createVehicleCrew _vehicle;
 };
 
-if (_vehicleLock) then {
+if (_vehicleLock && {SHZ_vehicleLock_enabled}) then {
     [_vehicle, _player] call SHZ_fnc_lockVehicleToPlayer;
 };
 

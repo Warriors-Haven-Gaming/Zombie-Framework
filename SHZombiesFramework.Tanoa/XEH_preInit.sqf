@@ -107,6 +107,28 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Locks
+[
+    "SHZ_vehicleLock_enabled",
+    "CHECKBOX",
+    ["STR_SHZ_settings_locks_vehicleLock_enabled", "STR_SHZ_settings_locks_vehicleLock_enabled_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_locks"],
+    true,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_vehicleLock_useACE",
+    "CHECKBOX",
+    ["STR_SHZ_settings_locks_vehicleLock_useACE", "STR_SHZ_settings_locks_vehicleLock_useACE_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_locks"],
+    true,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
 // Music
 [
     "SHZ_musicEnabled",
