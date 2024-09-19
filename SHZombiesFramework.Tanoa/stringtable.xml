@@ -440,6 +440,21 @@
         <Key ID="STR_SHZ_settings_economy_moneyMultipliers_rates_onFoot_tooltip">
             <Original>The amount your BP multiplier will increase per BP earned while outside of vehicles.\nThis stacks on top of the normal multiplier increase.\nMeasured in thousandths of a percent, i.e. 5 means +0.005% per BP earned.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire">
+            <Original>Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_recruits">
+            <Original>Recruit Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_recruits_tooltip">
+            <Original>Allow friendly fire damage from purchased recruits.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_teamSafezone">
+            <Original>Base Friendly Fire</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_friendlyFire_teamSafezone_tooltip">
+            <Original>Allow friendly fire damage in base safezones.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_gc">
             <Original>Garbage Collection</Original>
         </Key>

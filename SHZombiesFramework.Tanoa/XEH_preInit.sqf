@@ -65,6 +65,28 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Friendly Fire
+[
+    "SHZ_friendlyFire_recruits",
+    "CHECKBOX",
+    ["STR_SHZ_settings_friendlyFire_recruits", "STR_SHZ_settings_friendlyFire_recruits_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_friendlyFire"],
+    false,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_friendlyFire_teamSafezone",
+    "CHECKBOX",
+    ["STR_SHZ_settings_friendlyFire_teamSafezone", "STR_SHZ_settings_friendlyFire_teamSafezone_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_friendlyFire"],
+    false,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+
 // Garbage Collection
 [
     "SHZ_gcLootLifetime",

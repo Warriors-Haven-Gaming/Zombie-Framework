@@ -10,6 +10,7 @@ Author:
 */
 player addEventHandler ["HandleDamage", {call {
     params ["_unit", "", "", "", "", "_hitIndex", "_instigator"];
+    if (SHZ_friendlyFire_teamSafezone) exitWith {};
     if (isNull _instigator) exitWith {};
     if (
         !isPlayer _instigator
