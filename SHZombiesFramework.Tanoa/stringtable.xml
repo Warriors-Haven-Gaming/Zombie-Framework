@@ -702,7 +702,7 @@
             <Original>The faction that zombies will spawn as. Using OPFOR means zombies will not attack regular enemies.\nChanging this will not retroactively apply to existing zombies.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot">
-            <Original>Zombie Loot</Original>
+            <Original>Zombies Loot</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_FAK">
             <Original>First Aid Kit Chance</Original>
