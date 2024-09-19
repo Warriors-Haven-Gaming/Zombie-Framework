@@ -328,6 +328,8 @@ Author:
     {},
     false
 ] call SHZ_fnc_addSetting;
+
+// Zombie Loot
 [
     "SHZ_zombies_loot_FAK",
     "SLIDER",
