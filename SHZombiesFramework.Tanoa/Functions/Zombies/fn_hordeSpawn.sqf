@@ -67,6 +67,7 @@ for "_i" from 1 to _quantity do {
     if (_pos isEqualTo [0,0]) exitWith {};
 
     private _unit = _group createUnit [selectRandom _unitTypes, [0,0,0], [], 0, "CAN_COLLIDE"];
+    [_unit] joinSilent _group;
     _unit triggerDynamicSimulation false;
     _units pushBack _unit;
     [_unit] remoteExec ["SHZ_fnc_zombieInit"];
