@@ -28,15 +28,19 @@ addMissionEventHandler ["EntityKilled", {
         _uniqueItems set [_name, (_uniqueItems getOrDefault [_name, 0]) + _count];
     };
 
-    if (random 1 < 0.1) then {
+    if (random 1 < SHZ_zombies_loot_FAK) then {
         "FirstAidKit" call _addItem;
     };
 
-    if (random 1 < 0.02) then {
+    if (random 1 < SHZ_zombies_loot_pills) then {
         "RyanZombiesAntiVirusTemporary_Item" call _addItem;
     };
 
-    if (random 1 < [0.25, 0.5] select _isSoldier) then {
+    private _magazineChance = [
+        SHZ_zombies_loot_magazines,
+        SHZ_zombies_loot_magazines_soldier
+    ] select _isSoldier;
+    if (random 1 < _magazineChance) then {
         private _magazines = magazines _instigator;
         _magazines append (
             // Include magazines in unit's guns
@@ -49,24 +53,26 @@ addMissionEventHandler ["EntityKilled", {
         _magazines = _magazines arrayIntersect _magazines;
         if (count _magazines < 1) exitWith {};
 
-        private _maxCount = [1, 5] select _isSoldier;
+        private _maxCount = [
+            SHZ_zombies_loot_magazines_count,
+            SHZ_zombies_loot_magazines_count_soldier
+        ] select _isSoldier;
         for "_i" from 1 to floor random (_maxCount + 1) do {
             selectRandom _magazines call _addItem;
         };
     };
 
-    if (_isSoldier && {random 1 < 0.05}) then {
-        private _weapon = selectRandom [
-            "rhs_weap_m4_carryhandle_m203",
-            "rhs_weap_m27iar_grip",
-            "rhs_weap_m4_carryhandle",
-            "rhs_weap_m240B"
-        ];
+    private _weaponChance = [
+        SHZ_zombies_loot_weapon,
+        SHZ_zombies_loot_weapon_soldier
+    ] select _isSoldier;
+    if (random 1 < _weaponChance) then {
+        private _weapon = selectRandom SHZ_zombies_loot_weapon_types;
         private _config = configFile >> "CfgWeapons" >> _weapon;
 
         private _magazines = getArray (_config >> "magazines");
         if (count _magazines > 0) then {
-            [_magazines # 0, 1 + floor random 4] call _addItem;
+            [_magazines # 0, 1 + floor random SHZ_zombies_loot_weapon_magazines] call _addItem;
         };
 
         _weapon call _addItem;

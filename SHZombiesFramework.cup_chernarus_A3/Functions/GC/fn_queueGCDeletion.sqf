@@ -25,6 +25,7 @@ Author:
     thegamecracks
 
 */
+if (!isServer) exitWith {};
 params ["_objects", ["_minDistance", SHZ_gcDeletionDistance]];
 if !(_objects isEqualType []) then {_objects = [_objects]};
 SHZ_gcDeletionQueue pushBack [_objects, _minDistance];

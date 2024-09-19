@@ -15,6 +15,6 @@ Author:
 
 */
 params ["_purchaseTime", "_vehicle"];
-if (time > _purchaseTime + 120) exitWith {false};
+if (time > _purchaseTime + SHZ_refundShopkeeperPurchase_maxTime) exitWith {false};
 if (!alive _vehicle) exitWith {false};
 true

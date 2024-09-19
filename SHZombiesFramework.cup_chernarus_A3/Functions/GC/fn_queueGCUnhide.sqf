@@ -25,6 +25,7 @@ Author:
     thegamecracks
 
 */
+if (!isServer) exitWith {};
 params ["_objects", ["_minDistance", SHZ_gcUnhideDistance]];
 if !(_objects isEqualType []) then {_objects = [_objects]};
 SHZ_gcUnhideQueue pushBack [_objects, _minDistance];

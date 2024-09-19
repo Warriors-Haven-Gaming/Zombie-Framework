@@ -34,9 +34,6 @@ if (
         playMusic _music;
     }];
     SHZ_musicPlaylistEH = ["MusicStop", _ehID];
-    // For testing purposes, disable with `removeMusicEventHandler SHZ_musicPlaylistEH`.
-    // If for whatever reason we need to stop the playlist in code, consider
-    // writing a new function to stop the playlist.
 };
 
 playMusic (SHZ_musicPlaylist select -1);

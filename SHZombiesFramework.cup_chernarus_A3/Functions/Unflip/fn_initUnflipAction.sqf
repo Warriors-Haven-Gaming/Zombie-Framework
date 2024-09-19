@@ -10,8 +10,11 @@ Author:
 
 */
 if (!hasInterface) exitWith {};
+if (!isNil "SHZ_unflipActionID") then {
+    SHZ_unflipActionID call BIS_fnc_holdActionRemove;
+};
 
-[
+private _actionID = [
     player,
     localize "$STR_SHZ_initUnflipAction_title",
     "a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff1_ca.paa",
@@ -23,9 +26,11 @@ if (!hasInterface) exitWith {};
     {[cursorObject] remoteExec ["SHZ_fnc_unflipVehicle", cursorObject]},
     {},
     [],
-    10,
+    SHZ_unflip_duration,
     1000,
     false,
     false,
     true
 ] call BIS_fnc_holdActionAdd;
+
+SHZ_unflipActionID = [player, _actionID];

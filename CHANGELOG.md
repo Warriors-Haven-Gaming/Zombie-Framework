@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.13.3] - 2024-09-19
+
+### Added
+
+- Optional CBA settings for customizing the gamemode
+
+### Changed
+
+- Disabled ACE BLUFOR tracker by default to prevent interfering with our friendly icons
+- Force ACE fatigue performance / recovery factors to 1 and 2 respectively
+
+### Fixed
+
+- Don't calculate loitering threshold on clients
+- Prevent client-side usage of GC queue functions
+
 ## [0.13.2] - 2024-04-05
 
 ### Fixed

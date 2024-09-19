@@ -23,4 +23,4 @@ if (
 private _pos = getPosASL _vehicle;
 private _surfaceNormal = if (surfaceIsWater _pos) then {[0, 0, 1]} else {surfaceNormal _pos};
 private _angle = _surfaceNormal vectorDotProduct vectorUp _vehicle;
-_angle < 0.1
+_angle <= SHZ_unflip_angle

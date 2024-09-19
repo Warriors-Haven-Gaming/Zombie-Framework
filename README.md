@@ -18,6 +18,7 @@ please see the [contributing guide]!
 - *Blood Points* economy for purchasing AI, vehicles, and supplies
 - Native self-revive and vehicle unflip actions
 - Zombie loot drops based on player equipment
+- Customizable with CBA settings (optional)
 
 ## How do I play?
 

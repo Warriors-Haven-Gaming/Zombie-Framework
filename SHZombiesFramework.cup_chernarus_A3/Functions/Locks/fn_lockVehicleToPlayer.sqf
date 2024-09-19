@@ -20,7 +20,7 @@ if (isNull _vehicle) exitWith {diag_log text format ["%1: Vehicle is null", _fnc
 if (isNull _player) exitWith {diag_log text format ["%1: Player is null", _fnc_scriptName]};
 
 _vehicle lock 2;
-if (isClass (configFile >> "CfgPatches" >> "ace_vehiclelock")) then {
+if (SHZ_vehicleLock_useACE && {isClass (configFile >> "CfgPatches" >> "ace_vehiclelock")}) then {
     [_player, _vehicle, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
     [_vehicle] remoteExec ["SHZ_fnc_showACEVehicleLock", _player];
 } else {
