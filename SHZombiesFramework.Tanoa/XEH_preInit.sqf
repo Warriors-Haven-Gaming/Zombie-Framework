@@ -179,7 +179,7 @@ Author:
     "CHECKBOX",
     ["STR_SHZ_settings_music_musicEnabled", "STR_SHZ_settings_music_musicEnabled_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_music"],
-    false,
+    true,
     true,
     {
         if (!hasInterface) exitWith {};
