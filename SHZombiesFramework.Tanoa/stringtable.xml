@@ -635,6 +635,66 @@
         <Key ID="STR_SHZ_settings_zombies_loiteringHordeThreshold_random_tooltip">
             <Original>A random number of zombies to add to the threshold every time it is updated.\nThis can make hordes randomly appear more or less frequently.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude">
+            <Original>Max Altitude</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude_tooltip">
+            <Original>The maximum altitude in metres that players can trigger loitering zombies.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone">
+            <Original>Ignore Safezone</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone_tooltip">
+            <Original>Allow loitering zombies to spawn inside safezones. Mission hordes can spawn regardless of this setting.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor">
+            <Original>Movement Speed Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor_tooltip">
+            <Original>The speed in km/h at which loitering zombies will always trigger.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor">
+            <Original>Engine Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in a vehicle with a running engine.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor">
+            <Original>Headlights Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in the dark with a vehicle's headlights on.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor">
+            <Original>Flashlight Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor_tooltip">
+            <Original>The chance increase of loitering zombies when in the dark with a weapon flashlight on.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor">
+            <Original>Town Factor</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_tooltip">
+            <Original>The chance increase of loitering zombies when near a town.\nStacks with other factors.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance">
+            <Original>Town Factor Max Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance_tooltip">
+            <Original>The maximum distance in metres from a town considered for loitering zombies. Lower values may improve performance.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance">
+            <Original>Town Factor Min Distance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance_tooltip">
+            <Original>The radius in metres from the center of a town where the town factor is highest.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_minChance">
+            <Original>Min Chance</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_zombies_ambientHordeLoop_minChance_tooltip">
+            <Original>The minimum chance of loitering zombies spawning.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_zombies_zombieSide">
             <Original>Zombie Faction</Original>
         </Key>

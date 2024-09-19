@@ -379,6 +379,96 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 [
+    "SHZ_ambientHordeLoop_maxAltitude",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude", "STR_SHZ_settings_zombies_ambientHordeLoop_maxAltitude_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 500, 30, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_ignoreSafezone",
+    "CHECKBOX",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone", "STR_SHZ_settings_zombies_ambientHordeLoop_ignoreSafezone_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    false,
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_speedFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_speedFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [10, 1235, 130, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_engineFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_engineFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_headlightsFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_townFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_townFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.2, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_townFactor_maxDistance",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance", "STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_maxDistance_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 2000, 1000, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_townFactor_minDistance",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance", "STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_minDistance_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 2000, 200, 0, false],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_minChance",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_minChance", "STR_SHZ_settings_zombies_ambientHordeLoop_minChance_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.01, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
     "SHZ_zombieSide",
     "LIST",
     ["STR_SHZ_settings_zombies_zombieSide", "STR_SHZ_settings_zombies_zombieSide_tooltip"],
