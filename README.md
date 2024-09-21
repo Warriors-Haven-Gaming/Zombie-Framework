@@ -24,15 +24,30 @@ please see the [contributing guide]!
 
 You can find this mission published on the Steam Workshop:
 
-- [Zombie Framework (Tanoa)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329328254)
-- [Zombie Framework (Chernarus 2020)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329329231)
+- [Zombie Framework (Tanoa)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329328254), ID 3329328254
+- [Zombie Framework (Chernarus 2020)](https://steamcommunity.com/sharedfiles/filedetails/?id=3329329231), ID 3329329231
 
 Once subscribed, you can host the mission by going to Server Browser > Host Server,
 and then select Zombie Framework from the appropriate map.
 You may choose to host LAN if you want to play alone.
 
-For dedicated server hosters, the mission file will be named `SHZombiesFramework.terrain`,
-where terrain is the name of the map (`Tanoa` or `cup_chernarus_A3`).
+For dedicated server hosters, you will need to copy and rename the mission file
+from your workshop directory:
+1. Navigate to `<Steam>/steamapps/workshop/content/107410/<itemID>`,
+   where itemID corresponds to the workshop map you downloaded above
+2. Copy the `<numbers>_legacy.bin` file into your server's `MPMissions` directory
+3. Rename it to `SHZombiesFramework.<terrain>.pbo`, where terrain is the name
+   of the map (`Tanoa` or `cup_chernarus_A3`).
+4. In your server.cfg, use `SHZombiesFramework.<terrain>` as the template name,
+   for example:
+
+   ```cpp
+   class Missions {
+       class Zombies {
+           template = "SHZombiesFramework.Tanoa";
+       };
+   };
+   ```
 
 ## ACE Compatibility
 
