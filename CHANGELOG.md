@@ -6,6 +6,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.13.7] - 2024-09-21
+
+### Changed
+
+- BREAKING CHANGE: Declare `missionGroup = "SHZombiesFramework"` in [description.ext](https://community.bistudio.com/wiki/saveMissionProfileNamespace)
+
+  This will break saves for clients and player-hosted servers that played
+  through the Steam Workshop releases. Players can manually migrate their
+  saves by:
+
+  1. Navigating to their profile directory
+
+     On Windows, it'll usually be `Documents/Arma 3` or `Documents/Arma 3 - Other Profiles/<username>`.
+
+  2. Creating a copy of the old save file, `Zombie%%20Framework%%20(Chernaurus%%202020).vars`
+  3. Renaming the file to `SHZombiesFramework.vars`
+
+  Clients don't necessarily need to do this as the only information stored is
+  their last loadout. However, player hosters will need to do this to preserve
+  everyone's blood points and personal / game stats.
+
+  Dedicated servers that named the mission file `SHZombiesFramework.<terrain>.pbo`
+  and players that hosted directly from the source code will not be affected
+  by this breaking change, as their save files will already be named correctly.
+
+  As a side effect, this change will allow currency and stats to be shared
+  between the Steam Workshop versions of the Tanoa and Chernarus 2020 maps.
+
 ## [0.13.6] - 2024-09-19
 
 ### Added
@@ -648,7 +676,8 @@ types with five of each being randomly generated at the start.
 
 ![](https://raw.githubusercontent.com/Warriors-Haven-Gaming/Zombie-Framework/467565bcc53ef701fc7f89dac938033e806d8f1a/docs/images/banner.jpg)
 
-[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.6...main
+[Unreleased]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.7...main
+[0.13.7]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.6...v0.13.7
 [0.13.6]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.5...v0.13.6
 [0.13.5]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.4...v0.13.5
 [0.13.4]: https://github.com/Warriors-Haven-Gaming/Zombie-Framework/compare/v0.13.3...v0.13.4

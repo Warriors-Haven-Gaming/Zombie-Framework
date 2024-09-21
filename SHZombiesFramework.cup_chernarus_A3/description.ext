@@ -1,5 +1,6 @@
 #include "UI\RscShareMoney.hpp"
 
+missionGroup = "SHZombiesFramework";
 cba_settings_hasSettingsFile = 1;
 disableChannels[] = {
     {0, true, true},
