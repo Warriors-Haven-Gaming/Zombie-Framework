@@ -12,6 +12,8 @@ Author:
 skipTime random 24;
 enableSaving [false, false];
 
+call SHZ_fnc_initZombieSettings;
+
 if (isMultiplayer) then {
     // Will run before init.sqf and initPlayerLocal.sqf
     if (!isClass (configFile >> "CfgPatches" >> "cba_xeh")) then {
@@ -21,8 +23,6 @@ if (isMultiplayer) then {
 
 call SHZ_fnc_setPlayableAILoadouts;
 call SHZ_fnc_initChannels;
-
-call SHZ_fnc_initZombieSettings;
 
 SHZ_globalPlayerTarget = [0, -2] select isDedicated;
 publicVariable "SHZ_globalPlayerTarget";
@@ -64,7 +64,9 @@ SHZ_ambientHorde_script = 0 spawn SHZ_fnc_ambientHordeLoop;
 SHZ_garbageCollector_script = 0 spawn SHZ_fnc_garbageCollectorLoop;
 SHZ_loiteringHordeThresholdScript = 0 spawn SHZ_fnc_loiterThresholdLoop;
 SHZ_playerMoneyMarker_script = 0 spawn SHZ_fnc_playerMoneyMarkerLoop;
-[[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
+if (SHZ_wrecks_enabled) then {
+    [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnCarWrecks;
+};
 [[worldSize / 2, worldSize / 2], sqrt 2 / 2 * worldSize] spawn SHZ_fnc_spawnDamagedVehicles;
 
 SHZ_saveScript = scriptNull;

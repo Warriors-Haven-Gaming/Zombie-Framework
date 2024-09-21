@@ -19,7 +19,7 @@ Author:
 */
 // TODO: figure out how to count zombies about to be spawned
 //       (solution should handle SHZ_fnc_hordeSpawn being terminated)
-private _totalZombies = count units SHZ_zombieSide;
+private _totalZombies = {[_x] call SHZ_fnc_isZombie} count units SHZ_zombieSide;
 private _availableZombies = SHZ_loiteringHordeThreshold - _totalZombies;
 if (_availableZombies <= 0) exitWith {[]};
 _this call SHZ_fnc_hordeSpawn

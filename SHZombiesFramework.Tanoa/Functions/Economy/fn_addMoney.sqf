@@ -44,7 +44,7 @@ private _moneyEarned = SHZ_moneyEarned getOrDefault [_uid, createHashMap, true];
 } forEach _tags;
 
 if (_applyMultipliers && {_money > 0}) then {
-    private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, 1];
+    private _multiplier = SHZ_moneyMultipliers_current getOrDefault [_uid, SHZ_moneyMultipliers_base];
     _money = _money * _multiplier;
 };
 

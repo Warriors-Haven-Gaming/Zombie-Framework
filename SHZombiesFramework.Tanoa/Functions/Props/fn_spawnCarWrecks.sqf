@@ -20,25 +20,6 @@ Author:
 */
 params ["_center", "_radius"];
 
-private _baseDensity = 50;
-private _townMaxDistance = 1000;
-private _townDensityFactor = 5;
-private _rightHandDrive = true;
-private _wreckTypes = [
-    "Land_Wreck_Car_F",
-    "Land_Wreck_Car2_F",
-    "Land_Wreck_Car3_F",
-    "Land_Wreck_CarDismantled_F",
-    "Land_Wreck_HMMWV_F",
-    "Land_Wreck_Hunter_F",
-    "Land_Wreck_Offroad_F",
-    "Land_Wreck_Offroad2_F",
-    "Land_Wreck_Skodovka_F",
-    "Land_Wreck_Truck_dropside_F",
-    "Land_Wreck_Truck_F",
-    "Land_Wreck_Van_F"
-];
-
 private _wrecks = [];
 private _roads = _center nearRoads _radius;
 {
@@ -52,15 +33,22 @@ private _roads = _center nearRoads _radius;
     private _lengthDir = acos (_lengthVector vectorCos [0, 1, 0]);
     private _length = vectorMagnitude _lengthVector;
 
-    private _density = _baseDensity;
+    private _density = SHZ_wrecks_density;
     private _town = nearestLocation [
         _begPos,
         ["Airport", "NameVillage", "NameCity", "NameCityCapital"],
-        _townMaxDistance
+        SHZ_wrecks_townFactor_distance
     ];
     if (!isNull _town) then {
         private _distance = _begPos distance2D locationPosition _town;
-        private _factor = linearConversion [0, _townMaxDistance, _distance, _townDensityFactor, 1, true];
+        private _factor = linearConversion [
+            0,
+            SHZ_wrecks_townFactor_distance,
+            _distance,
+            SHZ_wrecks_townFactor,
+            1,
+            true
+        ];
         _density = _density / _factor;
     };
 
@@ -73,18 +61,21 @@ private _roads = _center nearRoads _radius;
         _normal = _normal vectorMultiply _normalScale;
         _objPos = _objPos vectorAdd _normal;
 
-        if ([_objPos] call SHZ_fnc_inAreaSafezone isNotEqualTo []) then {continue};
+        if (
+            !SHZ_wrecks_safezones
+            && {[_objPos] call SHZ_fnc_inAreaSafezone isNotEqualTo []}
+        ) then {continue};
 
         private _objDir = _lengthDir + random [-180, 0, 180];
         switch (true) do {
-            case (_rightHandDrive && {_normalScale < 0});
-            case (!_rightHandDrive && {_normalScale > 0}): {
+            case (SHZ_wrecks_rightHandDrive && {_normalScale < 0});
+            case (!SHZ_wrecks_rightHandDrive && {_normalScale > 0}): {
                 _objDir = _objDir + 180;
             };
         };
         _objDir = _objDir + 180; // all the wreck types are facing the wrong way
 
-        private _obj = createSimpleObject [selectRandom _wreckTypes, _objPos];
+        private _obj = createSimpleObject [selectRandom SHZ_wrecks_vehicleTypes, _objPos];
         // Sometimes the generated position is floating above/under ground,
         // so we'll need to find the nearest surface
         // (for whatever reason setPos ASLToATL embeds them in the ground?)
