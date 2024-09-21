@@ -34,8 +34,8 @@ You may choose to host LAN if you want to play alone.
 For dedicated server hosters, you will need to copy and rename the mission file
 from your workshop directory:
 1. Navigate to `<Steam>/steamapps/workshop/content/107410/<itemID>`,
-   where itemID corresponds to the workshop map you downloaded above
-2. Copy the `<numbers>_legacy.bin` file into your server's `MPMissions` directory
+   where itemID corresponds to the workshop map you downloaded above.
+2. Copy the `<numbers>_legacy.bin` file into your server's `MPMissions` directory.
 3. Rename it to `SHZombiesFramework.<terrain>.pbo`, where terrain is the name
    of the map (`Tanoa` or `cup_chernarus_A3`).
 4. In your server.cfg, use `SHZombiesFramework.<terrain>` as the template name,
