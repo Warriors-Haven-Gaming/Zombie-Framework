@@ -577,6 +577,16 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 [
+    "SHZ_ambientHordeLoop_flashlightFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.05, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
     "SHZ_ambientHordeLoop_townFactor",
     "SLIDER",
     ["STR_SHZ_settings_zombies_ambientHordeLoop_townFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_townFactor_tooltip"],
