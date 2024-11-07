@@ -32,10 +32,9 @@ private _recruitType = _item get "_recruitType";
 if (isNil "_recruitType") exitWith {false};
 if (isNil "_vehicleSpawn") exitWith {false};
 
-private _groupLimit = 6;
 private _playerAICount = {!isPlayer _x} count units _player;
-if (_playerAICount >= _groupLimit) exitWith {[
-    [_groupLimit],
+if (_playerAICount >= SHZ_recruits_limit) exitWith {[
+    [SHZ_recruits_limit],
     "SHZ_fnc_showBuyAIRecruitLimit"
 ]};
 

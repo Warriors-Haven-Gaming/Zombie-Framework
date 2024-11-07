@@ -31,8 +31,8 @@ SHZ_mainMissionLoop_script = [
     [
         "SHZ_fnc_msnMainClearZombies"
     ],
-    1,
-    1
+    SHZ_missions_main_min,
+    SHZ_missions_main_max
 ] spawn SHZ_fnc_missionLoop;
 SHZ_sideMissionLoop_script = [
     [
@@ -43,8 +43,8 @@ SHZ_sideMissionLoop_script = [
         "SHZ_fnc_msnDownloadIntel",
         "SHZ_fnc_msnRescueCivilians"
     ],
-    6,
-    15
+    SHZ_missions_side_min,
+    SHZ_missions_side_max
 ] spawn SHZ_fnc_missionLoop;
 
 SHZ_moneyEarned = createHashMap;
