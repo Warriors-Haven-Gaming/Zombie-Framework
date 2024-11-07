@@ -524,6 +524,33 @@
         <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE_tooltip">
             <Original>When ACE is loaded, replace the one-time unlock action with inventory keys.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_missions">
+            <Original>Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_mainMissions_min">
+            <Original>Minimum Main Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_mainMissions_min_tooltip">
+            <Original>The minimum number of main missions allowed.\nIf there are fewer main missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable main missions completely.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_mainMissions_max">
+            <Original>Maximum Main Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_mainMissions_max_tooltip">
+            <Original>The maximum number of main missions to spawn.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_sideMissions_min">
+            <Original>Minimum Side Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_sideMissions_min_tooltip">
+            <Original>The minimum number of side missions allowed.\nIf there are fewer side missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable side missions completely.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_sideMissions_max">
+            <Original>Maximum Side Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_sideMissions_max_tooltip">
+            <Original>The maximum number of side missions to spawn.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_music">
             <Original>Music</Original>
         </Key>

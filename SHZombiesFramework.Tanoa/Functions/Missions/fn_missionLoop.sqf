@@ -11,6 +11,7 @@ Parameters:
         The minimum number of active missions allowed.
     Number maxScripts:
         The maximum number of active missions allowed.
+        Takes priority over minScripts.
 
 Author:
     thegamecracks
@@ -26,6 +27,8 @@ _functions = _functions select {
 if (count _functions < 1) exitWith {
     diag_log text format ["%1: No functions to call", _fnc_scriptName];
 };
+
+_minScripts = _minScripts min _maxScripts;
 
 private _functionCounts = createHashMapFromArray (_functions apply {[_x, 0]});
 private _scripts = [];
