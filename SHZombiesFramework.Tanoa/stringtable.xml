@@ -560,6 +560,15 @@
         <Key ID="STR_SHZ_settings_music_musicEnabled_tooltip">
             <Original>Play various music tracks in a loop indefinitely. Requires Music volume to be unmuted.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_recruits">
+            <Original>Recruits</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_recruits_limit">
+            <Original>Recruit Limit</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_recruits_limit_tooltip">
+            <Original>The maximum number of recruits that can be commanded per player group.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_saves">
             <Original>Saves</Original>
         </Key>

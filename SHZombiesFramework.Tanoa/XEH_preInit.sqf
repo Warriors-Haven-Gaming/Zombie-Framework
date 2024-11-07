@@ -298,6 +298,18 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Recruits
+[
+    "SHZ_recruits_limit",
+    "SLIDER",
+    ["STR_SHZ_settings_recruits_limit", "STR_SHZ_settings_recruits_limit_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_recruits"],
+    [0, 50, 6, 0, false],
+    true,
+    {SHZ_recruits_limit = round SHZ_recruits_limit},
+    false
+] call SHZ_fnc_addSetting;
+
 // Saves
 [
     "SHZ_saveName",
