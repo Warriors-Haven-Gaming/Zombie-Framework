@@ -33,7 +33,6 @@ addMissionEventHandler ["EntityKilled", {
     };
 
     if (random 1 < SHZ_zombies_loot_pills) then {
-        "RyanZombiesAntiVirusTemporary_Item" call _addItem;
     };
 
     private _magazineChance = [

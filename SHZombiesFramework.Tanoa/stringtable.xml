@@ -780,10 +780,10 @@
             <Original>The chance that a zombie will drop a First Aid Kit.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_pills">
-            <Original>Pills Chance</Original>
+            <Original>Pills Chance (Disabled)</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_pills_tooltip">
-            <Original>The chance that a zombie will drop Antivirus Pills.</Original>
+            <Original>The chance that a zombie will drop Antivirus Pills.\nNot applicable in this mission.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_magazines">
             <Original>Magazine Chance</Original>
