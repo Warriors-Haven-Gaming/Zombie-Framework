@@ -4,7 +4,6 @@ missionGroup = "SHZombiesFramework";
 cba_settings_hasSettingsFile = 1;
 disableChannels[] = {
     {0, true, true},
-    {2, true, true},
 };
 
 class Extended_PreInit_EventHandlers {

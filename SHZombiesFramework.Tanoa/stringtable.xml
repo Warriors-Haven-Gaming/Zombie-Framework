@@ -524,6 +524,33 @@
         <Key ID="STR_SHZ_settings_locks_vehicleLock_useACE_tooltip">
             <Original>When ACE is loaded, replace the one-time unlock action with inventory keys.</Original>
         </Key>
+        <Key ID="STR_SHZ_settings_missions">
+            <Original>Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_main_min">
+            <Original>Minimum Main Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_main_min_tooltip">
+            <Original>The minimum number of main missions allowed.\nIf there are fewer main missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable main missions completely.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_main_max">
+            <Original>Maximum Main Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_main_max_tooltip">
+            <Original>The maximum number of main missions to spawn.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_side_min">
+            <Original>Minimum Side Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_side_min_tooltip">
+            <Original>The minimum number of side missions allowed.\nIf there are fewer side missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable side missions completely.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_side_max">
+            <Original>Maximum Side Missions</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_missions_side_max_tooltip">
+            <Original>The maximum number of side missions to spawn.</Original>
+        </Key>
         <Key ID="STR_SHZ_settings_music">
             <Original>Music</Original>
         </Key>
@@ -532,6 +559,15 @@
         </Key>
         <Key ID="STR_SHZ_settings_music_musicEnabled_tooltip">
             <Original>Play various music tracks in a loop indefinitely. Requires Music volume to be unmuted.</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_recruits">
+            <Original>Recruits</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_recruits_limit">
+            <Original>Recruit Limit</Original>
+        </Key>
+        <Key ID="STR_SHZ_settings_recruits_limit_tooltip">
+            <Original>The maximum number of recruits that can be commanded per player group.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_saves">
             <Original>Saves</Original>

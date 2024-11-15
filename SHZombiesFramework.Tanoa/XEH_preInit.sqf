@@ -233,6 +233,48 @@ Author:
     false
 ] call SHZ_fnc_addSetting;
 
+// Missions
+[
+    "SHZ_missions_main_min",
+    "SLIDER",
+    ["STR_SHZ_settings_missions_main_min", "STR_SHZ_settings_missions_main_min_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
+    [0, 10, 1, 0, false],
+    true,
+    {SHZ_missions_main_min = round SHZ_missions_main_min},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_missions_main_max",
+    "SLIDER",
+    ["STR_SHZ_settings_missions_main_max", "STR_SHZ_settings_missions_main_max_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
+    [1, 10, 1, 0, false],
+    true,
+    {SHZ_missions_main_max = round SHZ_missions_main_max},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_missions_side_min",
+    "SLIDER",
+    ["STR_SHZ_settings_missions_side_min", "STR_SHZ_settings_missions_side_min_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
+    [0, 50, 6, 0, false],
+    true,
+    {SHZ_missions_side_min = round SHZ_missions_side_min},
+    true
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_missions_side_max",
+    "SLIDER",
+    ["STR_SHZ_settings_missions_side_max", "STR_SHZ_settings_missions_side_max_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
+    [1, 50, 15, 0, false],
+    true,
+    {SHZ_missions_side_max = round SHZ_missions_side_max},
+    true
+] call SHZ_fnc_addSetting;
+
 // Music
 [
     "SHZ_musicEnabled",
@@ -253,6 +295,18 @@ Author:
         // NOTE: this can interrupt music from any source.
         playMusic "";
     },
+    false
+] call SHZ_fnc_addSetting;
+
+// Recruits
+[
+    "SHZ_recruits_limit",
+    "SLIDER",
+    ["STR_SHZ_settings_recruits_limit", "STR_SHZ_settings_recruits_limit_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_recruits"],
+    [0, 50, 6, 0, false],
+    true,
+    {SHZ_recruits_limit = round SHZ_recruits_limit},
     false
 ] call SHZ_fnc_addSetting;
 
@@ -518,6 +572,16 @@ Author:
     ["STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_headlightsFactor_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
     [0, 1, 0.1, 0, true],
+    true,
+    {},
+    false
+] call SHZ_fnc_addSetting;
+[
+    "SHZ_ambientHordeLoop_flashlightFactor",
+    "SLIDER",
+    ["STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor", "STR_SHZ_settings_zombies_ambientHordeLoop_flashlightFactor_tooltip"],
+    ["STR_SHZ_settings", "STR_SHZ_settings_zombies"],
+    [0, 1, 0.05, 0, true],
     true,
     {},
     false
