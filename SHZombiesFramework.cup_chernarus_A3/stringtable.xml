@@ -20,11 +20,11 @@
         <Key ID="STR_SHZ_assistSoldiers_description">
             <Original>Zombies are being fought off by soldiers here. Provide support!</Original>
         </Key>
-        <Key ID="STR_SHZ_clearDemons_title">
-            <Original>Hunt Demons</Original>
+        <Key ID="STR_SHZ_clearSpecials_title">
+            <Original>Hunt Specials</Original>
         </Key>
-        <Key ID="STR_SHZ_clearDemons_description">
-            <Original>A few groups of demons are roaming this area. Clear them out!</Original>
+        <Key ID="STR_SHZ_clearSpecials_description">
+            <Original>A few groups of special infected are roaming this area. Clear them out!</Original>
         </Key>
         <Key ID="STR_SHZ_clearRaiders_title">
             <Original>Clear Raiders</Original>
@@ -527,28 +527,28 @@
         <Key ID="STR_SHZ_settings_missions">
             <Original>Missions</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_mainMissions_min">
+        <Key ID="STR_SHZ_settings_missions_main_min">
             <Original>Minimum Main Missions</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_mainMissions_min_tooltip">
+        <Key ID="STR_SHZ_settings_missions_main_min_tooltip">
             <Original>The minimum number of main missions allowed.\nIf there are fewer main missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable main missions completely.</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_mainMissions_max">
+        <Key ID="STR_SHZ_settings_missions_main_max">
             <Original>Maximum Main Missions</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_mainMissions_max_tooltip">
+        <Key ID="STR_SHZ_settings_missions_main_max_tooltip">
             <Original>The maximum number of main missions to spawn.</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_sideMissions_min">
+        <Key ID="STR_SHZ_settings_missions_side_min">
             <Original>Minimum Side Missions</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_sideMissions_min_tooltip">
+        <Key ID="STR_SHZ_settings_missions_side_min_tooltip">
             <Original>The minimum number of side missions allowed.\nIf there are fewer side missions than this, the gamemode will spawn more missions up to the maximum.\nSet to 0 to disable side missions completely.</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_sideMissions_max">
+        <Key ID="STR_SHZ_settings_missions_side_max">
             <Original>Maximum Side Missions</Original>
         </Key>
-        <Key ID="STR_SHZ_settings_missions_sideMissions_max_tooltip">
+        <Key ID="STR_SHZ_settings_missions_side_max_tooltip">
             <Original>The maximum number of side missions to spawn.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_music">
@@ -780,10 +780,10 @@
             <Original>The chance that a zombie will drop a First Aid Kit.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_pills">
-            <Original>Pills Chance</Original>
+            <Original>Pills Chance (Disabled)</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_pills_tooltip">
-            <Original>The chance that a zombie will drop Antivirus Pills.</Original>
+            <Original>The chance that a zombie will drop Antivirus Pills.\nNot applicable in this mission.</Original>
         </Key>
         <Key ID="STR_SHZ_settings_zombies_loot_magazines">
             <Original>Magazine Chance</Original>

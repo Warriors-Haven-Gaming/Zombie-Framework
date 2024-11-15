@@ -17,7 +17,6 @@ Author:
 while {true} do {
     sleep 5;
     if (isNull player) then {continue};
-    2 enableChannel (leader player isEqualTo player);
 
     private _vehicle = objectParent player;
     if (_vehicle isKindOf "Air" && {currentPilot _vehicle isEqualTo player}) then {

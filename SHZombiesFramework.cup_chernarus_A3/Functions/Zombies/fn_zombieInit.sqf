@@ -19,6 +19,3 @@ Author:
 */
 params ["_unit"];
 _unit setSkill 1;
-if (isNil "ryanzombiesstartinganim") then {
-    _unit switchMove "AmovPercMstpSnonWnonDnon_SaluteOut";
-};

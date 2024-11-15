@@ -237,7 +237,7 @@ Author:
 [
     "SHZ_missions_main_min",
     "SLIDER",
-    ["STR_SHZ_settings_missions_mainMissions_min", "STR_SHZ_settings_missions_mainMissions_min_tooltip"],
+    ["STR_SHZ_settings_missions_main_min", "STR_SHZ_settings_missions_main_min_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
     [0, 10, 1, 0, false],
     true,
@@ -247,7 +247,7 @@ Author:
 [
     "SHZ_missions_main_max",
     "SLIDER",
-    ["STR_SHZ_settings_missions_mainMissions_max", "STR_SHZ_settings_missions_mainMissions_max_tooltip"],
+    ["STR_SHZ_settings_missions_main_max", "STR_SHZ_settings_missions_main_max_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
     [1, 10, 1, 0, false],
     true,
@@ -257,7 +257,7 @@ Author:
 [
     "SHZ_missions_side_min",
     "SLIDER",
-    ["STR_SHZ_settings_missions_sideMissions_min", "STR_SHZ_settings_missions_sideMissions_min_tooltip"],
+    ["STR_SHZ_settings_missions_side_min", "STR_SHZ_settings_missions_side_min_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
     [0, 50, 6, 0, false],
     true,
@@ -267,7 +267,7 @@ Author:
 [
     "SHZ_missions_side_max",
     "SLIDER",
-    ["STR_SHZ_settings_missions_sideMissions_max", "STR_SHZ_settings_missions_sideMissions_max_tooltip"],
+    ["STR_SHZ_settings_missions_side_max", "STR_SHZ_settings_missions_side_max_tooltip"],
     ["STR_SHZ_settings", "STR_SHZ_settings_missions"],
     [1, 50, 15, 0, false],
     true,

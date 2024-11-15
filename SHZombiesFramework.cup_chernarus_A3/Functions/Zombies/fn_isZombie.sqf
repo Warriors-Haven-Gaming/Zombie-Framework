@@ -16,7 +16,8 @@ Author:
 
 */
 params ["_type"];
-[
-    "RyanZombieCivilian_F",
-    "RyanZombieB_Soldier_base_F"
-] findIf {_type isKindOf _x} isNotEqualTo -1
+if (_type isEqualType objNull) then {_type = typeOf _type};
+(
+    [_type, "Zombie"] call SHZ_fnc_stringStartsWith
+    || {[_type, "WBK_SpecialZombie"] call SHZ_fnc_stringStartsWith}
+)

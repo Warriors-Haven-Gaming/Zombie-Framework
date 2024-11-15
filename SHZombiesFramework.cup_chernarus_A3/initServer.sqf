@@ -37,7 +37,7 @@ SHZ_mainMissionLoop_script = [
 SHZ_sideMissionLoop_script = [
     [
         "SHZ_fnc_msnAssistSoldiers",
-        "SHZ_fnc_msnClearDemons",
+        "SHZ_fnc_msnClearSpecials",
         "SHZ_fnc_msnClearRaiders",
         "SHZ_fnc_msnClearZombies",
         "SHZ_fnc_msnDownloadIntel",

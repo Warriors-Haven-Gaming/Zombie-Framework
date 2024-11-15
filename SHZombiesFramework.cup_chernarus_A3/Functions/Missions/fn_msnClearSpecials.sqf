@@ -1,8 +1,8 @@
 /*
-Function: SHZ_fnc_msnClearDemons
+Function: SHZ_fnc_msnClearSpecials
 
 Description:
-    Players must clear out demons from an area.
+    Players must clear out special infected from an area.
     Function must be ran in scheduled environment.
 
 Parameters:
@@ -31,7 +31,7 @@ if (_center isEqualTo []) exitWith {
     diag_log text format ["%1: No center found", _fnc_scriptName];
 };
 
-private _taskID = [blufor, "", "clearDemons", _center, "CREATED", -1, true, "danger"] call SHZ_fnc_taskCreate;
+private _taskID = [blufor, "", "clearSpecials", _center, "CREATED", -1, true, "danger"] call SHZ_fnc_taskCreate;
 
 private _activationArea = [_center, 200, 200, 0, false, 20];
 private _areaMarker = [
@@ -50,7 +50,7 @@ private _spawnerScript = [
     20 + count allPlayers * 2 min 100,
     [
         5 + floor (count allPlayers * 0.5),
-        "demons",
+        "specials",
         SHZ_zombieSide,
         [0,0,0],
         10,
@@ -79,7 +79,7 @@ _safezone setMarkerBrushLocal "SolidBorder";
 _safezone setMarkerColorLocal "ColorBlue";
 _safezone setMarkerAlpha 0.2;
 _safezone spawn {
-    scriptName "SHZ_fnc_msnClearDemons_tempSafezone";
+    scriptName "SHZ_fnc_msnClearSpecials_tempSafezone";
     sleep 1800;
     // TODO: announce safezone disappearing
     deleteMarker _this;

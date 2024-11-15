@@ -37,5 +37,10 @@ if (alive _zombie) exitWith {
     ];
 };
 
-private _money = [10, 100] select (_zombie isKindOf "RyanZombieboss1");
+private _zombieType = typeOf _zombie;
+private _money = switch (true) do {
+    case ([_zombieType, "WBK_SpecialZombie"] call SHZ_fnc_stringStartsWith): {500};
+    case ([_zombieType, "Zombie_Special"] call SHZ_fnc_stringStartsWith): {100};
+    default {10}
+};
 [_uid, _money, _tags, true] call SHZ_fnc_addMoney;
