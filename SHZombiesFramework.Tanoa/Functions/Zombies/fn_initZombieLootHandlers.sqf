@@ -21,7 +21,7 @@ addMissionEventHandler ["EntityKilled", {
     if (isNull _instigator) exitWith {};
     if (!local _instigator) exitWith {};
 
-    private _isSoldier = _killed isKindOf "RyanZombieB_Soldier_base_F";
+    private _isSoldier = true;
     private _uniqueItems = createHashMap;
     private _addItem = {
         params ["_name", ["_count", 1]];
