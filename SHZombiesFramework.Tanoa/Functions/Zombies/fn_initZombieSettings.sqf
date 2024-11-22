@@ -124,11 +124,6 @@ ryanzombiesinfecteddeath = 0.9;
 //   Duration in seconds the consumer is immune to infection and its symptoms.
 ryanzombiesantivirusduration = 300;
 
-// WARNING: do not add an Infection Settings module as this script will repeat twice!
-if (hasInterface) then {
-	player execVM "\ryanzombies\antivirus\item_handler.sqf";
-};
-
 // ===== Loot Settings =====
 // We have custom loot drops so this should always be disabled
 ryanzombiesAllLoot = nil;
